@@ -17,7 +17,7 @@ Includes synchronized video timestamps, whiteboard snapshots, and structured Mat
 
 ## 1. Repository Overview
 
-This repository offers a highly organized and visually structured index for Professor Leonard's _Calculus 1_ lecture series. The goal is to provide a fast, reliable reference to core topics using clear timestamps, concise explanations, and visual board captures.
+This repository offers a highly organized and visually structured index for Professor Leonard's _Calculus 2_ lecture series. The goal is to provide a fast, reliable reference to core topics using clear timestamps, concise explanations, and visual board captures.
 
 ### Folder Structure:
 
@@ -68,7 +68,8 @@ These folders are not optimized for viewing on GitHub but provide the best exper
 
 To explore the notes visually online, visit the rendered HTML site via GitHub Pages:
 
-[GitHub Pages – Calculus 1 Notes]()
+[GitHub Pages – Calculus 2- Professor Leonard Lectures](<https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/>
+)
 
 This version includes only:
 - The `docs/` folder (HTML versions of the lectures).
