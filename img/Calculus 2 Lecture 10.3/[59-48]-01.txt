@@ -1,0 +1,5 @@
+﻿image_name: [59-48]Example 3 — Find the concavity for 𝒙 = 𝑻² - 4, 𝒚 = 𝑻³ - 3𝑻.png
+file_name: [59-48]-01.png
+timestamp: 59:48
+counter: 01
+folder: Calculus 2 Lecture 10.3

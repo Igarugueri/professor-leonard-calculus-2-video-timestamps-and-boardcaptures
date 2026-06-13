@@ -1,0 +1,5 @@
+﻿image_name: [1-42-26]General properties of convergent series.png
+file_name: [1-42-26]-01.png
+timestamp: 1:42:26
+counter: 01
+folder: Calculus 2 Lecture 9.2

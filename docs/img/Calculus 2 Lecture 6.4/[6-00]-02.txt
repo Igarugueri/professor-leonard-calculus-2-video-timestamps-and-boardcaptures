@@ -1,0 +1,5 @@
+﻿image_name: [6-00]Example Differentiate an exponential function with base different from 𝓮 3^𝒙.png
+file_name: [6-00]-02.png
+timestamp: 6:00
+counter: 02
+folder: Calculus 2 Lecture 6.4

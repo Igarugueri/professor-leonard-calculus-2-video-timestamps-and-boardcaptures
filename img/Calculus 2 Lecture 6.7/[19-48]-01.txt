@@ -1,0 +1,5 @@
+﻿image_name: [19-48]Example — Exponential functions limₓ→₀ (𝒆ˣ − 1∕(2𝒙).png
+file_name: [19-48]-01.png
+timestamp: 19:48
+counter: 01
+folder: Calculus 2 Lecture 6.7

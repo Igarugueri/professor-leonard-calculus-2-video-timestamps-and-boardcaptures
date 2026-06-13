@@ -1,0 +1,5 @@
+﻿image_name: [43-42]Limit of a sequence.png
+file_name: [43-42]-01.png
+timestamp: 43:42
+counter: 01
+folder: Calculus 2 Lecture 9.1

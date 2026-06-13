@@ -1,0 +1,5 @@
+﻿image_name: [1-01-03]Proofs using implicit differentiation sec⁻¹(x)_2.png
+file_name: [1-01-03]-02.png
+timestamp: 1:01:03
+counter: 02
+folder: Calculus 2 Lecture 6.5

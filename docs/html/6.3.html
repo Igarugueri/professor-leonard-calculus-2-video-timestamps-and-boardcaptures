@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ６．３： Ｄｅｒｉｖａｔｉｖｅｓ ａｎｄ Ｉｎｔｅｇｒａｌｓ ｏｆ Ｅｘｐｏｎｅｎｔｉａｌ Ｆｕｎｃｔｉｏｎｓ</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      chtml: {
+        scale: 1.05,
+        matchFontHeight: false,
+        displayAlign: 'center',
+        displayIndent: '0em',
+        linebreaks: { automatic: false }
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <article class="chapter">
+    <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ６．３</h1>
+    <h1> Ｄｅｒｉｖａｔｉｖｅｓ ａｎｄ Ｉｎｔｅｇｒａｌｓ ｏｆ Ｅｘｐｏｎｅｎｔｉａｌ Ｆｕｎｃｔｉｏｎｓ</h1>
+
+    <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=1" target="_blank">[0:01]</a>.
+        Introduction to exponential functions and Euler’s number $𝓮$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 6.3/[0-01]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 6.3/[0-01]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Definition of the number $𝓮$ as the value satisfying $\ln(𝓮)=1$.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Connection with area under the curve.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Definition of the natural logarithm as an integral:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\ln(𝒙)=\displaystyle \int_{1}^{𝒙}\dfrac{1}{𝒕}\,𝒅𝒕$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Interpretation of $\ln(𝓮)$ as area under the curve:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\ln(𝓮)=\displaystyle \int_{1}^{𝓮}\dfrac{1}{𝒕}\,𝒅𝒕=1$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Proof of the existence of $𝓮$ using the Intermediate Value Theorem.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Continuity of $\ln$ on $(0,\infty)$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Range of $\ln$ is $(-\infty,\infty)$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">By the Intermediate Value Theorem, there exists a value $𝓮$ such that $\ln(𝓮)=1$.
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Equivalence between logarithmic and exponential notation.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\ln(𝒚)=𝒙$ ⇔ $𝓮^{𝒙}=𝒚$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=355" target="_blank">[5:55]</a>.
+            Cancellation properties used in solving equations.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Proof of the identity $\ln(𝓮^{𝒙})=𝒙$.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Let $𝒚=𝓮^{𝒙}$.
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\ln(𝒚)=\ln(𝓮^{𝒙})$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Use the equivalence $\ln(𝒚)=𝒙$ ⇔ $𝓮^{𝒙}=𝒚$.
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">Since $𝒚=𝓮^{𝒙}$, then $\ln(𝒚)=𝒙$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">Therefore, $\ln(𝓮^{𝒙})=𝒙$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Proof of the identity $𝓮^{\ln(𝒙)}=𝒙$.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Let $𝒙&gt;0$ and set $𝒖=\ln(𝒙)$.
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\ln(𝒙)=𝒖$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Convert to exponential form using $\ln(𝒚)=𝒙$ ⇔ $𝓮^{𝒙}=𝒚$.
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝓮^{𝒖}=𝒙$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Substitute $𝒖=\ln(𝒙)$.
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝓮^{\ln(𝒙)}=𝒙$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｓｏｌｖｉｎｇ Ｅｑｕａｔｉｏｎｓ ｗｉｔｈ $𝓮$ ａｎｄ $\ln$</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">Algebraic methodology for solving equations involving $𝓮$ and $\ln$.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=510" target="_blank">[8:30]</a>. 🧩
+            Example – Variable isolation example: $𝓮^{(4-5𝒙)}=9$. – <span class="image-container"><a
+                href="../img/Calculus 2 Lecture 6.3/[8-30]-01.png" target="_blank">[📷image]</a><img
+                src="../img/Calculus 2 Lecture 6.3/[8-30]-01.png" alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Apply the natural logarithm to both sides:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\ln(𝓮^{(4-5𝒙)})=\ln 9$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use the cancellation property $\ln(𝓮^{𝒖})=𝒖$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$4-5𝒙=\ln 9$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Isolate the variable $𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$-5𝒙=-4+\ln 9$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙=\dfrac{4}{5}-\dfrac{\ln 9}{5}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=674" target="_blank">[11:14]</a>.
+            🧩 Example – Variable isolation example: $3𝓮^{(5𝒙-1)}=2$. – <span class="image-container"><a
+                href="../img/Calculus 2 Lecture 6.3/[11-14]-01.png" target="_blank">[📷image]</a><img
+                src="../img/Calculus 2 Lecture 6.3/[11-14]-01.png" alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Isolate the exponential term:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝓮^{(5𝒙-1)}=\dfrac{2}{3}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Apply the natural logarithm to both sides:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\ln(𝓮^{(5𝒙-1)})=\ln\left(\dfrac{2}{3}\right)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use the cancellation property $\ln(𝓮^{𝒖})=𝒖$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$5𝒙-1=\ln\left(\dfrac{2}{3}\right)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Solve for $𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$5𝒙=\ln\left(\dfrac{2}{3}\right)+1$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙=\dfrac{\ln\left(\dfrac{2}{3}\right)+1}{5}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=810" target="_blank">[13:30]</a>.
+            🧩 Example – Variable isolation example: $\ln(7𝒙-1)=9$. – <span class="image-container"><a
+                href="../img/Calculus 2 Lecture 6.3/[13-30]-01.png" target="_blank">[📷image]</a><img
+                src="../img/Calculus 2 Lecture 6.3/[13-30]-01.png" alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Convert from logarithmic to exponential form:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$7𝒙-1=𝓮^{9}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Solve for $𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$7𝒙=𝓮^{9}+1$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙=\dfrac{𝓮^{9}+1}{7}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=880" target="_blank">[14:40]</a>.
+            🧩 Example – Solve the logarithmic equation: $\ln 𝒙+\ln(𝒙-1)=\ln 2$. – <span class="image-container"><a
+                href="../img/Calculus 2 Lecture 6.3/[14-40]-01.png" target="_blank">[📷image]</a><img
+                src="../img/Calculus 2 Lecture 6.3/[14-40]-01.png" alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Combine logarithms:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\ln\Big[𝒙(𝒙-1)\Big]=\ln 2$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Convert to exponential form:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝓮^{\ln\Big[𝒙(𝒙-1)\Big]}=𝓮^{\ln 2}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use the cancellation property $𝓮^{\ln(𝒙)}=𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙(𝒙-1)=2$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Solve the resulting polynomial equation:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙^{2}-𝒙=2$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙^{2}-𝒙-2=0$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$(𝒙-2)(𝒙+1)=0$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙=2$, $𝒙=-1$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=1100" target="_blank">[18:20]</a>.
+            🧩 Example – Solve the exponential equation: $𝓮^{(2𝒙)}-5𝓮^{𝒙}+6=0$. – <span class="image-container"><a
+                href="../img/Calculus 2 Lecture 6.3/[18-20]-01.png" target="_blank">[📷image]</a><img
+                src="../img/Calculus 2 Lecture 6.3/[18-20]-01.png" alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Rewrite using a substitution form:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$(𝓮^{𝒙})^{2}-5(𝓮^{𝒙})+6=0$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Substitute $𝒚=𝓮^{𝒙}$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒚^{2}-5𝒚+6=0$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Factor and solve for $𝒚$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$(𝒚-3)(𝒚-2)=0$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒚=3$, $𝒚=2$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Convert back to $𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝓮^{𝒙}=3$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\ln(𝓮^{𝒙})=\ln 3$
+                        <ul>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">$𝒙=\ln 3$</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝓮^{𝒙}=2$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\ln(𝓮^{𝒙})=\ln 2$
+                        <ul>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">$𝒙=\ln 2$</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ａｎａｌｙｔｉｃ Ｐｒｏｐｅｒｔｉｅｓ ｏｆ $𝓮^{𝒙}$</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=1480" target="_blank">[24:40]</a>.
+        Analytical properties and graphical representation of the function $𝓮^{𝒙}$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 6.3/[24-40]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 6.3/[24-40]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Domain and range.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Domain of $𝓮^{𝒙}$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$D=(-\infty,\infty)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Range of $𝓮^{𝒙}$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$R=(0,\infty)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Continuity and concavity.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Continuity on the entire real line:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝓮^{𝒙}$ is continuous on $(-\infty,\infty)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Concavity:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝓮^{𝒙}$ is concave up on $(-\infty,\infty)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Asymptotic behavior and fundamental limits.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Limits of the exponential function:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{x\to\infty}𝓮^{𝒙}=\infty$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{x\to-\infty}𝓮^{𝒙}=0$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Corresponding limits of the logarithmic function:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{x\to\infty}\ln 𝒙=\infty$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{x\to 0^+}\ln 𝒙=-\infty$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｌｉｍｉｔｓ ｗｉｔｈ Ｎｅｇａｔｉｖｅ Ｅｘｐｏｎｅｎｔｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">Evaluation of complex limits involving negative powers of $e$.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Algebraic manipulation by dividing through by the dominant exponential term in the
+            denominator, which grows without bound.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Analysis of infinitesimal terms and evaluation of constants in the limit.</li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=2040" target="_blank">[34:00]</a>. 🧩
+        Example – Limit involving exponential functions as $𝒙\rightarrow -\infty$: $\displaystyle
+        \lim_{x\to-\infty}\dfrac{𝓮^{-𝒙}-2𝓮^{(2𝒙)}}{𝓮^{(-2𝒙)}+3𝓮^{(2𝒙)}}$ – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 6.3/[34-00]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 6.3/[34-00]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Simplify by dividing numerator and denominator by $𝓮^{(-2𝒙)}$, It is the dominant term
+            (it grows without bound):
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{x\to-\infty}\dfrac{𝓮^{𝒙}-2𝓮^{(4𝒙)}}{1+3𝓮^{(4𝒙)}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Evaluate the limit using exponential behavior:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">As $𝒙\rightarrow -\infty$, $𝓮^{𝒙}\rightarrow 0$ and $𝓮^{(4𝒙)}\rightarrow 0$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final evaluation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{0-0}{1+0}=0$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=2441" target="_blank">[40:41]</a>. 🧩
+        Example – Evaluate the limit: $\displaystyle \lim_{x\to 0^+}\dfrac{{𝓮^{1/\ln 𝒙}}}{2+\cos\big(\pi
+        𝓮^{-𝒙}\big)}$. – <span class="image-container"><a href="../img/Calculus 2 Lecture 6.3/[40-41]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.3/[40-41]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Analyze each component as $𝒙\rightarrow 0^+$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Exponential term:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\ln 𝒙\rightarrow -\infty$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\dfrac{1}{\ln 𝒙}\rightarrow 0$
+                        <ul>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">$𝓮^{\dfrac{1}{\ln 𝒙}}\rightarrow 1$</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Trigonometric term:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝓮^{-𝒙}\rightarrow 1$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\pi 𝓮^{-𝒙}\rightarrow \pi$
+                        <ul>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">$\cos\big(\pi 𝓮^{-𝒙}\big)\rightarrow \cos(\pi)=-1$</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Combine the limits:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{x\to 0^+}\dfrac{𝓮^{1/\ln 𝒙}}{2+\cos\big(\pi
+                    𝓮^{-𝒙}\big)}=\dfrac{1}{2+(-1)}$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$=1$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｄｅｒｉｖａｔｉｖｅｓ and Ｉｎｔｅｇｒａｌｓ ｏｆ Ｎａｔｕｒａｌ Ｅｘｐｏｎｅｎｔｉａｌ Ｆｕｎｃｔｉｏｎｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=2700" target="_blank">[45:00]</a>.
+        Differential calculus applied to natural exponential functions. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 6.3/[45-00]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 6.3/[45-00]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Fundamental derivative rule.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Statement of the theorem:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{d}{d𝒙}\Big[𝓮^{𝒙}\Big]=𝓮^{𝒙}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Analytical proof using logarithmic differentiation.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Define the function:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒚=𝓮^{𝒙}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Take natural logarithms on both sides:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\ln 𝒚=\ln(𝓮^{𝒙})$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\ln 𝒚=𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Differentiate implicitly with respect to $𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{d}{d𝒙}\Big[\ln 𝒚\Big]=\dfrac{d}{d𝒙}\Big[𝒙\Big]$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{1}{𝒚}\cdot\dfrac{d𝒚}{d𝒙}=1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Solve for $d𝒚/d𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{d𝒚}{d𝒙}=𝒚$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{d𝒚}{d𝒙}=𝓮^{𝒙}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Chain rule extension.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">General exponential function:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{d}{d𝒙}\Big[𝓮^{𝒇(𝒙)}\Big]=𝓮^{𝒇(𝒙)}\cdot\dfrac{d}{d𝒙}\Big[𝒇(𝒙)\Big]$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Equivalent notation using an auxiliary variable:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Let $𝒖=𝒇(𝒙)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{d}{d𝒙}\Big[𝓮^{𝒖}\Big]=𝓮^{𝒖}\cdot\dfrac{d𝒖}{d𝒙}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=3040" target="_blank">[50:40]</a>.
+            🧩 Example – Differentiate the function: $𝓮^{-𝒙^{3}}$. – <span class="image-container"><a
+                href="../img/Calculus 2 Lecture 6.3/[50-40]-01.png" target="_blank">[📷image]</a><img
+                src="../img/Calculus 2 Lecture 6.3/[50-40]-01.png" alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Identify the composite structure:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Outer function: $𝓮^{𝒖}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Inner function: $𝒖=-𝒙^{3}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Apply the chain rule:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{d}{d𝒙}\Big[𝓮^{-𝒙^{3}}\Big]=𝓮^{-𝒙^{3}}\cdot\dfrac{d}{d𝒙}\Big[-𝒙^{3}\Big]$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Differentiate the inner function:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{d}{d𝒙}\Big[-𝒙^{3}\Big]=-3𝒙^{2}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Final result:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{d}{d𝒙}\Big[𝓮^{-𝒙^{3}}\Big]=-3𝒙^{2}\cdot 𝓮^{-𝒙^{3}}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=3145" target="_blank">[52:25]</a>.
+            🧩 Example – Differentiate the function: $𝒙^{2}𝓮^{-2𝒙}$. – <span class="image-container"><a
+                href="../img/Calculus 2 Lecture 6.3/[52-25]-01.png" target="_blank">[📷image]</a><img
+                src="../img/Calculus 2 Lecture 6.3/[52-25]-01.png" alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Reminder: first identify which rules are needed to compute the derivative.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Product rule.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Chain rule.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Apply the product rule:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{d}{d𝒙}\Big[𝒙^{2}𝓮^{-2𝒙}\Big]=\dfrac{d}{d𝒙}\Big[𝒙^{2}\Big]\cdot
+                    𝓮^{-2𝒙}+𝒙^{2}\cdot\dfrac{d}{d𝒙}\Big[𝓮^{-2𝒙}\Big]$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Differentiate each factor:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{d}{d𝒙}\Big[𝒙^{2}\Big]=2𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{d}{d𝒙}\Big[𝓮^{-2𝒙}\Big]=𝓮^{-2𝒙}\cdot\dfrac{d}{d𝒙}\Big[-2𝒙\Big]$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\dfrac{d}{d𝒙}\Big[-2𝒙\Big]=-2$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Combine the results:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$2𝒙𝓮^{-2𝒙}-2𝒙^{2}𝓮^{-2𝒙}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Factor the common terms:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$2𝒙𝓮^{-2𝒙}(1-𝒙)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=3370" target="_blank">[56:10]</a>.
+            🧩 Example – Differentiate the function $𝒚=\ln(𝓮^{\sqrt{𝒙}}+𝓮^{-\sqrt{𝒙}})$. – <span
+              class="image-container"><a href="../img/Calculus 2 Lecture 6.3/[56-10]-01.png"
+                target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.3/[56-10]-01.png"
+                alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Identify the outer and inner structure.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Outer function: $\ln(\cdot)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Inner function: $𝓮^{\sqrt{𝒙}}+𝓮^{-\sqrt{𝒙}}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Apply the chain rule for the logarithm.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{d𝒚}{d𝒙}=\dfrac{1}{𝓮^{\sqrt{𝒙}}+𝓮^{-\sqrt{𝒙}}}\cdot\dfrac{d}{d𝒙}\Big[𝓮^{\sqrt{𝒙}}+𝓮^{-\sqrt{𝒙}}\Big]$
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Differentiate each exponential term.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{d}{d𝒙}\Big[𝓮^{\sqrt{𝒙}}\Big]=𝓮^{\sqrt{𝒙}}\cdot\dfrac{d}{d𝒙}\Big[\sqrt{𝒙}\Big]$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\dfrac{d}{d𝒙}\Big[\sqrt{𝒙}\Big]=\dfrac{1}{2\sqrt{𝒙}}$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{d}{d𝒙}\Big[𝓮^{-\sqrt{𝒙}}\Big]=𝓮^{-\sqrt{𝒙}}\cdot\dfrac{d}{d𝒙}\Big[-\sqrt{𝒙}\Big]$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\dfrac{d}{d𝒙}\Big[-\sqrt{𝒙}\Big]=-\dfrac{1}{2\sqrt{𝒙}}$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Combine the derivatives.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{d}{d𝒙}\Big[𝓮^{\sqrt{𝒙}}+𝓮^{-\sqrt{𝒙}}\Big]$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$=\dfrac{𝓮^{\sqrt{𝒙}}}{2\sqrt{𝒙}}-\dfrac{𝓮^{-\sqrt{𝒙}}}{2\sqrt{𝒙}}$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Substitute back into the logarithmic derivative.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{d𝒚}{d𝒙}=\dfrac{1}{𝓮^{\sqrt{𝒙}}+𝓮^{-\sqrt{𝒙}}}\cdot\dfrac{𝓮^{\sqrt{𝒙}}-𝓮^{-\sqrt{𝒙}}}{2\sqrt{𝒙}}$
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Final simplified form.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{d𝒚}{d𝒙}=\dfrac{𝓮^{\sqrt{𝒙}}-𝓮^{-\sqrt{𝒙}}}{2\sqrt{𝒙}\big(𝓮^{\sqrt{𝒙}}+𝓮^{-\sqrt{𝒙}}\big)}$
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=3370" target="_blank">[56:10]</a>.
+            🧩 Example – First identify which rules are needed to compute the derivative. – <span
+              class="image-container"><a href="../img/Calculus 2 Lecture 6.3/[56-10]-02.png"
+                target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.3/[56-10]-02.png"
+                alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Function 1:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇(𝒙)=𝓮^{𝒙\ln 𝒙}$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">Chain rule.</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">Product rule (inside the exponent $𝒙\ln 𝒙$).</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Function 2:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒈(𝒙)=\big(𝓮^{2𝒙}-𝓮^{-3𝒙}\big)^{5}$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">Chain rule (outer power).</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">Sum / difference rule.</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">Chain rule (inside each exponential).</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Function 3:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒉(𝒙)=𝓮^{-𝒙}\cdot\tan(𝓮^{𝒙})$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">Product rule.</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">Chain rule (for $𝓮^{-𝒙}$).</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">Chain rule (for $\tan(𝓮^{𝒙})$).</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=4008" target="_blank">[1:6:48]</a>.
+        Integral calculus of natural exponential functions.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Fundamental integration rule: $\displaystyle \int 𝓮^{𝒙}\,𝒅𝒙=𝓮^{𝒙}+𝓒$.</li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=4095"
+              target="_blank">[1:08:15]</a>. 🧩 Example – Use of substitution with the variable $𝒖$: $\displaystyle
+            \int 𝓮^{2𝒙}\,𝒅𝒙$ – <span class="image-container"><a
+                href="../img/Calculus 2 Lecture 6.3/[1-08-15]-01.png" target="_blank">[📷image]</a><img
+                src="../img/Calculus 2 Lecture 6.3/[1-08-15]-01.png" alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Choose the substitution:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Let $𝒖=2𝒙$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒅𝒖=2𝒅𝒙$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒅𝒙=\dfrac{𝒅𝒖}{2}$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Rewrite the integral in terms of $𝒖$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int 𝓮^{𝒖}\left(\dfrac{𝒅𝒖}{2}\right)$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$=\dfrac{1}{2}\displaystyle \int 𝓮^{𝒖}\,𝒅𝒖$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Integrate with respect to $𝒖$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{1}{2}𝓮^{𝒖}+𝓒$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Substitute back to the original variable:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{1}{2}𝓮^{2𝒙}+𝓒$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=4305"
+              target="_blank">[1:11:45]</a>. 🧩 Example – Use of substitution with the variable $𝒖$: $\displaystyle
+            \int \dfrac{𝓮^{2/𝒙}}{𝒙^{2}}\,𝒅𝒙$<br> – <span class="image-container"><a
+                href="../img/Calculus 2 Lecture 6.3/[1-11-45]-01.png" target="_blank">[📷image]</a><img
+                src="../img/Calculus 2 Lecture 6.3/[1-11-45]-01.png" alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Choose the substitution:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Let $𝒖=\dfrac{2}{𝒙}$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒖=2𝒙^{-1}$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒅𝒖=-2𝒙^{-2}\,𝒅𝒙$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒅𝒖=-\dfrac{2}{𝒙^{2}}\,𝒅𝒙$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Solve for $𝒅𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒅𝒙=\left(\dfrac{𝒙^{2}}{-2}\right)𝒅𝒖$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Rewrite the integral in terms of $𝒖$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int
+                    \left(\dfrac{𝓮^{𝒖}}{𝒙^{2}}\right)\cdot\left(\dfrac{𝒙^{2}}{-2}\right)\,𝒅𝒖$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$=-\dfrac{1}{2}\displaystyle \int 𝓮^{𝒖}\,𝒅𝒖$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Integrate with respect to $𝒖$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$-\dfrac{1}{2}𝓮^{𝒖}+𝓒$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Substitute back to the original variable:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$-\ln|1+𝓮^{-𝒙}|+𝓒$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=4605"
+              target="_blank">[1:16:45]</a>. 🧩 Example – Use of substitution with the variable $𝒖$: – <span
+              class="image-container"><a href="../img/Calculus 2 Lecture 6.3/[1-16-45]-01.png"
+                target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.3/[1-16-45]-01.png"
+                alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Choose the substitution:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Let $𝒖=1+𝓮^{-𝒙}$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒅𝒖=𝓮^{-𝒙}\cdot\dfrac{d}{d𝒙}\Big[-𝒙\Big]\,𝒅𝒙$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒅𝒖=-𝓮^{-𝒙}\,𝒅𝒙$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Solve for $𝒅𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒅𝒙=\dfrac{𝒅𝒖}{-𝓮^{-𝒙}}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Rewrite the integral in terms of $𝒖$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int
+                    \left(\dfrac{𝓮^{-𝒙}}{𝒖}\right)\cdot\left(\dfrac{𝒅𝒖}{-𝓮^{-𝒙}}\right)$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$=-\displaystyle \int \dfrac{1}{𝒖}\,𝒅𝒖$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Integrate with respect to $𝒖$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$-\displaystyle \int \dfrac{1}{𝒖}\,𝒅𝒖$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$=-\ln|𝒖|+𝓒$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Substitute back to the original variable:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$-\ln|1+𝓮^{-𝒙}|+𝓒$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=5HlW7OnXUT4&t=4992"
+              target="_blank">[1:23:12]</a>. 🧩 Example – Use of substitution with the variable $𝒖$: $\displaystyle
+            \int 𝓮^{-𝒙}\sec\big(𝓮^{-𝒙}\big)\,𝒅𝒙$ – <span class="image-container"><a
+                href="../img/Calculus 2 Lecture 6.3/[1-23-12]-01.png" target="_blank">[📷image]</a><img
+                src="../img/Calculus 2 Lecture 6.3/[1-23-12]-01.png" alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Choose the substitution:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Let $𝒖=𝓮^{-𝒙}$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒅𝒖=-𝓮^{-𝒙}\,𝒅𝒙$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$-𝒅𝒖=𝓮^{-𝒙}\,𝒅𝒙$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Rewrite the integral in terms of $𝒖$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \sec(𝒖)(-𝒅𝒖)$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$=-\displaystyle \int \sec(𝒖)\,𝒅𝒖$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use the standard integral:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \sec(𝒖)\,𝒅𝒖=\ln|\sec(𝒖)+\tan(𝒖)|+𝓒$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Apply the result and substitute back:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$-\ln|\sec(𝒖)+\tan(𝒖)|+𝓒$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$-\ln|\sec(𝓮^{-𝒙})+\tan(𝓮^{-𝒙})|+𝓒$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+
+  </article>
+</body>
+
+</html>

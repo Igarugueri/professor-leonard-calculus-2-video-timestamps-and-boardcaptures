@@ -1,0 +1,5 @@
+﻿image_name: [43-10]Example 2 — Ratio test ∑[𝒏=1,∞] 𝒏!∕𝒏ⁿ_1.png
+file_name: [43-10]-01.png
+timestamp: 43:10
+counter: 01
+folder: Calculus 2 Lecture 9.6

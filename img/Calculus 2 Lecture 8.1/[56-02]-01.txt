@@ -1,0 +1,5 @@
+﻿image_name: [56-02]Example 2 — Solve 𝒅𝒚∕𝒅𝒙 = 𝒙𝒚 ∕ (𝒙² + 1)_1.png
+file_name: [56-02]-01.png
+timestamp: 56:02
+counter: 01
+folder: Calculus 2 Lecture 8.1

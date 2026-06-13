@@ -1,0 +1,5 @@
+﻿image_name: [1-03]Derivation of the Integration by Parts formula from the Product Rule_2.png
+file_name: [1-03]-02.png
+timestamp: 1:03
+counter: 02
+folder: Calculus 2 Lecture 7.1

@@ -1,0 +1,5 @@
+﻿image_name: [48-58]Example 4 — Without using the reduction formula ∫ sin⁶(𝒙) 𝒅𝒙_3.png
+file_name: [48-58]-03.png
+timestamp: 48:58
+counter: 03
+folder: Calculus 2 Lecture 7.2

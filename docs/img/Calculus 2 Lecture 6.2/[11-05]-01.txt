@@ -1,0 +1,5 @@
+﻿image_name: [11-05]Example Domain and rane graphycally.png
+file_name: [11-05]-01.png
+timestamp: 11:05
+counter: 01
+folder: img

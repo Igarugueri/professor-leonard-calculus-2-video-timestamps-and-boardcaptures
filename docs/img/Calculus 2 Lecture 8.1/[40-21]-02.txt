@@ -1,0 +1,5 @@
+﻿image_name: [40-21]Example 1 — Solve 𝒅𝒚∕𝒅𝒙 = 𝒚∕𝒙_2.png
+file_name: [40-21]-02.png
+timestamp: 40:21
+counter: 02
+folder: Calculus 2 Lecture 8.1

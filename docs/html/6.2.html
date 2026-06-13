@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ｃａｌｃｕｌｕｓ　２　ｌｅｃｔｕｒｅ　６．２：　Dｅｒｉｖａｔｉｖｅｓ　Oｆ　Iｎｖｅｒｓｅ　Fｕｎｃｔｉｏｎｓ</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      chtml: {
+        scale: 1.05,
+        matchFontHeight: false,
+        displayAlign: 'center',
+        displayIndent: '0em',
+        linebreaks: { automatic: false }
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <article class="chapter">
+    <h1><strong> Ｃａｌｃｕｌｕｓ　２　ｌｅｃｔｕｒｅ　６．２</h1>
+    <h1>　Dｅｒｉｖａｔｉｖｅｓ　Oｆ　Iｎｖｅｒｓｅ　Fｕｎｃｔｉｏｎｓ</strong></h1>
+
+    <h2>Ｅｘｉｓｔｅｎｃｅ, Ｎｏｔａｔｉｏｎ ａｎｄ Ａｌｇｅｂｒａｉｃ Ｐｒｏｐｅｒｔｉｅｓ ｏｆ Ｉｎｖｅｒｓｅ Ｆｕｎｃｔｉｏｎｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=HnsUNWNYZ28&t=0" target="_blank">0:00</a>.
+        Introduction to Section 6.2: Properties and derivatives of inverse functions.</li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=HnsUNWNYZ28&t=29" target="_blank">0:29</a>.
+        Fundamental requirements for the existence of an inverse function.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">One-to-one functions and uniqueness of outputs for each input.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use of the horizontal line test to verify injectivity. – <span class="image-container">
+              <a href="../img/Calculus 2 Lecture 6.2/[0-29]-02.png" target="_blank">[📷image]</a>
+              <img src="../img/Calculus 2 Lecture 6.2/[0-29]-02.png" alt="Preview" />
+            </span></li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Definition of the inverse function by interchanging inputs and outputs.– <span
+              class="image-container">
+              <a href="../img/Calculus 2 Lecture 6.2/[0-29]-01.png" target="_blank">[📷image]</a>
+              <img src="../img/Calculus 2 Lecture 6.2/[0-29]-01.png" alt="Preview" />
+            </span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">In a function, the input is $𝒙$ and the output is $𝒚$. To obtain the inverse
+                function, the roles of input and output are exchanged:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">What was the input becomes the output, and what was the output becomes the input.
+                    That is, if the original function maps<br>$𝒙\rightarrow 𝒚$ the inverse function maps
+                    $𝒚\rightarrow 𝒙$ In practice, to compute an inverse function:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">1) Write $𝒚=𝒇(𝒙)$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">2) Interchange $𝒙$ and $𝒚$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">3) Solve for $𝒚$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">🧩 Example – : $𝒇(𝒙)=2𝒙+1$
+                        <ul>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">After interchanging variables: $𝒙=2𝒚+1$</li>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">Solving for $𝒚=\dfrac{𝒙-1}{2}$</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=HnsUNWNYZ28&t=113" target="_blank">1:53</a>. Notation
+        and basic properties of 𝒇⁻¹. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.2/[1-53]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 6.2/[1-53]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Distinction between inverse notation $𝒇^{-1}$ and exponents.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Verification of inverses using composition of functions.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Identity property: $𝒇^{-1}(𝒇(𝒙))=𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Identity property: $𝒇(𝒇^{-1}(𝒙))=𝒙$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">The $𝒙$ in $𝒇^{-1}(𝒙)$ is not the same $𝒙$ as in the original function; it
+                    represents a y-value.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｆｉｎｄｉｎｇ ｔｈｅ Ｉｎｖｅｒｓｅ Ｆｕｎｃｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=HnsUNWNYZ28&t=257" target="_blank">4:17</a>.
+        Algebraic procedure to determine the inverse function. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.2/[4-17]-01.png" target="_blank">[image-1]</a>
+          <img src="../img/Calculus 2 Lecture 6.2/[4-17]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.2/[4-17]-02.png" target="_blank">[image-2]</a>
+          <img src="../img/Calculus 2 Lecture 6.2/[4-17]-02.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Steps for interchanging the variables $𝒙$ and $𝒚$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">🧩 Example – Find the inverse: $𝒇(𝒙)=\dfrac{1}{\sqrt{(2𝒙-3)}}$.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Write the function using $𝒚$:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒚=\dfrac{1}{\sqrt{(2𝒙-3)}}$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Interchange variables:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒙=\dfrac{1}{\sqrt{(2𝒚-3)}}$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Solve for $𝒚$:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\sqrt{(2𝒚-3)}=\dfrac{1}{𝒙}$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$2𝒚-3=\left(\dfrac{1}{𝒙}\right)^{2}$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$2𝒚-3=\dfrac{1}{𝒙^{2}}$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$2𝒚=\dfrac{1}{𝒙^{2}}+3$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒚=\dfrac{1}{2𝒙^{2}}+\dfrac{3}{2}$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒚=\dfrac{1+3𝒙^{2}}{2𝒙^{2}}$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Definition of the inverse function:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$𝒇^{-1}(𝒙)=\dfrac{1+3𝒙^{2}}{2𝒙^{2}}$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Verification by composition:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">
+                        $𝒇^{-1}(𝒇(𝒙))=\dfrac{1+3\left(\dfrac{1}{\sqrt{(2𝒙-3)}}\right)^{2}}{2\left(\dfrac{1}{\sqrt{(2𝒙-3)}}\right)^{2}}$
+                        <ul>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">Combine terms over a common denominator:
+                            <ul>
+                              <!-- ▲ nivel-7 -->
+                              <li class="level-7">$\dfrac{1+\dfrac{3}{2𝒙-3}}{\dfrac{2}{2𝒙-3}}$
+                                <ul>
+                                  <!-- ◭ nivel-8 -->
+                                  <li class="level-8">Multiply numerator and denominator by $(2𝒙-3)$:
+                                    <ul>
+                                      <!-- △ nivel-9 -->
+                                      <li class="level-9">$\dfrac{2𝒙-3+3}{2}=\dfrac{2𝒙}{2}=𝒙$ — Each function exactly
+                                        undoes what the other does; $𝒇^{-1}(𝒇(𝒙))=𝒙$ ∎</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=HnsUNWNYZ28&t=640" target="_blank">10:40</a>. The
+        idea behind an inverse function.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">For every one-to-one function, its inverse can be found and is also one-to-one.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｇｒａｐｈｉｃａｌ Ｉｎｔｅｒｐｒｅｔａｔｉｏｎ Ｄｅｒｉｖａｔｉｖｅ ｏｆ ｔｈｅ Ｉｎｖｅｒｓｅ Ｆｕｎｃｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=HnsUNWNYZ28&t=665" target="_blank">11:05</a>.
+        Graphical and geometric relationship of inverse functions. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.2/[11-05]-02.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 6.2/[11-05]-02.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">1) Symmetry and reflection of the graph across the identity line $𝒚=𝒙$.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">2) I̲f̲ $𝒇$ is continuous on a given domain, t̲h̲e̲n̲ $𝒇^{-1}$ is continuous on a
+            corresponding domain.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Continuity theorems for inverse functions.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Set relationship: the domain of $𝒇$ becomes the range of $𝒇^{-1}$.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">The range of $𝒇$ determines the domain of $𝒇^{-1}$.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">🧩 Example – Domain and range shown graphically. – <span class="image-container">
+                      <a href="../img/Calculus 2 Lecture 6.2/[11-05]-01.png" target="_blank">[📷image]</a>
+                      <img src="../img/Calculus 2 Lecture 6.2/[11-05]-01.png" alt="Preview" />
+                    </span>
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">The graph of $𝒇$ and its inverse illustrate how the domain of $𝒇$ becomes
+                        the range of $𝒇^{-1}$ under reflection across $𝒚=𝒙$.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=HnsUNWNYZ28&t=1055" target="_blank">17:35</a>. 3)
+            Differentiability and computation of derivatives of inverse functions.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Existence theorem for the derivative of $𝒇^{-1}$ when $𝒇$ is differentiable.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">I̲f̲ $𝒇$ is differentiable, t̲h̲e̲n̲ $𝒇^{-1}$ is also differentiable.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Derivation of the formula for the derivative of the inverse function.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Derivative formula:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\dfrac{d}{d𝒙}\Big[𝒇^{-1}(𝒙)\Big]=\dfrac{1}{𝒇'(𝒇^{-1}(𝒙))}$ OR<br>If
+                        $𝓰(𝒙)=𝒇^{-1}$ then $𝓰'(𝒙)=\dfrac{1}{𝒇'(𝓰(𝒙))}$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｅｖａｌｕａｔｉｎｇ Ｉｎｖｅｒｓｅ Ｆｕｎｃｔｉｏｎｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">[21:5]. Evaluating inverse functions at specific points without explicit computation.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">S͟t͟a͟t͟m͟e͟n͟t͟ : $𝒇(𝒙)=𝓪$ ⇔ $𝒇'(𝓪)=𝒙$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=HnsUNWNYZ28&t=1347" target="_blank">22:27</a>. 🧩
+            Example – : $𝒇(𝒙)=𝒙^{3}-1$, find $𝒇^{-1}(𝓪)$ when $𝓪=-1$ – <span class="image-container">
+              <a href="../img/Calculus 2 Lecture 6.2/[22-27]-01.png" target="_blank">[📷image]</a>
+              <img src="../img/Calculus 2 Lecture 6.2/[22-27]-01.png" alt="Preview" />
+            </span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">1) Set $𝒇(𝒙)=𝓪$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙^{3}-1=-1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">2) Solve for $𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙^{3}=0$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙=0$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">3) Find $𝒇^{-1}(𝓪)$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇^{-1}(-1)=0$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=HnsUNWNYZ28&t=1640" target="_blank">27:20</a>. 🧩
+            Example – $𝒇(𝒙)=\left(\dfrac{3}{\pi}\right)𝒙+\sin(𝒙)$, find $𝒇^{-1}(𝓪)$ when $𝓪=1$ – <span
+              class="image-container">
+              <a href="../img/Calculus 2 Lecture 6.2/[27-20]-01.png" target="_blank">[📷image]</a>
+              <img src="../img/Calculus 2 Lecture 6.2/[27-20]-01.png" alt="Preview" />
+            </span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">S͟t͟a͟t͟m͟e͟n͟t͟ : $𝒇(𝒙)=𝓪$ ⇔ $𝒇^{-1}(𝓪)=𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">1) Set $𝒇(𝒙)=𝓪$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\left(\dfrac{3}{\pi}\right)𝒙+\sin(𝒙)=1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">2) Solve for $𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙=\dfrac{\pi}{6}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">3) Verification:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\left(\dfrac{3}{\pi}\right)\left(\dfrac{\pi}{6}\right)+\sin\left(\dfrac{\pi}{6}\right)=\dfrac{1}{2}+\dfrac{1}{2}=1$
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">4) Evaluate the inverse:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇^{-1}(1)=\dfrac{\pi}{6}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ａｐｐｌｉｃａｔｉｏｎｓ ｏｆ ｔｈｅ Ｉｎｖｅｒｓｅ Ｄｅｒｉｖａｔｉｖｅ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=HnsUNWNYZ28&t=2274" target="_blank">37:54</a>.
+        Application of the derivative of the inverse function evaluated at a given point.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">🧩 Example – Find the derivative of the inverse of: $𝒇(𝒙)=𝒙^{3}$ at the point $(2,8)$
+            where $𝒈=𝒇^{-1}$. – <span class="image-container">
+              <a href="../img/Calculus 2 Lecture 6.2/[37-54]-01.png" target="_blank">[📷image]</a>
+              <img src="../img/Calculus 2 Lecture 6.2/[37-54]-01.png" alt="Preview" />
+            </span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Identify the given point on 𝒇:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇(2)=2^{3}=8$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Compute the derivative of 𝒇:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇'(𝒙)=3𝒙^{2}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Identify the corresponding value on the inverse function:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒈(8)=2$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Apply the derivative formula for inverse functions:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒈'(8)=\dfrac{1}{𝒇'(2)}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒈'(8)=\dfrac{1}{3\cdot 2^{2}}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒈'(8)=\dfrac{1}{12}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=HnsUNWNYZ28&t=2340" target="_blank">39:00</a>. 🧩
+            Example – Find the derivative of the inverse of $𝒇(𝒙)=\left(𝒙^{2}+1\right)^{3}$ at the point $(1,8)$,
+            where $𝒈=𝒇^{-1}$. – <span class="image-container">
+              <a href="../img/Calculus 2 Lecture 6.2/[39-00]-01.png" target="_blank">[📷image]</a>
+              <img src="../img/Calculus 2 Lecture 6.2/[39-00]-01.png" alt="Preview" />
+            </span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Identify the given point on 𝒇:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇(1)=(1^{2}+1)^{3}=8$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Identify the corresponding value on the inverse function:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒈(8)=1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Compute the derivative of 𝒇:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇'(𝒙)=6𝒙(𝒙^{2}+1)^{2}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Apply the derivative formula for inverse functions:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒈'(8)=\dfrac{1}{𝒇'(𝒈(8))}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒈'(8)=\dfrac{1}{𝒇'(1)}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒈'(8)=\dfrac{1}{24}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+  </article>
+</body>
+
+</html>

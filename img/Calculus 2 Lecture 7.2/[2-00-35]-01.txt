@@ -1,0 +1,5 @@
+﻿image_name: [2-00-35]Strategies for cases not covered by the standard patterns.png
+file_name: [2-00-35]-01.png
+timestamp: 2:00:35
+counter: 01
+folder: Calculus 2 Lecture 7.2

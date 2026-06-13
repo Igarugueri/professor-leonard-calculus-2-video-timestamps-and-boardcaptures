@@ -1,0 +1,5 @@
+﻿image_name: [43-15]Example — limₓ→₀⁺ (1∕𝒙 − 1∕(1 − cos 𝒙))_2.png
+file_name: [43-15]-02.png
+timestamp: 43:15
+counter: 02
+folder: Calculus 2 Lecture 6.7

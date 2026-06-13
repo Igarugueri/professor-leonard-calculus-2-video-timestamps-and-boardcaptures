@@ -1,0 +1,5 @@
+﻿image_name: [23-11]Example 1 — 𝒙 = 𝒕² - 4, 𝒚 = 2𝒕 on -1 ≤ 𝒕 ≤ 2.png
+file_name: [23-11]-01.png
+timestamp: 23:11
+counter: 01
+folder: Calculus 2 Lecture 10.2

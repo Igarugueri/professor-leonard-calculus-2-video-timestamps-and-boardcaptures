@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ６．５－Ｃａｌｃｕｌｕｓ ｏｆ Ｉｎｖｅｒｓｅ Ｔｒｉｇｏｎｏｍｅｔｒｉｃ Ｆｕｎｃｔｉｏｎｓ</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <article class="chapter">
+        <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ６．５－Ｃａｌｃｕｌｕｓ ｏｆ Ｉｎｖｅｒｓｅ Ｔｒｉｇｏｎｏｍｅｔｒｉｃ Ｆｕｎｃｔｉｏｎｓ</h1>
+
+        <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=1" target="_blank">[0:01]</a>.
+                Intro𝒅𝒖ction to inverse trigonometric functions and fundamental properties.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">One-to-one requirement: a function must be injective to have an inverse.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">A function is injective if different inputs always pro𝒅𝒖ce different
+                                outputs.
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">This guarantees that each value in the range corresponds to
+                                        exactly one value in the domain.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Without injectivity, an inverse function would be ambiguous (one
+                                        output mapping to multiple inputs).</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Need for domain restriction in periodic trigonometric functions.
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Trigonometric functions like $\sin$, $\cos$, and $\tan$ are
+                                        periodic and repeat values infinitely many times.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Restricting the domain removes this repetition and forces the
+                                        function to be one-to-one.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">The chosen restricted interval is called the principal interval
+                                        and defines the principal values of the inverse.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｉｎｖｅｒｓｅ　Ｓｉｎｅ　Ｆｕｎｃｔｉｏｎ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=101" target="_blank">[1:41]</a>.
+                Analysis of the sine function $𝒚=\sin(𝒙)$ and its graphical behavior. – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[1-41]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 6.5/[1-41]-01.png"
+                        alt="Preview" /></span> – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 6.5/[1-41]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 6.5/[1-41]-02.png" alt="Preview" /></span> – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[1-41]-03.png"
+                        target="_blank">[📷image-3]</a><img src="../img/Calculus 2 Lecture 6.5/[1-41]-03.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key graphical properties.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The sine function is periodic and oscillates between $-1$ and $1$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">It fails the <strong>horizontal line test</strong> on $\mathbb{R}$, so
+                                it is not one-to-one on its full domain.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Restricting the domain to the interval $[-\pi/2,\pi/2]$ to ensure injectivity.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">We restrict the domain so that the inverse is a function.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">On this interval, $\sin(𝒙)$ is strictly increasing.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Every horizontal line intersects the graph at most once.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Formal definition:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=\sin^{-1}(𝒙)$ if and only if $\sin(𝒚)=𝒙$.
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Here, 𝒚 is restricted to the principal interval
+                                        $[-\pi/2,\pi/2]$.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interchange principle.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The original domain $[-\pi/2,\pi/2]$ becomes the range of the inverse
+                                function.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The original range $[-1,1]$ becomes the domain of the inverse.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final specification for $\sin^{-1}(𝒙)$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Domain: $[-1,1]$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Range: $[-\pi/2,\pi/2]$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｉｎｖｅｒｓｅ　Ｃｏｓｉｎｅ　Ｆｕｎｃｔｉｏｎ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=619" target="_blank">[10:19]</a>.
+                Study of the cosine function $𝒚=\cos(𝒙)$ and restricted domain. – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 6.5/[10-19]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 6.5/[10-19]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key graphical properties.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The cosine function is periodic and oscillates between $-1$ and $1$.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">On its full domain $\mathbb{R}$, it fails the horizontal line test.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Selection of the interval $[0,\pi]$ to make the function one-to-one.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">On the interval $[0,\pi]$, $\cos(𝒙)$ is strictly decreasing.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Every horizontal line intersects the graph at most once.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">This interval is chosen to include both extreme values: $\cos(0)=1$ and
+                                $\cos(\pi)=-1$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interchange principle.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The restricted domain $[0,\pi]$ becomes the range of the inverse
+                                function.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The original range $[-1,1]$ becomes the domain of the inverse.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final specification for $\cos^{-1}(𝒙)$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Domain: $[-1,1]$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Range: $[0,\pi]$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｉｎｖｅｒｓｅ　Ｔａｎｇｅｎｔ　Ｆｕｎｃｔｉｏｎ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=855" target="_blank">[14:15]</a>.
+                Analysis of the tangent function $𝒚=\tan(𝒙)$ and asymptotic behavior. – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[14-15]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[14-15]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key graphical properties.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The tangent function is periodic and has vertical asymptotes at odd
+                                multiples of $\pi/2$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">It fails the horizontal line test on $\mathbb{R}$ 𝒅𝒖e to periodicity.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Restriction to the open interval $(-\pi/2,\pi/2)$ 𝒅𝒖e to vertical asymptotes.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">On this interval, $\tan(𝒙)$ is strictly increasing.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The function is continuous on $(-\pi/2,\pi/2)$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interchange principle.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The restricted domain $(-\pi/2,\pi/2)$ becomes the range of the inverse
+                                function.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Range and inverse implications.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Range of $\tan(𝒙)$ on $(-\pi/2,\pi/2)$: $(-\infty,\infty)$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore, the domain of $\tan^{-1}(𝒙)$ is $(-\infty,\infty)$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final specification for $\tan^{-1}(𝒙)$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Domain: $(-\infty,\infty)$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Range: $(-\pi/2,\pi/2)$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｏｔｈｅｒ　Ｉｎｖｅｒｓｅ　Ｔｒｉｇｏｎｏｍｅｔｒｉｃ　Ｆｕｎｃｔｉｏｎｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=1019"
+                    target="_blank">[16:59]</a>. Study of $𝒚=\csc(𝒙)$. – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 6.5/[16-59]-01.png" target="_blank">[📷image-1]</a><img
+                        src="../img/Calculus 2 Lecture 6.5/[16-59]-01.png" alt="Preview" /></span> – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[16-59]-02.png"
+                        target="_blank">[📷image-2]</a><img src="../img/Calculus 2 Lecture 6.5/[16-59]-02.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Definition and discontinuities.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\csc(𝒙)=\dfrac{1}{\sin(𝒙)}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\csc(𝒙)$ is undefined where $\sin(𝒙)=0$ ($𝒙=k\pi$,
+                                $k\in\mathbb{Z}$), pro𝒅𝒖cing vertical asymptotes.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Graphical behavior.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The graph consists of separate branches above $1$ and below $-1$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">It fails the horizontal line test on $\mathbb{R}$, so its inverse would
+                                not be a function unless the domain is restricted.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=1374"
+                    target="_blank">[22:54]</a>. Graphical behavior of $𝒚=\sec(𝒙)$ and transformation to
+                $\sec^{-1}(𝒙)$. – <span class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[22-54]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[22-54]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Definition and discontinuities.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sec(𝒙)=\dfrac{1}{\cos(𝒙)}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sec(𝒙)$ is undefined where $\cos(𝒙)=0$ ($𝒙=\pi/2+k\pi$),
+                                pro𝒅𝒖cing vertical asymptotes.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Inverse function idea.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The domain must be restricted so $\sec(𝒙)$ becomes one-to-one.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Then $\sec^{-1}(𝒙)$ is defined using principal values on that
+                                restricted domain.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=1660"
+                    target="_blank">[27:40]</a>. Inverse cotangent function $\cot^{-1}(𝒙)$. – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[27-40]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[27-40]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Range and domain relationship.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cot(𝒙)$ is one-to-one on $(0,\pi)$ and its range is
+                                $(-\infty,\infty)$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore, the inverse function has:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Domain: $(-\infty,\infty)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Range: $(0,\pi)$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｅｖａｌｕａｔｉｎｇ　Ｉｎｖｅｒｓｅ　Ｔｒｉｇｏｎｏｍｅｔｒｉｃ　Ｅｘｐｒｅｓｓｉｏｎｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=1800"
+                    target="_blank">[30:00]</a>. 🧩 Example – Evaluation of inverse trigonometric expressions using
+                exact values: – <span class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[30-00]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[30-00]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key idea: evaluating an inverse trigonometric function means finding the angle
+                        𝒚<br> within the principal range such that the original trigonometric function equals<br> the
+                        given value.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important restriction: the solution must lie inside the restricted interval of
+                        the<br> inverse function, <strong>not just any angle that satisfies the equation.</strong></li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluation of $\sin^{-1}\big(\dfrac{1}{2}\big)$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Solve $\sin(𝒚)=\dfrac{1}{2}$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The angle must satisfy $𝒚\in[-\pi/2,\pi/2]$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore, $\sin^{-1}\big(\dfrac{1}{2}\big)=\pi/6$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluation of $\cos^{-1}\big(-\dfrac{\sqrt{3}}{2}\big)$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Solve $\cos(𝒚)=-\dfrac{\sqrt{3}}{2}$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The angle must lie in the interval $[0,\pi]$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">This places the angle in the second quadrant.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Hence, $\cos^{-1}\big(-\dfrac{\sqrt{3}}{2}\big)=\dfrac{5\pi}{6}$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluation of $\tan^{-1}(\sqrt{3})$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Solve $\tan(𝒚)=\sqrt{3}$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The principal range is $(-\pi/2,\pi/2)$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Hence, $\tan^{-1}(\sqrt{3})=\pi/3$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key warning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Inverse trigonometric functions do NOT return all possible angles.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">They return the unique angle within the principal interval.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｃｏｍｐｏｓｉｔｉｏｎ　ｏｆ　Ｉｎｖｅｒｓｅ　Ｔｒｉｇｏｎｏｍｅｔｒｉｃ　Ｆｕｎｃｔｉｏｎｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=2322"
+                    target="_blank">[38:42]</a>. 🧩 Example – Composition of trigonometric functions and geometric
+                identities: – <span class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[38-42]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[38-42]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"> Evaluation of $\tan\big(\cos^{-1}\big(\dfrac{1}{2}\big)\big)$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $\theta=\cos^{-1}\big(\dfrac{1}{2}\big)$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Then $\cos\theta=\dfrac{1}{2}$, with $\theta$ restricted to the
+                                principal range $[0,\pi]$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Right-triangle construction:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">
+                                        $\cos\theta=\dfrac{\text{adjacent}}{\text{hypotenuse}}=\dfrac{1}{2}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Choose adjacent $=1$ and hypotenuse $=2$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Opposite $=\sqrt{2^{2}-1^{2}}=\sqrt{3}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">
+                                        $\tan\theta=\dfrac{\text{opposite}}{\text{adjacent}}=\dfrac{\sqrt{3}}{1}=\sqrt{3}$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\tan\big(\cos^{-1}\big(\dfrac{1}{2}\big)\big)=\sqrt{3}$.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=2554"
+                            target="_blank">[42:34]</a>. Evaluation of $\cot\big(\sin^{-1}\big(\dfrac{1}{3}\big)\big)$.
+                        – <span class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[42-34]-01.png"
+                                target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[42-34]-01.png"
+                                alt="Preview" /></span>
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $\theta=\sin^{-1}\big(\dfrac{1}{3}\big)$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Then $\sin\theta=\dfrac{1}{3}$, with $\theta$ in the principal range
+                                $[-\pi/2,\pi/2]$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Construct a right triangle:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Opposite side $=1$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Hypotenuse $=3$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Adjacent side $=\sqrt{3^{2}-1^{2}}=\sqrt{8}=2\sqrt{2}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Compute the cotangent:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">
+                                        $\cot\theta=\dfrac{\text{adjacent}}{\text{opposite}}=\dfrac{2\sqrt{2}}{1}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\cot\big(\sin^{-1}\big(\dfrac{1}{3}\big)\big)=2\sqrt{2}$.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｃａｎｃｅｌｌａｔｉｏｎ　Ｐｒｏｐｅｒｔｉｅｓ　ａｎｄ　Ｐｒｉｎｃｉｐａｌ　Ｖａｌｕｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=2760"
+                    target="_blank">[46:00]</a>. Cancellation properties and the importance of domain restrictions. –
+                <span class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[46-00]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[46-00]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Direct cancellation (function composed with its inverse):
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin(\sin^{-1}(𝒙))=𝒙$, for $-1\le 𝒙\le 1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos(\cos^{-1}(𝒙))=𝒙$, for $-1\le 𝒙\le 1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\tan(\tan^{-1}(𝒙))=𝒙$, for $-\infty<𝒙<\infty$< /li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reverse cancellation (inverse composed with the function):
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin^{-1}(\sin 𝒙)=𝒙$, for $-\pi/2\le 𝒙\le \pi/2$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos^{-1}(\cos 𝒙)=𝒙$, for $0\le 𝒙\le \pi$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\tan^{-1}(\tan 𝒙)=𝒙$, for $-\pi/2<𝒙<\pi /2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The inverse does not “undo” the function everywhere — it only undoes it
+                                on the interval where the function is one-to-one.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Cancellation only works when the input lies in the restricted domain
+                                (principal interval) of the inverse function.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Outside these intervals, inverse trigonometric functions return the
+                                principal value, not the original angle.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=2960"
+                    target="_blank">[49:20]</a>. 🧩 Example – Cancellation using inverse trigonometric functions:
+                $\sin(\sin^{-1}(0.3))$ – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 6.5/[49-20]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 6.5/[49-20]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key identity:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin(\sin^{-1}(𝒙))=𝒙$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">valid for $-1\le 𝒙\le 1$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Domain check:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0.3\in[-1,1]$ ✓</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Explanation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin^{-1}(𝒙)$ returns an angle whose sine is 𝒙.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Applying $\sin$ to that angle recovers the original value 𝒙.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Since 0.3 is within the domain of $\sin^{-1}$, the cancellation is
+                                valid.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin(\sin^{-1}(0.3))=0.3$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=2995"
+                    target="_blank">[49:55]</a>. 🧩 Example – Cancellation using inverse trigonometric functions:
+                $\cos^{-1}(\cos(3\pi/2))$ – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 6.5/[49-55]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 6.5/[49-55]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 1: Evaluate the inner cosine
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos(3\pi/2)=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2: Rewrite the expression
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos^{-1}(\cos(3\pi/2))=\cos^{-1}(0)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 3: Interpret $\cos^{-1}(0)$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $\theta=\cos^{-1}(0)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">This means: $\cos(\theta)=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 4: Apply the principal range of $\cos^{-1}$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Range of $\cos^{-1}(𝒙)$ is $[0,\pi]$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">In this interval, $\cos(\theta)=0$ at:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\theta=\pi/2$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos^{-1}(\cos(3\pi/2))=\pi/2$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｄｅｒｉｖａｔｉｖｅｓ　ｏｆ　Ｉｎｖｅｒｓｅ　Ｔｒｉｇｏｎｏｍｅｔｒｉｃ　Ｆｕｎｃｔｉｏｎｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=3100"
+                    target="_blank">[51:40]</a>. Derivatives of inverse trigonometric functions – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[51-40]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[51-40]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">General form ($𝒖=𝒖(𝒙)$):
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">All formulas require the Chain Rule: multiply by $\dfrac{𝒅𝒖}{𝒅𝒙}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Inverse sine:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅}{𝒅𝑥}\Big[\sin^{-1}(𝒖)\Big]=\dfrac{1}{\sqrt{1-𝒖^{2}}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Inverse cosine:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅}{𝒅𝑥}\Big[\cos^{-1}(𝒖)\Big]=-\dfrac{1}{\sqrt{1-𝒖^{2}}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Inverse tangent:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅}{𝒅𝑥}\Big[\tan^{-1}(𝒖)\Big]=\dfrac{1}{1+𝒖^{2}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Inverse cosecant:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝑥}\Big[\csc^{-1}(𝒖)\Big]=-\dfrac{1}{\lvert
+                                𝒖\rvert\sqrt{𝒖^{2}-1}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$ </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Inverse secant:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝑥}\Big[\sec^{-1}(𝒖)\Big]=\dfrac{1}{\lvert
+                                𝒖\rvert\sqrt{𝒖^{2}-1}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$ </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Inverse cotangent:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅}{𝒅𝑥}\Big[\cot^{-1}(𝒖)\Big]=-\dfrac{1}{1+𝒖^{2}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=3372"
+                    target="_blank">[56:12]</a>. Proofs using implicit differentiation: $𝑦=\cos^{-1}(𝒙)$ – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[56-12]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[56-12]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 1: Rewrite using the inverse definition
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑦=\cos^{-1}(𝒙)\iff\cos(𝑦)=𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2: Differentiate both sides with respect to 𝒙
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝑥}\Big[\cos(𝑦)\Big]=\dfrac{𝒅}{𝒅𝑥}\Big[𝒙\Big]$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-\sin(𝑦)\cdot\dfrac{𝒅𝑦}{𝒅𝑥}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 3: Solve for $\dfrac{𝒅𝑦}{𝒅𝑥}$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝑦}{𝒅𝑥}=-\dfrac{1}{\sin(𝑦)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 4: Eliminate 𝑦 using a trigonometric identity
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin^{2}(𝑦)+\cos^{2}(𝑦)=1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin^{2}(𝑦)=1-\cos^{2}(𝑦)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 5: Substitute $\cos(𝑦)=𝒙$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin(𝑦)=\sqrt{1-𝒙^{2}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">(positive root 𝒅𝒖e to the range of arccos)</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 6: Final result
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝑦}{𝒅𝑥}=-\dfrac{1}{\sqrt{1-𝒙^{2}}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=3663"
+                    target="_blank">[1:01:03]</a>. Proofs using implicit differentiation: $\sec^{-1}(𝒙)$ – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[38-42]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 6.5/[38-42]-01.png"
+                        alt="Preview" /></span> – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 6.5/[1-01-03]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 6.5/[1-01-03]-02.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 1: Write the inverse definition
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑦=\sec^{-1}(𝒙)\iff\sec(𝑦)=𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2: Differentiate implicitly with respect to 𝒙
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝑥}\Big[\sec(𝑦)\Big]=\dfrac{𝒅}{𝒅𝑥}\Big[𝒙\Big]$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sec(𝑦)\cdot\tan(𝑦)\cdot\dfrac{𝒅𝑦}{𝒅𝑥}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 3: Solve for $\dfrac{𝒅𝑦}{𝒅𝑥}$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝑦}{𝒅𝑥}=\dfrac{1}{\sec(𝑦)\cdot\tan(𝑦)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 4: Express everything in terms of 𝒙
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">From $\sec(𝑦)=𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos(𝑦)=\dfrac{1}{𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 5: Construct a right triangle
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Hypotenuse $=𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Adjacent side $=1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Opposite side $=\sqrt{𝒙^{2}-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 6: Compute $\tan(𝑦)$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\tan(𝑦)=\dfrac{\text{opposite}}{\text{adjacent}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\tan(𝑦)=\sqrt{𝒙^{2}-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 7: Substitute into the derivative
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝑦}{𝒅𝑥}=\dfrac{1}{𝒙\cdot\sqrt{𝒙^{2}-1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 8: Intro𝒅𝒖ce absolute value (domain issue)
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sec^{-1}(𝒙)$ is defined for $\lvert 𝒙\rvert\ge 1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sec(𝑦)=𝒙$ can be positive or negative</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore $\lvert 𝒙\rvert$ is required</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝑥}\Big[\sec^{-1}(𝒙)\Big]=\dfrac{1}{\lvert
+                                𝒙\rvert\sqrt{𝒙^{2}-1}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=4060"
+                    target="_blank">[1:07:40]</a>. 🧩 Example – Derivative of: $\cos^{-1}(5𝒙)$. – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[1-07-40]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[1-07-40]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2: Recall the derivative rule
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅}{𝒅𝑥}\Big[\cos^{-1}(𝒖)\Big]=-\dfrac{1}{\sqrt{1-𝒖^{2}}}\cdot\dfrac{𝒅𝒖}{𝒅𝑥}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 3: Identify the inner function
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒖=5𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒖}{𝒅𝑥}=5$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 4: Apply the chain rule
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)=\Big(-\dfrac{1}{\sqrt{1-(5𝒙)^{2}}}\Big)\cdot 5$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 5: Simplify
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(5𝒙)^{2}=25𝒙^{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sqrt{1-25𝒙^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)=-\dfrac{5}{\sqrt{1-25𝒙^{2}}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=4250"
+                    target="_blank">[1:10:50]</a>. 🧩 Example – Derivative of: $\sin^{-1}\big(\sqrt{2𝒕+1}\big)$. –
+                <span class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[1-10-50]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[1-10-50]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2: Recall the derivative rule
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅}{𝒅𝒕}\Big[\sin^{-1}(𝒖)\Big]=\dfrac{1}{\sqrt{1-𝒖^{2}}}\cdot\dfrac{𝒅𝒖}{𝒅𝒕}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 3: Define the inner function
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒖=\sqrt{2𝒕+1}=(2𝒕+1)^{1/2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 4: Differentiate 𝒖 (chain rule)
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒖}{𝒅𝒕}=\dfrac{1}{2}(2𝒕+1)^{-1/2}\cdot 2$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒖}{𝒅𝒕}=\dfrac{1}{\sqrt{2𝒕+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 5: Substitute into the main rule
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅𝒚}{𝒅𝒕}=\dfrac{1}{\sqrt{1-\big(\sqrt{2𝒕+1}\big)^{2}}}\cdot\dfrac{1}{\sqrt{2𝒕+1}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 6: Simplify
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\big(\sqrt{2𝒕+1}\big)^{2}=2𝒕+1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sqrt{1-(2𝒕+1)}=\sqrt{-2𝒕}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒕}=\dfrac{1}{\sqrt{-2𝒕}\cdot\sqrt{2𝒕+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Domain check (required for inverse trigonometric functions)
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">For $\sin^{-1}(𝒖)$, the argument must satisfy: $-1\le 𝒖\le 1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Need: $0\le\sqrt{2𝒕+1}\le 1\iff 0\le 2𝒕+1\le 1$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore: $-\dfrac{1}{2}\le 𝒕\le 0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">When differentiating inverse trigonometric functions, <strong>checking
+                                    the domain is essential</strong>,<br> not only to ensure the function is defined,
+                                but also to guarantee that the derivative represents <strong>real values</strong>.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=4560"
+                    target="_blank">[1:16:00]</a>. 🧩 Example – Derivative of sec⁻¹(e⁻²𝒙) – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[1-16-00]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[1-16-00]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 1 — Start with the chain rule formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">If $𝒚=\sec^{-1}(𝒖)$, then<br> $\dfrac{𝒅𝒚}{𝒅𝑥}=\dfrac{1}{\lvert
+                                𝒖\rvert\sqrt{𝒖^{2}-1}}\cdot\dfrac{𝒅𝒖}{𝒅𝑥}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2 — Identify the inner function:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒖=e^{-2𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 3 — Differentiate 𝒖:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒖}{𝒅𝑥}=e^{-2𝒙}\cdot(-2)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 4 — Substitute into the formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝑥}=\Big(\dfrac{1}{\lvert
+                                e^{-2𝒙}\rvert\sqrt{\big(e^{-2𝒙}\big)^{2}-1}}\Big)\cdot\big(-2e^{-2𝒙}\big)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 5 — Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\lvert e^{-2𝒙}\rvert=e^{-2𝒙}$ (always positive)</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\big(e^{-2𝒙}\big)^{2}=e^{-4𝒙}\Rightarrow\dfrac{𝒅𝒚}{𝒅𝑥}=\dfrac{-2e^{-2𝒙}}{e^{-2𝒙}\sqrt{e^{-4𝒙}-1}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 6 — Cancel $e^{-2𝒙}$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">⇒ $\dfrac{𝒅𝒚}{𝒅𝑥}=-\dfrac{2}{\sqrt{e^{-4𝒙}-1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final answer:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚'=-\dfrac{2}{\sqrt{e^{-4𝒙}-1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Domain check (important for sec⁻¹):
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Need $\lvert e^{-2𝒙}\rvert\ge 1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">The inverse function $\sec^{-1}(𝒖)$ is defined only when:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\lvert 𝒖\rvert\ge 1$</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Why? Because:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\sec 𝒙=\dfrac{1}{\cos 𝒙}$</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Since $\lvert\cos 𝒙\rvert\le 1$, it follows that $\lvert\sec
+                                        𝒙\rvert\ge 1$.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Therefore, the natural domain of $\sec^{-1}(𝒖)$ is:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\lvert 𝒖\rvert\ge 1$</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$e^{-2𝒙}\ge 1\iff -2𝒙\ge 0\iff 𝒙\le 0$ </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Valid domain: $𝒙\le 0$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=4949"
+                    target="_blank">[1:22:29]</a>. 🧩 Example – Derivative of cot(cos⁻¹(𝒙²)). – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[1-22-29]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[1-22-29]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 1 — Chain rule (outer function cot):
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅}{𝒅𝑥}\big[\cot(𝒖)\big]=-\csc^{2}(𝒖)\cdot\dfrac{𝒅𝒖}{𝒅𝑥}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒖=\cos^{-1}(𝒙^{2})$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅𝒚}{𝒅𝑥}=-\csc^{2}\big(\cos^{-1}(𝒙^{2})\big)\cdot\dfrac{𝒅}{𝒅𝑥}\big[\cos^{-1}(𝒙^{2})\big]$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2 — Chain rule (inverse cosine):
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅}{𝒅𝑥}\big[\cos^{-1}(𝒗)\big]=-\dfrac{1}{\sqrt{1-𝒗^{2}}}\cdot\dfrac{𝒅𝒗}{𝒅𝑥}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Here $𝒗=𝒙^{2}\Rightarrow\dfrac{𝒅𝒗}{𝒅𝑥}=2𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅}{𝒅𝑥}\big[\cos^{-1}(𝒙^{2})\big]=-\Big(\dfrac{1}{\sqrt{1-(𝒙^{2})^{2}}}\Big)\cdot
+                                2𝒙=-\dfrac{2𝒙}{\sqrt{1-𝒙^{4}}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 3 — Substitute back and simplify signs:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅𝒚}{𝒅𝑥}=-\csc^{2}\big(\cos^{-1}(𝒙^{2})\big)\cdot\Big(-\dfrac{2𝒙}{\sqrt{1-𝒙^{4}}}\Big)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅𝒚}{𝒅𝑥}=\dfrac{2𝒙\cdot\csc^{2}\big(\cos^{-1}(𝒙^{2})\big)}{\sqrt{1-𝒙^{4}}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 4 — Triangle method to rewrite $\csc^{2}\big(\cos^{-1}(𝒙^{2})\big)$ in
+                        terms of 𝒙:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $\theta=\cos^{-1}(𝒙^{2})\iff\cos\theta=𝒙^{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">In a right triangle take:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">adjacent $=𝒙^{2}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">hypotenuse $=1$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">opposite $=\sqrt{1-𝒙^{4}}$ (since
+                                        $1^{2}-(𝒙^{2})^{2}=1-𝒙^{4}$)</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Then:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">
+                                        $\sin\theta=\dfrac{\text{opposite}}{\text{hypotenuse}}=\sqrt{1-𝒙^{4}}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\csc\theta=\dfrac{1}{\sin\theta}=\dfrac{1}{\sqrt{1-𝒙^{4}}}$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\csc^{2}\theta=\dfrac{1}{1-𝒙^{4}}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\csc^{2}\big(\cos^{-1}(𝒙^{2})\big)=\dfrac{1}{1-𝒙^{4}}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final answer:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅𝒚}{𝒅𝑥}=\Big(\dfrac{2𝒙}{1-𝒙^{4}}\Big)\cdot\dfrac{1}{\sqrt{1-𝒙^{4}}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝑥}=\dfrac{2𝒙}{(1-𝒙^{4})^{3/2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Domain note (real-valued):
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The inner function is $\cos^{-1}(𝒙^{2})$, which is only defined when
+                                its input lies in $[-1,1]$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore we require:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒙^{2}\in[-1,1]$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Since $𝒙^{2}$ is always non-negative, this re𝒅𝒖ces to:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$0\le 𝒙^{2}\le 1$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Taking square roots gives:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\lvert 𝒙\rvert\le 1$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Hence the valid real domain for the original function is:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$-1\le 𝒙\le 1$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Additionally, the derivative contains $\sqrt{1-𝒙^{4}}$ in the
+                                denominator.
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">To avoid division by zero we must also have $1-𝒙^{4}>0$.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">This again implies $\lvert 𝒙\rvert<1$ (strict inequality for
+                                            the derivative).</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Final practical domain for the derivative:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$-1<𝒙<1$< /li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">NOTE: Triangle method simplification (Right Triangle Method)
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Core idea: represent the inverse angle with a right triangle.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Assign sides using the defining ratio of the inverse function.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Use Pythagoras to find the missing side.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Compute the desired trigonometric function from the triangle.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Why this method is so useful (key point):
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">It avoids complicated algebraic manipulations.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">It transforms abstract inverse-trig expressions into clear geometric
+                                relationships.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">It provides an intuitive visual interpretation of the composition of
+                                functions.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｉｎｔｅｇｒａｌｓ　Ｉｎｖｏｌｖｉｎｇ　Ｉｎｖｅｒｓｅ　Ｔｒｉｇｏｎｏｍｅｔｒｉｃ　Ｆｕｎｃｔｉｏｎｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=5542"
+                    target="_blank">[1:32:22]</a>. Integrals leading to inverse trigonometric functions. – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[1-32-22]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[1-32-22]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Fundamental inverse-trig integrals:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int
+                                \dfrac{1}{\sqrt{1-𝒖^{2}}}\,𝒅𝒖=\sin^{-1}(𝒖)+\mathcal{C}$ ;Works when $\lvert
+                                𝒖\rvert\le 1$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{1+𝒖^{2}}\,𝒅𝒖=\tan^{-1}(𝒖)+\mathcal{C}$
+                                ;Valid for all real 𝒖.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{𝒖\sqrt{𝒖^{2}-1}}\,𝒅𝒖=\sec^{-1}(\lvert
+                                𝒖\rvert)+\mathcal{C}$ ;Requires $\lvert 𝒖\rvert\ge 1$ (same restriction as
+                                $\sec^{-1}$).</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Idea behind these formulas:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Many “complicated-looking” integrals can be transformed into one of
+                                these three forms by substitution.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Once matched, the result is immediately an inverse trigonometric
+                                function.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3"><strong>We use only the positive formulas because the negative sign is
+                                    absorbed in the substitution $\dfrac{𝒅𝒖}{𝒅𝒖}$; that is why we do not <br> need
+                                    integration formulas involving $\cos^{-1}$, $\cot^{-1}$, or $\csc^{-1}$ with a
+                                    negative sign.</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=5750"
+                    target="_blank">[1:35:50]</a>. 🧩 Example – Integration by substitution leading to $\sin^{-1}(𝒖)$:
+                $\displaystyle \int \dfrac{1}{\sqrt{1-𝒖^{2}}}\,𝒅𝑢$ – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 6.5/[1-35-50]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 6.5/[1-35-50]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 1 — Recognize the inverse-trig form
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The integrand resembles:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle \int \dfrac{1}{\sqrt{1-𝒖^{2}}}\,𝒅𝑢\rightarrow
+                                        \sin^{-1}(𝒖)+\mathcal{C}$ </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Problem: the denominator contains $16𝒙^{2}$, so it is not in standard
+                                form.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2 — Make a substitution
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒖=4𝒙$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Then $\dfrac{𝒅𝑢}{𝒅𝑥}=4$ </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">So $𝒅𝑥=\dfrac{1}{4}\,𝒅𝑢$ </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 3 — Rewrite the integral in terms of 𝒖
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{\sqrt{1-16𝒙^{2}}}\,𝒅𝑥$ </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \int
+                                \dfrac{1}{\sqrt{1-(4𝒙)^{2}}}\cdot\dfrac{1}{4}\,𝒅𝑢$ </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{1}{4}\displaystyle \int \dfrac{1}{\sqrt{1-𝒖^{2}}}\,𝒅𝑢$ </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 4 — Apply the fundamental formula
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{4}\displaystyle \int \dfrac{1}{\sqrt{1-𝒖^{2}}}\,𝒅𝑢$ </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{1}{4}\sin^{-1}(𝒖)+\mathcal{C}$ </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 5 — Back-substitute
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{4}\sin^{-1}(4𝒙)+\mathcal{C}$ </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key idea to remember
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The goal of the substitution is to <strong>match exactly</strong> the
+                                pattern $\dfrac{1}{\sqrt{1-𝒖^{2}}}$ so we can use the inverse sine formula directly.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=5970"
+                    target="_blank">[1:39:30]</a>. 🧩 Example – : $\displaystyle \int \dfrac{1}{\sqrt{25-𝒙^{2}}}\,𝒅𝑥$
+                – <span class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[1-39-30]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[1-39-30]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 1 — Factor the constant:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Rewrite:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4"> $\displaystyle \int \dfrac{1}{\sqrt{25-𝒙^{2}}}\,𝒅𝑥$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\displaystyle \int \dfrac{1}{5\sqrt{1-(𝒙/5)^{2}}}\,𝒅𝑥$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2 — 𝒖–substitution:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒖=𝒙/5$ </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Then: $𝒅𝑢=\dfrac{1}{5}\,𝒅𝑥\iff 𝒅𝑥=5\,𝒅𝑢$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 3 — Substitute into the integral:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{5\sqrt{1-𝒖^{2}}}\cdot 5\,𝒅𝑢$ </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \int \dfrac{1}{\sqrt{1-𝒖^{2}}}\,𝒅𝑢$ </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 4 — Apply the standard formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int
+                                \dfrac{1}{\sqrt{1-𝒖^{2}}}\,𝒅𝑢=\sin^{-1}(𝒖)+\mathcal{C}$ </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 5 — Return to 𝒙:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin^{-1}(𝒙/5)+\mathcal{C}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=6165"
+                    target="_blank">[1:42:45]</a>. 🧩 Example –: $\displaystyle \int \dfrac{e^{𝒙}}{e^{2𝒙}+1}\,𝒅𝑥$ –
+                <span class="image-container"><a href="../img/Calculus 2 Lecture 6.5/[1-42-45]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 6.5/[1-42-45]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 1 — Rewrite to expose a perfect “something² + 1”:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$e^{2𝒙}=\left(e^{𝒙}\right)^{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3"> $\displaystyle \int \dfrac{e^{𝒙}}{e^{2𝒙}+1}\,𝒅𝑥=\displaystyle \int
+                                \dfrac{e^{𝒙}}{\left(e^{𝒙}\right)^{2}+1}\,𝒅𝑥$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2 — Substitution:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒖=e^{𝒙}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Then $𝒅𝑢=e^{𝒙}\,𝒅𝑥$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 3 — Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{e^{𝒙}}{\left(e^{𝒙}\right)^{2}+1}\,𝒅𝑥$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4"> $\displaystyle \int \dfrac{1}{𝒖^{2}+1}\,𝒅𝑢$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 4 — Use the standard inverse trig antiderivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{𝒖^{2}+1}\,𝒅𝑢=\tan^{-1}(𝒖)+\mathcal{C}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 5 — Back-substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\tan^{-1}\left(e^{𝒙}\right)+\mathcal{C}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=ST3ORfqVYQw&t=6418"
+                    target="_blank">[1:46:58]</a>. 🧩 Example –: $\displaystyle \int
+                \dfrac{1}{𝒙\sqrt{9𝒙^{2}-1}}\,𝒅𝑥$ – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 6.5/[1-46-58]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 6.5/[1-46-58]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 1 — Recognize structure:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Inside the root we have $9𝒙^{2}-1$, which suggests something like
+                                $\sqrt{𝒖^{2}-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2 — Choose substitution:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒖=3𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Then $\dfrac{𝒅𝑢}{𝒅𝑥}=3\Rightarrow 𝒅𝑥=\dfrac{1}{3}\,𝒅𝑢$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 3 — Rewrite the integral in terms of 𝒖:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=\dfrac{𝒖}{3}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sqrt{9𝒙^{2}-1}=\sqrt{𝒖^{2}-1}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">So the integral becomes:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4"> $\displaystyle \int
+                                        \dfrac{1}{\left(𝒖/3\right)\sqrt{𝒖^{2}-1}}\cdot\dfrac{1}{3}\,𝒅𝑢$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 4 — Simplify constants:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \int \dfrac{1}{𝒖\sqrt{𝒖^{2}-1}}\,𝒅𝑢$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 5 — Use standard formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{𝒖\sqrt{𝒖^{2}-1}}\,𝒅𝑢=\sec^{-1}(\lvert
+                                𝒖\rvert)+\mathcal{C}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 6 — Back-substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sec^{-1}(\lvert 3𝒙\rvert)+\mathcal{C}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>

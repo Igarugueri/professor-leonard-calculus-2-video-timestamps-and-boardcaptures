@@ -1,0 +1,5 @@
+﻿image_name: [1-08-30]Example General Power Rule 𝒅∕𝒅𝒙[𝒙³ ln(5𝒙)].png
+file_name: [1-08-30]-01.png
+timestamp: 1:08:30
+counter: 01
+folder: Calculus 2 Lecture 6.1

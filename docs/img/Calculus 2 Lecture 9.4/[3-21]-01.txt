@@ -1,0 +1,5 @@
+﻿image_name: [3-21]Scenario 1 — Proving convergence.png
+file_name: [3-21]-01.png
+timestamp: 3:21
+counter: 01
+folder: Calculus 2 Lecture 9.4

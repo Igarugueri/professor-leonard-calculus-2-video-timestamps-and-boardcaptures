@@ -1,0 +1,5 @@
+﻿image_name: [1-03-39]Graph the polar equation 𝒓 = 2·cos(2𝜽)_3.png
+file_name: [1-03-39]-03.png
+timestamp: 1:03:39
+counter: 03
+folder: Calculus 2 Lecture 10.4

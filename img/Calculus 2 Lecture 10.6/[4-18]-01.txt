@@ -1,0 +1,5 @@
+﻿image_name: [4-18]Example — Approximate ∫[1,2] (1∕𝒙) 𝒅𝒙 with 𝒏 = 10.png
+file_name: [4-18]-01.png
+timestamp: 4:18
+counter: 01
+folder: Calculus 2 Lecture 10.6

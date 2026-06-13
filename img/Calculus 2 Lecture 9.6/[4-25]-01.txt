@@ -1,0 +1,5 @@
+﻿image_name: [4-25]Example — Absolute convergence  ∑[𝒏=1,∞] (-1)ⁿ⁻¹∕𝒏².png
+file_name: [4-25]-01.png
+timestamp: 4:25
+counter: 01
+folder: Calculus 2 Lecture 9.6

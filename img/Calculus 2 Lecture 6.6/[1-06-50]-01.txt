@@ -1,0 +1,5 @@
+﻿image_name: [1-06-50]Complete derivative table (inverse hyperbolic).png
+file_name: [1-06-50]-01.png
+timestamp: 1:06:50
+counter: 01
+folder: Calculus 2 Lecture 6.6

@@ -1,0 +1,5 @@
+﻿image_name: [2-27-00]Comparison Theorem for improper integrals.png
+file_name: [2-27-00]-01.png
+timestamp: 2:27:00
+counter: 01
+folder: Calculus 2 Lecture 7.6

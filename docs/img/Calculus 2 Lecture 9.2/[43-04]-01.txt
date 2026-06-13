@@ -1,0 +1,5 @@
+﻿image_name: [43-04]Example 3 — Partial fractions in a telescoping series Σ[n=1,∞] 4 ∕ (4n² - 1)_1.png
+file_name: [43-04]-01.png
+timestamp: 43:04
+counter: 01
+folder: Calculus 2 Lecture 9.2

@@ -1,0 +1,5 @@
+﻿image_name: [45-30]Example 2 — Find the Taylor series for 𝒇(𝒙) = Ln(𝒙) centered at 𝑪 = 1_3.png
+file_name: [45-30]-03.png
+timestamp: 45:30
+counter: 03
+folder: Calculus 2 Lecture 9.8

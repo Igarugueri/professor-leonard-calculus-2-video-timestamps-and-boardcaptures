@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．２ - Ｓｅｒｉｅｓ， Ｇｅｏｍｅｔｒｉｃ Ｓｅｒｉｅｓ， Ｈａｒｍｏｎｉｃ Ｓｅｒｉｅｓ， ａｎｄ Ｄｉｖｅｒｇｅｎｃｅ Ｔｅｓｔ</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <article class="chapter">
+    <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．２</h1>
+    <h1>Ｓｅｒｉｅｓ， Ｇｅｏｍｅｔｒｉｃ Ｓｅｒｉｅｓ， Ｈａｒｍｏｎｉｃ Ｓｅｒｉｅｓ， ａｎｄ Ｄｉｖｅｒｇｅｎｃｅ Ｔｅｓｔ</h1>
+
+    <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=1" target="_blank">[0:01]</a>.
+        Conceptual transition — From sequences to series. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.2/[0-01]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.2/[0-01]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">A sequence lists terms.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">A series adds those terms together.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Main idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If we take the terms of a sequence and add them, we obtain a series</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｓｉｇｍａ　Ｎｏｔａｔｉｏｎ　＆　Ｐａｒｔｉａｌ　Ｓｕｍｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">– <span class="image-container"><a href="../img/Calculus 2 Lecture 9.2/[1-01]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.2/[1-01]-01.png" alt="Preview" /></span>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=61" target="_blank">[1:01]</a>.
+        Introduction to Sigma notation.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">A series is obtained by adding the terms of a sequence.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Basic form:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂_{1}+𝒂_{2}+𝒂_{3}+\cdots$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Written with Sigma notation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The symbol $\sum$ represents a sum.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">General meaning:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">it tells us where to start</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">and where to stop adding the terms</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=148" target="_blank">[2:28]</a>.
+        Definition of a partial sum $S_{n}$.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">A partial sum adds only finitely many terms of the series.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Written as:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{k=1}^{n} a_{k}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">General form:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{n}=\displaystyle \sum_{k=1}^{n} a_{k}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Since $n$ is finite,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the partial sum must exist</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Important interpretation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">We do not study the infinite sum all at once,</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">instead, we study the finite partial sums first</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=350" target="_blank">[5:50]</a>.
+        Important idea.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Each new value of $n$ produces a new partial sum.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">For the next $n$,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">there is a new $S_{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the partial sums form a sequence</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=438" target="_blank">[7:18]</a>.
+        Sequence of partial sums.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conceptual distinction:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Sequence if I don’t add them</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Series if I do add them</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">First terms of the sequence of partial sums:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{1}=\displaystyle \sum_{k=1}^{1} a_{k}=𝒂_{1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{2}=\displaystyle \sum_{k=1}^{2} a_{k}=𝒂_{1}+𝒂_{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{3}=\displaystyle \sum_{k=1}^{3} a_{k}=𝒂_{1}+𝒂_{2}+𝒂_{3}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{4}=\displaystyle \sum_{k=1}^{4} a_{k}=𝒂_{1}+𝒂_{2}+𝒂_{3}+𝒂_{4}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\cdots$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{n}=𝒂_{1}+𝒂_{2}+𝒂_{3}+\cdots+𝒂_{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Sequence notation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{1},S_{2},S_{3},S_{4},\dots,S_{n}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">this creates the sequence of partial sums $\{S_{n}\}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Main idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Each new value of $n$ gives a different partial sum,</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so the partial sums themselves form a sequence,</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">this is why sequences were covered first</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｃｏｎｖｅｒｇｅｎｃｅ　＆　Ｄｉｖｅｒｇｅｎｃｅ　ｏｆ　Ｓｅｒｉｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=550" target="_blank">[9:10]</a>.
+        Convergence and divergence of a series.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><strong>A series is studied through the sequence of its partial sums.</strong></li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=600" target="_blank">[10:00]</a>.
+        Formal definition of an infinite series by limits. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.2/[10-00]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.2/[10-00]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ $\{S_{n}\}$ converges, that is, $\displaystyle \lim_{n\to\infty} S_{n}=S$,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ the series $\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}$ also converges
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">and the sum of the series is $S$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=787" target="_blank">[13:07]</a>.
+            The infinite series is defined through the limit of the partial sums:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}=\lim_{n\to\infty}\sum_{k=1}^{n}
+                a_{k}=\lim_{n\to\infty} S_{n}=S$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">Covergence and divergence
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ the sequence of partial sums $\{S_{n}\}$ converges,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ the series $\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}$ converges</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ the sequence of partial sums $\{S_{n}\}$ diverges,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ the series $\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}$ diverges</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">N̲O̲T̲E̲ — Meaning of $\{S_{n}\}$.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The notation $\{S_{n}\}$ represents the sequence of all partial sums.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">In expanded form:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$S_{1},S_{2},S_{3},S_{4},\dots,S_{n},\dots$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$S_{n}=𝒂_{1}+𝒂_{2}+\cdots+𝒂_{n}$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Here:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$S_{1}$ is the first partial sum</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$S_{2}$ is the second partial sum</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$S_{3}$ is the third partial sum</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">and so on</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}$ denotes the infinite series
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂_{1}+𝒂_{2}+𝒂_{3}+\cdots$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Important clarification:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">although braces are used, $\{S_{n}\}$ is understood here as a sequence, not as an
+                unordered set</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\{S_{n}\}$ converges means:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the sequence of partial sums converges</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">If $\{S_{n}\}$ converges to $S$,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">then the series $\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}$ converges</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">and the sum of the series is $S$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=1180" target="_blank">[19:40]</a>. 🧩
+        Example 1 — Series: $\displaystyle \sum_{n=1}^{\infty} n$ – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.2/[19-40]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.2/[19-40]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❶ Find the partial sum.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{n}=1+2+3+\cdots+n$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❷ Find a formula for $S_{n}$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$1+2+3+\cdots+n=\dfrac{n(n+1)}{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$S_{n}=\dfrac{n(n+1)}{2}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❸ Take the limit as $n\to\infty$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{n(n+1)}{2}=\infty$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the series diverges</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=1640" target="_blank">[27:20]</a>. 🧩
+        Example 2 — Telescoping series: $\displaystyle \sum_{n=1}^{\infty}\left(\dfrac{1}{2n+3}-\dfrac{1}{2n+1}\right)$
+        – <span class="image-container"><a href="../img/Calculus 2 Lecture 9.2/[27-20]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.2/[27-20]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❶ Find the partial sum.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $S_{n}=\left(\dfrac{1}{5}-\dfrac{1}{3}\right)+\left(\dfrac{1}{7}-\dfrac{1}{5}\right)+\left(\dfrac{1}{9}-\dfrac{1}{7}\right)+\cdots$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">write out several terms</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">identify the cancellation pattern
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the first fraction of each term cancels with the second fraction of the previous
+                    term</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">keep only the terms that do not cancel</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❷ Find a formula for $S_{n}$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">After cancellation,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$S_{n}=-\dfrac{1}{3}+\dfrac{1}{2n+3}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❸ Take the limit as $n\to\infty$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}
+                S_{n}=\lim_{n\to\infty}\left(-\dfrac{1}{3}+\dfrac{1}{2n+3}\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-\dfrac{1}{3}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the series converges</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">and its sum is $-\dfrac{1}{3}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">N̲O̲T̲E̲ 1: This is a telescoping series.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Most middle terms cancel when the series is written out</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">only the non-cancelling outer terms remain</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">N̲O̲T̲E̲ 2: General note on telescoping series.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">In a partial sum $S_{n}$, cancellation only occurs among the terms that are already
+            included, that is, from $k=1$ up to $k=n$.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">A term cancels only if its opposite counterpart also appears within those first $n$ terms.
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">If the cancelling counterpart would appear only in the next term, $k=n+1$, or later, then
+            it does not cancel in $S_{n}$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore, when computing $S_{n}$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">do not continue the cancellation beyond the nth term</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Main idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The cancellation stops where the partial sum stops
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">so the surviving terms are the boundary terms that have not yet found their
+                    cancelling partners</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=2584" target="_blank">[43:04]</a>. 🧩
+        Example 3 — Partial fractions in a telescoping series: $\displaystyle \sum_{n=1}^{\infty}\dfrac{4}{4n^{2}-1}$ –
+        <span class="image-container"><a href="../img/Calculus 2 Lecture 9.2/[43-04]-01.png"
+            target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 9.2/[43-04]-01.png"
+            alt="Preview" /></span> – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.2/[43-04]-02.png" target="_blank">[📷image-2]</a><img
+            src="../img/Calculus 2 Lecture 9.2/[43-04]-02.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❶ Rewrite the general term using partial fractions.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{4}{4n^{2}-1}=\dfrac{4}{(2n-1)(2n+1)}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Set
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{4}{(2n-1)(2n+1)}=\dfrac{A}{2n-1}+\dfrac{B}{2n+1}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$4=A(2n+1)+B(2n-1)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Solve for the constants:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$n=\dfrac{1}{2}\;\to\;4=2A\;\to\;A=2$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$n=-\dfrac{1}{2}\to 4=-2B\to B=-2$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{4}{4n^{2}-1}=\dfrac{2}{2n-1}-\dfrac{2}{2n+1}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❷ Find the partial sum.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $S_{n}=\left(\dfrac{2}{1}-\dfrac{2}{3}\right)+\left(\dfrac{2}{3}-\dfrac{2}{5}\right)+\left(\dfrac{2}{5}-\dfrac{2}{7}\right)+\cdots$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">identify the telescoping pattern</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">most middle terms cancel</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">after cancellation,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$S_{n}=2-\dfrac{2}{2n+1}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❸ Take the limit as $n\to\infty$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}
+                S_{n}=\lim_{n\to\infty}\left(2-\dfrac{2}{2n+1}\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=2$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the series converges</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">and its sum is $2$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｇｅｏｍｅｔｒｉｃ　Ｓｅｒｉｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">– <span class="image-container"><a href="../img/Calculus 2 Lecture 9.2/[51-22]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.2/[51-22]-01.png" alt="Preview" /></span>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=3082" target="_blank">[51:22]</a>.
+        Geometric series.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">A geometric series is defined to be:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty} 𝒂\cdot 𝓻^{n-1}=𝒂+𝒂𝓻+𝒂𝓻^{2}+𝒂𝓻^{3}+\cdots$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Equivalent form:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=0}^{\infty} 𝒂\cdot 𝓻^{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Here:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂$ is the first term</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝓻$ is the common ratio</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=3230" target="_blank">[53:50]</a>.
+        Convergence criterion for geometric series.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ $|𝓻|&lt;1$ or $-1&lt;𝓻&lt;1$
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ the series converges</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ $|𝓻|\ge 1$ or $(𝓻\le -1$ or $𝓻\ge 1)$
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ the series diverges</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=3438" target="_blank">[57:18]</a>. Sum
+        of a geometric series.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ $|𝓻|&lt;1$,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \sum_{n=1}^{\infty} 𝒂\cdot 𝓻^{n-1}=\dfrac{𝒂}{1-𝓻}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Important note:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">this formula applies only when the series converges</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">that is, only when $|𝓻|&lt;1$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=3478" target="_blank">[57:58]</a>.
+        Derivation of the geometric-series formula. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.2/[57-58]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.2/[57-58]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Start with the partial sum:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{n}=𝒂+𝒂𝓻+𝒂𝓻^{2}+\cdots+𝒂𝓻^{n-1}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Multiply by $𝓻$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝓻S_{n}=𝒂𝓻+𝒂𝓻^{2}+\cdots+𝒂𝓻^{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Subtract:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{n}-𝓻S_{n}=𝒂-𝒂𝓻^{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Factor:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{n}(1-𝓻)=𝒂(1-𝓻^{n})$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Solve for the partial sum:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{n}=\dfrac{𝒂(1-𝓻^{n})}{1-𝓻}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=3903"
+              target="_blank">[1:05:03]</a>. Now pass to the infinite series:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty} 𝒂𝓻^{n-1}=\lim_{n\to\infty} S_{n}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{n\to\infty}\dfrac{𝒂(1-𝓻^{n})}{1-𝓻}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"> i̲f̲ $|𝓻|&lt;1$, <strong>the series converges</strong>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ $𝓻^{n}\to 0$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty} 𝒂𝓻^{n-1}=\dfrac{𝒂}{1-𝓻}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｅｘａｍｐｌｅｓ　—　Ｇｅｏｍｅｔｒｉｃ　Ｓｅｒｉｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=4183" target="_blank">[1:09:43]</a>. 🧩
+        Example 4 — Geometric series with alternating signs: $\displaystyle \sum_{n=1}^{\infty}
+        3\left(-\dfrac{1}{2}\right)^{n-1}$ – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.2/[1-09-43]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.2/[1-09-43]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">First check whether the series is geometric.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">check whether there is a constant ratio between consecutive terms</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">To use the formula conveniently:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">check that the initial index makes the exponent start at $0$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">this matters because, when the first exponent is $0$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the first term is $𝒂\cdot 𝓻^{0}=𝒂$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">so $𝒂$ is the first term of the series</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Then identify:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂=3$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝓻=-\dfrac{1}{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Next:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">test whether $|𝓻|&lt;1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\left|-\dfrac{1}{2}\right|=\dfrac{1}{2}&lt;1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore, the series converges</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the geometric-series formula:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=\dfrac{𝒂}{1-𝓻}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=\dfrac{3}{1-\left(-\dfrac{1}{2}\right)}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=\dfrac{3}{\dfrac{3}{2}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=2$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the series converges</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">and its sum is $2$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=4349" target="_blank">[1:12:29]</a>. 🧩
+        Example 5 — Geometric series with alternating signs: $\displaystyle \sum_{n=1}^{\infty}
+        3\left(\dfrac{4}{3}\right)^{n-1}$
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ $|𝓻|\ge 1$ or $(𝓻\le -1$ or $𝓻\ge 1)$
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝓻=\dfrac{4}{3}&gt;1$ t̲h̲e̲n̲ the series diverges</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=4372" target="_blank">[1:12:52]</a>. 🧩
+        Example 6 — Geometric series with alternating signs: $\displaystyle \sum_{n=1}^{\infty}
+        3\left(-\dfrac{4}{3}\right)^{n-1}$ – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.2/[1-12-52]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.2/[1-12-52]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ $|𝓻|\ge 1$ or $(𝓻\le -1$ or $𝓻\ge 1)$
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝓻=-\dfrac{4}{3}&lt; -1$ t̲h̲e̲n̲ the series diverges</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=4455" target="_blank">[1:14:15]</a>. 🧩
+        Example 7 — Rewriting the series $\displaystyle \sum_{n=1}^{\infty}=
+        \dfrac{5}{3}-\dfrac{5}{9}+\dfrac{5}{27}-\dfrac{5}{81}+\cdots$ in geometric form. – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 9.2/[1-14-15]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.2/[1-14-15]-01.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❶ Check where the series starts.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Here the series starts at $n=1$,</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so the exponent should begin at $0$ in the first term,</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore we want a form involving $(n-1)$ in the exponent</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❷ Factor as much as possible.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">factor out $\dfrac{5}{3}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">this gives:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\left(\dfrac{5}{3}\right)\left(1-\dfrac{1}{3}+\dfrac{1}{9}-\dfrac{1}{27}+\cdots\right)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❸ Rewrite the remaining pattern in exponential form.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$1=\left(-\dfrac{1}{3}\right)^{0}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-\dfrac{1}{3}=\left(-\dfrac{1}{3}\right)^{1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{9}=\left(-\dfrac{1}{3}\right)^{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-\dfrac{1}{27}=\left(-\dfrac{1}{3}\right)^{3}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so the series becomes:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle
+                    \sum_{n=1}^{\infty}\left(\dfrac{5}{3}\right)\left(-\dfrac{1}{3}\right)^{n-1}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">now the series is written in geometric form</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂=\dfrac{5}{3}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝓻=-\dfrac{1}{3}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❺ Check convergence.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$|𝓻|=\dfrac{1}{3}&lt;1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore, the series converges</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❻ Compute the sum.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=\dfrac{𝒂}{1-𝓻}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=\dfrac{\dfrac{5}{3}}{1-\left(-\dfrac{1}{3}\right)}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=\dfrac{\dfrac{5}{3}}{\dfrac{4}{3}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=\dfrac{5}{4}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the series converges</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">and its sum is $\dfrac{5}{4}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">Algebraic rewriting strategies.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Sometimes a series does not look geometric at first.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Strategy:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">rewrite the powers so that the exponent matches the index pattern</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">factor out constants if necessary</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=4915"
+              target="_blank">[1:21:55]</a>. 🧩 Example 7 — Rewrite $\displaystyle
+            \sum_{n=1}^{\infty}\dfrac{𝒆^{n}}{3^{n+1}}$ into geometric form. – <span class="image-container"><a
+                href="../img/Calculus 2 Lecture 9.2/[1-21-55]-01.png" target="_blank">[📷image]</a><img
+                src="../img/Calculus 2 Lecture 9.2/[1-21-55]-01.png" alt="Preview" /></span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒆^{n}}{3^{n+1}}=\dfrac{𝒆\cdot 𝒆^{n-1}}{3^{2}\cdot 3^{n-1}}$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">now the exponent matches the index pattern, because the series starts at $1$ and
+                    the first exponent must be $0$, so that the first term is $𝒂$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\left(\dfrac{𝒆}{9}\right)\cdot \left(\dfrac{𝒆^{n-1}}{3^{n-1}}\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\left(\dfrac{𝒆}{9}\right)\cdot \left(\dfrac{𝒆}{3}\right)^{n-1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle
+                    \sum_{n=1}^{\infty}\dfrac{𝒆^{n}}{3^{n+1}}=\sum_{n=1}^{\infty}\left(\dfrac{𝒆}{9}\right)\left(\dfrac{𝒆}{3}\right)^{n-1}$
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Identify the geometric parameters:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂=\dfrac{𝒆}{9}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝓻=\dfrac{𝒆}{3}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Check convergence:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">since $\dfrac{𝒆}{3}&lt;1$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the series converges</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Compute the sum:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=\dfrac{𝒂}{1-𝓻}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=\dfrac{\dfrac{𝒆}{9}}{1-\dfrac{𝒆}{3}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=\dfrac{𝒆}{3(3-𝒆)}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">N̲O̲T̲E̲ 1 — Subsequences and divergence.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ a sequence $\{𝒂_{n}\}$ is convergent,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ any subsequence of $\{𝒂_{n}\}$ must also be convergent.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">to show that a sequence $\{𝒂_{n}\}$ diverges,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">it is enough to show that a subsequence diverges.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Connection with the harmonic series:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">for a series, convergence is studied through its sequence of partial sums.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">in the harmonic series, the terms $\dfrac{1}{n}$ go to $0$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">but this is not enough for the series to converge.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the partial sums keep growing.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so the harmonic series diverges because its sequence of partial sums does not
+                converge.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">one way to show this is to find a subsequence of partial sums that diverges.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">N̲O̲T̲E̲ 2 — Why the harmonic series diverges.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The harmonic series is:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$1+\dfrac{1}{2}+\dfrac{1}{3}+\dfrac{1}{4}+\dfrac{1}{5}+\dfrac{1}{6}+\cdots$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Instead of seeing it as one long sum,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">we group the terms in blocks:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $1+\dfrac{1}{2}+\left(\dfrac{1}{3}+\dfrac{1}{4}\right)+\left(\dfrac{1}{5}+\dfrac{1}{6}+\dfrac{1}{7}+\dfrac{1}{8}\right)+\left(\dfrac{1}{9}+\cdots+\dfrac{1}{16}\right)+\cdots$
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Key idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">in each block, every term is greater than or equal to the last term of that block.
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">For example:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{3}+\dfrac{1}{4}&gt;\dfrac{1}{4}+\dfrac{1}{4}=\dfrac{1}{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{5}+\dfrac{1}{6}+\dfrac{1}{7}+\dfrac{1}{8}&gt;
+                \dfrac{1}{8}+\dfrac{1}{8}+\dfrac{1}{8}+\dfrac{1}{8}=\dfrac{1}{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{9}+\cdots+\dfrac{1}{16}&gt;8\cdot \dfrac{1}{16}=\dfrac{1}{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the partial sums keep increasing by at least $\dfrac{1}{2}$ again and again.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so the sequence of partial sums $\{S_{n}\}$ does not converge.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore, the harmonic series diverges.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">N̲O̲T̲E̲ 3 — Connection with partial sums and subsequences.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">A series converges or diverges depending on its sequence of partial sums $\{S_{n}\}$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">i̲f̲ $\{S_{n}\}$ converges,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">t̲h̲e̲n̲ the series $\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}$ converges.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">i̲f̲ $\{S_{n}\}$ diverges,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">t̲h̲e̲n̲ the series $\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}$ diverges.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore, to prove that the harmonic series diverges,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">we have to prove that its sequence of partial sums $\{S_{n}\}$ diverges.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">This is where the subsequence idea enters:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">i̲f̲ $\{S_{n}\}$ were convergent,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">t̲h̲e̲n̲ every subsequence of $\{S_{n}\}$ would also be convergent.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so, if we find one subsequence of partial sums that diverges,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">then $\{S_{n}\}$ cannot converge.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore, the harmonic series diverges.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">In this case, a useful subsequence is:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{1},S_{2},S_{4},S_{8},S_{16},\dots$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">that is, the subsequence of partial sums with indices $1,2,4,8,16,\dots$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">equivalently, $S$ with index $2^{k}$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">This subsequence is useful because it matches the block grouping:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{2}$ includes $1+\dfrac{1}{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{4}$ includes $1+\dfrac{1}{2}+\left(\dfrac{1}{3}+\dfrac{1}{4}\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{8}$ includes
+                $1+\dfrac{1}{2}+\left(\dfrac{1}{3}+\dfrac{1}{4}\right)+\left(\dfrac{1}{5}+\dfrac{1}{6}+\dfrac{1}{7}+\dfrac{1}{8}\right)$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{16}$ includes the next block up to $\dfrac{1}{16}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Since each new block adds at least $\dfrac{1}{2}$,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the subsequence $S_{1},S_{2},S_{4},S_{8},S_{16},\dots$ grows without bound.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore, this subsequence diverges.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so the full sequence of partial sums $\{S_{n}\}$ cannot converge.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">N̲O̲T̲E̲ 4 — Important clarification.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Finding one convergent subsequence does not usually prove that the whole sequence
+            converges.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">However, for an increasing sequence of partial sums,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">i̲f̲ one subsequence converged to a finite number,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">t̲h̲e̲n̲ the whole sequence would be bounded above.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">therefore, the whole sequence would converge.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">In the harmonic series, this does not happen:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the partial sums keep growing without bound.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore, no subsequence of partial sums can converge to a finite number.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">N̲O̲T̲E̲ 5 — Subsequences and convergence/divergence.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">A divergent subsequence implies that the original sequence diverges:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">divergent subsequence $\Rightarrow$ original sequence diverges</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Two subsequences with different limits imply that the original sequence diverges:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">two subsequences with different limits $\Rightarrow$ original sequence diverges</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">One convergent subsequence does not imply that the original sequence converges:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">one convergent subsequence $\nRightarrow$ original sequence converges</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">However, with an extra condition, it can be enough:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">increasing sequence + one convergent subsequence $\Rightarrow$ original sequence
+                converges</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Reason:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">if the original sequence is increasing,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">and one subsequence converges to a finite number,
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">then the whole sequence is bounded above.</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">therefore, the whole sequence converges.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｔｈｅ　Ｄｉｖｅｒｇｅｎｃｅ　Ｔｅｓｔ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">– <span class="image-container"><a href="../img/Calculus 2 Lecture 9.2/[1-33-47]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.2/[1-33-47]-01.png"
+            alt="Preview" /></span></li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=5627" target="_blank">[1:33:47]</a>.
+        Necessary condition for convergence:
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ $\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}$ converges,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ $\displaystyle \lim_{n\to\infty} 𝒂_{n}=0$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">N̲O̲T̲E̲ — Series convergence versus term convergence.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">If a series converges to $\mathcal{K}$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}=\mathcal{K}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">This means that the sequence of partial sums converges to $\mathcal{K}$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$S_{n}=𝒂_{1}+𝒂_{2}+\cdots+𝒂_{n}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty} S_{n}=\mathcal{K}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Important distinction:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the series $\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}$ may converge to a finite number,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">but the individual terms $𝒂_{n}$ must converge to $0$.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Reason:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">for an infinite sum to stabilize at a finite number,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the new terms being added must become smaller and smaller.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">therefore, they must tend to $0$.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=5735" target="_blank">[1:35:35]</a>.
+        Fundamental theorem and divergence test.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty} 𝒂_{n}\ne 0$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">o̲r̲ ̲i̲f̲ the limit does not exist,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ the series diverges</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=5930" target="_blank">[1:38:50]</a>.
+        Important warning.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\displaystyle \lim_{n\to\infty} 𝒂_{n}=0$ does not guarantee that the series converges.
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">It is only a necessary condition,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">not a sufficient one</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=6061" target="_blank">[1:41:01]</a>. 🧩
+        Example 8 — Using the Divergence Test: $\displaystyle \sum_{n=1}^{\infty}\dfrac{2n^{2}-1}{3n^{2}-1}$ – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 9.2/[1-41-01]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.2/[1-41-01]-01.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Take the limit of the general term:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{2n^{2}-1}{3n^{2}-1}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Since the numerator and denominator have the same degree,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">compare the leading coefficients:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{n\to\infty}\dfrac{2n^{2}-1}{3n^{2}-1}=\dfrac{2}{3}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Since:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{2}{3}\ne 0$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">By the Divergence Test:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">i̲f̲ $\displaystyle \lim_{n\to\infty} 𝒂_{n}\ne 0$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">t̲h̲e̲n̲ $\displaystyle \sum_{n=1}^{\infty} 𝒂_{n}$ diverges.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{2n^{2}-1}{3n^{2}-1}$ diverges.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｐｒｏｐｅｒｔｉｅｓ　ｏｆ　Ｃｏｎｖｅｒｇｅｎｔ　Ｓｅｒｉｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=6146" target="_blank">[1:42:26]</a>.
+        General properties of convergent series. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.2/[1-42-26]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.2/[1-42-26]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Constant multiple:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}(c\cdot 𝒂_{n})=c\cdot \sum_{n=1}^{\infty} 𝒂_{n}$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Sum and difference:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}(𝒂_{n}\pm b_{n})=\sum_{n=1}^{\infty} 𝒂_{n}\pm
+                \sum_{n=1}^{\infty} b_{n}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">Important practical remark.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ a series is split into several parts,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ every part must converge for the whole expression to converge</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ one part diverges,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ the whole series diverges</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=6215" target="_blank">[1:43:35]</a>. 🧩
+        Example 9 — Splitting a series into geometric series: $\displaystyle
+        \sum_{n=1}^{\infty}\left[\dfrac{2^{n}-5^{n}}{3^{n}}\right]$ – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.2/[1-43-35]-01.png" target="_blank">[📷image-1]</a><img
+            src="../img/Calculus 2 Lecture 9.2/[1-43-35]-01.png" alt="Preview" /></span> – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 9.2/[1-43-35]-02.png"
+            target="_blank">[📷image-2]</a><img src="../img/Calculus 2 Lecture 9.2/[1-43-35]-02.png"
+            alt="Preview" /></span> – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.2/[1-43-35]-03.png" target="_blank">[📷image-3]</a><img
+            src="../img/Calculus 2 Lecture 9.2/[1-43-35]-03.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Split the fraction:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{2^{n}-5^{n}}{3^{n}}=\dfrac{2^{n}}{3^{n}}-\dfrac{5^{n}}{3^{n}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite each term as a power:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{2^{n}}{3^{n}}=\left(\dfrac{2}{3}\right)^{n}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{5^{n}}{3^{n}}=\left(\dfrac{5}{3}\right)^{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle
+                \sum_{n=1}^{\infty}\left[\dfrac{2^{n}-5^{n}}{3^{n}}\right]=\sum_{n=1}^{\infty}\left(\dfrac{2}{3}\right)^{n}-\sum_{n=1}^{\infty}\left(\dfrac{5}{3}\right)^{n}$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Analyze each geometric series:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\left(\dfrac{2}{3}\right)^{n}$ converges because
+                $\left|\dfrac{2}{3}\right|&lt;1$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\left(\dfrac{5}{3}\right)^{n}$ diverges because
+                $\left|\dfrac{5}{3}\right|&gt;1$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Important warning:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the geometric series formula only applies when $|𝒓|&lt;1$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">since $\left|\dfrac{5}{3}\right|&gt;1$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">we cannot use $\dfrac{𝒂}{1-𝒓}$ for $\displaystyle
+                    \sum_{n=1}^{\infty}\left(\dfrac{5}{3}\right)^{n}$.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the original series diverges.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><strong>Edited variant</strong> — replacing $5^{n}$ with $1^{n}$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\left[\dfrac{2^{n}-1^{n}}{3^{n}}\right]$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Split the fraction:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{2^{n}-1^{n}}{3^{n}}=\dfrac{2^{n}}{3^{n}}-\dfrac{1^{n}}{3^{n}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite each term as a power:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{2^{n}}{3^{n}}=\left(\dfrac{2}{3}\right)^{n}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1^{n}}{3^{n}}=\left(\dfrac{1}{3}\right)^{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle
+                \sum_{n=1}^{\infty}\left[\dfrac{2^{n}-1^{n}}{3^{n}}\right]=\sum_{n=1}^{\infty}\left(\dfrac{2}{3}\right)^{n}-\sum_{n=1}^{\infty}\left(\dfrac{1}{3}\right)^{n}$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Analyze each geometric series:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\left(\dfrac{2}{3}\right)^{n}$ converges because
+                $\left|\dfrac{2}{3}\right|&lt;1$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\left(\dfrac{1}{3}\right)^{n}$ converges because
+                $\left|\dfrac{1}{3}\right|&lt;1$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the geometric series formula:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty} 𝒂𝒓^{n-1}=\dfrac{𝒂}{1-𝒓}$, where $|𝒓|&lt;1$.
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite each series starting with its first term:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle
+                \sum_{n=1}^{\infty}\left(\dfrac{2}{3}\right)^{n}=\sum_{n=1}^{\infty}\left(\dfrac{2}{3}\right)\left(\dfrac{2}{3}\right)^{n-1}$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle
+                \sum_{n=1}^{\infty}\left(\dfrac{1}{3}\right)^{n}=\sum_{n=1}^{\infty}\left(\dfrac{1}{3}\right)\left(\dfrac{1}{3}\right)^{n-1}$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Evaluate:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle
+                \sum_{n=1}^{\infty}\left(\dfrac{2}{3}\right)^{n}=\dfrac{\dfrac{2}{3}}{1-\dfrac{2}{3}}=\dfrac{\dfrac{2}{3}}{\dfrac{1}{3}}=2$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle
+                \sum_{n=1}^{\infty}\left(\dfrac{1}{3}\right)^{n}=\dfrac{\dfrac{1}{3}}{1-\dfrac{1}{3}}=\dfrac{\dfrac{1}{3}}{\dfrac{2}{3}}=\dfrac{1}{2}$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle
+                \sum_{n=1}^{\infty}\left[\dfrac{2^{n}-1^{n}}{3^{n}}\right]=2-\dfrac{1}{2}=\dfrac{3}{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion for the edited variant:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the edited series converges.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=6720" target="_blank">[1:52:00]</a>.
+        Shortcut for identifying $𝒂$ in a geometric series. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.2/[1-52-07]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.2/[1-52-07]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The value of $𝒂$ is the <strong>first term of the series.</strong></li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">So:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">first make sure the exponent pattern matches the starting index</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Then:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">identify the actual first term</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">and use it in the formula $s=\dfrac{𝒂}{1-𝓻}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">Matching exponents and starting indices.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ the series starts at $n=k$,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ the exponent should be adjusted so that the first exponent is $0$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">This may require factoring out extra powers or constants.</li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=6760" target="_blank">[1:52:40]</a>. 🧩
+        Example 10 — Matching exponents and starting indices: $\displaystyle
+        \sum_{n=1}^{\infty}\left(\dfrac{2}{3}\right)^{n}$
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Important issue:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the exponent starts at $n$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">but the geometric series formula is usually written with exponent $n-1$.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Geometric series formula:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty} 𝒂𝒓^{n-1}=\dfrac{𝒂}{1-𝒓}$, where $|𝒓|&lt;1$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the term so the exponent matches $n-1$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\left(\dfrac{2}{3}\right)^{n}=\left(\dfrac{2}{3}\right)\left(\dfrac{2}{3}\right)^{n-1}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle
+                \sum_{n=1}^{\infty}\left(\dfrac{2}{3}\right)^{n}=\sum_{n=1}^{\infty}\left(\dfrac{2}{3}\right)\left(\dfrac{2}{3}\right)^{n-1}$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Identify the first term and the ratio:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂=\dfrac{2}{3}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒓=\dfrac{2}{3}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Since:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\left|\dfrac{2}{3}\right|&lt;1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The series converges.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the formula:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle
+                \sum_{n=1}^{\infty}\left(\dfrac{2}{3}\right)^{n}=\dfrac{\dfrac{2}{3}}{1-\dfrac{2}{3}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{\dfrac{2}{3}}{\dfrac{1}{3}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=2$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\left(\dfrac{2}{3}\right)^{n}=2$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Key idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">when the series starts at $n=1$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the first term is not $1$.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the first term is $\left(\dfrac{2}{3}\right)^{1}=\dfrac{2}{3}$.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so we use $\dfrac{𝒂}{1-𝒓}$, with $𝒂=\dfrac{2}{3}$.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=DGcWMdW-72M&t=6833" target="_blank">[1:53:53]</a>. 🧩
+        Example 11 — Matching exponents and starting indices: $\displaystyle
+        \sum_{n=2}^{\infty}\dfrac{𝒆^{n}}{3^{n+1}}$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.2/[1-53-53]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.2/[1-53-53]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❶ Rewrite the general term.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒆^{n}}{3^{n+1}}=\dfrac{𝒆^{n}}{3\cdot 3^{n}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{3}\left(\dfrac{𝒆}{3}\right)^{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❷ Match the exponent to the starting index.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the series starts at $n=2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so we want the exponent to begin at $0$ when $n=2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore rewrite:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{1}{3}\left(\dfrac{𝒆}{3}\right)^{n}=\dfrac{1}{3}\left(\dfrac{𝒆}{3}\right)^{2}\left(\dfrac{𝒆}{3}\right)^{n-2}$
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\left(\dfrac{𝒆^{2}}{27}\right)\left(\dfrac{𝒆}{3}\right)^{n-2}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❸ Identify the geometric parameters.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂=\dfrac{𝒆^{2}}{27}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝓻=\dfrac{𝒆}{3}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❹ Check convergence.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">since $\dfrac{𝒆}{3}&lt;1$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the series converges</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">❺ Compute the sum.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=\dfrac{𝒂}{1-𝓻}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$s=\dfrac{\dfrac{𝒆^{2}}{27}}{1-\dfrac{𝒆}{3}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Important idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">here $𝒂$ is not $\dfrac{1}{3}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂$ must be the actual first term of the geometric series</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">since the series starts at $n=2$, the first term is $\dfrac{𝒆^{2}}{27}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｓｔｒａｔｅｇｉｃ　Ｎｏｔｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">Main workflow for testing a series.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">1. Identify the form of the series.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">2. If possible, find the partial sum.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">3. Take the limit of the partial sums.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">4. For geometric series,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">first test $|r|&lt;1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">then use the sum formula i̲f̲ it converges</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">5. Always remember the Divergence Test:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">i̲f̲ $\displaystyle \lim_{n\to\infty} 𝒂_{n}\ne 0$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">t̲h̲e̲n̲ the series diverges immediately</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">Infinite Series
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://openstax.org/books/calculus-volume-2/pages/5-2-infinite-series"
+              target="_blank">[openstax🌐]</a></li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">The Divergence test
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a
+              href="https://openstax.org/books/calculus-volume-2/pages/5-3-the-divergence-and-integral-tests"
+              target="_blank">[openstax🌐]</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  </article>
+</body>
+
+</html>

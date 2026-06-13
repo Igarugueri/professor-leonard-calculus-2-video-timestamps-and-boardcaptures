@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．９： Ａｐｐｒｏｘｉｍａｔｉｏｎ ｏｆ Ｆｕｎｃｔｉｏｎｓ ｂｙ Ｔａｙｌｏｒ Ｐｏｌｙｎｏｍｉａｌｓ</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            chtml: {
+                scale: 1.05,
+                matchFontHeight: false,
+                displayAlign: 'center',
+                displayIndent: '0em',
+                linebreaks: { automatic: false }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <article class="chapter">
+        <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．９</h1>
+        <h1>Ａｐｐｒｏｘｉｍａｔｉｏｎ ｏｆ Ｆｕｎｃｔｉｏｎｓ ｂｙ Ｔａｙｌｏｒ Ｐｏｌｙｎｏｍｉａｌｓ</h1>
+        <h2>１ - Ｔａｙｌｏｒ　Ｐｏｌｙｎｏｍｉａｌｓ:　Ｔｈｅｏｒｙ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 9.9/[0-00]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.9/[0-00]-01.png"
+                        alt="Preview" /></span>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=0"
+                    target="_blank">[0:00]</a>. Introduction — Approximating functions with Taylor polynomials.
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=9"
+                    target="_blank">[0:09]</a>. Taylor polynomials are based on Taylor series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use part of a Taylor series.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">approximate a function near a chosen center $𝑪$.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=30"
+                    target="_blank">[0:30]</a>. Review of Taylor series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A function can be represented by:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=𝒇(𝑪)+𝒇'(𝑪)(𝒙-𝑪)+\dfrac{𝒇''(𝑪)\cdot
+                                (𝒙-𝑪)^{2}}{2!}+\cdots+\dfrac{𝒇^{(n)}(𝑪)\cdot (𝒙-𝑪)^{n}}{n!}+\cdots$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This keeps going forever.
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=103"
+                    target="_blank">[1:43]</a>. Taylor series versus Maclaurin series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Taylor series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">centered at any value $𝑪$.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Maclaurin series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">special Taylor series centered at $𝑪=0$.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=140"
+                    target="_blank">[2:20]</a>. Main idea — stop the Taylor series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A Taylor series goes forever.
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But in practice:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we stop at a particular term.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">When we stop at degree $n$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we get a <strong>Taylor polynomial.</strong>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=198"
+                    target="_blank">[3:18]</a>. Full Taylor series versus stopped Taylor series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Full Taylor series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">can represent the function exactly.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Stopped Taylor series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">does not represent the function perfectly.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">gives an approximation.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=250"
+                    target="_blank">[4:10]</a>. Definition — nth degree Taylor polynomial.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">When the Taylor series is stopped at degree $n$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the result is a polynomial.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is called:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the $n$-th degree Taylor polynomial.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=317"
+                    target="_blank">[5:17]</a>. Remainder and error.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A Taylor polynomial is missing the rest of the Taylor series.
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">That missing part is called:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the remainder.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The remainder measures:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3"><strong>the error between the Taylor polynomial and the actual
+                                    function.</strong>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=417"
+                    target="_blank">[6:57]</a>. Function equals Taylor polynomial plus remainder.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main relationship:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=𝑷_{n}(𝒙)+𝑹_{n}(𝒙)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Taylor polynomial + error = actual function.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=435"
+                    target="_blank">[7:15]</a>. Formula for the remainder.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Remainder formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{n}(𝒙)=\dfrac{𝒇^{(n+1)}(𝒛)\cdot (𝒙-𝑪)^{n+1}}{(n+1)!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This uses:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the next derivative after the degree of the polynomial.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=551"
+                    target="_blank">[9:11]</a>. Meaning of $𝒛$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">$𝒛$ is some number between:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪$, the center.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙$, the point being approximated.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We choose $𝒛$ to give the largest possible error.
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we want to overestimate the error.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we do not want to underestimate it.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>２ - Ｅｘａｍｐｌｅｓ　ｏｆ　Ｔａｙｌｏｒ　Ｐｏｌｙｎｏｍｉａｌ　Ａｐｐｒｏｘｉｍａｔｉｏｎ</h2>
+        <h2>２．１ - Ｅｘａｍｐｌｅ 1:　Ａｐｐｒｏｘｉｍａｔｉｎｇ　$\ln(1.1)$</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 9.9/[10-05]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 9.9/[10-05]-01.png"
+                        alt="Preview" /></span> - <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 9.9/[10-05]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 9.9/[10-05]-02.png" alt="Preview" /></span> - <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 9.9/[10-05]-03.png"
+                        target="_blank">[📷image-3]</a><img src="../img/Calculus 2 Lecture 9.9/[10-05]-03.png"
+                        alt="Preview" /></span> - <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 9.9/[10-05]-04.png" target="_blank">[📷image-4]</a><img
+                        src="../img/Calculus 2 Lecture 9.9/[10-05]-04.png" alt="Preview" /></span>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=605"
+                    target="_blank">[10:05]</a>. 🧩 Example 1 — Approximate $\ln(1.1)$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Function:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\ln(𝒙)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">approximate $\ln(1.1)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Method:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use a Taylor polynomial.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">choose a center close to $1.1$.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=662"
+                    target="_blank">[11:02]</a>. Choose a nearby center.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Approximation point:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=1.1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Choose:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$1$ is close to $1.1$.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(1)$ is easy to compute.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Taylor polynomial will be centered at $𝑪=1$.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">all powers will involve $(𝒙-1)$.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=727"
+                    target="_blank">[12:07]</a>. Use a fourth degree Taylor polynomial.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Degree:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$n=4$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">stop at the fourth derivative.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">build $𝑷_{4}(𝒙)$.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">For the error:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">go one derivative further.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use the fifth derivative.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=800"
+                    target="_blank">[13:20]</a>. Find derivatives of $\ln(𝒙)$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\ln(𝒙)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)=\dfrac{1}{𝒙}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Second derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇''(𝒙)=-\dfrac{1}{𝒙^{2}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Third derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'''(𝒙)=\dfrac{2}{𝒙^{3}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Fourth derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇^{(4)}(𝒙)=-\dfrac{6}{𝒙^{4}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Fifth derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇^{(5)}(𝒙)=\dfrac{24}{𝒙^{5}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">derivatives up to $𝒇^{(4)}$ are used for the Taylor polynomial.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇^{(5)}$ is saved for the error.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=963"
+                    target="_blank">[16:03]</a>. Evaluate derivatives at $𝑪=1$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute $𝒙=1$ into each derivative.
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Values:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(1)=\ln(1)=0$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(1)=1$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇''(1)=-1$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'''(1)=2$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇^{(4)}(1)=-6$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇^{(5)}(1)=24$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=1082"
+                    target="_blank">[18:02]</a>. Build the fourth degree Taylor polynomial.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">General fourth degree Taylor polynomial:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑷_{4}(𝒙)=𝒇(1)+𝒇'(1)(𝒙-1)+\dfrac{𝒇''(1)\cdot
+                                (𝒙-1)^{2}}{2!}+\dfrac{𝒇'''(1)\cdot (𝒙-1)^{3}}{3!}+\dfrac{𝒇^{(4)}(1)\cdot
+                                (𝒙-1)^{4}}{4!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute the values:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑷_{4}(𝒙)=0+1(𝒙-1)+\dfrac{-1\cdot (𝒙-1)^{2}}{2!}+\dfrac{2\cdot
+                                (𝒙-1)^{3}}{3!}+\dfrac{-6\cdot (𝒙-1)^{4}}{4!}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=1278"
+                    target="_blank">[21:18]</a>. Simplify the Taylor polynomial.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify each coefficient:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{2}{3!}=\dfrac{2}{6}=\dfrac{1}{3}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-\dfrac{6}{4!}=-\dfrac{6}{24}=-\dfrac{1}{4}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $𝑷_{4}(𝒙)=(𝒙-1)-\dfrac{(𝒙-1)^{2}}{2}+\dfrac{(𝒙-1)^{3}}{3}-\dfrac{(𝒙-1)^{4}}{4}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this fourth degree Taylor polynomial approximates $\ln(𝒙)$ around
+                                $𝑪=1$.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=1448"
+                    target="_blank">[24:08]</a>. Approximate $\ln(1.1)$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=1.1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙-1=0.1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute into the Taylor polynomial:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(1.1)\approx 𝑷_{4}(1.1)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $𝑷_{4}(1.1)=0.1-\dfrac{(0.1)^{2}}{2}+\dfrac{(0.1)^{3}}{3}-\dfrac{(0.1)^{4}}{4}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Approximation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(1.1)\approx 0.095308333\ldots$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=1661"
+                    target="_blank">[27:41]</a>. Need to measure the error.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is only an approximation.
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we stopped the Taylor series at degree $4$.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore, we do not have the full Taylor series.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Question:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">how close is $𝑷_{4}(1.1)$ to the real value of $\ln(1.1)$?
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=1729"
+                    target="_blank">[28:49]</a>. Remainder for the fourth degree Taylor polynomial.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$n=4$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The error uses:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the next derivative.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the fifth derivative.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Remainder formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{4}(𝒙)=\dfrac{𝒇^{(5)}(𝒛)\cdot (𝒙-𝑪)^{4+1}}{(4+1)!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{4}(𝒙)=\dfrac{𝒇^{(5)}(𝒛)\cdot (𝒙-1)^{5}}{5!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛$ is between $1$ and $1.1$.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=1873"
+                    target="_blank">[31:13]</a>. Choose $𝒛$ for the largest error.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Fifth derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇^{(5)}(𝒙)=\dfrac{24}{𝒙^{5}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇^{(5)}(𝒛)=\dfrac{24}{𝒛^{5}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$1\leq 𝒛\leq 1.1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">To get the largest error:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">choose the value of $𝒛$ that makes $\dfrac{24}{𝒛^{5}}$ as large as
+                                possible.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since $𝒛$ is in the denominator:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the smaller $𝒛$ is,
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the larger $\dfrac{24}{𝒛^{5}}$ becomes.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">choose $𝒛=1$.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇^{(5)}(1)=24$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=2041"
+                    target="_blank">[34:01]</a>. Compute the maximum error.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start from:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{4}(𝒙)=\dfrac{𝒇^{(5)}(𝒛)\cdot (𝒙-1)^{5}}{5!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=1.1$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛=1$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇^{(5)}(1)=24$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{4}(1.1)=\dfrac{24\cdot (1.1-1)^{5}}{5!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$1.1-1=0.1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{4}(1.1)=\dfrac{24\cdot (0.1)^{5}}{5!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$5!=120$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{24}{120}=\dfrac{1}{5}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{4}(1.1)=\dfrac{(0.1)^{5}}{5}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{4}(1.1)=0.000002$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{4}(1.1)=2\times 10^{-6}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=2158"
+                    target="_blank">[35:58]</a>. Final interpretation.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Approximation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(1.1)\approx 𝑷_{4}(1.1)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑷_{4}(1.1)\approx 0.095308333\ldots$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Error bound:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|error|\leq 2\times 10^{-6}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|error|\leq 0.000002$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the approximation is within $0.000002$ of the real value.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the fourth degree Taylor polynomial gives a very close approximation.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interval for the real value:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0.095308333\ldots-0.000002\leq \ln(1.1)\leq 0.095308333\ldots+0.000002$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In absolute value form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|\ln(1.1)-𝑷_{4}(1.1)|\leq 0.000002$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">exact value = infinite series.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">approximation = Taylor polynomial stopped at degree $4$.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">error = difference between the exact value and the approximation.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In this problem:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">exact value:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\ln(1.1)$
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">approximation:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝑷_{4}(1.1)$
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">error:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$|\ln(1.1)-𝑷_{4}(1.1)|$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|\ln(1.1)-𝑷_{4}(1.1)|\leq 0.000002$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Difference between $𝒙$ and $𝒛$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In the approximation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=1.1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But in the error formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛$ is some number between $𝑪$ and $𝒙$.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=1$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=1.1$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so $1\leq 𝒛\leq 1.1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙$ and $𝒛$ do not have to be the same number.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In this example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=1.1$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛=1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙$ is the point we want to approximate.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛$ is chosen to make the error as large as possible.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">choosing the largest possible error gives a safe error bound.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>２．２ - Ｅｘａｍｐｌｅ 2:　Ｔａｙｌｏｒ　Ｐｏｌｙｎｏｍｉａｌ　ｆｏｒ　$\sqrt{𝒙}$</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 9.9/[37-37]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 9.9/[37-37]-01.png"
+                        alt="Preview" /></span> - <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 9.9/[37-37]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 9.9/[37-37]-02.png" alt="Preview" /></span>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=2257"
+                    target="_blank">[37:37]</a>. 🧩 Example 2 — Taylor polynomial for $\sqrt{𝒙}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Function:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\sqrt{𝒙}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Task:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the second degree Taylor polynomial.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Center:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=4$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interval for the error:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$[3,5]$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=2361"
+                    target="_blank">[39:21]</a>. Start with derivatives.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Need:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">derivatives up to degree $2$.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Also need:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">one more derivative for the error.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">a second degree Taylor polynomial uses $𝒇$, $𝒇'$, and $𝒇''$.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">its error uses $𝒇'''$.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=2371"
+                    target="_blank">[39:31]</a>. Find derivatives of $\sqrt{𝒙}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\sqrt{𝒙}=𝒙^{1/2}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)=\left(\dfrac{1}{2}\right)𝒙^{-1/2}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Second derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇''(𝒙)=-\left(\dfrac{1}{4}\right)𝒙^{-3/2}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Third derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'''(𝒙)=\left(\dfrac{3}{8}\right)𝒙^{-5/2}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'''(𝒙)=\dfrac{3}{8𝒙^{5/2}}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=2443"
+                    target="_blank">[40:43]</a>. Evaluate derivatives at $𝑪=4$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=4$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Values:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(4)=\sqrt{4}=2$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(4)=\dfrac{1}{4}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇''(4)=-\dfrac{1}{32}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'''(4)=\dfrac{3}{256}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'''(4)$ is not used in $𝑷_{2}(𝒙)$.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is saved for the error.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=2549"
+                    target="_blank">[42:29]</a>. Build the second degree Taylor polynomial.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑷_{2}(𝒙)=𝒇(4)+𝒇'(4)(𝒙-4)+\dfrac{𝒇''(4)\cdot (𝒙-4)^{2}}{2!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $𝑷_{2}(𝒙)=2+\left(\dfrac{1}{4}\right)(𝒙-4)+\dfrac{\left(-\dfrac{1}{32}\right)\cdot
+                                (𝒙-4)^{2}}{2!}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=2586"
+                    target="_blank">[43:06]</a>. Simplify.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2!=2$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(-\dfrac{1}{32}\right)\Big/\;2=-\dfrac{1}{64}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑷_{2}(𝒙)=2+\dfrac{(𝒙-4)}{4}-\dfrac{(𝒙-4)^{2}}{64}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=2660"
+                    target="_blank">[44:20]</a>. Meaning of the polynomial.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This polynomial approximates:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sqrt{𝒙}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Around:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=4$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">values of $𝒙$ close to $4$ should give good approximations.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=2729"
+                    target="_blank">[45:29]</a>. Next step — maximum error.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The polynomial can approximate values on:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$[3,5]$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Need:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">maximum possible error on that interval.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=2908"
+                    target="_blank">[48:28]</a>. Remainder for the second degree polynomial.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$n=2$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The error uses:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the next derivative.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the third derivative.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Remainder formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{2}(𝒙)=\dfrac{𝒇'''(𝒛)\cdot (𝒙-4)^{3}}{3!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛$ is between the center $4$ and the value of $𝒙$ being approximated.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">since the interval is $[3,5]$, we can take $𝒛\in [3,5]$ for the
+                                maximum-error estimate.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=3021"
+                    target="_blank">[50:21]</a>. Substitute the third derivative.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'''(𝒙)=\dfrac{3}{8𝒙^{5/2}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'''(𝒛)=\dfrac{3}{8𝒛^{5/2}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{2}(𝒙)=\left(\dfrac{3}{8𝒛^{5/2}}\right)\cdot
+                                \dfrac{(𝒙-4)^{3}}{3!}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=3081"
+                    target="_blank">[51:21]</a>. Choose values for maximum error.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">On the interval:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$3\leq 𝒙\leq 5$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">To maximize $|𝒙-4|$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">choose an endpoint.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=3$ or $𝒙=5$.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Leonard chooses:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=5$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙-4|=|5-4|=1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">To maximize:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{3}{8𝒛^{5/2}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">choose the smallest possible $𝒛$.
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛\in [3,5]$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">choose:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛=3$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛$ is in the denominator.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">smaller $𝒛$ gives a larger fraction.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">larger fraction gives a larger error bound.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=3249"
+                    target="_blank">[54:09]</a>. Compute the maximum error.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start from:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{2}(𝒙)=\left(\dfrac{3}{8𝒛^{5/2}}\right)\cdot
+                                \dfrac{(𝒙-4)^{3}}{3!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛=3$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=5$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{2}(𝒙)=\left(\dfrac{3}{8\cdot 3^{5/2}}\right)\cdot
+                                \dfrac{(5-4)^{3}}{3!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(5-4)^{3}=1$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$3!=3\cdot 2\cdot 1=6$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{2}(𝒙)=\left(\dfrac{3}{8\cdot 3^{5/2}}\right)\cdot
+                                \left(\dfrac{1}{6}\right)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{2}(𝒙)=\dfrac{3}{48\cdot 3^{5/2}}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{2}(𝒙)=\dfrac{1}{16\cdot 3^{5/2}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Approximation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{2}(𝒙)\approx 0.004$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=3393"
+                    target="_blank">[56:33]</a>. Final interpretation.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Maximum error:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|error|\leq 0.004$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">for any $𝒙$ in $[3,5]$,
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the approximation given by $𝑷_{2}(𝒙)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">is within about $0.004$ of the true value $\sqrt{𝒙}$.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In absolute value form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|\sqrt{𝒙}-𝑷_{2}(𝒙)|\leq 0.004$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">for $3\leq 𝒙\leq 5$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>３ - Ｗｈｅｎ　Ｄｏｅｓ　ａ　Ｆｕｎｃｔｉｏｎ　Ｈａｖｅ　ａ　Ｔａｙｌｏｒ　Ｓｅｒｉｅｓ　Ｒｅｐｒｅｓｅｎｔａｔｉｏｎ？</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 9.9/[57-51]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.9/[57-51]-01.png"
+                        alt="Preview" /></span>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=3471"
+                    target="_blank">[57:51]</a>. New question — When does a function have a Taylor series
+                representation?
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Question:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">when does a Taylor series actually represent the original function?
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=3527"
+                    target="_blank">[58:47]</a>. Use the remainder.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">a Taylor polynomial has a remainder.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the remainder measures the error between the polynomial and the
+                                function.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if the remainder goes to zero,
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Taylor series represents the function.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=3578"
+                    target="_blank">[59:38]</a>. Key theorem.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝑹_{n}(𝒙)=0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">t̲h̲e̲n̲:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the function can be represented by its Taylor series centered at $𝑪$.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=3639"
+                    target="_blank">[1:00:39]</a>. Idea of the proof.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start from:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=𝑷_{n}(𝒙)+𝑹_{n}(𝒙)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rearrange:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑷_{n}(𝒙)=𝒇(𝒙)-𝑹_{n}(𝒙)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{n}(𝒙)\to 0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">t̲h̲e̲n̲:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑷_{n}(𝒙)\to 𝒇(𝒙)$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=3773"
+                    target="_blank">[1:02:53]</a>. What happens as $n$ goes to infinity.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">As:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$n\to\infty$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The Taylor polynomial:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">includes more and more terms.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In the limit:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Taylor polynomials become the Taylor series.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $𝑹_{n}(𝒙)\to 0$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ the Taylor series represents the function.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=3856"
+                    target="_blank">[1:04:16]</a>. Useful limit.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important limit:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{|𝒙|^{n}}{n!}=0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">factorial growth eventually beats any fixed power of $𝒙$.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This will be used:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">to prove that certain remainders go to $0$.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">especially in examples involving $𝓮^{x}$ and $\sin(𝒙)$.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>４ - Ｅｘａｍｐｌｅｓ　ｏｆ　Ｐｒｏｖｉｎｇ　Ｔａｙｌｏｒ　Ｓｅｒｉｅｓ　Ｒｅｐｒｅｓｅｎｔａｔｉｏｎ</h2>
+        <h2>４．１ - Ｅｘａｍｐｌｅ 3:　Ｓｈｏｗ　ｔｈａｔ　ｔｈｅ　Ｍａｃｌａｕｒｉｎ　Ｓｅｒｉｅｓ　ｆｏｒ　$𝓮^{x}$　Ｒｅｐｒｅｓｅｎｔｓ　$𝓮^{x}$</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 9.9/[1-06-39]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 9.9/[1-06-39]-01.png"
+                        alt="Preview" /></span> - <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 9.9/[1-06-39]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 9.9/[1-06-39]-02.png" alt="Preview" /></span>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=3999"
+                    target="_blank">[1:06:39]</a>. 🧩 Example 3 — Show that the Maclaurin series for $𝓮^{x}$ represents
+                $𝓮^{x}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Known Maclaurin series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝓮^{x}=\displaystyle \sum_{n=0}^{\infty}\dfrac{𝒙^{n}}{n!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">prove that this series actually represents $𝓮^{x}$.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Method:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">show that the remainder goes to zero.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=4093"
+                    target="_blank">[1:08:13]</a>. Do not reinvent the wheel.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We already know the Maclaurin series for $𝓮^{x}$.
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We do not need to derive the series again.
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Instead, we prove:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝑹_{n}(𝒙)=0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the remainder goes to zero:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Taylor series represents the function.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=4212"
+                    target="_blank">[1:10:12]</a>. Start from the remainder formula.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{n}(𝒙)=\dfrac{𝒇^{(n+1)}(𝒛)\cdot (𝒙-𝑪)^{n+1}}{(n+1)!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛$ is between $𝑪$ and $𝒙$.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=4255"
+                    target="_blank">[1:10:55]</a>. Since this is Maclaurin.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Center:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{n}(𝒙)=\dfrac{𝒇^{(n+1)}(𝒛)\cdot 𝒙^{n+1}}{(n+1)!}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=4308"
+                    target="_blank">[1:11:48]</a>. Derivatives of $𝓮^{x}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=𝓮^{x}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Every derivative is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝓮^{x}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇^{(n+1)}(𝒙)=𝓮^{x}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute $𝒛$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇^{(n+1)}(𝒛)=𝓮^{z}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=4423"
+                    target="_blank">[1:13:43]</a>. Remainder expression.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute into the remainder formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{n}(𝒙)=\dfrac{𝓮^{z}\cdot 𝒙^{n+1}}{(n+1)!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Now we need to show:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝑹_{n}(𝒙)=0$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=4560"
+                    target="_blank">[1:16:00]</a>. Case ❶ — $𝒙>0$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛$ is between $0$ and $𝒙$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0<𝒛<𝒙$ </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝓮^{z}<𝓮^{x}$ </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Also:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{n}(𝒙)=\dfrac{𝓮^{z}\cdot 𝒙^{n+1}}{(n+1)!}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Since $𝒙>0$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝑹_{n}(𝒙)$ is positive.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=4663"
+                    target="_blank">[1:17:43]</a>. Squeeze the remainder for $𝒙>0$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Bound:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0\leq 𝑹_{n}(𝒙)\leq \dfrac{𝓮^{x}\cdot 𝒙^{n+1}}{(n+1)!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since $𝒙$ is fixed:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝓮^{x}$ is a constant.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Useful limit:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{𝒙^{n+1}}{(n+1)!}=0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{𝓮^{x}\cdot 𝒙^{n+1}}{(n+1)!}=0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">By the Squeeze Theorem:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝑹_{n}(𝒙)=0$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=4861"
+                    target="_blank">[1:21:01]</a>. Case ❷ — $𝒙<0$. <ul>
+                    <!-- ◉ nivel-2 -->
+            <li class="level-2">Since:
+                <ul>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">$𝒛$ is between $𝒙$ and $0$
+                    </li>
+                </ul>
+            </li>
+            <!-- ◉ nivel-2 -->
+            <li class="level-2">Then:
+                <ul>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">$𝒙<𝒛<0$ </li>
+                </ul>
+            </li>
+            <!-- ◉ nivel-2 -->
+            <li class="level-2">Therefore:
+                <ul>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">$𝒛<0$ </li>
+                </ul>
+            </li>
+            <!-- ◉ nivel-2 -->
+            <li class="level-2">So:
+                <ul>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">$𝓮^{z}<𝓮^{0}$ </li>
+                            <!-- ○ nivel-3 -->
+                    <li class="level-3">$𝓮^{z}<1$ </li>
+                </ul>
+            </li>
+        </ul>
+        </li>
+        <!-- ● nivel-1 -->
+        <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=4899"
+                target="_blank">[1:21:39]</a>. Squeeze the absolute value for $𝒙<0$. <ul>
+                <!-- ◉ nivel-2 -->
+        <li class="level-2">Use absolute value:
+            <ul>
+                <!-- ○ nivel-3 -->
+                <li class="level-3">$|𝑹_{n}(𝒙)|=\left|\dfrac{𝓮^{z}\cdot 𝒙^{n+1}}{(n+1)!}\right|$
+                </li>
+            </ul>
+        </li>
+        <!-- ◉ nivel-2 -->
+        <li class="level-2">Since:
+            <ul>
+                <!-- ○ nivel-3 -->
+                <li class="level-3">$𝓮^{z}<1$ </li>
+            </ul>
+        </li>
+        <!-- ◉ nivel-2 -->
+        <li class="level-2">Then:
+            <ul>
+                <!-- ○ nivel-3 -->
+                <li class="level-3">$0\leq |𝑹_{n}(𝒙)|\leq \dfrac{|𝒙|^{n+1}}{(n+1)!}$
+                </li>
+            </ul>
+        </li>
+        <!-- ◉ nivel-2 -->
+        <li class="level-2">Useful limit:
+            <ul>
+                <!-- ○ nivel-3 -->
+                <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{|𝒙|^{n+1}}{(n+1)!}=0$
+                </li>
+            </ul>
+        </li>
+        <!-- ◉ nivel-2 -->
+        <li class="level-2">By the Squeeze Theorem:
+            <ul>
+                <!-- ○ nivel-3 -->
+                <li class="level-3">$\displaystyle \lim_{n\to\infty}|𝑹_{n}(𝒙)|=0$
+                </li>
+            </ul>
+        </li>
+        <!-- ◉ nivel-2 -->
+        <li class="level-2">Therefore:
+            <ul>
+                <!-- ○ nivel-3 -->
+                <li class="level-3">$\displaystyle \lim_{n\to\infty}𝑹_{n}(𝒙)=0$
+                </li>
+            </ul>
+        </li>
+        </ul>
+        </li>
+        <!-- ● nivel-1 -->
+        <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=5121"
+                target="_blank">[1:25:21]</a>. Conclusion.
+            <ul>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">In both cases:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$𝒙>0$
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$𝒙<0$ </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">the remainder goes to zero:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$\displaystyle \lim_{n\to\infty}𝑹_{n}(𝒙)=0$
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Also:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">if $𝒙=0$, the result is immediate.
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Therefore:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">the Maclaurin series for $𝓮^{x}$ represents $𝓮^{x}$.
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Final statement:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$𝓮^{x}=\displaystyle \sum_{n=0}^{\infty}\dfrac{𝒙^{n}}{n!}$
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <!-- ● nivel-1 -->
+        <li class="level-1">N̲O̲T̲E̲ — Why this limit goes to $0$.
+            <ul>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Limit:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{𝓮^{x}\cdot 𝒙^{n+1}}{(n+1)!}=0$
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">At first sight:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">if $𝒙>1$,
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">the numerator grows.
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">the denominator also grows.
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">so it may look like an $\infty/\infty$ situation.
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">But here:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$𝒙$ is fixed.
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$𝓮^{x}$ is also fixed.
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">the variable going to infinity is $n$.
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Therefore:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">this is best understood as a sequence.
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">the clean way is to compare consecutive terms.
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Let:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$𝒂_{n}=\dfrac{𝓮^{x}\cdot 𝒙^{n+1}}{(n+1)!}$
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Then:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$𝒂_{n+1}=\dfrac{𝓮^{x}\cdot 𝒙^{n+2}}{(n+2)!}$
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Compare consecutive terms:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$\dfrac{𝒂_{n+1}}{𝒂_{n}}$
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$=\left(\dfrac{𝓮^{x}\cdot 𝒙^{n+2}}{(n+2)!}\right)\cdot
+                            \left(\dfrac{(n+1)!}{𝓮^{x}\cdot 𝒙^{n+1}}\right)$
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Cancel common factors:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$𝓮^{x}$ cancels.
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$𝒙^{n+1}$ cancels.
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$\dfrac{(n+1)!}{(n+2)!}=\dfrac{1}{n+2}$
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Therefore:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$\dfrac{𝒂_{n+1}}{𝒂_{n}}=\dfrac{𝒙}{n+2}$
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Now:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{𝒙}{n+2}=0$
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Meaning:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">each new term eventually becomes much smaller than the previous one.
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">the factorial in the denominator grows faster than the fixed power in the
+                            numerator.
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Therefore:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$𝒂_{n}\to 0$
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">So:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{𝓮^{x}\cdot 𝒙^{n+1}}{(n+1)!}=0$
+                        </li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Main idea:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">powers grow by multiplying by the same fixed number $𝒙$.
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">factorials grow by multiplying by larger and larger numbers.
+                        </li>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">therefore, the factorial eventually wins.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        </ul>
+        <h2>４．２ - Ｅｘａｍｐｌｅ 4:　Ｓｈｏｗ　ｔｈａｔ　ｔｈｅ　Ｍａｃｌａｕｒｉｎ　Ｓｅｒｉｅｓ　ｆｏｒ　$\sin(𝒙)$　Ｒｅｐｒｅｓｅｎｔｓ　$\sin(𝒙)$</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 9.9/[1-26-57]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.9/[1-26-57]-01.png"
+                        alt="Preview" /></span>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=5217"
+                    target="_blank">[1:26:57]</a>. 🧩 Example 4 — Show that the Maclaurin series for $\sin(𝒙)$
+                represents $\sin(𝒙)$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Known Maclaurin series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin(𝒙)=\displaystyle
+                                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}𝒙^{2n+1}}{(2n+1)!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">prove that this series actually represents $\sin(𝒙)$.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Method:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">show that the remainder goes to zero.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=5262"
+                    target="_blank">[1:27:42]</a>. Goal.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Show:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝑹_{n}(𝒙)=0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if the remainder goes to zero,
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then the Taylor series represents the function.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=5297"
+                    target="_blank">[1:28:17]</a>. Start from the remainder formula.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since this is a Maclaurin series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Remainder formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{n}(𝒙)=\dfrac{𝒇^{(n+1)}(𝒛)\cdot 𝒙^{n+1}}{(n+1)!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒛$ is between $0$ and $𝒙$.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=5338"
+                    target="_blank">[1:28:58]</a>. Derivatives of $\sin(𝒙)$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Derivatives cycle through:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin(𝒙)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos(𝒙)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-\sin(𝒙)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-\cos(𝒙)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇^{(n+1)}(𝒛)$ is always one of:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\pm \sin(𝒛)$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\pm \cos(𝒛)$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=5424"
+                    target="_blank">[1:30:24]</a>. Bound the derivative.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-1\leq \sin(𝒛)\leq 1$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-1\leq \cos(𝒛)\leq 1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-1\leq 𝒇^{(n+1)}(𝒛)\leq 1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In absolute value:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒇^{(n+1)}(𝒛)|\leq 1$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=5458"
+                    target="_blank">[1:30:58]</a>. Bound the remainder.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start from:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{n}(𝒙)=\dfrac{𝒇^{(n+1)}(𝒛)\cdot 𝒙^{n+1}}{(n+1)!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Take absolute value:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝑹_{n}(𝒙)|=\left|\dfrac{𝒇^{(n+1)}(𝒛)\cdot 𝒙^{n+1}}{(n+1)!}\right|$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒇^{(n+1)}(𝒛)|\leq 1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0\leq |𝑹_{n}(𝒙)|\leq \dfrac{|𝒙|^{n+1}}{(n+1)!}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=5539"
+                    target="_blank">[1:32:19]</a>. Take the limit.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{|𝒙|^{n+1}}{(n+1)!}=0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">By the Squeeze Theorem:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}|𝑹_{n}(𝒙)|=0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝑹_{n}(𝒙)=0$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=RbreIk02B3c&amp;t=5581"
+                    target="_blank">[1:33:01]</a>. Conclusion.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝑹_{n}(𝒙)=0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Maclaurin series for $\sin(𝒙)$ represents $\sin(𝒙)$.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final statement:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin(𝒙)=\displaystyle
+                                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}𝒙^{2n+1}}{(2n+1)!}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">Taylor polynomial remainder
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a
+                            href="https://www.khanacademy.org/math/ap-calculus-bc/bc-series-new/bc-10-12/v/error-or-remainder-of-a-taylor-polynomial-approximation"
+                            target="_blank">[Khan Academy 🌐]</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </article>
+</body>
+
+</html>

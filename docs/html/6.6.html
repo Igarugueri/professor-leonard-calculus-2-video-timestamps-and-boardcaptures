@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ６．６－Ａ Ｄｉｓｃｕｓｓｉｏｎ ｏｆ Ｈｙｐｅｒｂｏｌｉｃ Ｆｕｎｃｔｉｏｎｓ</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <article class="chapter">
+    <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ６．６－Ａ Ｄｉｓｃｕｓｓｉｏｎ ｏｆ Ｈｙｐｅｒｂｏｌｉｃ Ｆｕｎｃｔｉｏｎｓ</h1>
+
+    <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=0" target="_blank">[0:00]</a>.
+        Introduction to Hyperbolic Functions – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[0-00]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[0-00]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Fundamental Definitions
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=65" target="_blank">[1:05]</a>.
+                Hyperbolic Sine (“sinh”): $𝒇(𝒙)=\sinh(𝒙)$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Exponential definition:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\sinh(𝒙)=\dfrac{𝒆^{𝒙}-𝒆^{-𝒙}}{2}$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Engineering application:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">The catenary curve describing suspended cables
+                        <ul>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">A catenary is the natural shape a flexible cable takes when it hangs under
+                            its own weight between two supports</li>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">Common real-world examples
+                            <ul>
+                              <!-- ▲ nivel-7 -->
+                              <li class="level-7">power lines between poles</li>
+                              <!-- ▲ nivel-7 -->
+                              <li class="level-7">suspension bridge cables</li>
+                              <!-- ▲ nivel-7 -->
+                              <li class="level-7">a chain hanging between two hooks</li>
+                            </ul>
+                          </li>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">This curve appears naturally when balancing gravitational forces along the
+                            cable</li>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">The mathematical study of this curve leads to the introduction of
+                            hyperbolic functions</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=122"
+                  target="_blank">[2:02]</a>. Hyperbolic Cosine (“cosh”): $𝒇(𝒙)=\cosh(𝒙)$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Exponential definition:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\cosh(𝒙)=\dfrac{𝒆^{𝒙}+𝒆^{-𝒙}}{2}$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=147"
+                  target="_blank">[2:27]</a>. Derived Hyperbolic Functions
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Hyperbolic tangent:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\tanh(𝒙)=\dfrac{\sinh(𝒙)}{\cosh(𝒙)}$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Hyperbolic cosecant:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\operatorname{csch}(𝒙)=\dfrac{1}{\sinh(𝒙)}$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Hyperbolic secant:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\operatorname{sech}(𝒙)=\dfrac{1}{\cosh(𝒙)}$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Hyperbolic cotangent:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\coth(𝒙)=\dfrac{\cosh(𝒙)}{\sinh(𝒙)}$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｉｄｅｎｔｉｔｉｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=259" target="_blank">[4:19]</a>.
+        Hyperbolic Function Identities – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[4-19]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[4-19]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\sinh(-𝒙)=-\sinh(𝒙)$ (odd)</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\cosh(-𝒙)=\cosh(𝒙)$ (even)</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\cosh^{2}(𝒙)-\sinh^{2}(𝒙)=1$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\operatorname{sech}^{2}(𝒙)=1-\tanh^{2}(𝒙)$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\sinh(𝒙+𝒚)=\sinh(𝒙)\cosh(𝒚)+\cosh(𝒙)\sinh(𝒚)$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\cosh(𝒙+𝒚)=\cosh(𝒙)\cosh(𝒚)+\sinh(𝒙)\sinh(𝒚)$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\sinh(2𝒙)=2\sinh(𝒙)\cosh(𝒙)$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\cosh(2𝒙)=\cosh^{2}(𝒙)+\sinh^{2}(𝒙)$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\cosh^{2}(𝒙)=\dfrac{1}{2}\big(1+\cosh(2𝒙)\big)$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\sinh^{2}(𝒙)=\dfrac{1}{2}\big(-1+\cosh(2𝒙)\big)$</li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=595" target="_blank">[9:55]</a>.
+        Algebraic Proof — Proof of $\sinh(2𝒙)$ – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[9-55]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[9-55]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Start from the exponential definition
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sinh(2𝒙)=\dfrac{𝒆^{2𝒙}-𝒆^{-2𝒙}}{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the powers
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒆^{2𝒙}=(𝒆^{𝒙})^{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒆^{-2𝒙}=(𝒆^{-𝒙})^{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sinh(2𝒙)=\dfrac{(𝒆^{𝒙})^{2}-(𝒆^{-𝒙})^{2}}{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the difference of squares
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂^{2}-𝒃^{2}=(𝒂-𝒃)(𝒂+𝒃)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sinh(2𝒙)=\dfrac{(𝒆^{𝒙}-𝒆^{-𝒙})(𝒆^{𝒙}+𝒆^{-𝒙})}{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Separate the factors
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\sinh(2𝒙)=2\Big[\dfrac{𝒆^{𝒙}-𝒆^{-𝒙}}{2}\Big]\Big[\dfrac{𝒆^{𝒙}+𝒆^{-𝒙}}{2}\Big]$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Recognize the hyperbolic functions
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒆^{𝒙}-𝒆^{-𝒙}}{2}=\sinh(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒆^{𝒙}+𝒆^{-𝒙}}{2}=\cosh(𝒙)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final identity
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sinh(2𝒙)=2\sinh(𝒙)\cosh(𝒙)$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｄｅｒｉｖａｔｉｖｅｓ ＆ Ｉｎｔｅｇｒａｌｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=885" target="_blank">[14:45]</a>.
+        Derivatives of Hyperbolic Functions – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[14-45]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[14-45]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Derivative of sinh
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\sinh(𝒙)\big]=\cosh(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">From the exponential definition
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\sinh(𝒙)=\dfrac{𝒆^{𝒙}-𝒆^{-𝒙}}{2}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{𝒅}{𝒅𝒙}\Big[\dfrac{𝒆^{𝒙}-𝒆^{-𝒙}}{2}\Big]=\dfrac{𝒆^{𝒙}+𝒆^{-𝒙}}{2}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Therefore
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\dfrac{𝒅}{𝒅𝒙}\big[\sinh(𝒙)\big]=\cosh(𝒙)$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Derivative of cosh
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\cosh(𝒙)\big]=\sinh(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">From the exponential definition
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\cosh(𝒙)=\dfrac{𝒆^{𝒙}+𝒆^{-𝒙}}{2}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{𝒅}{𝒅𝒙}\Big[\dfrac{𝒆^{𝒙}+𝒆^{-𝒙}}{2}\Big]=\dfrac{𝒆^{𝒙}-𝒆^{-𝒙}}{2}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Therefore
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\dfrac{𝒅}{𝒅𝒙}\big[\cosh(𝒙)\big]=\sinh(𝒙)$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Derivative of tanh
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\tanh(𝒙)=\dfrac{\sinh(𝒙)}{\cosh(𝒙)}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use the quotient rule
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{𝒅}{𝒅𝒙}\big[\tanh(𝒙)\big]=\dfrac{𝒅}{𝒅𝒙}\Big[\dfrac{\sinh(𝒙)}{\cosh(𝒙)}\Big]$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\dfrac{\cosh(𝒙)\cdot\cosh(𝒙)-\sinh(𝒙)\cdot\sinh(𝒙)}{\cosh^{2}(𝒙)}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\dfrac{\cosh^{2}(𝒙)-\sinh^{2}(𝒙)}{\cosh^{2}(𝒙)}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Using the identity
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\cosh^{2}(𝒙)-\sinh^{2}(𝒙)=1$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Final result
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\dfrac{𝒅}{𝒅𝒙}\big[\tanh(𝒙)\big]=\dfrac{1}{\cosh^{2}(𝒙)}$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\dfrac{𝒅}{𝒅𝒙}\big[\tanh(𝒙)\big]=\operatorname{sech}^{2}(𝒙)$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=1203" target="_blank">[20:03]</a>.
+        General Table of Derivatives and Integrals – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[20-03]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[20-03]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Table of derivatives
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\sinh(𝒖)\big]=\cosh(𝒖)\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\cosh(𝒖)\big]=\sinh(𝒖)\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{𝒅}{𝒅𝒙}\big[\tanh(𝒖)\big]=\operatorname{sech}^{2}(𝒖)\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{𝒅}{𝒅𝒙}\big[\operatorname{csch}(𝒖)\big]=-\operatorname{csch}(𝒖)\coth(𝒖)\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{𝒅}{𝒅𝒙}\big[\operatorname{sech}(𝒖)\big]=-\operatorname{sech}(𝒖)\tanh(𝒖)\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{𝒅}{𝒅𝒙}\big[\coth(𝒖)\big]=-\operatorname{csch}^{2}(𝒖)\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Corresponding basic integrals
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \cosh(𝒖)\,d𝒖=\sinh(𝒖)+𝓒$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \sinh(𝒖)\,d𝒖=\cosh(𝒖)+𝓒$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \operatorname{sech}^{2}(𝒖)\,d𝒖=\tanh(𝒖)+𝓒$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \operatorname{csch}(𝒖)\coth(𝒖)\,d𝒖=-\operatorname{csch}(𝒖)+𝓒$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \operatorname{sech}(𝒖)\tanh(𝒖)\,d𝒖=-\operatorname{sech}(𝒖)+𝓒$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \operatorname{csch}^{2}(𝒖)\,d𝒖=-\coth(𝒖)+𝓒$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Key idea
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integral formulas are obtained directly by reversing the derivative formulas</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The factor $\dfrac{𝒅𝒖}{𝒅𝒙}$ indicates the Chain Rule in derivatives and
+                𝒖-substitution in integrals</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=1655" target="_blank">[27:35]</a>. 🧩
+        Example 1 — Composite derivative: $\dfrac{𝒅}{𝒅𝒙}\big[\cosh^{2}(3𝒕^{2}+1)\big]$ – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[27-35]-01.png" target="_blank">[image-1]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[27-35]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[27-35]-02.png" target="_blank">[image-2]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[27-35]-02.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Identify the layers of composition
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Outer layer: $(...)^{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Middle layer: $\cosh(...)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Inner layer: $3𝒕^{2}+1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the power rule
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒕}\big[\cosh^{2}(3𝒕^{2}+1)\big]$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=2\cosh(3𝒕^{2}+1)\cdot\dfrac{𝒅}{𝒅𝒕}\big[\cosh(3𝒕^{2}+1)\big]$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Differentiate the hyperbolic cosine
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒕}\big[\cosh(3𝒕^{2}+1)\big]$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\sinh(3𝒕^{2}+1)\cdot\dfrac{𝒅}{𝒅𝒕}\big[3𝒕^{2}+1\big]$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Differentiate the inner polynomial
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒕}\big[3𝒕^{2}+1\big]=6𝒕$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Combine all factors
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒕}\big[\cosh^{2}(3𝒕^{2}+1)\big]$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=2\cosh(3𝒕^{2}+1)\cdot\sinh(3𝒕^{2}+1)\cdot 6𝒕$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final simplified result
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒕}\big[\cosh^{2}(3𝒕^{2}+1)\big]=12𝒕\cosh(3𝒕^{2}+1)\sinh(3𝒕^{2}+1)$
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=1953" target="_blank">[32:33]</a>. 🧩
+        Example 2 — Nested derivative: $\dfrac{𝒅}{𝒅𝒙}\big[\coth(\operatorname{csch}(2𝒙))\big]$ – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[32-33]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[32-33]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Identify the composition
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Outer function: $\coth(𝒖)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Inner function: $𝒖=\cosh(2𝒙)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Differentiate the outer function
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{𝒅}{𝒅𝒙}\big[\coth(𝒖)\big]=-\operatorname{csch}^{2}(𝒖)\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute 𝒖 = cosh(2𝒙)
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{𝒅}{𝒅𝒙}\big[\coth(\cosh(2𝒙))\big]=-\operatorname{csch}^{2}(\cosh(2𝒙))\cdot\dfrac{𝒅}{𝒅𝒙}\big[\cosh(2𝒙)\big]$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Differentiate the inner function
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\cosh(2𝒙)\big]=\sinh(2𝒙)\cdot\dfrac{𝒅}{𝒅𝒙}\big[2𝒙\big]$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[2𝒙\big]=2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{𝒅}{𝒅𝒙}\big[\cosh(2𝒙)\big]=2\sinh(2𝒙)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Combine the factors
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\coth(\cosh(2𝒙))\big]$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=-\operatorname{csch}^{2}(\cosh(2𝒙))\cdot 2\sinh(2𝒙)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{𝒅}{𝒅𝒙}\big[\coth(\cosh(2𝒙))\big]=-2\operatorname{csch}^{2}(\cosh(2𝒙))\sinh(2𝒙)$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=2195" target="_blank">[36:35]</a>. 🧩
+        Example 3 — Integration by substitution: $\displaystyle \int \cosh^{2}(3𝒙)\sinh(3𝒙)\,d𝒙$ – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[36-35]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[36-35]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step 1 — First substitution
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let $𝒖=3𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then $d𝒖=3\,d𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So $d𝒙=\dfrac{d𝒖}{3}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step 2 — Rewrite the integral in terms of 𝒖
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \cosh^{2}(3𝒙)\sinh(3𝒙)\,d𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int \cosh^{2}(𝒖)\sinh(𝒖)\cdot\dfrac{d𝒖}{3}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{3}\displaystyle \int \cosh^{2}(𝒖)\sinh(𝒖)\,d𝒖$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step 3 — Second substitution
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let $𝔀=\cosh(𝒖)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then $d𝔀=\sinh(𝒖)\,d𝒖$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step 4 — Rewrite using 𝔀
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{3}\displaystyle \int \cosh^{2}(𝒖)\sinh(𝒖)\,d𝒖$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{3}\displaystyle \int 𝔀^{2}\,d𝔀$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step 5 — Integrate
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{3}\displaystyle \int 𝔀^{2}\,d𝔀=\dfrac{1}{3}\cdot\dfrac{𝔀^{3}}{3}+𝓒$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{𝔀^{3}}{9}+𝓒$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step 6 — Back-substitute
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{\cosh^{3}(𝒖)}{9}+𝓒$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{\cosh^{3}(3𝒙)}{9}+𝓒$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \cosh^{2}(3𝒙)\sinh(3𝒙)\,d𝒙=\dfrac{\cosh^{3}(3𝒙)}{9}+𝓒$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｉｎｖｅｒｓｅ Ｈｙｐｅｒｂｏｌｉｃ Ｆｕｎｃｔｉｏｎｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=2510" target="_blank">[41:50]</a>.
+        Inverse Hyperbolic Functions – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[41-50]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[41-50]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Inverse hyperbolic domains
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒚=\sinh^{-1}(𝒙)$, $(-\infty,\infty)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒚=\cosh^{-1}(𝒙)$, $[1,\infty)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒚=\tanh^{-1}(𝒙)$, $(-1,1)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒚=\operatorname{csch}^{-1}(𝒙)$, $(-\infty,0)\cup(0,\infty)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒚=\operatorname{sech}^{-1}(𝒙)$, $(0,1]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒚=\coth^{-1}(𝒙)$, $(-\infty,-1)\cup(1,\infty)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Logarithmic definitions
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Remember: the inverse of $𝒆^{𝒙}$ is $\ln(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sinh^{-1}(𝒙)=\ln\big(𝒙+\sqrt{𝒙^{2}+1}\big)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\tanh^{-1}(𝒙)=1/2\,\ln\big((1+𝒙)/(1-𝒙)\big)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\cosh^{-1}(𝒙)=\ln\big(𝒙+\sqrt{𝒙^{2}-1}\big)$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=2677" target="_blank">[44:37]</a>.
+        Proof of the logarithmic identity for $\cosh^{-1}(𝒙)$ – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[44-37]-01.png" target="_blank">[image-1]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[44-37]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[44-37]-02.png" target="_blank">[image-2]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[44-37]-02.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Start with the inverse definition
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\cosh^{-1}(𝒙)=𝒚\iff\cosh(𝒚)=𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite cosh in exponential form
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙=\dfrac{𝒆^{𝒚}+𝒆^{-𝒚}}{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$2𝒙=𝒆^{𝒚}+𝒆^{-𝒚}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Eliminate the negative exponent
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Multiply by $𝒆^{𝒚}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$2𝒙𝒆^{𝒚}=𝒆^{2𝒚}+1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$0=𝒆^{2𝒚}-2𝒙𝒆^{𝒚}+1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">View the equation as quadratic in $𝒆^{𝒚}$
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$0=𝒆^{2𝒚}-2𝒙𝒆^{𝒚}+1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let $𝒖=𝒆^{𝒚}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$0=𝒖^{2}-2𝒙𝒖+1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the quadratic formula
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒖=\dfrac{2𝒙\pm\sqrt{4𝒙^{2}-4}}{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒖=\dfrac{2𝒙\pm 2\sqrt{𝒙^{2}-1}}{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒖=𝒙\pm\sqrt{𝒙^{2}-1}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Return to $𝒆^{𝒚}$
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒆^{𝒚}=𝒙\pm\sqrt{𝒙^{2}-1}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Domain considerations
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Since $𝒆^{𝒚}>0$, the negative branch is rejected
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒚=\cosh^{-1}(𝒙)$, $[1,\infty)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Also, $\cosh^{-1}(𝒙)$ is defined for $𝒙\ge 1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore $𝒆^{𝒚}=𝒙+\sqrt{𝒙^{2}-1}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the natural logarithm
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\ln(𝒆^{𝒚})=\ln\big(𝒙+\sqrt{𝒙^{2}-1}\big)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒚=\ln\big(𝒙+\sqrt{𝒙^{2}-1}\big)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final identity
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\cosh^{-1}(𝒙)=\ln\big(𝒙+\sqrt{𝒙^{2}-1}\big)$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｄｅｒｉｖａｔｉｖｅｓ ｏｆ Ｉｎｖｅｒｓｅ Ｈｙｐｅｒｂｏｌｉｃ Ｆｕｎｃｔｉｏｎｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=3319" target="_blank">[55:19]</a>.
+        Proof of derivative of $\cosh^{-1}(𝒙)$ – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[55-19]-01.png" target="_blank">[image-1]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[55-19]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[55-19]-02.png" target="_blank">[image-2]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[55-19]-02.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Method 1 — Using logarithmic form
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Start from the identity
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\cosh^{-1}(𝒙)=\ln\big(𝒙+\sqrt{𝒙^{2}-1}\big)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Differentiate both sides
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{𝒅}{𝒅𝒙}\big[\cosh^{-1}(𝒙)\big]=\dfrac{𝒅}{𝒅𝒙}\big[\ln\big(𝒙+\sqrt{𝒙^{2}-1}\big)\big]$
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Apply chain rule
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\dfrac{1}{𝒙+\sqrt{𝒙^{2}-1}}\cdot\dfrac{𝒅}{𝒅𝒙}\big[𝒙+\sqrt{𝒙^{2}-1}\big]$
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Differentiate inside
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{𝒅}{𝒅𝒙}[𝒙]=1$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{𝒅}{𝒅𝒙}\big[\sqrt{𝒙^{2}-1}\big]=1/2\,(𝒙^{2}-1)^{-1/2}\cdot
+                    2𝒙=\dfrac{𝒙}{\sqrt{𝒙^{2}-1}}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">So derivative becomes
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$=\dfrac{1}{𝒙+\sqrt{𝒙^{2}-1}}\cdot\Big(1+\dfrac{𝒙}{\sqrt{𝒙^{2}-1}}\Big)$
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Combine terms
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $=\dfrac{1}{𝒙+\sqrt{𝒙^{2}-1}}\cdot\Big(\dfrac{\sqrt{𝒙^{2}-1}+𝒙}{\sqrt{𝒙^{2}-1}}\Big)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Simplify
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\dfrac{1}{\sqrt{𝒙^{2}-1}}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=3790"
+              target="_blank">[1:03:10]</a>. Method 2 — Implicit differentiation
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let $𝒚=\cosh^{-1}(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then $𝒙=\cosh(𝒚)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Differentiate both sides
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$1=\sinh(𝒚)\cdot\dfrac{𝒅𝒚}{𝒅𝒙}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Solve for derivative
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{1}{\sinh(𝒚)}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Express $\sinh(𝒚)$ in terms of 𝒙
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\cosh^{2}(𝒚)-\sinh^{2}(𝒚)=1$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\sinh^{2}(𝒚)=\cosh^{2}(𝒚)-1=𝒙^{2}-1$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\sinh(𝒚)=\sqrt{𝒙^{2}-1}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Final result
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{𝒅}{𝒅𝒙}\big[\cosh^{-1}(𝒙)\big]=\dfrac{1}{\sqrt{𝒙^{2}-1}}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=4010" target="_blank">[1:06:50]</a>.
+        Complete derivative table (inverse hyperbolic) – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[1-06-50]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[1-06-50]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">
+            $\dfrac{𝒅}{𝒅𝒙}\big[\cosh^{-1}(𝒖)\big]=\dfrac{1}{\sqrt{𝒖^{2}-1}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">
+            $\dfrac{𝒅}{𝒅𝒙}\big[\sinh^{-1}(𝒖)\big]=\dfrac{1}{\sqrt{𝒖^{2}+1}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\dfrac{𝒅}{𝒅𝒙}\big[\tanh^{-1}(𝒖)\big]=\dfrac{1}{1-𝒖^{2}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">
+            $\dfrac{𝒅}{𝒅𝒙}\big[\operatorname{sech}^{-1}(𝒖)\big]=-\dfrac{1}{𝒖\sqrt{1-𝒖^{2}}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\dfrac{𝒅}{𝒅𝒙}\big[\operatorname{csch}^{-1}(𝒖)\big]=-\dfrac{1}{\lvert
+            𝒖\rvert\sqrt{𝒖^{2}+1}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">$\dfrac{𝒅}{𝒅𝒙}\big[\coth^{-1}(𝒖)\big]=\dfrac{1}{1-𝒖^{2}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=3kPg0gkJQgc&t=4255" target="_blank">[1:10:55]</a>. 🧩
+        Final Example — Product rule: $\dfrac{𝒅}{𝒅𝒙}\big[𝒆^{𝒙}\cdot \operatorname{sech}^{-1}(3𝒙)\big]$ – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 6.6/[1-10-55]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 6.6/[1-10-55]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Identify the structure
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Product of two functions
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒖=𝒆^{𝒙}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒗=\operatorname{sech}^{-1}(3𝒙)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the product rule
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}[𝒖𝒗]=𝒖'𝒗+𝒖𝒗'$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[𝒆^{𝒙}\cdot \operatorname{sech}^{-1}(3𝒙)\big]$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\dfrac{𝒅}{𝒅𝒙}\big[𝒆^{𝒙}\big]\cdot
+                    \operatorname{sech}^{-1}(3𝒙)+𝒆^{𝒙}\cdot \dfrac{𝒅}{𝒅𝒙}\big[\operatorname{sech}^{-1}(3𝒙)\big]$
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Differentiate each factor
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[𝒆^{𝒙}\big]=𝒆^{𝒙}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">For the inverse hyperbolic term
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{𝒅}{𝒅𝒙}\big[\operatorname{sech}^{-1}(𝒖)\big]=-\dfrac{1}{𝒖\sqrt{1-𝒖^{2}}}\cdot\dfrac{𝒅𝒖}{𝒅𝒙}$
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Let $𝒖=3𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{𝒅𝒖}{𝒅𝒙}=3$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{𝒅}{𝒅𝒙}\big[\operatorname{sech}^{-1}(3𝒙)\big]=-\dfrac{1}{3𝒙\sqrt{1-(3𝒙)^{2}}}\cdot 3$
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=-\dfrac{1}{𝒙\sqrt{1-9𝒙^{2}}}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute back into the product rule
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[𝒆^{𝒙}\cdot \operatorname{sech}^{-1}(3𝒙)\big]$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $=𝒆^{𝒙}\operatorname{sech}^{-1}(3𝒙)+𝒆^{𝒙}\Big(-\dfrac{1}{𝒙\sqrt{1-9𝒙^{2}}}\Big)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final simplified result
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[𝒆^{𝒙}\cdot \operatorname{sech}^{-1}(3𝒙)\big]$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=𝒆^{𝒙}\operatorname{sech}^{-1}(3𝒙)-\dfrac{𝒆^{𝒙}}{𝒙\sqrt{1-9𝒙^{2}}}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>

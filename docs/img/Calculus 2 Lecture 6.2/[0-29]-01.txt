@@ -1,0 +1,5 @@
+﻿image_name: [0-29]Definition of the inverse function by interchanging inputs and outputs.png
+file_name: [0-29]-01.png
+timestamp: 0:29
+counter: 01
+folder: img

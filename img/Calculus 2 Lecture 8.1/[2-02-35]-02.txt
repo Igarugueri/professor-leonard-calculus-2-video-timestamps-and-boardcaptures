@@ -1,0 +1,5 @@
+﻿image_name: [2-02-35]Application — Half-life and radioactive decay model_2.png
+file_name: [2-02-35]-02.png
+timestamp: 2:02:35
+counter: 02
+folder: Calculus 2 Lecture 8.1

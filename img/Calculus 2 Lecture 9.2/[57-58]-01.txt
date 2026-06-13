@@ -1,0 +1,5 @@
+﻿image_name: [57-58]Derivation of the geometric-series formula.png
+file_name: [57-58]-01.png
+timestamp: 57:58
+counter: 01
+folder: Calculus 2 Lecture 9.2

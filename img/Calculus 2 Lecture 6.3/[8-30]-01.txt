@@ -1,0 +1,5 @@
+﻿image_name: [8-30]Example Variable isolation example 𝓮^(4 − 5𝒙) = 9.png
+file_name: [8-30]-01.png
+timestamp: 8:30
+counter: 01
+folder: Calculus 2 Lecture 6.3

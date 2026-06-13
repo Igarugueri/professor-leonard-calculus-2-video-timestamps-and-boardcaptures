@@ -1,0 +1,5 @@
+﻿image_name: [2-12-55]Common Maclaurin series_2.png
+file_name: [2-12-55]-02.png
+timestamp: 2:12:55
+counter: 02
+folder: Calculus 2 Lecture 9.8

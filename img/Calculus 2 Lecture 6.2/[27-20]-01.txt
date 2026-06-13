@@ -1,0 +1,5 @@
+﻿image_name: [27-20]Example 𝒇(𝒙) = (3∕π)𝒙 + sin(𝒙) find 𝒇⁻¹(𝓪) when 𝓪 = 1.png
+file_name: [27-20]-01.png
+timestamp: 27:20
+counter: 01
+folder: img

@@ -1,0 +1,5 @@
+﻿image_name: [16-59]Study of 𝒚 = csc(𝒙)_2.png
+file_name: [16-59]-02.png
+timestamp: 16:59
+counter: 02
+folder: Calculus 2 Lecture 6.5

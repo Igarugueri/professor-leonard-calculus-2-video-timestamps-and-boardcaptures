@@ -1,0 +1,5 @@
+﻿image_name: [16-55]Example 2 — Analyzing ∑[𝒏=1,∞] 1∕(2ⁿ + 3).png
+file_name: [16-55]-01.png
+timestamp: 16:55
+counter: 01
+folder: Calculus 2 Lecture 9.4

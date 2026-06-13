@@ -1,0 +1,5 @@
+﻿image_name: [1-05-20]Advanced Example 1 — ∑ (2𝒏² + 𝒏)∕√(4𝒏⁷ + 3)_2.png
+file_name: [1-05-20]-02.png
+timestamp: 1:05:20
+counter: 02
+folder: Calculus 2 Lecture 9.4

@@ -1,0 +1,5 @@
+﻿image_name: [1-01-24]Example 4 — Practical problem of precision and error ∑[𝒏=0,∞] (-1)ⁿ∕𝒏!_1.png
+file_name: [1-01-24]-01.png
+timestamp: 1:01:24
+counter: 01
+folder: Calculus 2 Lecture 9.5

@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．５： Ｓｈｏｗｉｎｇ Ｃｏｎｖｅｒｇｅｎｃｅ Ｗｉｔｈ ｔｈｅ ▲ｌｔｅｒｎａｔｉｎｇ Ｓｅｒｉｅｓ Ｔｅｓｔ， Ｆｉｎｄｉｎｇ Ｅｒｒｏｒ ｏｆ Ｓｕｍｓ</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <article class="chapter">
+        <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．５：</h1>
+        <h1>Ｓｈｏｗｉｎｇ Ｃｏｎｖｅｒｇｅｎｃｅ Ｗｉｔｈ ｔｈｅ Aｌｔｅｒｎａｔｉｎｇ Ｓｅｒｉｅｓ Ｔｅｓｔ， Ｆｉｎｄｉｎｇ Ｅｒｒｏｒ ｏｆ Ｓｕｍｓ</h1>
+
+        <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=0" target="_blank">[0:00]</a>.
+                Introduction to Alternating Series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">an alternating series is a series whose sequential terms alternate
+                                signs.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the signs go:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">positive, negative, positive, negative, ...</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">or:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">negative, positive, negative, positive, ...</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ　Ｅｘａｍｐｌｅ 1</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.5/[1-00]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.5/[1-00]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=60" target="_blank">[1:00]</a>.
+                🧩 Example 1 — Definition of an alternating series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Expand the first terms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$1-\dfrac{1}{2}+\dfrac{1}{3}-\dfrac{1}{4}+\dfrac{1}{5}-\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key observation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the signs alternate:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$+,-,+,-,+,\ldots$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore, this is an alternating series.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Identifying the alternating factor.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The factor that creates the sign change is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the series starts with a positive term,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we often use $(-1)^{n-1}$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the series starts with a negative term,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we often use $(-1)^{n}$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the $(-1)$ factor controls the signs.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the rest of the expression gives the positive size of each term.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=200" target="_blank">[3:20]</a>.
+                General structure of an alternating series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Any alternating series can usually be written as:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}(-1)^{n-1}\cdot 𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n-1}$ creates the alternating signs.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}$ represents the positive part of the terms.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In this example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{1}{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{𝒏}=\sum_{n=1}^{\infty}(-1)^{n-1}\cdot
+                                \dfrac{1}{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}$ itself is positive.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the alternating sign is not considered part of $𝒂_{n}$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=257" target="_blank">[4:17]</a>.
+                Harmonic Series versus Alternating Harmonic Series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Harmonic Series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{𝒏}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=1+\dfrac{1}{2}+\dfrac{1}{3}+\dfrac{1}{4}+\cdots$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Alternating Harmonic Series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{𝒏}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=1-\dfrac{1}{2}+\dfrac{1}{3}-\dfrac{1}{4}+\cdots$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">adding alternating signs can change the convergence behavior.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the harmonic series diverges,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">but the alternating harmonic series converges.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ　Ｅｘａｍｐｌｅ 2</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.5/[5-15]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.5/[5-15]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=315" target="_blank">[5:15]</a>.
+                🧩 Example 2 — Alternating series $\displaystyle \sum_{n=1}^{\infty}(-1)^{n}\dfrac{𝒏^{2}}{(𝒏+1)!}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Expand the first terms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-\dfrac{1}{2!}+\dfrac{4}{3!}-\dfrac{9}{4!}+\dfrac{16}{5!}-\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key observation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the signs alternate:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$-,+,-,+,\ldots$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore, this is an alternating series.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Identifying the alternating factor.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The factor that creates the sign change is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the series starts with a negative term,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n}$ is the natural alternating factor.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The positive part of the terms is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{𝒏^{2}}{(𝒏+1)!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}(-1)^{n}\dfrac{𝒏^{2}}{(𝒏+1)!}=\sum_{n=1}^{\infty}(-1)^{n}\cdot
+                                𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">General structure.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This example has the form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}(-1)^{n}\cdot 𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n}$ creates the alternating signs.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}$ represents the positive size of each term.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In this example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{𝒏^{2}}{(𝒏+1)!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}$ itself is positive.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the alternating sign is not considered part of $𝒂_{n}$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ａｌｔｅｒｎａｔｉｎｇ　Ｓｅｒｉｅｓ　Ｔｅｓｔ (ＡＳＴ)</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.5/[7-53]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.5/[7-53]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=473" target="_blank">[7:53]</a>.
+                The Alternating Series Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The Alternating Series Test applies to series of the form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}(-1)^{n-1}\cdot 𝒂_{n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">or $\displaystyle \sum_{n=1}^{\infty}(-1)^{n}\cdot 𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Where:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}>0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The test checks two things:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the positive terms $𝒂_{n}$ must be decreasing.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the positive terms $𝒂_{n}$ must approach $0$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=564" target="_blank">[9:24]</a>.
+                Condition 1 — Decreasing sequence.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The positive sequence must be decreasing:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}\le 𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">each next positive term is less than or equal to the previous one.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is important because:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the alternating partial sums move back and forth,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but the jumps get smaller and smaller.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=630" target="_blank">[10:30]</a>.
+                Condition 2 — Limit of the positive terms.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The positive terms must approach $0$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝒂_{n}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is like the Divergence Test,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but applied to the positive part $𝒂_{n}$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">do not include $(-1)^{n}$ or $(-1)^{n-1}$ when checking this limit.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">only use the positive part $𝒂_{n}$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=686" target="_blank">[11:26]</a>.
+                Conclusion of the Alternating Series Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ $𝒂_{n+1}\le 𝒂_{n}$ a̲n̲d̲ $\displaystyle \lim_{n\to\infty}𝒂_{n}=0$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the alternating series $\displaystyle \sum (-1)^{n-1}𝒂_{n}$
+                                converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In words:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if the positive terms decrease to $0$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">then the alternating series converges.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=686" target="_blank">[11:26]</a>.
+                Recap — How to use the Alternating Series Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First, verify that the series is alternating.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the signs must alternate:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$+,-,+,-,\ldots$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">or $-,+,-,+,\ldots$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this usually comes from:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$(-1)^{n}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">or $(-1)^{n-1}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then, separate the series into:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the alternating factor,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and the positive part $𝒂_{n}$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">General form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum (-1)^{n-1}𝒂_{n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">or $\displaystyle \sum (-1)^{n}𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}$ is only the positive part.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">do not include $(-1)^{n}$ or $(-1)^{n-1}$ inside $𝒂_{n}$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 1 — Check the limit of the positive terms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝒂_{n}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2 — Check that the positive terms are decreasing:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}\le 𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $𝒂_{n}\to 0$,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">a̲n̲d̲ $𝒂_{n}$ is decreasing,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ the alternating series converges.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the test is not applied to the whole signed term.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is applied to the positive sequence $𝒂_{n}$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=838" target="_blank">[13:58]</a>.
+                Graphical and conceptual justification.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Imagine the partial sums moving back and forth:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">add a positive term,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">subtract a smaller term,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">add an even smaller term,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">subtract an even smaller term,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and so on.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Because the terms are decreasing:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">each jump is smaller than the previous jump.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Because the terms approach $0$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the jumps eventually become tiny.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the partial sums settle toward one finite value.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is why the alternating series converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=838" target="_blank">[13:58]</a>.
+                Ping-pong model.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Think of a ping-pong rally:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the ball moves from one side to the other.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">each hit travels a shorter distance.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">eventually, the movement gets closer and closer to a central point.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Alternating series behave similarly:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the partial sums jump above and below the final sum.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the jumps become smaller.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the sequence of partial sums converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Even and odd partial sums in an alternating series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $1-\dfrac{1}{2}+\dfrac{1}{3}-\dfrac{1}{4}+\dfrac{1}{5}-\dfrac{1}{6}+\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Partial sums:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$S_{1}=1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$S_{2}=0.5$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$S_{3}\approx 0.833$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$S_{4}\approx 0.583$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$S_{5}\approx 0.783$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$S_{6}\approx 0.616$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Even partial sums:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$S_{2}, S_{4}, S_{6}, \ldots$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0.5, 0.583, 0.616, \ldots$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">these are increasing.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Odd partial sums:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$S_{1}, S_{3}, S_{5}, \ldots$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$1, 0.833, 0.783, \ldots$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">these are decreasing.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key pattern:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the even partial sums approach the final sum from below.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the odd partial sums approach the final sum from above.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">both subsequences move toward the same value.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the partial sums bounce around the final sum,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">but each bounce is smaller.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is why the alternating series converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｅｘａｍｐｌｅｓ　Ｕｓｉｎｇ　ｔｈｅ　ＡＳＴ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">Ｅｘａｍｐｌｅ 1</li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.5/[19-00]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.5/[19-00]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=1140"
+                    target="_blank">[19:00]</a>. 🧩 Example 1 — Alternating Harmonic Series: $\displaystyle
+                \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{𝒏}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Identify the positive part:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{1}{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n-1}$ only creates the alternating signs.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is not part of $𝒂_{n}$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=1260"
+                    target="_blank">[21:00]</a>. ❶ Check the limit condition.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{1}{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{1}{𝒏}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the limit condition is satisfied.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=1320"
+                    target="_blank">[22:00]</a>. ❷ Check the decreasing condition.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We need:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}\le 𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{1}{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{1}{𝒏+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compare:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒏+1}\le \dfrac{1}{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}$ is decreasing.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=1453"
+                    target="_blank">[24:13]</a>. Conclusion for Example 1.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series is alternating.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The positive terms satisfy:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝒂_{n}=0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}\le 𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore, by the Alternating Series Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{𝒏}$ converges.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the harmonic series $\displaystyle \sum \dfrac{1}{𝒏}$ diverges.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the alternating harmonic series $\displaystyle \sum
+                                \dfrac{(-1)^{n-1}}{𝒏}$ converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Ｅｘａｍｐｌｅ 2</li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.5/[27-52]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.5/[27-52]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=1672"
+                    target="_blank">[27:52]</a>. 🧩 Example 2 — $\displaystyle \sum_{n=1}^{\infty}(-1)^{n}\cdot
+                \dfrac{2𝒏}{4𝒏-1}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Identify the positive part:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{2𝒏}{4𝒏-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series is alternating because of:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=1730"
+                    target="_blank">[28:50]</a>. Checking decreasing behavior.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">To check decreasing, we need:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}\le 𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Direct substitution can be messy:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{2(𝒏+1)}{4(𝒏+1)-1}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{2𝒏+2}{4𝒏+3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Comparing this directly with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{2𝒏}{4𝒏-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">can be more work.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Easier method:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">model the positive sequence with a function.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\dfrac{2𝒙}{4𝒙-1}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=1760"
+                    target="_blank">[29:20]</a>. Using the derivative to show decreasing.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\dfrac{2𝒙}{4𝒙-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Using the quotient rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)=\dfrac{2(4𝒙-1)-4(2𝒙)}{(4𝒙-1)^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)=\dfrac{8𝒙-2-8𝒙}{(4𝒙-1)^{2}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)=\dfrac{-2}{(4𝒙-1)^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(4𝒙-1)^{2}>0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)<0$< /li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is decreasing.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so $𝒂_{n}$ is decreasing.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=1902"
+                    target="_blank">[31:42]</a>. Check the limit condition.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{2𝒏}{4𝒏-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the numerator and denominator have the same degree:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">compare leading coefficients.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \lim_{n\to\infty}\dfrac{2𝒏}{4𝒏-1}=\dfrac{2}{4}=\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{2}\ne 0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The positive terms do not approach $0$.</li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=1938"
+                    target="_blank">[32:18]</a>. Conclusion for Example 2.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Even though $𝒂_{n}$ is decreasing,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the limit condition fails.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝒂_{n}\ne 0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series fails the necessary condition for convergence.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}(-1)^{n}\cdot \dfrac{2𝒏}{4𝒏-1}$
+                                diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">for the Alternating Series Test, both conditions are needed:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒂_{n}$ must be decreasing.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle \lim_{n\to\infty}𝒂_{n}$ must equal $0$.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">here, the decreasing condition works,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">but the limit condition fails.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Ｅｘａｍｐｌｅ 3</li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.5/[33-31]-01.png" target="_blank">[📷image-1]</a>
+                    <img src="../img/Calculus 2 Lecture 9.5/[33-31]-01.png" alt="Preview" />
+                </span> – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.5/[33-31]-02.png" target="_blank">[📷image-2]</a>
+                    <img src="../img/Calculus 2 Lecture 9.5/[33-31]-02.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=2011"
+                    target="_blank">[33:31]</a>. 🧩 Example 3 — $\displaystyle \sum_{n=2}^{\infty}(-1)^{n-1}\cdot
+                \dfrac{\sqrt{𝒏+1}}{𝒏-1}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum (-1)^{n-1}\cdot \dfrac{\sqrt{𝒏+1}}{𝒏-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Identify the positive part:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{\sqrt{𝒏+1}}{𝒏-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series is alternating because of:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n-1}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=2183"
+                    target="_blank">[36:23]</a>. Check the limit condition using L'Hôpital's Rule.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{\sqrt{𝒏+1}}{𝒏-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This has the form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\infty/\infty$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply L'Hôpital's Rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">derivative of $\sqrt{𝒏+1}=\dfrac{1}{2\sqrt{𝒏+1}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">derivative of $𝒏-1=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{\sqrt{𝒏+1}}{𝒏-1}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \lim_{n\to\infty}\dfrac{1}{2\sqrt{𝒏+1}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝒂_{n}=0$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=2325"
+                    target="_blank">[38:45]</a>. Check the decreasing condition using the derivative.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Define:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\dfrac{\sqrt{𝒙+1}}{𝒙-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We use a function because:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ models the positive sequence $𝒂_{n}$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)<0$< /li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is decreasing,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so the sequence $𝒂_{n}$ is decreasing.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=2552"
+                    target="_blank">[42:32]</a>. Showing the derivative is negative.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\dfrac{\sqrt{𝒙+1}}{𝒙-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important domain detail:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is not defined at $𝒙=1$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">because the denominator $𝒙-1$ becomes $0$.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">since the series starts at $𝒏=2$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">we only need to show decreasing behavior for $𝒙\ge 2$.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Using the quotient rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $𝒇'(𝒙)=\dfrac{\left(\dfrac{𝒙-1}{2\sqrt{𝒙+1}}\right)-\sqrt{𝒙+1}}{(𝒙-1)^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Combine the numerator:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)=\dfrac{𝒙-1-2(𝒙+1)}{2\sqrt{𝒙+1}(𝒙-1)^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)=\dfrac{-𝒙-3}{2\sqrt{𝒙+1}(𝒙-1)^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Sign analysis:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the denominator is positive for $𝒙>1$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the numerator $-𝒙-3$ is negative for $𝒙>1$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore, $𝒇'(𝒙)<0$ for $𝒙>1$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In particular:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)<0$ for $𝒙\ge 2$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is decreasing on $[2,\infty)$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so $𝒂_{n}$ is decreasing for $𝒏\ge 2$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=2658"
+                    target="_blank">[44:18]</a>. Conclusion for Example 3.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series is alternating.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The positive terms satisfy:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝒂_{n}=0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}$ is decreasing.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore, by the Alternating Series Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Note:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">even if the first few terms are problematic,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">adding or removing finitely many terms does not change
+                                        convergence.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ａｌｔｅｒｎａｔｉｎｇ　Ｓｅｒｉｅｓ　Ｅｒｒｏｒ　Ｅｓｔｉｍａｔｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.5/[45-28]-01.png" target="_blank">[📷image-1]</a>
+                    <img src="../img/Calculus 2 Lecture 9.5/[45-28]-01.png" alt="Preview" />
+                </span> – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.5/[45-28]-02.png" target="_blank">[📷image-2]</a>
+                    <img src="../img/Calculus 2 Lecture 9.5/[45-28]-02.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=2728"
+                    target="_blank">[45:28]</a>. Finding error in alternating series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If a series $\displaystyle \sum 𝒂_{n}$ converges,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then it has some sum $𝑺$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The sequence of partial sums satisfies:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝑺_{n}=𝑺$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}(𝑺-𝑺_{n})=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if $𝒏$ actually goes to infinity,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the partial sums approach the exact sum.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but if we stop at a finite $𝒏$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">there will be some error between $𝑺$ and $𝑺_{n}$.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=3000"
+                    target="_blank">[50:00]</a>. Defining the error.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The error is called:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Definition:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{n}=𝑺-𝑺_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">error = whole sum - partial sum</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In words:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑺$ is the exact infinite sum.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑺_{n}$ is the partial sum after $𝒏$ terms.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹_{n}$ is the difference between them.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=3216"
+                    target="_blank">[53:36]</a>. Alternating Series Estimation Theorem.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">For alternating series only:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝑹_{n}|=|𝑺-𝑺_{n}|\le 𝒂_{n+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the absolute error is less than or equal to the first omitted term.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If we stop at $𝑺_{n}$,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the next positive term is $𝒂_{n+1}$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the error is no larger than $𝒂_{n+1}$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=3304"
+                    target="_blank">[55:04]</a>. Why the first omitted term controls the error.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Suppose the exact sum is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑺=𝒂_{1}-𝒂_{2}+𝒂_{3}-\cdots-𝒂_{n}+𝒂_{n+1}-𝒂_{n+2}+\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The partial sum is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑺_{n}=𝒂_{1}-𝒂_{2}+𝒂_{3}-\cdots-𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore, the remaining tail is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑺-𝑺_{n}=𝒂_{n+1}-𝒂_{n+2}+𝒂_{n+3}-\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the positive terms are decreasing:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+2}\le 𝒂_{n+1}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+3}\le 𝒂_{n+2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and so on.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The remaining terms alternate signs and partially cancel each other,
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and since their sizes decrease, the total remaining error cannot exceed
+                                the first omitted term.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝑺-𝑺_{n}|\le 𝒂_{n+1}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝑹_{n}|\le 𝒂_{n+1}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Key idea.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In an alternating series,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the terms after $𝑺_{n}$ keep alternating signs.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Because the positive terms decrease,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">each new term partially cancels the previous one.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the total error after stopping at $𝑺_{n}$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">is controlled by the first term you did not include.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｐｒａｃｔｉｃａｌ　Ｅｒｒｏｒ　Ｅｘａｍｐｌｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.5/[1-01-24]-01.png" target="_blank">[📷image-1]</a>
+                    <img src="../img/Calculus 2 Lecture 9.5/[1-01-24]-01.png" alt="Preview" />
+                </span> – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.5/[1-01-24]-02.png" target="_blank">[📷image-2]</a>
+                    <img src="../img/Calculus 2 Lecture 9.5/[1-01-24]-02.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=3684"
+                    target="_blank">[1:01:24]</a>. 🧩 Example 4 — Practical problem of precision and error:
+                $\displaystyle \sum_{n=0}^{\infty}\dfrac{(-1)^{n}}{𝒏!}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">approximate the sum of the series using a partial sum.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Desired accuracy:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">make the error less than $0.0005$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we first prove that the series converges.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then we use the error bound to decide how many terms are needed.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=3762"
+                    target="_blank">[1:02:42]</a>. Check convergence first.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series is alternating because of:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Identify the positive part:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{1}{𝒏!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check the limit:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{1}{𝒏!}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check decreasing:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{1}{(𝒏+1)!}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{(𝒏+1)!}\le \dfrac{1}{𝒏!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}$ is decreasing.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">By the Alternating Series Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}\dfrac{(-1)^{n}}{𝒏!}$ converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=3960"
+                    target="_blank">[1:06:00]</a>. How error works.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">For a convergent alternating series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝑹_{n}|=|𝑺-𝑺_{n}|\le 𝒂_{n+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In this example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{1}{(𝒏+1)!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝑹_{n}|\le \dfrac{1}{(𝒏+1)!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the error after stopping at $𝑺_{n}$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">is no bigger than the first omitted term.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Practical interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">you tell the series how accurate you want to be.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then use $𝑹_{n}$ to determine how many terms are needed to be that
+                                accurate.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=4190"
+                    target="_blank">[1:09:50]</a>. Finding how many terms are needed.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We want:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝑹_{n}|<0.0005$< /li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝑹_{n}|\le \dfrac{1}{(𝒏+1)!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">It is enough to require:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{(𝒏+1)!}<0.0005$< /li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This guarantees:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝑹_{n}|<0.0005$< /li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=4381"
+                    target="_blank">[1:13:01]</a>. Solving the inequality.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{(𝒏+1)!}<0.0005$< /li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Take reciprocals:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒏+1)!>\dfrac{1}{0.0005}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{0.0005}=2000$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒏+1)!>2000$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=4511"
+                    target="_blank">[1:15:11]</a>. Determining $𝒏$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check factorials:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$6!=720$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$7!=5040$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$6!<2000$< /li>
+                                    <!-- ○ nivel-3 -->
+                            <li class="level-3">$7!>2000$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We need:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏+1=7$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏=6$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">stopping at $𝑺_{6}$ guarantees an error less than $0.0005$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=4556"
+                    target="_blank">[1:15:56]</a>. Computing the partial sum $𝑺_{6}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the series starts at $𝒏=0$,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑺_{6}$ includes the terms from $𝒏=0$ through $𝒏=6$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $𝑺_{6}=1-\dfrac{1}{1!}+\dfrac{1}{2!}-\dfrac{1}{3!}+\dfrac{1}{4!}-\dfrac{1}{5!}+\dfrac{1}{6!}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $𝑺_{6}=1-1+\dfrac{1}{2}-\dfrac{1}{6}+\dfrac{1}{24}-\dfrac{1}{120}+\dfrac{1}{720}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=BhYPrQHDrjk&t=4700"
+                    target="_blank">[1:18:20]</a>. Final approximation.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑺_{6}=0.368$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑺\approx 0.368$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑺_{6}$ is not exactly equal to $𝑺$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑺_{6}$ is only a partial sum approximation.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is a very good approximation.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">How good?
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the error is less than $0.0005$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this means $𝑺_{6}$ is within $0.0005$ of the true sum $𝑺$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In Leonard's words:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is not equal to $𝑺$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">but it is within $5$ ten-thousandths of $𝑺$.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">that is how the error estimate is used.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲:
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Smaller allowed error ⇒ you need to go further in the series ⇒ you use a partial
+                        sum with more terms ⇒ you are closer to the true sum.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">The Alternating Series Test
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a
+                            href="https://openstax.org/books/calculus-volume-2/pages/5-5-alternating-series"
+                            target="_blank">[openstax🌐]</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </article>
+</body>
+
+</html>

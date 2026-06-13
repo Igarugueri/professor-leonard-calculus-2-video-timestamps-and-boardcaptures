@@ -1,0 +1,5 @@
+﻿image_name: [1-00-24]Example Differentiation using the chain rule (not logarithmic differentiation).png
+file_name: [1-00-24]-01.png
+timestamp: 1:00:24
+counter: 01
+folder: Calculus 2 Lecture 6.4

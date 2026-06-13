@@ -1,0 +1,5 @@
+﻿image_name: [1-06-25 ]Example 6 — Odd powers of secant  ∫ sec 𝒙 𝒅𝒙 ; ∫ sec² 𝒙 𝒅𝒙 ; ∫ sec⁵ 𝒙 𝒅𝒙_2.png
+file_name: [1-06-25 ]-02.png
+timestamp: 1:06:25 
+counter: 02
+folder: Calculus 2 Lecture 7.1

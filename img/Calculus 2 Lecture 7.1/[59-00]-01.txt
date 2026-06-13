@@ -1,0 +1,5 @@
+﻿image_name: [59-00]Example 5 — Definite integral and geometric interpretation ∫[1, 𝒆] ln 𝒙 𝒅𝒙.png
+file_name: [59-00]-01.png
+timestamp: 59:00
+counter: 01
+folder: Calculus 2 Lecture 7.1

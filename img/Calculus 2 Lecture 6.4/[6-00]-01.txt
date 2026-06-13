@@ -1,0 +1,5 @@
+﻿image_name: [6-00]Derivative of a general exponential function.png
+file_name: [6-00]-01.png
+timestamp: 6:00
+counter: 01
+folder: Calculus 2 Lecture 6.4

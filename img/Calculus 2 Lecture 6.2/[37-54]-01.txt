@@ -1,0 +1,5 @@
+﻿image_name: [37-54]Example – Find the derivative of the inverse of 𝒇(𝒙) = 𝒙³ at the point (2, 8) where 𝒈 = 𝒇⁻¹.png
+file_name: [37-54]-01.png
+timestamp: 37:54
+counter: 01
+folder: img

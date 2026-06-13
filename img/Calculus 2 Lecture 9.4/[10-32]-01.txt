@@ -1,0 +1,5 @@
+﻿image_name: [10-32]Example 1 — Analyzing ∑[𝒏=1,∞] 1∕(𝒏² + 2).png
+file_name: [10-32]-01.png
+timestamp: 10:32
+counter: 01
+folder: Calculus 2 Lecture 9.4

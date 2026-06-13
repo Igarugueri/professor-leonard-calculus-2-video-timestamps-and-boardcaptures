@@ -1,0 +1,5 @@
+﻿image_name: [19-00]Example 1 — Alternating Harmonic Series ∑[𝒏=1,∞] [(-1)ⁿ⁻¹]∕𝒏.png
+file_name: [19-00]-01.png
+timestamp: 19:00
+counter: 01
+folder: Calculus 2 Lecture 9.5

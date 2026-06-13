@@ -1,0 +1,5 @@
+﻿image_name: [45-10]Example 2 — Long division first ∫ (𝒙⁴ − 3𝒙² − 3𝒙 − 2)∕(𝒙³ − 𝒙² − 2𝒙) 𝒅𝒙_3.png
+file_name: [45-10]-03.png
+timestamp: 45:10
+counter: 03
+folder: Calculus 2 Lecture 7.4

@@ -1,0 +1,5 @@
+﻿image_name: [12-30]Extension to the indeterminate form ∞∕∞.png
+file_name: [12-30]-01.png
+timestamp: 12:30
+counter: 01
+folder: Calculus 2 Lecture 6.7

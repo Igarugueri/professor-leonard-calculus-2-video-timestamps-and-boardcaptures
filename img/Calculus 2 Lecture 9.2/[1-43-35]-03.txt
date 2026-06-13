@@ -1,0 +1,5 @@
+﻿image_name: [1-43-35]Example 9 — Splitting a series into geometric series ∑[n=1,∞] [(2ⁿ - 5ⁿ)∕3ⁿ]_3.png
+file_name: [1-43-35]-03.png
+timestamp: 1:43:35
+counter: 03
+folder: Calculus 2 Lecture 9.2

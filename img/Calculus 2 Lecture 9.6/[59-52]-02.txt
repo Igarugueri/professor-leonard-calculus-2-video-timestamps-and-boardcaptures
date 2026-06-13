@@ -1,0 +1,5 @@
+﻿image_name: [59-52]Example 3 — Ratio test ∑[𝒏=1,∞] (-5)ⁿ⁻¹∕(𝒏² ⋅ 3ⁿ)_2.png
+file_name: [59-52]-02.png
+timestamp: 59:52
+counter: 02
+folder: Calculus 2 Lecture 9.6

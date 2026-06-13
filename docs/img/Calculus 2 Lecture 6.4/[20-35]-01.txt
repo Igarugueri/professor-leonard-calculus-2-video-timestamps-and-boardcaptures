@@ -1,0 +1,5 @@
+﻿image_name: [20-35]Example Differentiate a product involving an exponential function 𝒚 = 𝒙^𝓮 · 𝓮^𝒙.png
+file_name: [20-35]-01.png
+timestamp: 20:35
+counter: 01
+folder: Calculus 2 Lecture 6.4

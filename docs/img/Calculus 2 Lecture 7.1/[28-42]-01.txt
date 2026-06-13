@@ -1,0 +1,5 @@
+﻿image_name: [28-42]Example 3 — Repeated use of Integration by Parts Evaluate ∫ 𝒙² sin(2𝒙) 𝒅𝒙.png
+file_name: [28-42]-01.png
+timestamp: 28:42
+counter: 01
+folder: Calculus 2 Lecture 7.1

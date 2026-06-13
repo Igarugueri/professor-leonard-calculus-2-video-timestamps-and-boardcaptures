@@ -1,0 +1,5 @@
+﻿image_name: [2-09-05]Summary of Trigonometric Formulas with ln.png
+file_name: [2-09-05]-01.png
+timestamp: 2:09:05
+counter: 01
+folder: Calculus 2 Lecture 6.1

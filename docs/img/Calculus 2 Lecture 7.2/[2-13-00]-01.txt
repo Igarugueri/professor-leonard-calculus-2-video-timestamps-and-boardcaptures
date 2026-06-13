@@ -1,0 +1,5 @@
+﻿image_name: [2-13-00]Example 10 — Evaluate ∫[0, π∕2] sin(𝒙)cos(2𝒙) 𝒅𝒙.png
+file_name: [2-13-00]-01.png
+timestamp: 2:13:00
+counter: 01
+folder: Calculus 2 Lecture 7.2

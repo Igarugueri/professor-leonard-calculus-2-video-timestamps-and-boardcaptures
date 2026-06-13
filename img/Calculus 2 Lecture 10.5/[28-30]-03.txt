@@ -1,0 +1,5 @@
+﻿image_name: [28-30]Example 3 — Find the area between 𝒓 = 3 and 𝒓 = 2 + 2 cos(𝜽)_3.png
+file_name: [28-30]-03.png
+timestamp: 28:30
+counter: 03
+folder: Calculus 2 Lecture 10.5

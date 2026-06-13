@@ -1,0 +1,5 @@
+﻿image_name: [55-19]Proof of derivative of cosh⁻¹(𝒙) _2.png
+file_name: [55-19]-02.png
+timestamp: 55:19
+counter: 02
+folder: Calculus 2 Lecture 6.6

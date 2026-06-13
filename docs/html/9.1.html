@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．１ － Ｃｏｎｖｅｒｇｅｎｃｅ ａｎｄ Ｄｉｖｅｒｇｅｎｃｅ ｏｆ Ｓｅｑｕｅｎｃｅｓ</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <article class="chapter">
+    <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．１</h1>
+    <h1>Ｃｏｎｖｅｒｇｅｎｃｅ ａｎｄ Ｄｉｖｅｒｇｅｎｃｅ ｏｆ Ｓｅｑｕｅｎｃｅｓ</h1>
+
+    <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=0" target="_blank">[0:00]</a>.
+        Introduction to Sequences and Series.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">In this section, the focus is only on sequences.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Main goals:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">understand what a sequence is</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">generate terms from sequence notation</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">find sequence notation from a list of terms</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">determine whether a sequence converges or diverges</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Motivating idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">a complicated function $𝒇(𝒙)$ can often be expressed as a series of simpler
+                functions</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｓｅｑｕｅｎｃｅｓ　—　Ｂａｓｉｃ　Ｄｅｆｉｎｉｔｉｏｎｓ　＆　Ｎｏｔａｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=97" target="_blank">[1:37]</a>.
+        Definition of a sequence $𝒂_{n}$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[1-37]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[1-37]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">A sequence is a set of terms, typically an ordered list of terms.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Standard notation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂_{1},\,𝒂_{2},\,𝒂_{3},\,\ldots,\,𝒂_{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The index $n$ is a positive integer.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Alternative notation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\{a_{𝒏}\}_{n=k}^{\infty}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Convention:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">if no starting index is shown,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒏$ starts at $1$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｇｅｎｅｒａｔｉｎｇ　Ｔｅｒｍｓ　Ｆｒｏｍ　Ｓｅｑｕｅｎｃｅ　Ｎｏｔａｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=260" target="_blank">[4:20]</a>.
+        Generating terms from sequence notation.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Basic idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">substitute specific values of $𝒏$ into the formula to generate terms</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=288" target="_blank">[4:48]</a>. 🧩
+        Example 1 — Listing the first terms of the sequence $\left\{\dfrac{(-1)^{\,n+1}\cdot
+        2^{n}}{n+1}\right\}_{n=1}^{\infty}$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[4-48]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[4-48]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n=1\;\to\;𝒂_{1}=1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n=2\;\to\;𝒂_{2}=-\dfrac{4}{3}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n=3\;\to\;𝒂_{3}=2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n=4\;\to\;𝒂_{4}=-\dfrac{16}{5}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n=5\;\to\;𝒂_{5}=\dfrac{16}{3}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Alternating behavior:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the factor $(-1)^{n+1}$ makes the sequence alternate in sign</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">positive, negative, positive, negative, ...</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Pattern recognition:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence continues indefinitely</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">each term is obtained by substituting the next positive integer value of $n$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=675" target="_blank">[11:15]</a>. 🧩
+        Example 2 — Evaluating the sequence $\left\{(-1)^{n}\sqrt{n-2}\right\}$ with starting index $n=2$. – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 9.1/[11-15]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.1/[11-15]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Reason for the starting index:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence starts at $n=2$ because $\sqrt{n-2}$ is not real when $n=1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Evaluate the first terms by substitution.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n=2\;\to\;𝒂_{2}=0$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n=3\;\to\;𝒂_{3}=-1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n=4\;\to\;𝒂_{4}=\sqrt{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n=5\;\to\;𝒂_{5}=-\sqrt{3}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n=6\;\to\;𝒂_{6}=2$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Pattern:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the factor $(-1)^{n}$ makes the signs alternate</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the radical part follows
+                $\sqrt{0},\,\sqrt{1},\,\sqrt{2},\,\sqrt{3},\,\sqrt{4},\,\ldots$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｆｉｎｄｉｎｇ　Ｓｅｑｕｅｎｃｅ　Ｎｏｔａｔｉｏｎ　Ｆｒｏｍ　Ａ　Ｌｉｓｔ　Ｏｆ　Ｔｅｒｍｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">Determining the notation of a sequence from a list of terms.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">General strategy:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">1. Rewrite the given terms in a uniform form, if possible.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">2. Relate each part of the term to the index $n$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">3. Move from the specific pattern to the general formula.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">Pattern-identification strategies.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Look for:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">numerator patterns</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">denominator patterns</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">alternating signs</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">radicals</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">factorials</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=1206" target="_blank">[20:06]</a>. 🧩
+        Example 3 — Finding the sequence notation from a list of terms:
+        $2,\,\dfrac{3}{\sqrt{2}},\,\dfrac{4}{\sqrt{3}},\,\dfrac{5}{2},\,\ldots$ – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[20-06]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[20-06]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step 1. Rewrite the given terms in a uniform form, if possible.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{1}=2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{2}=\dfrac{3}{\sqrt{2}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{3}=\dfrac{4}{\sqrt{3}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{4}=\dfrac{5}{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step 2. Relate each part of the term to the index $n$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{1}=2\;\;\to\;\;\dfrac{2}{\sqrt{1}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{2}=\dfrac{3}{\sqrt{2}}\;\;\to\;\;\dfrac{3}{\sqrt{2}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{3}=\dfrac{4}{\sqrt{3}}\;\;\to\;\;\dfrac{4}{\sqrt{3}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{4}=\dfrac{5}{2}\;\;\to\;\;\dfrac{5}{\sqrt{4}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step 3. Move from the specific pattern to the general formula.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{1}=2\;\;\to\;\;\dfrac{2}{\sqrt{1}}\;\;\to\;\;\dfrac{1+1}{\sqrt{1}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $a_{2}=\dfrac{3}{\sqrt{2}}\;\;\to\;\;\dfrac{3}{\sqrt{2}}\;\;\to\;\;\dfrac{2+1}{\sqrt{2}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $a_{3}=\dfrac{4}{\sqrt{3}}\;\;\to\;\;\dfrac{4}{\sqrt{3}}\;\;\to\;\;\dfrac{3+1}{\sqrt{3}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{4}=\dfrac{5}{2}\;\;\to\;\;\dfrac{5}{\sqrt{4}}\;\;\to\;\;\dfrac{4+1}{\sqrt{4}}$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Pattern identification:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">numerator = $n+1$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">denominator = $\sqrt{n}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">General formula:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$a_{n}=\dfrac{n+1}{\sqrt{n}}$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=1410" target="_blank">[23:30]</a>. 🧩
+        Example 4 — Finding the sequence notation from a list of terms:
+        $-1,\,\dfrac{1}{2},\,-\dfrac{1}{6},\,\dfrac{1}{24},\,-\dfrac{1}{120},\,\ldots$ – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 9.1/[23-30]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.1/[23-30]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step 1. Identify the sign pattern.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{1}=-1\;\;\to\;\;\text{negative}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{2}=\dfrac{1}{2}\;\;\to\;\;\text{positive}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{3}=-\dfrac{1}{6}\;\;\to\;\;\text{negative}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{4}=\dfrac{1}{24}\;\;\to\;\;\text{positive}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{5}=-\dfrac{1}{120}\;\;\to\;\;\text{negative}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step 2. Rewrite the denominators in factorial form.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{1}=-1\;\;\to\;\;-\dfrac{1}{1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{2}=\dfrac{1}{2}\;\;\to\;\;\dfrac{1}{2\cdot 1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{3}=-\dfrac{1}{6}\;\;\to\;\;-\dfrac{1}{3\cdot 2\cdot 1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{4}=\dfrac{1}{24}\;\;\to\;\;\dfrac{1}{4\cdot 3\cdot 2\cdot 1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{5}=-\dfrac{1}{120}\;\;\to\;\;-\dfrac{1}{5\cdot 4\cdot 3\cdot 2\cdot 1}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step 3. Move from the specific pattern to the general formula.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{1}=-1\;\;\to\;\;-\dfrac{1}{1}\;\;\to\;\;-\dfrac{1}{1!}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{2}=\dfrac{1}{2}\;\;\to\;\;\dfrac{1}{2\cdot 1}\;\;\to\;\;\dfrac{1}{2!}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{3}=-\dfrac{1}{6}\;\;\to\;\;-\dfrac{1}{3\cdot 2\cdot 1}\;\;\to\;\;-\dfrac{1}{3!}$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{4}=\dfrac{1}{24}\;\;\to\;\;\dfrac{1}{4\cdot 3\cdot 2\cdot
+                1}\;\;\to\;\;\dfrac{1}{4!}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{5}=-\dfrac{1}{120}\;\;\to\;\;-\dfrac{1}{5\cdot 4\cdot 3\cdot 2\cdot
+                1}\;\;\to\;\;-\dfrac{1}{5!}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sign alternates</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the numerator is always $\pm 1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the denominator is $n!$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">since the sequence starts with a negative term,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">use $(-1)^{n}$ for the sign pattern</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">General formula:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{n}=\dfrac{(-1)^{n}}{n!}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｒｅｃｕｒｓｉｖｅ　Ｓｅｑｕｅｎｃｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">Recursive sequences.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">A recursive sequence is defined using previous terms.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">To generate a new term,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">use the given initial values</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">and apply the recursive formula to the preceding terms</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=2200" target="_blank">[36:40]</a>. 🧩
+        Example 5 — Recursive sequence. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[36-40]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[36-40]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Given:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{1}=2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{2}=4$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{n+1}=2a_{n}-a_{n-1}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">each new term is built from previous terms</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">this is a recursive sequence</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Generate the next terms:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{3}=2a_{2}-a_{1}\;\;\to\;\;2(4)-2\;\;\to\;\;6$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{4}=2a_{3}-a_{2}\;\;\to\;\;2(6)-4\;\;\to\;\;8$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{5}=2a_{4}-a_{3}\;\;\to\;\;2(8)-6\;\;\to\;\;10$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">First generated terms:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$2,\,4,\,6,\,8,\,10,\,\ldots$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｌｉｍｉｔｓ　Ｏｆ　Ｓｅｑｕｅｎｃｅｓ　—　Ｃｏｎｖｅｒｇｅｎｃｅ　＆　Ｄｉｖｅｒｇｅｎｃｅ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=2622" target="_blank">[43:42]</a>.
+        Limit of a sequence. – <span class="image-container"><a href="../img/Calculus 2 Lecture 9.1/[43-42]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.1/[43-42]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">A sequence $\{a_{n}\}$ has a limit if the terms approach a single value as $n\to\infty$.
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Notation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty} a_{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Main idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the goal is to study what happens to $a_{n}$ as $n\to\infty$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">Convergence.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><u>If</u> $\displaystyle \lim_{n\to\infty} a_{n}$ exists and equals a real number,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3"><u>then</u> the sequence is convergent.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">Divergence.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><u>If</u> the limit does not exist,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3"><u>or</u> <u>If</u> the sequence tends to $+\infty$ or $-\infty$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4"><u>then</u> the sequence is divergent.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｐｒｏｐｅｒｔｉｅｓ　Ｏｆ　Ｌｉｍｉｔｓ　Ｏｆ　Ｓｅｑｕｅｎｃｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=2800" target="_blank">[46:40]</a>.
+        Properties of limits of sequences. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[46-40]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[46-40]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Constant multiple:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}(c\cdot a_{n})=c\displaystyle \lim_{n\to\infty} a_{n}$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Sum:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}(a_{n}+b_{n})=\displaystyle \lim_{n\to\infty}
+                a_{n}+\displaystyle \lim_{n\to\infty} b_{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Product:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}(a_{n}\cdot b_{n})=\left(\displaystyle
+                \lim_{n\to\infty} a_{n}\right)\cdot\left(\displaystyle \lim_{n\to\infty} b_{n}\right)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Quotient:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}\left(\dfrac{a_{n}}{b_{n}}\right)=\dfrac{\displaystyle
+                \lim_{n\to\infty} a_{n}}{\displaystyle \lim_{n\to\infty} b_{n}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Power rule:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}(a_{n})^{p}=\left(\displaystyle \lim_{n\to\infty}
+                a_{n}\right)^{p}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">valid when $a_{n}>0$ and $p>0$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｔｅｓｔｉｎｇ　Ｃｏｎｖｅｒｇｅｎｃｅ　Ｂｙ　Ｅｖａｌｕａｔｉｎｇ　Ｌｉｍｉｔｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">– <span class="image-container"><a href="../img/Calculus 2 Lecture 9.1/[50-39]-01.png"
+            target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 9.1/[50-39]-01.png"
+            alt="Preview" /></span> – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[50-39]-02.png" target="_blank">[📷image-2]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[50-39]-02.png" alt="Preview" /></span></li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=3039" target="_blank">[50:39]</a>. 🧩
+        Example 1 — Oscillating sequence: $a_{n}=(-1)^{n}$.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Terms:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-1,\,1,\,-1,\,1,\,-1,\,\ldots$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence oscillates and does not approach a single number</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore it diverges</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=3172" target="_blank">[52:52]</a>. 🧩
+        Example 2 — Sequence: $a_{n}=\dfrac{2n}{n+1}$.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Take the limit:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{2n}{n+1}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Simplify by dividing by the highest power of $n$ in the denominator:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{2n/n}{(n+1)/n}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{2}{1+\dfrac{1}{n}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Limit:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$2$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence converges to $2$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=3411" target="_blank">[56:51]</a>. 🧩
+        Example 3 — Sequence: $a_{n}=\dfrac{2+(-1)^{n}}{n}$.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Take the limit:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{2+(-1)^{n}}{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}\left[\dfrac{2}{n}+\dfrac{(-1)^{n}}{n}\right]$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Key observation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{2}{n}\to 0$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{(-1)^{n}}{n}\to 0$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence converges to $0$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=3661" target="_blank">[1:01:01]</a>. 🧩
+        Example 4 — Sequence: $a_{n}=\dfrac{\ln(n)}{n}$.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Take the limit:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{\ln(n)}{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply L'Hôpital's Rule:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{d}{dn}[\ln(n)]=\dfrac{1}{n}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{d}{dn}[n]=1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{(1/n)}{1}=0$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence converges to $0$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=3788" target="_blank">[1:03:08]</a>. 🧩
+        Example 5 — Difference of radicals: $a_{n}=\sqrt{n+1}-\sqrt{n}$
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Technique:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">multiply by the conjugate</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Transformation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\left[\sqrt{n+1}-\sqrt{n}\right]\cdot\dfrac{\sqrt{n+1}+\sqrt{n}}{\sqrt{n+1}+\sqrt{n}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{(n+1)-n}{\sqrt{n+1}+\sqrt{n}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{\sqrt{n+1}+\sqrt{n}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the limit is $0$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence converges to $0$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｓｑｕｅｅｚｅ　Ｔｈｅｏｒｅｍ　Ｆｏｒ　Ｓｅｑｕｅｎｃｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=4062" target="_blank">[1:07:42]</a>.
+        Squeeze Theorem. – <span class="image-container"><a href="../img/Calculus 2 Lecture 9.1/[1-07-42]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.1/[1-07-42]-01.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><u>If</u>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$a_{n}\le b_{n}\le c_{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><u>and</u>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty} a_{n}=\displaystyle \lim_{n\to\infty} c_{n}=L$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><u>then</u>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty} b_{n}=L$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=4266" target="_blank">[1:11:06]</a>. 🧩
+        Example — Sequence: $a_{n}=\dfrac{n!}{n^{n}}$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[1-11-00]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[1-11-00]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">First observation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$0\le a_{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Key comparison:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n!=n(n-1)(n-2)\cdots 2\cdot 1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n!$ has $n$ factors</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the last factor is $1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">since $1\le n$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">it is not necessary to compare that last factor with another extra $n$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">therefore the estimate can be sharpened to
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$n!\le n^{n-1}$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Divide by $n^{n}$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{n!}{n^{n}}\le \dfrac{n^{n-1}}{n^{n}}=\dfrac{1}{n}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the Squeeze Theorem:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$0\le a_{n}\le \dfrac{1}{n}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">and $\dfrac{1}{n}\to 0$ as $n\to\infty$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$a_{n}\to 0$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence converges to $0$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ａｂｓｏｌｕｔｅ　Ｖａｌｕｅ　Ｔｈｅｏｒｅｍ　Ｆｏｒ　Ｓｅｑｕｅｎｃｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=5255" target="_blank">[1:27:35]</a>.
+        Absolute value theorem. – <span class="image-container"><a href="../img/Calculus 2 Lecture 9.1/[1-27-35]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.1/[1-27-35]-01.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ $\displaystyle \lim_{n\to\infty}|𝒂_{n}|=0$
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ $\displaystyle \lim_{n\to\infty} 𝒂_{n}=0$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=5341" target="_blank">[1:29:01]</a>. 🧩
+        Example — Sequence: $𝒂_{n}=\dfrac{(-1)^{n}}{𝒏}$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[1-29-01]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[1-29-01]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Absolute value:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\left|\dfrac{(-1)^{n}}{𝒏}\right|=\dfrac{1}{𝒏}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Since
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{𝒏}\to 0,$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">it follows that $\dfrac{(-1)^{n}}{𝒏}\to 0$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence converges</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｃｏｎｔｉｎｕｏｕｓ　Ｆｕｎｃｔｉｏｎｓ　＆　Ｓｅｑｕｅｎｃｅ　Ｌｉｍｉｔｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=5470" target="_blank">[1:31:10]</a>.
+        Limit of sequences inside continuous functions. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[1-31-10]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[1-31-10]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">i̲f̲ $𝒇$ is continuous and $\displaystyle \lim_{n\to\infty} 𝒂_{n}=L$
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">t̲h̲e̲n̲ $\displaystyle \lim_{n\to\infty} 𝒇(𝒂_{n})=𝒇\left(\displaystyle
+                \lim_{n\to\infty} 𝒂_{n}\right)=𝒇(L)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">if a sequence $a_{n}$ approaches a number $L$, and $𝒇$ is continuous, then you can
+                “bring the limit inside the function.”</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=5629" target="_blank">[1:33:49]</a>. 🧩
+        Example — Sequence: $e^{\sin(1/n)}$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[1-33-49]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[1-33-49]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the theorem:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">i̲f̲ $𝒇$ is continuous and $\displaystyle \lim_{n\to\infty} 𝒂_{n}=𝑳$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">t̲h̲e̲n̲ $\displaystyle \lim_{n\to\infty} 𝒇(𝒂_{n})=𝒇\left(\displaystyle
+                    \lim_{n\to\infty} 𝒂_{n}\right)=𝒇(𝑳)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Identify the parts:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒇(𝒙)=e^{x}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂_{n}=\sin\left(\dfrac{1}{n}\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒇(𝒂_{n})=e^{\sin(1/n)}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Since
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{n}\to 0$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin\left(\dfrac{1}{n}\right)\to \sin(0)=0$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">so $\displaystyle \lim_{n\to\infty} 𝒂_{n}=0$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute into the theorem:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty} 𝒇(𝒂_{n})\;=\;𝒇\left(\displaystyle
+                \lim_{n\to\infty} 𝒂_{n}\right)\;=\;𝒇(𝑳)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty} e^{\sin(1/n)}=e^{\left(\displaystyle
+                \lim_{n\to\infty}\sin(1/n)\right)}=𝒇(0)=e^{0}=1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence converges to $1$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=5762" target="_blank">[1:36:02]</a>. 🧩
+        Example — Sequence: $\tan^{-1}(𝒏^{2})$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[1-36-02]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[1-36-02]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the theorem:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">i̲f̲ $𝒇$ is continuous and $\displaystyle \lim_{n\to\infty} 𝒂_{n}=𝑳$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">t̲h̲e̲n̲ $\displaystyle \lim_{n\to\infty} 𝒇(𝒂_{n})=𝒇\left(\displaystyle
+                    \lim_{n\to\infty} 𝒂_{n}\right)=𝒇(𝑳)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Identify the parts:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒇(𝒙)=\tan^{-1}(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂_{n}=n^{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒇(𝒂_{n})=\tan^{-1}(n^{2})$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Since
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$n^{2}\to \infty$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">so $\displaystyle \lim_{n\to\infty} 𝒂_{n}=\infty$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">hence $𝑳=\infty$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute into the theorem:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty} 𝒇(𝒂_{n})=𝒇\left(\displaystyle \lim_{n\to\infty}
+                𝒂_{n}\right)=𝒇(𝑳)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{n\to\infty}\tan^{-1}(n^{2})=\tan^{-1}\left(\displaystyle
+                \lim_{n\to\infty} n^{2}\right)=𝒇(\infty)=\tan^{-1}(\infty)=\dfrac{\pi}{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence converges to $\dfrac{\pi}{2}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｍｏｎｏｔｏｎｉｃ　Ｓｅｑｕｅｎｃｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=5878" target="_blank">[1:37:58]</a>.
+        Monotonic sequences. – <span class="image-container"><a href="../img/Calculus 2 Lecture 9.1/[1-37-58]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.1/[1-37-58]-01.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">A monotonic sequence is one that is always:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">increasing</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">or decreasing</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1">Ways to <strong>prove</strong> monotonicity.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Method 1:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">compare $𝒂_{n}$ and $𝒂_{n+1}$ directly</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">To prove increasing:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">show $𝒂_{n}\le 𝒂_{n+1}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">To prove decreasing:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">show $𝒂_{n+1}\le 𝒂_{n}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Method 2:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use the derivative of an associated function,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">associate the sequence with a function $𝒇(𝒙)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3"><strong>First, look at where the sequence starts.</strong></li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3"><strong>Then use that to determine the relevant domain of the associated
+                  function.</strong></li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Next, check the sign of $𝒇'(𝒙)$ on that domain.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If you prove that $𝒇$ is increasing on the interval containing all those $n$-values,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">then the sequence is also increasing.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">i̲f̲ $𝒇'(𝒙)&gt;0$ on the relevant domain,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">t̲h̲e̲n̲ the sequence is increasing</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">i̲f̲ $𝒇'(𝒙)&lt;0$ on the relevant domain,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">t̲h̲e̲n̲ the sequence is decreasing</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=6070" target="_blank">[1:41:10 ]</a>.
+        🧩 Example — Show that $𝒂_{n}=\dfrac{𝒏}{𝒏+1}$ is increasing. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[1-41-10 ]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[1-41-10 ]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Method 1 — Compare consecutive terms.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">To show that the sequence is increasing, it is enough to prove that
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$a_{n}\le a_{n+1}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So show that
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{n}{n+1}\le \dfrac{n+1}{n+2}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Cross-multiply:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$n(n+2)\le (n+1)(n+1)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Expand both sides:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$n^{2}+2n\le n^{2}+2n+1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">This is true for all $n\ge 1$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$a_{n}$ is increasing</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=6462"
+              target="_blank">[1:47:42]</a>. Method 2 — Use the associated function.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Define
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇(𝒙)=\dfrac{x}{x+1}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Differentiate:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇'(𝒙)=\dfrac{(x+1)-x}{(x+1)^{2}}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇'(𝒙)=\dfrac{1}{(x+1)^{2}}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The relevant domain is determined by the sequence.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Since the sequence is defined for $n\ge 1$, we check $𝒇'(𝒙)$ on $x\ge 1$.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Since
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇'(𝒙)\ge 0$ for $x\ge 1$,</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">it follows that
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇$ is increasing on $[1,\infty)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Because the sequence uses the inputs $n=1,2,3,\ldots$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$a_{n}=𝒇(n)$ also increases</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">i̲f̲ $𝒇'(𝒙)&gt;0$ on the relevant domain,
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">t̲h̲e̲n̲ the sequence is increasing</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">the sequence $a_{n}=\dfrac{n}{n+1}$ is increasing</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=6901" target="_blank">[1:55:01]</a>. 🧩
+        Example — Analyze $𝒇(𝒙)=\dfrac{𝒙}{e^{x}}$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[1-55-01]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[1-55-01]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Associate the sequence with the function:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂_{n}=\dfrac{n}{e^{n}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒇(𝒙)=\dfrac{𝒙}{e^{x}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Relevant domain:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Since the sequence starts at $n=1$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">we study $𝒇(𝒙)$ on $[1,\infty)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Derivative:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒇'(𝒙)=\dfrac{1-𝒙}{e^{x}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Sign of the derivative on the relevant domain:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Since $e^{x}&gt;0$ for every $𝒙$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the sign of $𝒇'(𝒙)$ depends only on $1-𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If $𝒙\ge 1$, then $1-𝒙\le 0$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore $𝒇'(𝒙)\le 0$ for $𝒙\ge 1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">i̲f̲ $𝒇'(𝒙)&lt;0$ on the relevant domain,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">t̲h̲e̲n̲ the sequence is decreasing</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒇$ is decreasing on $[1,\infty)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore the associated sequence $\left\{\dfrac{n}{e^{n}}\right\}$ is decreasing</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｂｏｕｎｄｅｄ　Ｓｅｑｕｅｎｃｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=7211" target="_blank">[2:00:11]</a>.
+        Bounded sequences. – <span class="image-container"><a href="../img/Calculus 2 Lecture 9.1/[2-00-11]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.1/[2-00-11]-01.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Bounded above:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂_{n}\le 𝑴$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Bounded below:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒂_{n}\ge 𝒎$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Bounded:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒎\le 𝒂_{n}\le 𝑴$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｍｏｎｏｔｏｎｉｃ　Ｓｅｑｕｅｎｃｅ　Ｔｈｅｏｒｅｍ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=7425" target="_blank">[2:03:45]</a>.
+        Monotonic Sequence Theorem.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><u>If</u> a sequence is monotonic and bounded,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3"><u>then</u> it converges</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">More specifically:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">increasing + bounded above ⇒ convergent</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">decreasing + bounded below ⇒ convergent</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=7724" target="_blank">[2:08:44]</a>. 🧩
+        Example — Show that $𝒂_{n}=\dfrac{2^{n}}{𝒏!}$ is convergent. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[2-08-44]-01.png" target="_blank">[📷image-1]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[2-08-44]-01.png" alt="Preview" /></span> – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 9.1/[2-08-44]-02.png"
+            target="_blank">[📷image-2]</a><img src="../img/Calculus 2 Lecture 9.1/[2-08-44]-02.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">If we write out some terms, it appears that the sequence is decreasing.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=7865"
+              target="_blank">[2:11:05]</a>. To determine whether a sequence is monotonic:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Decreasing sequence:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒂_{n}\ge 𝒂_{n+1}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">equivalently, $𝒂_{n+1}\le 𝒂_{n}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">if the sequence is positive, equivalently, $\dfrac{𝒂_{n+1}}{𝒂_{n}}\le 1$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=7985"
+              target="_blank">[2:13:05]</a>. Determine whether $𝒂_{n}=\dfrac{2^{n}}{𝒏!}$ is decreasing:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒂_{n+1}}{𝒂_{n}}=\dfrac{\left(2^{n+1}/(n+1)!\right)}{\left(2^{n}/n!\right)}$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{𝒂_{n+1}}{𝒂_{n}}=\left(\dfrac{2^{n+1}}{(n+1)!}\right)\cdot\left(\dfrac{n!}{2^{n}}\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒂_{n+1}}{𝒂_{n}}=\left(\dfrac{2\cdot 2^{n}}{(n+1)\cdot
+                n!}\right)\cdot\left(\dfrac{n!}{2^{n}}\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒂_{n+1}}{𝒂_{n}}=\dfrac{2}{n+1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{2}{n+1}\le 1$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">true for $n\ge 1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Result:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the sequence is decreasing</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=8424"
+              target="_blank">[2:20:24]</a>. Also:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Since $𝒂_{n}=\dfrac{2^{n}}{𝒏!}$ cannot be negative,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">it must be bounded below by $0$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒂_{n}$ is always positive</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">By the Monotonic Sequence Theorem:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">decreasing + bounded below ⇒ convergent</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore the sequence is convergent</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｇｅｏｍｅｔｒｉｃ　Ｓｅｑｕｅｎｃｅｓ　𝒓ⁿ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=FoNLQvf4NUs&t=8625" target="_blank">[2:23:45]</a>.
+        Summary for geometric sequences $𝒓^{n}$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 9.1/[2-23-45]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 9.1/[2-23-45]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">If $-1&lt;𝒓&lt;1$,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">then $𝒓^{n}\to 0$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">if $0&lt;𝒓&lt;1$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the terms stay positive and approach $0$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">if $-1&lt;𝒓&lt;0$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the terms alternate in sign and approach $0$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">If $𝒓=1$,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">then $𝒓^{n}\to 1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">If $𝒓=-1$,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence oscillates and diverges</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">If $|𝒓|&gt;1$,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the sequence diverges</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">if $𝒓&gt;1$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the terms grow without bound</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">if $𝒓&lt;-1$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the terms alternate in sign and their magnitudes grow without bound</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">NOTE:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">First define the absolute value:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$|𝒓|=𝒓,\;\;\text{if }𝒓\ge 0$</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$|𝒓|=-𝒓,\;\;\text{if }𝒓&lt;0$</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Then solve $|𝒓|&gt;1$ by cases:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">If $𝒓\ge 0$, then $|𝒓|=𝒓$
+                        <ul>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">so $𝒓&gt;1$</li>
+                        </ul>
+                      </li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">If $𝒓&lt;0$, then $|𝒓|=-𝒓$
+                        <ul>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">so $-𝒓&gt;1$</li>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">therefore $𝒓&lt;-1$</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Conclusion:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$|𝒓|&gt;1$ means $𝒓&gt;1$ or $𝒓&lt;-1$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3"><strong>the sequence $\{𝒓^{n}\}$ converges if and only if $-1&lt;𝒓\le 1$</strong>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">Sequences
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://openstax.org/books/calculus-volume-2/pages/5-1-sequences"
+              target="_blank">[openstax🌐]</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  </article>
+</body>
+
+</html>

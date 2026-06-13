@@ -1,0 +1,5 @@
+﻿image_name: [2-08-13]Integrals of products with different angles.png
+file_name: [2-08-13]-01.png
+timestamp: 2:08:13
+counter: 01
+folder: Calculus 2 Lecture 7.2

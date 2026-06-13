@@ -1,0 +1,5 @@
+﻿image_name: [2-55-00]Example 9 — Integrate by series 𝓮⁻ˣ².png
+file_name: [2-55-00]-01.png
+timestamp: 2:55:00
+counter: 01
+folder: Calculus 2 Lecture 9.8

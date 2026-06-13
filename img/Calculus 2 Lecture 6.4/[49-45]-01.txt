@@ -1,0 +1,5 @@
+﻿image_name: [49-45]Example Definite integral using substitution ∫[1,4] 3^{√𝒙} ∕ √𝒙  d𝒙.png
+file_name: [49-45]-01.png
+timestamp: 49:45
+counter: 01
+folder: Calculus 2 Lecture 6.4

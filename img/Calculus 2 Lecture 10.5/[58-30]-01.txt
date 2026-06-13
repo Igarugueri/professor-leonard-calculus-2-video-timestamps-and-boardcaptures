@@ -1,0 +1,5 @@
+﻿image_name: [58-30]Revolution about the line 𝜽 = π∕2.png
+file_name: [58-30]-01.png
+timestamp: 58:30
+counter: 01
+folder: Calculus 2 Lecture 10.5

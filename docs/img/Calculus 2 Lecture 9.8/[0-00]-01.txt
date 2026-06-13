@@ -1,0 +1,5 @@
+﻿image_name: [0-00]Representing functions with power series.png
+file_name: [0-00]-01.png
+timestamp: 0:00
+counter: 01
+folder: Calculus 2 Lecture 9.8

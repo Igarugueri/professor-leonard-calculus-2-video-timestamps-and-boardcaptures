@@ -1,0 +1,5 @@
+﻿image_name: [11-15]Example 2 — Evaluating the sequence {(-1)ⁿ √(n - 2)} with starting index n = 2.png
+file_name: [11-15]-01.png
+timestamp: 11:15
+counter: 01
+folder: Calculus 2 Lecture 9.1

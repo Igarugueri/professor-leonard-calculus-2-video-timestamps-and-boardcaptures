@@ -1,0 +1,5 @@
+﻿image_name: [19-34]Example 2 — Analyzing ∑[𝒏=1,∞] 3∕(2𝒏 - 1).png
+file_name: [19-34]-01.png
+timestamp: 19:34
+counter: 01
+folder: Calculus 2 Lecture 9.3

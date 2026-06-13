@@ -1,0 +1,5 @@
+﻿image_name: [18-20]Example Solve the exponential equation 𝓮^(2𝒙) − 5𝓮^𝒙 + 6 = 0.png
+file_name: [18-20]-01.png
+timestamp: 18:20
+counter: 01
+folder: Calculus 2 Lecture 6.3

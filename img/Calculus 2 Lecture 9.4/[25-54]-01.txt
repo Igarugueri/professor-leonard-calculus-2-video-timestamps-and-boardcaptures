@@ -1,0 +1,5 @@
+﻿image_name: [25-54]Example 3 — Analyzing ∑[𝒏=3,∞] 3ⁿ∕(2ⁿ - 4)_1.png
+file_name: [25-54]-01.png
+timestamp: 25:54
+counter: 01
+folder: Calculus 2 Lecture 9.4

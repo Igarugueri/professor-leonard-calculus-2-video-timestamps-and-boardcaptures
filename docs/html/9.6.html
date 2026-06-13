@@ -1,0 +1,3334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．６： Ａｂｓｏｌｕｔｅ Ｃｏｎｖｅｒｇｅｎｃｅ， Ｒａｔｉｏ Ｔｅｓｔ ａｎｄ Ｒｏｏｔ Ｔｅｓｔ Ｆｏｒ Ｓｅｒｉｅｓ</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            chtml: {
+                scale: 1.05,
+                matchFontHeight: false,
+                displayAlign: 'center',
+                displayIndent: '0em',
+                linebreaks: { automatic: false }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <article class="chapter">
+        <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．６：</h1>
+        <h1> Ａｂｓｏｌｕｔｅ Ｃｏｎｖｅｒｇｅｎｃｅ，Ｒａｔｉｏ Ｔｅｓｔ ａｎｄ Ｒｏｏｔ Ｔｅｓｔ Ｆｏｒ Ｓｅｒｉｅｓ</h1>
+
+        <h2>1 - Ａｂｓｏｌｕｔｅ　Ｃｏｎｖｅｒｇｅｎｃｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=3" target="_blank">[0:03]</a>.
+                Introduction to Absolute Convergence.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Previous tests often required positive terms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Integral Test:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">positive,</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">continuous,</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">decreasing.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Direct Comparison Test:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">positive terms.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Limit Comparison Test:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">positive terms.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main question:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">how do we deal with series that have negative terms?</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">One case is already known:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if the signs alternate regularly,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">use the Alternating Series Test.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if the terms are sometimes positive and sometimes negative,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and they do not alternate regularly,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">we need another idea.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=49" target="_blank">[0:49]</a>.
+                Absolute convergence idea.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the original series has negative terms,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">take the absolute value of the terms.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This turns all terms into positive terms.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then we can try tests that require positive terms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Comparison Test.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Limit Comparison Test.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Integral Test.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Ratio Test.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Root Test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>1.1 - Ｄｅｆｉｎｉｔｉｏｎ　ｏｆ　Ａｂｓｏｌｕｔｅ　Ｃｏｎｖｅｒｇｅｎｃｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=91" target="_blank">[1:31]</a>.
+                <strong>Formal definition of absolute convergence.</strong> – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[1-31]-01.png" target="_blank">[image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[1-31]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given a series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum 𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Take the absolute value of every term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum |𝒂_{n}|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ $\displaystyle \sum |𝒂_{n}|$ converges,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ $\displaystyle \sum 𝒂_{n}$ is absolutely convergent.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=123" target="_blank">[2:03]</a>.
+                Effect of absolute value.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The absolute value changes negative terms into positive terms.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒂_{1}|+|𝒂_{2}|+|𝒂_{3}|+\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">There are no negative terms left.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">absolute convergence studies the convergence of the positive-size
+                                version of the series.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=265" target="_blank">[4:25]</a>.
+                🧩 Example — Use for things like this: $\displaystyle \sum_{n=1}^{\infty}\dfrac{\sin(2𝑥)}{𝒏^{2}}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">NOT (Alternating,noneincreasin and positive)</li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Meaning of absolute convergence.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Absolute convergence means:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series still converges even after removing all sign cancellations.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is stronger than ordinary convergence.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if the positive-size version converges,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">then the original signed series definitely converges.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>1.2 -Ｆｉｒｓｔ　Ｅｘａｍｐｌｅ　ｏｆ　Ａｂｓｏｌｕｔｅ　Ｃｏｎｖｅｒｇｅｎｃｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[4-25]-01.png" target="_blank">[image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[4-25]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=265" target="_blank">[4:25]</a>.
+                🧩 Example — Absolute convergence: $\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{𝒏^{2}}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is an alternating series.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">It converges by the Alternating Series Test.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But now we check whether it converges absolutely.</li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=303" target="_blank">[5:03]</a>.
+                Take the absolute value.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Consider:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}\left|\dfrac{(-1)^{n-1}}{𝒏^{2}}\right|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|(-1)^{n-1}|=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left|\dfrac{(-1)^{n-1}}{𝒏^{2}}\right|=\dfrac{1}{𝒏^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}\left|\dfrac{(-1)^{n-1}}{𝒏^{2}}\right|=\sum_{n=1}^{\infty}\dfrac{1}{𝒏^{2}}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=335" target="_blank">[5:35]</a>.
+                Use the 𝒑-Series Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{𝒏^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">is a 𝒑-series with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒑=2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2>1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{𝒏^{2}}$ converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=361" target="_blank">[6:01]</a>.
+                Conclusion.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}\left|\dfrac{(-1)^{n-1}}{𝒏^{2}}\right|$ converges,</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{𝒏^{2}}$ is
+                                absolutely convergent.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we do not only say “convergent.”</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we say “absolutely convergent,” because the absolute value series
+                                converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>2 - Ｃｏｎｄｉｔｉｏｎａｌ　Ｃｏｎｖｅｒｇｅｎｃｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[7-19]-01.png" target="_blank">[image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[7-19]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=439" target="_blank">[7:19]</a>.
+                🧩 Example — Conditional convergence: $\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{𝒏}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is the alternating harmonic series.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We already know:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it converges by the Alternating Series Test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=504" target="_blank">[8:24]</a>.
+                Check ordinary convergence.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series is alternating.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Positive part:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{1}{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check the limit:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{1}{𝒏}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check decreasing:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒏+1}\le \dfrac{1}{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore, by the Alternating Series Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{𝒏}$ converges.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this proves ordinary convergence,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">not absolute convergence.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=550" target="_blank">[9:10]</a>.
+                Check absolute convergence.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Take the absolute value:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\left|\dfrac{(-1)^{n-1}}{𝒏}\right|$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|(-1)^{n-1}|=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}\left|\dfrac{(-1)^{n-1}}{𝒏}\right|=\sum_{n=1}^{\infty}\dfrac{1}{𝒏}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=613" target="_blank">[10:13]</a>.
+                Harmonic Series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">is the harmonic series.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The harmonic series diverges.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\left|\dfrac{(-1)^{n-1}}{𝒏}\right|$
+                                diverges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=648" target="_blank">[10:48]</a>.
+                Important conclusion.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The original alternating harmonic series converges:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{𝒏}$ converges.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But its absolute value series diverges:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\left|\dfrac{(-1)^{n-1}}{𝒏}\right|$
+                                diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the original series is not absolutely convergent.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=730" target="_blank">[12:10]</a>.
+                <strong>Definition of conditional convergence.</strong>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ the original series $\displaystyle \sum 𝒂_{n}$ converges, a̲n̲d̲ the
+                        absolute value series $\displaystyle \sum |𝒂_{n}|$ diverges,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the series $\displaystyle \sum 𝒂_{n}$ is conditionally
+                                convergent.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Symbolically:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum 𝒂_{n}$ converges</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but $\displaystyle \sum |𝒂_{n}|$ diverges</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum 𝒂_{n}$ is conditionally convergent.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=829" target="_blank">[13:49]</a>.
+                Conditional convergence for the alternating harmonic series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{𝒏}$ converges,
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}\left|\dfrac{(-1)^{n-1}}{𝒏}\right|=\sum_{n=1}^{\infty}\dfrac{1}{𝒏}$
+                                diverges,</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{𝒏}$ is
+                                conditionally convergent.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=915" target="_blank">[15:15]</a>.
+                Absolute convergence is stronger than convergence.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Absolute convergence is stronger than ordinary convergence.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ a series is absolutely convergent,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ it is definitely convergent.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">However:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">a series can converge without being absolutely convergent.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">That case is called:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">conditional convergence.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Three possible outcomes.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Divergent:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series does not converge.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Conditionally convergent:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum 𝒂_{n}$ converges,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but $\displaystyle \sum |𝒂_{n}|$ diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Absolutely convergent:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum |𝒂_{n}|$ converges,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so $\displaystyle \sum 𝒂_{n}$ also converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Conceptual hierarchy:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">absolute convergence is the strongest form of convergence.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">conditional convergence is still convergence,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">but it depends on sign cancellation.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">divergence means there is no convergence.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>1.3 - Ａｂｓｏｌｕｔｅ　Ｃｏｎｖｅｒｇｅｎｃｅ　Ｅｘａｍｐｌｅ　ｗｉｔｈ　Ｓｉｎｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[16-45]-01.png" target="_blank">[image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[16-45]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=1005"
+                    target="_blank">[16:45]</a>. 🧩 Example — Absolute convergence example: $\displaystyle
+                \sum_{n=1}^{\infty}\dfrac{\sin(2𝒏)}{𝒏^{2}}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{\sin(2𝒏)}{𝒏^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First observations:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is not always positive.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is not alternating in the regular sense.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin(2𝒏)$ oscillates between $-1$ and $1$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Alternating Series Test is not appropriate.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">ordinary Comparison Tests cannot be used directly because the terms are
+                                not always positive.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=1028"
+                    target="_blank">[17:08]</a>. Divergence Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{\sin(2𝒏)}{𝒏^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-1\le \sin(2𝒏)\le 1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">And:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏^{2}\to\infty$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{\sin(2𝒏)}{𝒏^{2}}\to 0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Divergence Test is inconclusive.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=1105"
+                    target="_blank">[18:25]</a>. Take the absolute value.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Consider:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}\left|\dfrac{\sin(2𝒏)}{𝒏^{2}}\right|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left|\dfrac{\sin(2𝒏)}{𝒏^{2}}\right|=\dfrac{|\sin(2𝒏)|}{𝒏^{2}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">And:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0\le |\sin(2𝒏)|\le 1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0\le \dfrac{|\sin(2𝒏)|}{𝒏^{2}}\le \dfrac{1}{𝒏^{2}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=1200"
+                    target="_blank">[20:00]</a>. Use Direct Comparison.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We have:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0\le \dfrac{|\sin(2𝒏)|}{𝒏^{2}}\le \dfrac{1}{𝒏^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The comparison series is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{𝒏^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is a 𝒑-series with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒑=2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2>1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{𝒏^{2}}$ converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=1270"
+                    target="_blank">[21:10]</a>. Conclusion by Comparison Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0\le \dfrac{|\sin(2𝒏)|}{𝒏^{2}}\le \dfrac{1}{𝒏^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">And:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{𝒏^{2}}$ converges,</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{|\sin(2𝒏)|}{𝒏^{2}}$
+                                converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=1330"
+                    target="_blank">[22:10]</a>. Final conclusion.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the absolute value series converges:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}\left|\dfrac{\sin(2𝒏)}{𝒏^{2}}\right|$ converges,</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{\sin(2𝒏)}{𝒏^{2}}$ is
+                                absolutely convergent.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we used absolute convergence because the original series was not always
+                                positive and not regularly alternating.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3 -Ｔｈｅ　Ｒａｔｉｏ　Ｔｅｓｔ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[25-56]-01.png" target="_blank">[image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[25-56]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=1556"
+                    target="_blank">[25:56]</a>. The Ratio Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The Ratio Test compares:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the next term $𝒂_{n+1}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">with the current term $𝒂_{n}$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main expression:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=1584"
+                    target="_blank">[26:24]</a>. Structure of the Ratio Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}$ goes on top.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}$ goes on the bottom.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Be careful:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">do not invert the ratio.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=1695"
+                    target="_blank">[28:15]</a>. Ratio Test $\displaystyle
+                \lim_{n\to\infty}\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|=𝑳$ outcomes.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ $𝑳&lt;1$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the series is absolutely convergent.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"> i̲f̲ $𝑳&gt;1$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the series diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"> i̲f̲ $𝑳=1$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the test is inconclusive.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Why the Ratio Test is powerful.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The Ratio Test includes absolute values.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it can prove absolute convergence.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">It is especially useful for:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">factorials.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">powers involving $𝒏$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">expressions where $\dfrac{𝒂_{n+1}}{𝒂_{n}}$ simplifies nicely.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Ratio Test versus Divergence Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Usually, we first check the Divergence Test.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But with factorials or complicated powers,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Divergence Test may be awkward.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The Ratio Test can often detect:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">absolute convergence,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">or divergence,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">without needing a separate Divergence Test first.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the Ratio Test gives $𝑳=1$,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then we must try another test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3.1 - Ｒａｔｉｏ　Ｔｅｓｔ　Ｅｘａｍｐｌｅ　１</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[30-00]-01.png" target="_blank">[image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[30-00]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=1800"
+                    target="_blank">[30:00]</a>. 🧩 Example 1 — Ratio test: $\displaystyle
+                \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}(𝒏^{2}+1)}{2^{n}}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">It is alternating because of:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Ratio Test can show absolute convergence,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">which is stronger than ordinary convergence.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=1980"
+                    target="_blank">[33:00]</a>. Set up the Ratio Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Positive/absolute term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒂_{n}|=\dfrac{𝒏^{2}+1}{2^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Next term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒂_{n+1}|=\dfrac{(𝒏+1)^{2}+1}{2^{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Ratio:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{\dfrac{(𝒏+1)^{2}+1}{2^{n+1}}}{\dfrac{𝒏^{2}+1}{2^{n}}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=2176"
+                    target="_blank">[36:16]</a>. Simplify the ratio.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=2202"
+                            target="_blank">[36:42]</a>. Discussion about when the absolute value can be removed</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reciprocate and multiply:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(𝒏+1)^{2}+1}{2^{n+1}}\cdot \dfrac{2^{n}}{𝒏^{2}+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2^{n+1}=2^{n}\cdot 2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{2^{n}}{2^{n+1}}=\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So the ratio becomes:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(𝒏+1)^{2}+1}{2(𝒏^{2}+1)}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=2340"
+                    target="_blank">[39:00]</a>. Evaluate the limit.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Expand:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒏+1)^{2}+1=𝒏^{2}+2𝒏+2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\dfrac{𝒏^{2}+2𝒏+2}{2𝒏^{2}+2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compare leading terms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=2383"
+                    target="_blank">[39:43]</a>. Conclusion for Example 1.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">And:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{2}&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">By the Ratio Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}(𝒏^{2}+1)}{2^{n}}$
+                                is absolutely convergent.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3.2 - Ｒａｔｉｏ　Ｔｅｓｔ　Ｅｘａｍｐｌｅ　２</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[43-10]-01.png" target="_blank">[image-1]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[43-10]-01.png" alt="Preview" />
+                </span> <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[43-10]-02.png" target="_blank">[image-2]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[43-10]-02.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=2590"
+                    target="_blank">[43:10]</a>. 🧩 Example 2 — Ratio test: $\displaystyle
+                \sum_{n=1}^{\infty}\dfrac{𝒏!}{𝒏^{n}}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is not:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">geometric,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">a 𝒑-series,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">telescoping.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The factorial suggests:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use the Ratio Test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=2681"
+                    target="_blank">[44:41]</a>. Set up the Ratio Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Let:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{𝒏!}{𝒏^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{(𝒏+1)!}{(𝒏+1)^{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=2746"
+                    target="_blank">[45:46]</a>. Build the ratio.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\dfrac{\dfrac{(𝒏+1)!}{(𝒏+1)^{n+1}}}{\dfrac{𝒏!}{𝒏^{n}}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reciprocate and multiply:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\dfrac{(𝒏+1)!}{(𝒏+1)^{n+1}}\cdot
+                                \dfrac{𝒏^{n}}{𝒏!}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=2911"
+                    target="_blank">[48:31]</a>. Factorial simplification.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Fundamental property:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒏+1)!=(𝒏+1)\cdot 𝒏!$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(𝒏+1)\cdot 𝒏!\cdot 𝒏^{n}}{(𝒏+1)^{n+1}\cdot 𝒏!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Cancel:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏!$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(𝒏+1)𝒏^{n}}{(𝒏+1)^{n+1}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=3040"
+                    target="_blank">[50:40]</a>. Exponent manipulation.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒏+1)^{n+1}=(𝒏+1)^{n}\cdot (𝒏+1)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Cancel:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏+1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We get:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\dfrac{𝒏^{n}}{(𝒏+1)^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\left(\dfrac{𝒏}{𝒏+1}\right)^{n}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=3026"
+                    target="_blank">[50:26]</a>. Special exponential limit.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We reached:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\left(\dfrac{𝒏}{𝒏+1}\right)^{n}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Direct substitution gives:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(\dfrac{𝒏}{𝒏+1}\right)^{n}\to 1^{\infty}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is an indeterminate form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$1^{\infty}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite the fraction:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒏}{𝒏+1}=\dfrac{1}{\dfrac{𝒏+1}{𝒏}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\left(\dfrac{𝒏}{𝒏+1}\right)^{n}=\left[\dfrac{1}{\dfrac{𝒏+1}{𝒏}}\right]^{n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{1}{\left(\dfrac{𝒏+1}{𝒏}\right)^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒏+1}{𝒏}=1+\dfrac{1}{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\left(\dfrac{𝒏}{𝒏+1}\right)^{n}=\dfrac{1}{\left(1+\dfrac{1}{𝒏}\right)^{n}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲: Evaluating the classic exponential limit.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We know the classic limit:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\left(1+\dfrac{1}{𝒏}\right)^{n}=𝒆$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \lim_{n\to\infty}\dfrac{1}{\left(1+\dfrac{1}{𝒏}\right)^{n}}=\dfrac{1}{𝒆}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \lim_{n\to\infty}\left(\dfrac{𝒏}{𝒏+1}\right)^{n}=\dfrac{1}{𝒆}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=3150"
+                    target="_blank">[52:30]</a>. Optional derivation of the classic limit.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">To justify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\left(1+\dfrac{1}{𝒏}\right)^{n}=𝒆$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite using exponentials:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\left(1+\dfrac{1}{𝒏}\right)^{n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $=𝒆^{\lim_{n\to\infty}\ln\left(\left(1+\dfrac{1}{𝒏}\right)^{n}\right)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Bring the exponent down:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=𝒆^{\lim_{n\to\infty} n\ln\left(1+\dfrac{1}{𝒏}\right)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite as a quotient:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $n\ln\left(1+\dfrac{1}{𝒏}\right)=\dfrac{\ln\left(1+\dfrac{1}{𝒏}\right)}{\dfrac{1}{𝒏}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This gives the indeterminate form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0/0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply L'Hôpital's Rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \lim_{n\to\infty}\dfrac{\ln\left(1+\dfrac{1}{𝒏}\right)}{\dfrac{1}{𝒏}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle
+                                \lim_{n\to\infty}\dfrac{\dfrac{1}{1+\dfrac{1}{𝒏}}\cdot\left(\dfrac{-1}{𝒏^{2}}\right)}{-\dfrac{1}{𝒏^{2}}}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \lim_{n\to\infty}\dfrac{1}{1+\dfrac{1}{𝒏}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \lim_{n\to\infty}\left(1+\dfrac{1}{𝒏}\right)^{n}=𝒆^{1}=𝒆$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Hence:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \lim_{n\to\infty}\left(\dfrac{𝒏}{𝒏+1}\right)^{n}=\dfrac{1}{𝒆}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=3313"
+                    target="_blank">[55:13]</a>. Conclusion for Example 2.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The Ratio Test limit is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\dfrac{1}{𝒆}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒆}&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">By the Ratio Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{𝒏!}{𝒏^{n}}$ converges
+                                absolutely.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the terms are already positive:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">absolute convergence is just convergence here,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but the Ratio Test still proves convergence.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3.3 - Ｒａｔｉｏ　Ｔｅｓｔ　Ｅｘａｍｐｌｅ　３</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[59-52]-01.png" target="_blank">[image-1]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[59-52]-01.png" alt="Preview" />
+                </span> <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[59-52]-02.png" target="_blank">[image-2]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[59-52]-02.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=3592"
+                    target="_blank">[59:52]</a>. 🧩 Example 3 — Ratio test: $\displaystyle
+                \sum_{n=1}^{\infty}\dfrac{(-5)^{n-1}}{𝒏^{2}\cdot 3^{n}}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Because of the negative base:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the signs alternate in some form.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The Ratio Test is a good choice because:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">there are exponential powers,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and the absolute value handles the negative signs.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=3654"
+                    target="_blank">[1:00:54]</a>. Set up the Ratio Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Let:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{(-5)^{n-1}}{𝒏^{2}\cdot 3^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{(-5)^{n}}{(𝒏+1)^{2}\cdot 3^{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=3738"
+                    target="_blank">[1:02:18]</a>. Handle the negative base.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Inside the absolute value:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|(-5)^{n}|=5^{n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|(-5)^{n-1}|=5^{n-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the absolute value removes the negative sign,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but it does not remove the factor $5^{n}$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=3720"
+                    target="_blank">[1:02:00]</a>. Simplify the ratio.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Ratio:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{5^{n}}{(𝒏+1)^{2}\cdot 3^{n+1}}\cdot \dfrac{𝒏^{2}\cdot
+                                3^{n}}{5^{n-1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify powers:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{5^{n}}{5^{n-1}}=5$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{3^{n}}{3^{n+1}}=\dfrac{1}{3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\dfrac{5}{3}\cdot
+                                \dfrac{𝒏^{2}}{(𝒏+1)^{2}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=3879"
+                    target="_blank">[1:04:39]</a>. Evaluate the limit.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{𝒏}{𝒏+1}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\left(\dfrac{𝒏}{𝒏+1}\right)^{2}=1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\dfrac{5}{3}\cdot 1=\dfrac{5}{3}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=3903"
+                    target="_blank">[1:05:03]</a>. Conclusion for Example 3.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\dfrac{5}{3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">And:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{5}{3}&gt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">By the Ratio Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-5)^{n-1}}{𝒏^{2}\cdot 3^{n}}$
+                                diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">say “diverges,” not “absolutely diverges.”</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">there is no category called absolutely divergent.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Correct terminology.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The main categories are:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">absolutely convergent,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">conditionally convergent,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">divergent.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Do not say:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">absolutely divergent.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the Ratio Test gives $𝑳&gt;1$,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the original series diverges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>4 - Ｔｈｅ　Ｒｏｏｔ　Ｔｅｓｔ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[1-07-08]-01.png" target="_blank">[image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[1-07-08]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=4028"
+                    target="_blank">[1:07:08]</a>. The Root Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The Root Test is useful when the terms contain powers of $𝒏$.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">It is especially useful when the whole expression is raised to the $𝒏$-th
+                        power.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">It often overlaps with the Ratio Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Ratio Test works well for factorials and $𝒏$-th powers.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Root Test works especially well for $𝒏$-th powers.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Avoid using the Root Test for factorials:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Ratio Test is usually better there.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=4154"
+                    target="_blank">[1:09:14]</a>. Definition of the Root Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\sqrt[n]{|𝒂_{n}|}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">There is no ratio here.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Unlike the Ratio Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we do not form $\dfrac{𝒂_{n+1}}{𝒂_{n}}$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We take:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the absolute value of $𝒂_{n}$,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then the $𝒏$-th root.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=4185"
+                    target="_blank">[1:09:45]</a>. Root Test $\displaystyle \lim_{n\to\infty}\sqrt[n]{|𝒂_{n}|}=𝑳$
+                outcomes.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ $𝑳&lt;1$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the series is absolutely convergent.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ $𝑳&gt;1$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the series diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ $𝑳=1$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the test is inconclusive.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>4.1 - Ｒｏｏｔ　Ｔｅｓｔ　Ｅｘａｍｐｌｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[1-11-45]-01.png" target="_blank">[image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[1-11-45]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=4305"
+                    target="_blank">[1:11:45]</a>. 🧩 Example — Root test: $\displaystyle
+                \sum_{n=1}^{\infty}\dfrac{(-1)^{n}2^{n+3}}{(𝒏+1)^{n}}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">It is alternating because of:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">showing decreasing behavior directly may not be convenient.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the expression contains $𝒏$-th powers,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Root Test is a natural choice.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=4412"
+                    target="_blank">[1:13:32]</a>. Set up the Root Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\sqrt[n]{\left|\dfrac{(-1)^{n}2^{n+3}}{(𝒏+1)^{n}}\right|}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The absolute value removes:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\sqrt[n]{\dfrac{2^{n+3}}{(𝒏+1)^{n}}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=4491"
+                    target="_blank">[1:14:51]</a>. Separate constants and powers.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2^{n+3}=2^{3}\cdot 2^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{2^{n+3}}{(𝒏+1)^{n}}=2^{3}\cdot \dfrac{2^{n}}{(𝒏+1)^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{2^{n}}{(𝒏+1)^{n}}=\left(\dfrac{2}{𝒏+1}\right)^{n}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=4573"
+                    target="_blank">[1:16:13]</a>. Apply the $𝒏$-th root.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We have:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sqrt[n]{2^{3}\cdot \left(\dfrac{2}{𝒏+1}\right)^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Separate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sqrt[n]{2^{3}}\cdot \sqrt[n]{\left(\dfrac{2}{𝒏+1}\right)^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sqrt[n]{2^{3}}=(2^{3})^{1/n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sqrt[n]{\left(\dfrac{2}{𝒏+1}\right)^{n}}=\dfrac{2}{𝒏+1}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=4644"
+                    target="_blank">[1:17:24]</a>. Evaluate the limit.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Now:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}(2^{3})^{1/n}\cdot \dfrac{2}{𝒏+1}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(2^{3})^{1/n}\to 1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{2}{𝒏+1}\to 0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=1\cdot 0=0$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=4668"
+                    target="_blank">[1:17:48]</a>. Conclusion for the Root Test example.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">And:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">By the Root Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n}2^{n+3}}{(𝒏+1)^{n}}$
+                                converges absolutely.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>5 - Ｓｔｒａｔｅｇｉｃ　Ｓｕｍｍａｒｙ　ｏｆ　Ｓｅｒｉｅｓ　Ｔｅｓｔｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[1-20-17]-01.png" target="_blank">[image-1]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[1-20-17]-01.png" alt="Preview" />
+                </span> <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[1-20-17]-02.png" target="_blank">[image-2]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[1-20-17]-02.png" alt="Preview" />
+                </span> <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[1-20-17]-03.png" target="_blank">[image-3]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[1-20-17]-03.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=4817"
+                    target="_blank">[1:20:17]</a>. Summary of all series tests.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main purpose:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">decide which test to try first.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Strategy:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">do not start with the hardest test.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">look for the easiest recognizable structure.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=4855"
+                    target="_blank">[1:20:55]</a>. ❶ — Divergence Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Always check, when practical:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ $\displaystyle \lim_{n\to\infty}𝒂_{n}\ne 0$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ $\displaystyle \sum 𝒂_{n}$ diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ $\displaystyle \lim_{n\to\infty}𝒂_{n}=0$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the test is inconclusive.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">continue with another test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=4900"
+                    target="_blank">[1:21:40]</a>. ❷ — By type.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Geometric Series.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Geometric form:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle \sum 𝒂𝒓^{n}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $|𝒓|&lt;1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">It converges</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $|𝒓|\ge 1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">It diverges</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ it converges,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ the sum is:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\dfrac{𝒂}{1-𝒓}$</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Important:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">check convergence before using the sum formula.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Telescoping Series.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Telescoping series often require:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">partial fractions.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Main idea:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">rewrite the terms so that many terms cancel.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Then:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">find a formula for the partial sum $𝑺_{n}$.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Finally:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">compute $\displaystyle \lim_{n\to\infty}𝑺_{n}$.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">𝒑-Series.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">𝒑-series form:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{𝒏^{𝒑}}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $𝒑&gt;1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">It converges</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $𝒑\le 1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">It diverges</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $𝒑=1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">gives the harmonic series,
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">which diverges.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=5230"
+                    target="_blank">[1:27:10]</a>. ❸ — Integral Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the Integral Test when the terms can be modeled by a function:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=𝒇(𝒏)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The function must be:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">positive,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">continuous,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">decreasing.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This only needs to hold from some point onward:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$[𝑵,\infty)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then evaluate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int_{𝑵}^{\infty}𝒇(𝒙)\cdot 𝒅𝑥$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Meaning of $𝑵$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝑵$ is the point from which the final tail of the series is
+                                        tested.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the first finitely many terms do not affect convergence or
+                                        divergence.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">only the infinite tail determines the final behavior.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ the integral converges:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the series converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ the integral diverges:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the series diverges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=5395"
+                    target="_blank">[1:29:55]</a>. ❹ — Comparison Tests.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use Comparison Tests when:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">all terms are positive,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and the series behaves like a known series.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Common known series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">𝒑-series.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">geometric series.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">harmonic series.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Direct Comparison Test.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">To prove convergence:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">compare with a bigger convergent series.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Symbolically:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$0\le 𝒂_{n}\le 𝒃_{n}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle \sum 𝒃_{n}$ converges</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">therefore, $\displaystyle \sum 𝒂_{n}$ converges.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">To prove divergence:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">compare with a smaller divergent series.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Symbolically:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$0\le 𝒃_{n}\le 𝒂_{n}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle \sum 𝒃_{n}$ diverges</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">therefore, $\displaystyle \sum 𝒂_{n}$ diverges.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Limit Comparison Test.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Use when two positive-term series have similar end behavior.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Compute:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle \lim_{n\to\infty}\dfrac{𝒂_{n}}{𝒃_{n}}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ the limit exists and is a finite positive number:
+                                $0&lt;𝑳&lt;\infty$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ both series have the same convergence behavior.
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">they both converge or both diverge.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=5661"
+                    target="_blank">[1:34:21]</a>. ❺ — Alternating Series Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use when the series has the form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum (-1)^{n}𝒂_{n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">or $\displaystyle \sum (-1)^{n-1}𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Where:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}&gt;0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check two conditions:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝒂_{n}=0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}\le 𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ both conditions hold:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the alternating series converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this proves ordinary convergence,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">not necessarily absolute convergence.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=5763"
+                    target="_blank">[1:36:03]</a>. ❻ — Ratio Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Try the Ratio Test for:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">factorials.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏$-th powers.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳&lt;1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ absolutely convergent.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳&gt;1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ divergent.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ inconclusive.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=5829"
+                    target="_blank">[1:37:09]</a>. ❼ — Root Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Try the Root Test for:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏$-th powers.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\sqrt[n]{|𝒂_{n}|}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳&lt;1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ absolutely convergent.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳&gt;1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ divergent.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=1$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ inconclusive.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>6 - Ｑｕｉｃｋ　Ｉｄｅｎｔｉｆｉｃａｔｉｏｎ　Ｇｕｉｄｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[1-40-19]-01.png" target="_blank">[image-1]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[1-40-19]-01.png" alt="Preview" />
+                </span> <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.6/[1-40-19]-02.png" target="_blank">[image-2]</a>
+                    <img src="../img/Calculus 2 Lecture 9.6/[1-40-19]-02.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=6019"
+                    target="_blank">[1:40:19]</a>. ❶ Always start by looking for immediate divergence:
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">if $\displaystyle \lim_{n\to\infty}𝒂_{n}\ne 0$,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">stop.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">⭐ Model Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{2𝒏-1}{3𝒏-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check the general term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{2𝒏-1}{3𝒏-1}=\dfrac{2}{3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{2}{3}\ne 0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series diverges by the Divergence Test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=6057"
+                    target="_blank">[1:40:57]</a>. ❷ Split sums when possible.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If a series is written as a sum or difference of recognizable series,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">split it.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">⭐ Model Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}\left[\dfrac{2}{3^{n}}-\dfrac{1}{𝒏(𝒏+1)}\right]$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Split:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}\dfrac{2}{3^{n}}-\sum_{n=1}^{\infty}\dfrac{1}{𝒏(𝒏+1)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First part:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{2}{3^{n}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \sum_{n=1}^{\infty}2\left(\dfrac{1}{3}\right)^{n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">geometric series with $|𝒓|=\dfrac{1}{3}&lt;1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore, it converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Second part:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{𝒏(𝒏+1)}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">telescoping series.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">analyze each part separately.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The whole series converges only if all parts converge.</li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=6096"
+                    target="_blank">[1:41:36]</a>. ❸ Look for 𝒑-Series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the expression can be rewritten as:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒏^{𝒑}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use the 𝒑-Series Test.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">⭐ Model Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\left(\dfrac{1}{𝒏}\right)^{𝒆}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(\dfrac{1}{𝒏}\right)^{𝒆}=\dfrac{1}{𝒏^{𝒆}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is a 𝒑-series with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒑=𝒆$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒆&gt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{𝒏^{𝒆}}$ converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=6125"
+                    target="_blank">[1:42:05]</a>. ❹ Integral Test versus Comparison.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the Integral Test when:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the function is easy to integrate,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and positive, continuous, decreasing.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">⭐ Model Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=3}^{\infty}\dfrac{1}{𝒏\sqrt{\ln(𝒏)}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Model with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\dfrac{1}{𝒙\sqrt{\ln(𝒙)}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This suggests the Integral Test because:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the function is positive for $𝒙\ge 3$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is continuous for $𝒙\ge 3$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is decreasing for large $𝒙$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the integral is manageable by substitution.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Integral idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">let $𝒖=\ln(𝒙)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then $𝒅𝒖=\dfrac{1}{𝒙}\cdot 𝒅𝑥$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use the Integral Test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=6158"
+                    target="_blank">[1:42:38]</a>. ❺ Direct Comparison for single dominant terms.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the expression has simple single-term behavior,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Direct Comparison may be easiest.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">⭐ Model Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=3}^{\infty}\dfrac{\ln(𝒏)}{𝒏^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Single-term comparison idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(𝒏)$ grows slower than $\sqrt{𝒏}$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So for large $𝒏$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(𝒏)&lt;\sqrt{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{\ln(𝒏)}{𝒏^{2}}&lt;\dfrac{\sqrt{𝒏}}{𝒏^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{\sqrt{𝒏}}{𝒏^{2}}=\dfrac{1}{𝒏^{3/2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=3}^{\infty}\dfrac{1}{𝒏^{3/2}}$ is a 𝒑-series
+                                with $𝒑=\dfrac{3}{2}&gt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=3}^{\infty}\dfrac{1}{𝒏^{3/2}}$ converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">By Direct Comparison:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=3}^{\infty}\dfrac{\ln(𝒏)}{𝒏^{2}}$ converges.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=6203"
+                    target="_blank">[1:43:23]</a>. ❻ Limit Comparison for multiple-term expressions.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the numerator or denominator has several terms,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Direct Comparison may be awkward.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use leading terms.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">⭐ Model Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}\dfrac{\sqrt{𝒏^{3}-2}}{𝒏^{4}+3𝒏^{2}+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">End behavior:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sqrt{𝒏^{3}-2}$ behaves like $\sqrt{𝒏^{3}}=𝒏^{3/2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏^{4}+3𝒏^{2}+1$ behaves like $𝒏^{4}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{\sqrt{𝒏^{3}-2}}{𝒏^{4}+3𝒏^{2}+1}$ behaves like
+                                $\dfrac{𝒏^{3/2}}{𝒏^{4}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒏^{3/2}}{𝒏^{4}}=\dfrac{1}{𝒏^{5/2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Choose:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒃_{n}=\dfrac{1}{𝒏^{5/2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{𝒂_{n}}{𝒃_{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{𝒏^{5/2}}$ is a 𝒑-series
+                                with $𝒑=\dfrac{5}{2}&gt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use the Limit Comparison Test.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the given series converges if the comparison limit is finite and
+                                positive.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=6255"
+                    target="_blank">[1:44:15]</a>. ❼ Alternating series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the series clearly has:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">or $(-1)^{n-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">try the Alternating Series Test.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">⭐ Model Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}(-1)^{n}\dfrac{\sqrt{𝒏}}{𝒏^{2}+1}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Positive part:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{\sqrt{𝒏}}{𝒏^{2}+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝒂_{n}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{\sqrt{𝒏}}{𝒏^{2}+1}$ behaves like
+                                $\dfrac{\sqrt{𝒏}}{𝒏^{2}}=\dfrac{1}{𝒏^{3/2}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and $\dfrac{1}{𝒏^{3/2}}\to 0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then check decreasing:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}\le 𝒂_{n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">or use $𝒇'(𝒙)&lt;0$ for the related function.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">try the Alternating Series Test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=6273"
+                    target="_blank">[1:44:33]</a>. ❽ Ratio Test or Root Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use these when:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">other tests are not convenient,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the expression has factorials,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">or $𝒏$-th powers.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">⭐ Model Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{𝒏}{2^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is not directly geometric:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">because of the extra factor $𝒏$ in the numerator.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">(i) Use the Ratio Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{𝒏}{2^{n}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{𝒏+1}{2^{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \lim_{n\to\infty}\dfrac{𝒏+1}{2^{n+1}}\cdot
+                                \dfrac{2^{n}}{𝒏}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \lim_{n\to\infty}\dfrac{𝒏+1}{𝒏}\cdot \dfrac{1}{2}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\dfrac{1}{2}&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{𝒏}{2^{n}}$ converges by the
+                                Ratio Test.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">(ii) Root Test also works.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{𝒏}{2^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite the numerator:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏=𝒏^{1}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏^{1}=𝒏^{n/n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏^{n/n}=(𝒏^{1/n})^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒏}{2^{n}}=\dfrac{(𝒏^{1/n})^{n}}{2^{n}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\left(\dfrac{𝒏^{1/n}}{2}\right)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply the Root Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\sqrt[n]{\left|\dfrac{𝒏}{2^{n}}\right|}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle
+                                \lim_{n\to\infty}\sqrt[n]{\left(\dfrac{𝒏^{1/n}}{2}\right)^{n}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \lim_{n\to\infty}\dfrac{𝒏^{1/n}}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}𝒏^{1/n}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\dfrac{1}{2}&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{𝒏}{2^{n}}$ converges by the
+                                Root Test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=g4iZJOwMkjU&t=6312"
+                    target="_blank">[1:45:12]</a>. ❾ Strategy for trigonometric functions.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the series contains:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin(𝒏)$,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos(𝒏)$,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sin(2𝒏)$,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">or similar oscillating terms,</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it may not be positive,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and may not alternate regularly.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">⭐ Model Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{\sin(𝒏)}{\sqrt{𝒏^{3}+1}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In that case:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">try absolute value.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Take:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left|\dfrac{\sin(𝒏)}{\sqrt{𝒏^{3}+1}}\right|$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{|\sin(𝒏)|}{\sqrt{𝒏^{3}+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|\sin(𝒏)|\le 1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{|\sin(𝒏)|}{\sqrt{𝒏^{3}+1}}\le \dfrac{1}{\sqrt{𝒏^{3}+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">End behavior:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{\sqrt{𝒏^{3}+1}}$ behaves like $\dfrac{1}{𝒏^{3/2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{𝒏^{3/2}}$ converges</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use absolute value plus comparison.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the original series is absolutely convergent.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Final strategy.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Do not randomly choose a test.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First identify the structure:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">nonzero term limit ⇒ Divergence Test.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">geometric form ⇒ Geometric Series Test.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">telescoping cancellation ⇒ Telescoping Series.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒏^{𝒑}}$ form ⇒ 𝒑-Series.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">positive continuous decreasing function ⇒ Integral Test.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">positive terms like a known series ⇒ Comparison.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">alternating signs ⇒ Alternating Series Test.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">factorials ⇒ Ratio Test.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏$-th powers ⇒ Root Test.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">trig oscillation ⇒ absolute value plus comparison.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">Absolute Convergence. Prof. Herbert Gross.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a
+                            href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/resources/lecture-3-absolute-convergence/"
+                            target="_blank">[MIT 🌐]</a></li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Ratio and Root Tests.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a
+                            href="https://openstax.org/books/calculus-volume-2/pages/5-6-ratio-and-root-tests"
+                            target="_blank">[openstax🌐]</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </article>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+﻿image_name: [1-17-30]Example Logarithmic Expansion Before Differentiation 𝒅∕𝒅𝒙 [ ln ( ( 𝒙² (2𝒙² + 1)³ ) ∕ √(5 − 𝒙²) ]_2.png
+file_name: [1-17-30]-02.png
+timestamp: 1:17:30
+counter: 02
+folder: Calculus 2 Lecture 6.1

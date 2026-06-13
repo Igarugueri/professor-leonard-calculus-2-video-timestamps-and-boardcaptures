@@ -1,0 +1,5 @@
+﻿image_name: [50-55]Example — 𝒑-Series ∑[𝒏=1,∞] 1∕∛𝒏.png
+file_name: [50-55]-01.png
+timestamp: 50:55
+counter: 01
+folder: Calculus 2 Lecture 9.3

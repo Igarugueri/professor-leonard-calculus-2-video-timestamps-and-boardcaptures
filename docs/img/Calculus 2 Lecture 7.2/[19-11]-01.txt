@@ -1,0 +1,5 @@
+﻿image_name: [19-11]Example 2 —  At least one power is odd Evaluate ∫ sin³(𝒙) cos²(𝒙) 𝒅𝒙.png
+file_name: [19-11]-01.png
+timestamp: 19:11
+counter: 01
+folder: Calculus 2 Lecture 7.2

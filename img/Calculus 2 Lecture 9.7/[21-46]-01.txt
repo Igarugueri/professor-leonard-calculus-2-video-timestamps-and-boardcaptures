@@ -1,0 +1,5 @@
+﻿image_name: [21-46]The most basic power series ∑[𝒏=0,∞] 𝒙ⁿ.png
+file_name: [21-46]-01.png
+timestamp: 21:46
+counter: 01
+folder: Calculus 2 Lecture 9.7

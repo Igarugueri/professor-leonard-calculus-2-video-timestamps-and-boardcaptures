@@ -1,0 +1,5 @@
+﻿image_name: [2-14-40]Example 9 — Discontinuity at an interior point of the interval ∫[-1, 1] 1∕𝒙² ⋅ 𝒅𝒙.png
+file_name: [2-14-40]-01.png
+timestamp: 2:14:40
+counter: 01
+folder: Calculus 2 Lecture 7.6

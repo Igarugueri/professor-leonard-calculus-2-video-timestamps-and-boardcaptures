@@ -1,0 +1,5 @@
+﻿image_name: [2-23-40]Example 5 — Case 4 Evaluate ∫ (𝒙³ − 2𝒙² + 3𝒙 + 2) ∕ [𝒙(𝒙² + 1)²] 𝒅𝒙_3.png
+file_name: [2-23-40]-03.png
+timestamp: 2:23:40
+counter: 03
+folder: Calculus 2 Lecture 7.4

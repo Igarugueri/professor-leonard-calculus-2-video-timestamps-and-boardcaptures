@@ -1,0 +1,5 @@
+﻿image_name: [12-52]Example Differentiate an exponential function with base different from 𝓮 5^{∛𝒙}.png
+file_name: [12-52]-01.png
+timestamp: 12:52
+counter: 01
+folder: Calculus 2 Lecture 6.4

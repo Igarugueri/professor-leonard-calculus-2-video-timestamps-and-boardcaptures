@@ -1,0 +1,5 @@
+﻿image_name: [15-19]Plotting the polar point (1, -3π).png
+file_name: [15-19]-01.png
+timestamp: 15:19
+counter: 01
+folder: Calculus 2 Lecture 10.4

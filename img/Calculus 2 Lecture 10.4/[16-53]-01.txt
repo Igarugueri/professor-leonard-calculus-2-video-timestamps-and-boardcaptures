@@ -1,0 +1,5 @@
+﻿image_name: [16-53]Coordinate conversion between polar and rectangular systems.png
+file_name: [16-53]-01.png
+timestamp: 16:53
+counter: 01
+folder: Calculus 2 Lecture 10.4

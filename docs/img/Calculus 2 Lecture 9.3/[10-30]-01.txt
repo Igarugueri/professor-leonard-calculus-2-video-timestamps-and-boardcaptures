@@ -1,0 +1,5 @@
+﻿image_name: [10-30]Example 1 — Determining convergence for ∑[𝒏=1,∞] 1∕(𝒏² + 1).png
+file_name: [10-30]-01.png
+timestamp: 10:30
+counter: 01
+folder: Calculus 2 Lecture 9.3

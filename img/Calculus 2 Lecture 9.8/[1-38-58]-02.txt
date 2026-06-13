@@ -1,0 +1,5 @@
+﻿image_name: [1-38-58]Example 4 — The Binomial Series 𝒇(𝒙) = (1 + 𝒙)ᵏ_2.png
+file_name: [1-38-58]-02.png
+timestamp: 1:38:58
+counter: 02
+folder: Calculus 2 Lecture 9.8

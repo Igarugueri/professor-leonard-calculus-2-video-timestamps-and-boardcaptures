@@ -1,0 +1,5 @@
+﻿image_name: [20-46]Taylor series formula.png
+file_name: [20-46]-01.png
+timestamp: 20:46
+counter: 01
+folder: Calculus 2 Lecture 9.8

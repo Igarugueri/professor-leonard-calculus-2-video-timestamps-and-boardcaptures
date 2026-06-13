@@ -1,0 +1,5 @@
+﻿image_name: [18-34]General notation and definitions of convergence.png
+file_name: [18-34]-01.png
+timestamp: 18:34
+counter: 01
+folder: Calculus 2 Lecture 7.6

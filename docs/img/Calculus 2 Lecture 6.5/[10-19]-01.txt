@@ -1,0 +1,5 @@
+﻿image_name: [10-19]Study of the cosine function 𝒚 = cos(𝒙) and restricted domain.png
+file_name: [10-19]-01.png
+timestamp: 10:19
+counter: 01
+folder: Calculus 2 Lecture 6.5

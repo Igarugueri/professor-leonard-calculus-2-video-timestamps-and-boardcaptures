@@ -1,0 +1,5 @@
+﻿image_name: [44-37]Proof of the logarithmic identity for cosh⁻¹(𝒙)_1.png
+file_name: [44-37]-01.png
+timestamp: 44:37
+counter: 01
+folder: Calculus 2 Lecture 6.6

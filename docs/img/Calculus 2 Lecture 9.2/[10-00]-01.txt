@@ -1,0 +1,5 @@
+﻿image_name: [10-00]Formal definition of an infinite series by limits.png
+file_name: [10-00]-01.png
+timestamp: 10:00
+counter: 01
+folder: Calculus 2 Lecture 9.2

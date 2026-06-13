@@ -1,0 +1,5 @@
+﻿image_name: [0-29]Use of the horizontal line test to verify injectivity.png
+file_name: [0-29]-02.png
+timestamp: 0:29
+counter: 02
+folder: img

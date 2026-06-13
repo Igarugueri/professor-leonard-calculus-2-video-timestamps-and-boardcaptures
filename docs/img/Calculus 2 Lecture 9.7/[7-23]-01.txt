@@ -1,0 +1,5 @@
+﻿image_name: [7-23]Example 1 — Alternating power series centered at 0 ∑[𝒏=0,∞] (-1)ⁿ𝒙ⁿ∕𝒏!.png
+file_name: [7-23]-01.png
+timestamp: 7:23
+counter: 01
+folder: Calculus 2 Lecture 9.7

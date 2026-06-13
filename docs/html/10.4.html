@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ １０．４： Ｕｓｉｎｇ Ｐｏｌａｒ Ｃｏｏｒｄｉｎａｔｅｓ ａｎｄ Ｐｏｌａｒ Ｅｑｕａｔｉｏｎｓ</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <article class="chapter">
+        <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ １０．４ </h1>
+        <h1> Ｕｓｉｎｇ Ｐｏｌａｒ Ｃｏｏｒｄｉｎａｔｅｓ ａｎｄ Ｐｏｌａｒ Ｅｑｕａｔｉｏｎｓ</h1>
+
+        <h2>１ - Ｐｏｌａｒ　Ｃｏｏｒｄｉｎａｔｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.4/[0-00]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 10.4/[0-00]-01.png"
+                        alt="Preview" /></span> - <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.4/[0-00]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 10.4/[0-00]-02.png" alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=0" target="_blank">[0:00]</a>.
+                Introduction to polar coordinates.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">represent curves using angles and distances instead of rectangular
+                                coordinates</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">polar graph paper uses concentric circles to measure distance from a
+                                central point</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">some curves are easier, nicer, or more relevant to describe without $𝒙$
+                                and $𝒚$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">using polar graph paper helps visualize the angle and the directed
+                                distance directly</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=85" target="_blank">[1:25]</a>.
+                Definition — The polar coordinate system.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Polar axis:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the initial ray from which the angle starts</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it plays the role of the positive x-axis</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Pole:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the central fixed point</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is the origin</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">a point is described by an ordered pair $(𝒓,𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽$ gives the angle from the polar axis</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓$ gives the directed distance from the pole to the point</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=257" target="_blank">[4:17]</a>.
+                Orientation of the angle $𝜽$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Definition:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽$ measures angular movement from the polar axis</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ $𝜽>0$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ the direction is counterclockwise</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ $𝜽<0$ <ul>
+                            <!-- ○ nivel-3 -->
+                    <li class="level-3">t̲h̲e̲n̲ the direction is clockwise</li>
+                </ul>
+            </li>
+            <!-- ◉ nivel-2 -->
+            <li class="level-2">Important:
+                <ul>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">the sign of the angle determines the direction of rotation</li>
+                </ul>
+            </li>
+        </ul>
+        </li>
+
+        <!-- ● nivel-1 -->
+        <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=293" target="_blank">[4:53]</a>. The
+            directed distance $𝒓$.
+            <ul>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">Definition:
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">$𝒓$ is the distance from the pole to the point</li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">i̲f̲ $𝒓>0$
+                    <ul>
+                        <!-- ○ nivel-3 -->
+                        <li class="level-3">t̲h̲e̲n̲ the point lies on the terminal side of the angle</li>
+                    </ul>
+                </li>
+                <!-- ◉ nivel-2 -->
+                <li class="level-2">i̲f̲ $𝒓<0$ <ul>
+                        <!-- ○ nivel-3 -->
+                <li class="level-3">t̲h̲e̲n̲ use the given angle first</li>
+                <!-- ○ nivel-3 -->
+                <li class="level-3">then reflect the point $180^\circ$ through the pole</li>
+            </ul>
+        </li>
+        <!-- ◉ nivel-2 -->
+        <li class="level-2">Meaning:
+            <ul>
+                <!-- ○ nivel-3 -->
+                <li class="level-3">negative $𝒓$ sends the point in the opposite direction along the same line</li>
+            </ul>
+        </li>
+        </ul>
+        </li>
+        </ul>
+
+        <h2>１. １ - Ｅｘａｍｐｌｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=469" target="_blank">[7:49]</a>.
+                🧩 Plotting the polar point $\left(1,\dfrac{2\pi}{3}\right)$. <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.4/[7-49]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 10.4/[7-49]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">locate a point using a positive angle and a positive distance</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Procedure:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">rotate counterclockwise to $\dfrac{2\pi}{3}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">move out to the first concentric circle</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the point lies in Quadrant II</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=649" target="_blank">[10:49]</a>.
+                🧩 Plotting the polar point $\left(3,-\dfrac{\pi}{4}\right)$. <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.4/[10-49]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 10.4/[10-49]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">locate a point using a negative angle</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Procedure:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">rotate clockwise by $\dfrac{\pi}{4}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">move out a distance of $3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">negative angle means clockwise rotation</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the point lies in Quadrant IV</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=810" target="_blank">[13:30]</a>.
+                🧩 Plotting the polar point $\left(-2,\dfrac{\pi}{3}\right)$. <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.4/[13-30]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 10.4/[13-30]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">locate a point with negative $𝒓$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Procedure:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">first locate the ray at $\dfrac{\pi}{3}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then move $180^\circ$ opposite through the pole</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">keep the same distance $2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">negative $𝒓$ does not change the given angle label</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it changes the direction of the plotted point</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the point lies on the opposite ray, in Quadrant III</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=919" target="_blank">[15:19]</a>.
+                🧩 Plotting the polar point $(1,-3\pi)$. <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.4/[15-19]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 10.4/[15-19]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">reinforce the role of angle direction and coterminal positioning</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Procedure:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">rotate clockwise through $3\pi$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">move out a distance of $1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the direction still matters even when the angle makes full rotations
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>２ - Ｃｏｎｖｅｒｓｉｏｎ　Ｂｅｔｗｅｅｎ　Ｐｏｌａｒ　ａｎｄ　Ｒｅｃｔａｎｇｕｌａｒ　Ｃｏｏｒｄｉｎａｔｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.4/[16-53]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.4/[16-53]-01.png"
+                        alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=1013"
+                    target="_blank">[16:53]</a>. Coordinate conversion between polar and rectangular systems.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">move back and forth between $(𝒓,𝜽)$ and $(𝒙,𝒚)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use right-triangle trigonometry</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Polar to rectangular:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝒓\cdot \cos(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒓\cdot \sin(𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rectangular to polar:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓^{2}=𝒙^{2}+𝒚^{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\tan(𝜽)=\dfrac{𝒚}{𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">always graph the point first</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this prevents quadrant mistakes when choosing the angle</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Warning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the square root in $𝒓=\sqrt{𝒙^{2}+𝒚^{2}}$ does not by itself fix the
+                                correct quadrant</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the quadrant must be handled through the angle $𝜽$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>２. １ - Ｅｘａｍｐｌｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=1233"
+                    target="_blank">[20:33]</a>. 🧩 Conversion — Polar to rectangular: $\left(4,\dfrac{\pi}{6}\right)$.
+                <span class="image-container"><a href="../img/Calculus 2 Lecture 10.4/[20-33]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.4/[20-33]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Graph the point first.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the angle $\dfrac{\pi}{6}$ places the point in Quadrant I</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the distance from the pole is $4$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the conversion formulas:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝒓\cdot \cos(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒓\cdot \sin(𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute $𝒓=4$ and $𝜽=\dfrac{\pi}{6}$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=4\cdot \cos\left(\dfrac{\pi}{6}\right)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=4\cdot \sin\left(\dfrac{\pi}{6}\right)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=4\cdot \left(\dfrac{\sqrt{3}}{2}\right)=2\sqrt{3}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=4\cdot \left(\dfrac{1}{2}\right)=2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒙,𝒚)=\left(2\sqrt{3},2\right)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the rectangular point is in Quadrant I, matching the original polar
+                                point</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=1453"
+                    target="_blank">[24:13]</a>. 🧩 Conversion — Polar to rectangular:
+                $\left(-\sqrt{2},\dfrac{\pi}{4}\right)$. <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.4/[24-13]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 10.4/[24-13]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Graph the point first.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the angle $\dfrac{\pi}{4}$ points into Quadrant I</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but $𝒓$ is negative, so the point is plotted in the opposite direction
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore the point lies in Quadrant III</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the conversion formulas:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝒓\cdot \cos(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒓\cdot \sin(𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute $𝒓=-\sqrt{2}$ and $𝜽=\dfrac{\pi}{4}$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=-\sqrt{2}\cdot \cos\left(\dfrac{\pi}{4}\right)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=-\sqrt{2}\cdot \sin\left(\dfrac{\pi}{4}\right)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=-\sqrt{2}\cdot \left(\dfrac{\sqrt{2}}{2}\right)=-1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=-\sqrt{2}\cdot \left(\dfrac{\sqrt{2}}{2}\right)=-1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒙,𝒚)=(-1,-1)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(-\sqrt{2},\dfrac{\pi}{4}\right)$ and
+                                $\left(\sqrt{2},\dfrac{5\pi}{4}\right)$ represent the same point</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=1659"
+                    target="_blank">[27:39]</a>. 🧩 Conversion — Rectangular to polar: $(-1,1)$. <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 10.4/[27-39]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.4/[27-39]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Graph the point first.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the point $(-1,1)$ lies in Quadrant II</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Find $𝒓$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓^{2}=𝒙^{2}+𝒚^{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓^{2}=(-1)^{2}+1^{2}=2$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=\sqrt{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Find $𝜽$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\tan(𝜽)=\dfrac{𝒚}{𝒙}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\tan(𝜽)=\dfrac{1}{-1}=-1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the reference angle is $\dfrac{\pi}{4}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">since the point is in Quadrant II,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝜽=\dfrac{3\pi}{4}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒓,𝜽)=\left(\sqrt{2},\dfrac{3\pi}{4}\right)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">do not choose $-\dfrac{\pi}{4}$ here</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\tan(𝜽)=-1$ is true in more than one quadrant</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the graph tells us the correct angle is $\dfrac{3\pi}{4}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=2023"
+                    target="_blank">[33:43]</a>. 🧩 Conversion — Rectangular to polar: $(3,-4)$. <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 10.4/[33-43]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.4/[33-43]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Graph the point first.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the point $(3,-4)$ lies in Quadrant IV</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Find $𝒓$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓^{2}=𝒙^{2}+𝒚^{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓^{2}=3^{2}+(-4)^{2}=25$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=5$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Find $𝜽$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\tan(𝜽)=\dfrac{𝒚}{𝒙}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\tan(𝜽)=\dfrac{-4}{3}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the point is in Quadrant IV</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so we can write:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝜽=\tan^{-1}\left(-\dfrac{4}{3}\right)+2\pi$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\left(𝒓,𝜽\right)=\left(5,\tan^{-1}\left(-\dfrac{4}{3}\right)+2\pi\right)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the inverse tangent gives a negative angle here</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">add $2\pi$ to express the angle as a positive coterminal angle</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">N̲O̲T̲E̲ — About $\tan^{-1}$ and negative inputs.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">For the principal value of $\tan^{-1}$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">i̲f̲ the input is negative,
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">t̲h̲e̲n̲ $\tan^{-1}$ returns a negative angle</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">i̲f̲ the input is positive,
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">t̲h̲e̲n̲ $\tan^{-1}$ returns a positive angle</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Important:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\tan^{-1}$ returns principal angles in the interval
+                                        $\left(-\dfrac{\pi}{2},\dfrac{\pi}{2}\right)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">so its output lies only in Quadrant I or Quadrant IV</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\tan^{-1}\left(-\dfrac{4}{3}\right)$ gives a negative principal
+                                        angle</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">i̲f̲ a positive coterminal angle is preferred,
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">add $2\pi$</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=2346"
+                    target="_blank">[39:06]</a>. 🧩 Convert the polar equation $𝒓=2\cdot \sin(𝜽)$ to rectangular form.
+                <span class="image-container"><a href="../img/Calculus 2 Lecture 10.4/[39-06]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.4/[39-06]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">identify the curve in rectangular coordinates</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use $𝒓^{2}=𝒙^{2}+𝒚^{2}$ as the bridge between systems</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Procedure:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">multiply both sides by $𝒓$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒓^{2}=2𝒓\cdot \sin(𝜽)$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">substitute:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒓^{2}=𝒙^{2}+𝒚^{2}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒓\cdot \sin(𝜽)=𝒚$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒙^{2}+𝒚^{2}=2𝒚$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙^{2}+𝒚^{2}-2𝒚=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Complete the square:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙^{2}+𝒚^{2}-2𝒚+1=1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙^{2}+(𝒚-1)^{2}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the curve is a circle</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">center = $(0,1)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">radius = $1$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>６ - Ｓｙｍｍｅｔｒｙ　ｉｎ　Ｐｏｌａｒ　Ｅｑｕａｔｉｏｎｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=2838"
+                    target="_blank">[47:18]</a>. Symmetry tests for polar equations. <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.4/[47-18]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 10.4/[47-18]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">For $𝒓=𝒇(𝜽)$:</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Symmetry about the polar axis:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $𝒇(𝜽)=𝒇(-𝜽)$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ the graph is symmetric about the polar axis</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">that is, symmetric about the x-axis</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Symmetry about the $𝜽=\dfrac{\pi}{2}$ axis:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $𝒇(\pi-𝜽)=𝒇(𝜽)$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ the graph is symmetric about the line
+                                        $𝜽=\dfrac{\pi}{2}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">that is, symmetric about the y-axis</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Symmetry about the pole:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $𝒇(𝜽+\pi)=-𝒇(𝜽)$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ the graph is symmetric about the pole</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">that is, symmetric about the origin</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">test symmetry before making a table of values</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this can greatly reduce the amount of graphing work</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=2925"
+                    target="_blank">[48:45]</a>. 🧩 Graph the polar equation $𝒓=1+\cos(𝜽)$. <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 10.4/[48-45]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.4/[48-45]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❶ First check what kind of equation it is.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is already a polar equation</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it uses only $𝒓$ and $𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❷ Test symmetry.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">let $𝒇(𝜽)=1+\cos(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(-𝜽)=1+\cos(-𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(-𝜽)=1+\cos(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒇(-𝜽)=𝒇(𝜽)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the graph is symmetric about the polar axis</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❸ Use the symmetry.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">because the graph is symmetric about the polar axis,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">it is enough to graph only $0\leq 𝜽\leq \pi$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">then reflect across the polar axis</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❹ Build a table of easy values.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=0$ → $𝒓=2$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=\dfrac{\pi}{4}$ → $𝒓=1+\dfrac{\sqrt{2}}{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=\dfrac{\pi}{2}$ → $𝒓=1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=\dfrac{3\pi}{4}$ → $𝒓=1-\dfrac{\sqrt{2}}{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=\pi$ → $𝒓=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❺ Interpret the motion.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">as $𝜽$ increases from $0$ to $\pi$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒓$ decreases from $2$ to $0$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">so the curve moves inward toward the pole</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❻ Plot the points and connect them smoothly.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then reflect the curve across the polar axis</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the graph is a cardioid</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the graph is heart-shaped</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and symmetric about the polar axis</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">N̲O̲T̲E̲ — General workflow for graphing polar equations.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❶ First decide what kind of equation you have.
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">is it already polar, or do you need to convert it first?</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❷ After that, test symmetry.
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">there are three main symmetry tests</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❸ Once you find symmetry, use it.
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">do not do more work than necessary</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❹ Then make a table of convenient angles.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❺ Plot the points and use the symmetry to complete the graph.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=3819"
+                    target="_blank">[1:03:39]</a>. 🧩 Graph the polar equation $𝒓=2\cdot \cos(2𝜽)$. <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 10.4/[1-03-39]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 10.4/[1-03-39]-01.png"
+                        alt="Preview" /></span> - <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.4/[1-03-39]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 10.4/[1-03-39]-02.png" alt="Preview" /></span> - <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 10.4/[1-03-39]-03.png"
+                        target="_blank">[📷image-3]</a><img src="../img/Calculus 2 Lecture 10.4/[1-03-39]-03.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❶ First check what kind of equation it is.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is already a polar equation</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it uses only $𝒓$ and $𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❷ Test symmetry.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">let $𝒇(𝜽)=2\cdot \cos(2𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(-𝜽)=2\cdot \cos(-2𝜽)=2\cdot \cos(2𝜽)$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">so the graph is symmetric about the polar axis</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(\pi-𝜽)=2\cdot \cos(2\pi-2𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Develop:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒇(\pi-𝜽)=2\cdot \cos\left(2(\pi-𝜽)\right)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒇(\pi-𝜽)=2\cdot \cos(2\pi-2𝜽)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">use the identity:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\cos(𝒂-𝒃)=\cos(𝒂)\cos(𝒃)+\sin(𝒂)\sin(𝒃)$</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">therefore:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\cos(2\pi-2𝜽)=\cos(2\pi)\cos(2𝜽)+\sin(2\pi)\sin(2𝜽)$
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">since:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\cos(2\pi)=1$</li>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\sin(2\pi)=0$</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">then:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\cos(2\pi-2𝜽)=1\cdot \cos(2𝜽)+0\cdot \sin(2𝜽)$</li>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\cos(2\pi-2𝜽)=\cos(2𝜽)$</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">so:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$𝒇(\pi-𝜽)=2\cdot \cos(2𝜽)$</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">but $𝒇(𝜽)=2\cdot \cos(2𝜽)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">therefore:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$𝒇(\pi-𝜽)=𝒇(𝜽)$</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">so the graph is symmetric about the line $𝜽=\dfrac{\pi}{2}$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❸ Use the symmetry.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">because of the symmetry, it is enough to study $0\leq 𝜽\leq
+                                \dfrac{\pi}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❹ Build a table of easy values.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=0$ → $𝒓=2$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=\dfrac{\pi}{8}$ → $𝒓=\sqrt{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=\dfrac{\pi}{4}$ → $𝒓=0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=\dfrac{3\pi}{8}$ → $𝒓=-\sqrt{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=\dfrac{\pi}{2}$ → $𝒓=-2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❺ Use the auxiliary $𝒓$-versus-$𝜽$ graph.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">graphing $𝒓$ as a function of $𝜽$ first shows how $𝒓$ changes as $𝜽$
+                                increases</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">on $0\leq 𝜽\leq \dfrac{\pi}{2}$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒓$ decreases from $2$ to $0$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">then becomes negative and continues down to $-2$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this helps us understand where the polar curve moves outward, inward,
+                                and when it flips to the opposite direction</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❻ Interpret the sign of $𝒓$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">when $𝒓>0$, plot the point on the terminal side of $𝜽$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">when $𝒓<0$, plot the point $180^\circ$ opposite</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❼ Plot the points and connect them smoothly.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">from $𝜽=0$ to $𝜽=\dfrac{\pi}{4}$, the curve traces the right petal
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">from $𝜽=\dfrac{\pi}{4}$ to $𝜽=\dfrac{\pi}{2}$, negative $𝒓$ makes the
+                                curve trace the lower petal</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then use symmetry to obtain the left and upper petals</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the graph is a four-petaled rose</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the graph looks like a clover leaf with four symmetric petals</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">N̲O̲T̲E̲ — Why draw the $𝒓$-versus-$𝜽$ graph first.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the rectangular-looking graph with angles on the horizontal axis is not
+                                the final polar graph</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is only a helper graph</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it tells us how the radius $𝒓$ increases, decreases, becomes zero, or
+                                becomes negative as $𝜽$ changes</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">that information is then transferred to the polar plane to sketch the
+                                actual curve</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=5184"
+                    target="_blank">[1:26:24]</a>. 🧩 Example 5 — Sketch the curve
+                $(𝒙^{2}+𝒚^{2})^{2}=4(𝒙^{2}-𝒚^{2})$. <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.4/[1-26-24]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 10.4/[1-26-24]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❶ First identify what kind of equation it is.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is a rectangular equation, not a polar one</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so convert it to polar form first</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❷ Use the standard conversions.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙^{2}+𝒚^{2}=𝒓^{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝒓\cdot \cos(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒓\cdot \sin(𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❸ Substitute into the equation.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒓^{2})^{2}=4\left[(𝒓\cdot \cos(𝜽))^{2}-(𝒓\cdot
+                                \sin(𝜽))^{2}\right]$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓^{4}=4(𝒓^{2}\cos^{2}(𝜽)-𝒓^{2}\sin^{2}(𝜽))$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓^{4}=4𝒓^{2}(\cos^{2}(𝜽)-\sin^{2}(𝜽))$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❹ Use the identity:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos^{2}(𝜽)-\sin^{2}(𝜽)=\cos(2𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒓^{4}=4𝒓^{2}\cos(2𝜽)$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❺ Divide by $𝒓^{2}$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓^{2}=4\cos(2𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❻ Solve for $𝒓$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=\sqrt{4\cos(2𝜽)}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=2\sqrt{\cos(2𝜽)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❼ Use symmetry.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">from the original rectangular equation:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">all the powers of $𝒙$ and $𝒚$ are even</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">so the graph is symmetric about the x-axis and the y-axis</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">in polar language, this means:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">symmetric about the polar axis</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">symmetric about the line $𝜽=\dfrac{\pi}{2}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❽ Check the domain.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">because of the square root, we need:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\cos(2𝜽)\geq 0$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore the graph is undefined when $\cos(2𝜽)<0$< /li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❾ Plot only the part that is defined.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">for $0\leq 𝜽\leq \dfrac{\pi}{4}$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝜽=0$ → $𝒓=2$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝜽=\dfrac{\pi}{8}$ →
+                                        $𝒓=2\sqrt{\cos\left(\dfrac{\pi}{4}\right)}=2\sqrt{\dfrac{\sqrt{2}}{2}}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝜽=\dfrac{\pi}{4}$ → $𝒓=0$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but for larger angles such as $\dfrac{3\pi}{8}$ or $\dfrac{\pi}{2}$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\cos(2𝜽)$ becomes negative,</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">so $𝒓$ is undefined there</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❿ Use symmetry to complete the graph.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">first draw the defined arc from $𝜽=0$ to $𝜽=\dfrac{\pi}{4}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">reflect it across the polar axis</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then reflect those two pieces across the line $𝜽=\dfrac{\pi}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the graph is a lemniscate</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the curve has the shape of an infinity sign</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">N̲O̲T̲E̲ — Main idea of this example.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">unlike the previous rose-curve example, here the square root creates a
+                                domain restriction</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so we cannot keep plotting through all the usual sample angles</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">once the inside of the square root becomes negative, the graph stops
+                                there</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then symmetry is used to generate the rest of the curve</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>７ - Ｔａｎｇｅｎｔ　Ｌｉｎｅｓ　ａｎｄ　Ｓｌｏｐｅｓ　ｆｏｒ　Ｐｏｌａｒ　Ｃｕｒｖｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.4/[1-37-31]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.4/[1-37-31]-01.png"
+                        alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=5851"
+                    target="_blank">[1:37:31]</a>. Tangent lines and slopes for polar curves.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the slope $\dfrac{𝒅𝒚}{𝒅𝒙}$ for a curve given in polar form</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">polar equations are not exactly parametric equations</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but they behave like parametric equations with parameter $𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the rectangular relations:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝒓\cos(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒓\sin(𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">here $𝒓$ is not a constant</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓$ is a function of $𝜽$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so we must use the product rule</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and treat $𝒓$ implicitly as depending on $𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning of the derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">even for a polar curve, $\dfrac{𝒅𝒚}{𝒅𝒙}$ still means the usual
+                                rectangular slope</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">that is, rise over run</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=5963"
+                    target="_blank">[1:39:23]</a>. Polar curves as parametric curves.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝒙(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒚(𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\dfrac{𝒅𝒚}{𝒅𝜽}}{\dfrac{𝒅𝒙}{𝒅𝜽}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is the same idea as in parametric calculus,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">only now the parameter is $𝜽$ instead of $𝒕$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=6003"
+                    target="_blank">[1:40:03]</a>. Deriving $\dfrac{𝒅𝒚}{𝒅𝜽}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒓\sin(𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate with respect to $𝜽$.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the product rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝜽}=\dfrac{𝒅}{𝒅𝜽}[𝒓]\cdot \sin(𝜽)+𝒓\cdot
+                                \dfrac{𝒅}{𝒅𝜽}[\sin(𝜽)]$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝜽}=\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)\sin(𝜽)+𝒓\cos(𝜽)$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=6244"
+                    target="_blank">[1:44:04]</a>. Deriving $\dfrac{𝒅𝒙}{𝒅𝜽}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝒓\cos(𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate with respect to $𝜽$.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the product rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒙}{𝒅𝜽}=\dfrac{𝒅}{𝒅𝜽}[𝒓]\cdot \cos(𝜽)+𝒓\cdot
+                                \dfrac{𝒅}{𝒅𝜽}[\cos(𝜽)]$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒙}{𝒅𝜽}=\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)\cos(𝜽)-𝒓\sin(𝜽)$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=6319"
+                    target="_blank">[1:45:19]</a>. Final slope formula for polar curves.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute into the parametric-style ratio:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\dfrac{𝒅𝒚}{𝒅𝜽}}{\dfrac{𝒅𝒙}{𝒅𝜽}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)\sin(𝜽)+𝒓\cos(𝜽)}{\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)\cos(𝜽)-𝒓\sin(𝜽)}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=7176"
+                    target="_blank">[1:59:36]</a>. Horizontal and vertical tangents. <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.4/[1-59-36]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 10.4/[1-59-36]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Horizontal tangents:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $\dfrac{𝒅𝒚}{𝒅𝜽}=0$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ the slope is zero</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">so the tangent is horizontal</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Vertical tangents:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $\dfrac{𝒅𝒙}{𝒅𝜽}=0$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ the slope is undefined</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">so the tangent is vertical</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In terms of the formulas:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">horizontal tangent when
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)\sin(𝜽)+𝒓\cos(𝜽)=0$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">vertical tangent when
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)\cos(𝜽)-𝒓\sin(𝜽)=0$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 1 — Why the product rule is needed.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">in $𝒙=𝒓\cos(𝜽)$ and $𝒚=𝒓\sin(𝜽)$,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">both factors depend on $𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">$\cos(𝜽)$ and $\sin(𝜽)$ clearly depend on $𝜽$</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">and $𝒓$ also depends on $𝜽$ because the polar equation has the form
+                        $𝒓=𝒇(𝜽)$</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">so each derivative requires the product rule</li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 2 — Why $\dfrac{𝒅𝒓}{𝒅𝜽}$ appears.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">$𝒓$ is not treated as a constant</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">it changes as $𝜽$ changes</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">so when differentiating $𝒓$ with respect to $𝜽$,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we get $\dfrac{𝒅𝒓}{𝒅𝜽}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 3 — Main workflow for polar slope problems.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❶ Write:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝒓\cos(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒓\sin(𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❷ Find $\dfrac{𝒅𝒓}{𝒅𝜽}$.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❸ Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝜽}=\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)\sin(𝜽)+𝒓\cos(𝜽)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒙}{𝒅𝜽}=\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)\cos(𝜽)-𝒓\sin(𝜽)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❹ Form the ratio:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\dfrac{𝒅𝒚}{𝒅𝜽}}{\dfrac{𝒅𝒙}{𝒅𝜽}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❺ Then evaluate at the requested angle
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">or set the numerator or denominator equal to zero for tangent-line
+                                questions</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>７．１ Ｔａｎｇｅｎｔ　Ｌｉｎｅ Ｅｘａｍｐｌｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.4/[1-46-50]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.4/[1-46-50]-01.png"
+                        alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=sWUyFQQ5QeI&t=6410"
+                    target="_blank">[1:46:50]</a>. 🧩 Example 6 — Find $\dfrac{𝒅𝒚}{𝒅𝒙}$ and the slope of the tangent
+                line for $𝒓=1+\cos(𝜽)$, at $𝜽=\dfrac{\pi}{6}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❶ Find $\dfrac{𝒅𝒓}{𝒅𝜽}$ first.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=1+\cos(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒓}{𝒅𝜽}=-\sin(𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❷ Use the polar slope formula.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)\sin(𝜽)+𝒓\cos(𝜽)}{\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)\cos(𝜽)-𝒓\sin(𝜽)}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❸ Substitute $𝒓$ and $\dfrac{𝒅𝒓}{𝒅𝜽}$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\left(-\sin(𝜽)\right)\sin(𝜽)+\left(1+\cos(𝜽)\right)\cos(𝜽)}{\left(-\sin(𝜽)\right)\cos(𝜽)-\left(1+\cos(𝜽)\right)\sin(𝜽)}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❹ Expand and simplify.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">numerator:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$-\sin^{2}(𝜽)+\cos(𝜽)+\cos^{2}(𝜽)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\cos^{2}(𝜽)-\sin^{2}(𝜽)+\cos(𝜽)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\cos(2𝜽)+\cos(𝜽)$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">denominator:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$-\sin(𝜽)\cos(𝜽)-\sin(𝜽)-\sin(𝜽)\cos(𝜽)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=-2\sin(𝜽)\cos(𝜽)-\sin(𝜽)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=-\sin(2𝜽)-\sin(𝜽)$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❺ Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\cos(2𝜽)+\cos(𝜽)}{-\sin(2𝜽)-\sin(𝜽)}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=-\dfrac{\cos(2𝜽)+\cos(𝜽)}{\sin(2𝜽)+\sin(𝜽)}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❻ Evaluate at $𝜽=\dfrac{\pi}{6}$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $𝒎=-\dfrac{\cos\left(\dfrac{\pi}{3}\right)+\cos\left(\dfrac{\pi}{6}\right)}{\sin\left(\dfrac{\pi}{3}\right)+\sin\left(\dfrac{\pi}{6}\right)}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $𝒎=-\dfrac{\dfrac{1}{2}+\dfrac{\sqrt{3}}{2}}{\dfrac{\sqrt{3}}{2}+\dfrac{1}{2}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒎=-1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=-\dfrac{\cos(2𝜽)+\cos(𝜽)}{\sin(2𝜽)+\sin(𝜽)}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">at $𝜽=\dfrac{\pi}{6}$, $𝒎=-1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the tangent line to the cardioid at $𝜽=\dfrac{\pi}{6}$ has slope $-1$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 4 — Horizontal and vertical tangents for polar curves.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">horizontal tangents happen when the main numerator is zero
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">that is, when $\dfrac{𝒅𝒚}{𝒅𝜽}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">vertical tangents happen when the main denominator is zero
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">that is, when $\dfrac{𝒅𝒙}{𝒅𝜽}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is exactly analogous to the parametric case</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">only now the parameter is $𝜽$ instead of $𝒕$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">Polar Coordinates
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a
+                            href="https://openstax.org/books/calculus-volume-2/pages/7-3-polar-coordinates"
+                            target="_blank">[Openstax🌐]</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </article>
+</body>
+
+</html>

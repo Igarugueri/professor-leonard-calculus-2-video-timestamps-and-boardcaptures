@@ -1,0 +1,5 @@
+﻿image_name: [1-41]Analysis of the sine function 𝒚 = sin(𝒙) and its graphical behavior_2.png
+file_name: [1-41]-02.png
+timestamp: 1:41
+counter: 02
+folder: Calculus 2 Lecture 6.5

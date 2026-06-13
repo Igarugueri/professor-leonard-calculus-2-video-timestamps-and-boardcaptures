@@ -1,0 +1,5 @@
+﻿image_name: [2-22-22]Case study — Cooling of a turkey_3.png
+file_name: [2-22-22]-03.png
+timestamp: 2:22:22
+counter: 03
+folder: Calculus 2 Lecture 8.1

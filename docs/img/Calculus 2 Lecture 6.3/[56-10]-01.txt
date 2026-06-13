@@ -1,0 +1,5 @@
+﻿image_name: [56-10]Example Differentiate the function 𝒚 = ln(𝓮^{√𝒙} + 𝓮^{−√𝒙}).png
+file_name: [56-10]-01.png
+timestamp: 56:10
+counter: 01
+folder: Calculus 2 Lecture 6.3

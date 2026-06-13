@@ -1,0 +1,5 @@
+﻿image_name: [27-20]Example 2 — Telescoping series Σ[n=1,∞] (1∕(2n + 3) - 1∕(2n + 1)).png
+file_name: [27-20]-01.png
+timestamp: 27:20
+counter: 01
+folder: Calculus 2 Lecture 9.2

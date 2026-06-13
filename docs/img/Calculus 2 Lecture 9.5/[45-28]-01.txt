@@ -1,0 +1,5 @@
+﻿image_name: [45-28]Finding error in alternating series_1.png
+file_name: [45-28]-01.png
+timestamp: 45:28
+counter: 01
+folder: Calculus 2 Lecture 9.5

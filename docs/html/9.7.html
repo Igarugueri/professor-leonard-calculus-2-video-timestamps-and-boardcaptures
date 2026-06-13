@@ -1,0 +1,3983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．７： Ｐｏｗｅｒ Ｓｅｒｉｅｓ</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <article class="chapter">
+        <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．７</h1>
+        <h1> Ｐｏｗｅｒ Ｓｅｒｉｅｓ， Ｃａｌｃｕｌｕｓ ｏｆ Ｐｏｗｅｒ Ｓｅｒｉｅｓ， Ｒａｔｉｏ Ｔｅｓｔ ｆｏｒ Ｉｎｔ． ｏｆ Ｃｏｎｖｅｒｇｅｎｃｅ</h1>
+
+        <h2>１ - Ｉｎｔｒｏｄｕｃｔｉｏｎ　ｔｏ　Ｐｏｗｅｒ　Ｓｅｒｉｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[0-16]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[0-16]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=1" target="_blank">[0:01]</a>.
+                Introduction to power series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">previous sections on series were needed in order to understand power
+                                series.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A power series is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">a series with a <strong>variable</strong>,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">usually $𝒙$,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">raised to powers depending on $n$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=16" target="_blank">[0:16]</a>.
+                Definition of a power series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A power series is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">a series with a <strong>variable $𝒙$</strong> raised to some power.
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The power is usually based on:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the index $n$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">General idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">instead of having only numerical terms,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we now have terms involving $𝒙$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=64" target="_blank">[1:04]</a>.
+                The exponent depends on $n$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In a power series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the exponent changes as $n$ changes.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Typical form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}𝒂_{n}𝒙^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}$ gives the coefficient.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙^{n}$ gives the power part.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the variable is $𝒙$,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but the exponent is controlled by $n$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=89" target="_blank">[1:29]</a>.
+                Two main types of power series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Type 1:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">power series centered at the origin.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">centered at $0$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Type 2:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">power series centered at a constant $𝑪$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">centered at $𝑪$ instead of $0$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>１．１ - Ｐｏｗｅｒ　Ｓｅｒｉｅｓ　Ｃｅｎｔｅｒｅｄ　ａｔ　ｔｈｅ　Ｏｒｉｇｉｎ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[1-35]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[1-35]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=95" target="_blank">[1:35]</a>.
+                Type 1 — Power series centered at zero.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">General form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}𝒂_{n}𝒙^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is centered at:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0$ (origin)</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">nothing is added to or subtracted from $𝒙$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We can think of it as:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}𝒂_{n}(𝒙-0)^{n}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=177" target="_blank">[2:57]</a>.
+                Expanding the first few terms.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}𝒂_{n}𝒙^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=0$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{0}𝒙^{0}=𝒂_{0}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=1$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{1}𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=2$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{2}𝒙^{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=0}^{\infty}𝒂_{n}𝒙^{n}=𝒂_{0}+𝒂_{1}𝒙+𝒂_{2}𝒙^{2}+𝒂_{3}𝒙^{3}+\cdots$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Why this is centered at $0$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The center is the number subtracted from $𝒙$.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">we can rewrite:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙^{n}=(𝒙-0)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the center is $0$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>１．２ - Ｐｏｗｅｒ　Ｓｅｒｉｅｓ　Ｃｅｎｔｅｒｅｄ　ａｔ $𝑪$</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[5-11]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[5-11]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=311" target="_blank">[5:11]</a>.
+                Type 2 — Power series centered at a constant $𝑪$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">General form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}𝒂_{n}(𝒙-𝑪)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is centered at:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪$ is a constant.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙$ is the variable.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=332" target="_blank">[5:32]</a>.
+                First few terms of a shifted power series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}𝒂_{n}(𝒙-𝑪)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=0$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{0}(𝒙-𝑪)^{0}=𝒂_{0}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=1$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{1}(𝒙-𝑪)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=2$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{2}(𝒙-𝑪)^{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{0}+𝒂_{1}(𝒙-𝑪)+𝒂_{2}(𝒙-𝑪)^{2}+𝒂_{3}(𝒙-𝑪)^{3}+\cdots$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=364" target="_blank">[6:04]</a>.
+                Identifying the center.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒙-𝑪)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">the center is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒙-3)^{n}$ is centered at $3$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒙+2)^{n}=(𝒙-(-2))^{n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so it is centered at $-2$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲— The sign changes.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The form is always:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙-𝑪$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙-3$ means center $3$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙+3$ means center $-3$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>2 - Ｅｘａｍｐｌｅｓ　ｏｆ　Ｐｏｗｅｒ　Ｓｅｒｉｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=422" target="_blank">[7:02]</a>.
+                Examples of power series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">recognize the structure.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">identify the center.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">expand the first few terms.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>2．１ - Ｅｘａｍｐｌｅ １</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[7-23]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[7-23]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=443" target="_blank">[7:23]</a>.
+                🧩 Example 1 — Alternating power series centered at $0$: $\displaystyle
+                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}𝒙^{n}}{n!}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is a power series because:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it contains <strong>a variabke $𝒙$ raised to powers depending on
+                                    $n$.</strong></li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">It is centered at:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the expression uses $𝒙^{n}$,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">not $(𝒙-𝑪)^{n}$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=543" target="_blank">[9:03]</a>.
+                Expanding.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}\dfrac{(-1)^{n}𝒙^{n}}{n!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=0$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(-1)^{0}𝒙^{0}}{0!}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=1$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(-1)^{1}𝒙^{1}}{1!}=-\dfrac{𝒙}{1!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=2$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(-1)^{2}𝒙^{2}}{2!}=\dfrac{𝒙^{2}}{2!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=3$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(-1)^{3}𝒙^{3}}{3!}=-\dfrac{𝒙^{3}}{3!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $1-\dfrac{𝒙}{1!}+\dfrac{𝒙^{2}}{2!}-\dfrac{𝒙^{3}}{3!}+\dfrac{𝒙^{4}}{4!}-\cdots$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Pattern in Example 1.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The factor:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">creates alternating signs:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$+,-,+,-,\dots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The power part:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">makes it a power series.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The factorial:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$n!$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">appears in the denominator.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>2．2 - Ｅｘａｍｐｌｅ 2</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[10-22]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[10-22]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=622" target="_blank">[10:22]</a>.
+                🧩 Example 2 — Power series centered at $\dfrac{\pi}{4}$: $\displaystyle
+                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}(𝒙-\dfrac{\pi}{4})^{2n+1}}{(2n+1)!}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is a power series because:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it contains the variable $𝒙$ raised to powers depending on $n$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">It is centered at:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{\pi}{4}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the variable part is $(𝒙-\dfrac{\pi}{4})$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=750" target="_blank">[12:30]</a>.
+                Expanding the first few terms.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}(𝒙-\dfrac{\pi}{4})^{2n+1}}{(2n+1)!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=0$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(-1)^{0}(𝒙-\dfrac{\pi}{4})^{1}}{1!}=(𝒙-\dfrac{\pi}{4})$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=1$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{(-1)^{1}(𝒙-\dfrac{\pi}{4})^{3}}{3!}=-\dfrac{(𝒙-\dfrac{\pi}{4})^{3}}{3!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in $n=2$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{(-1)^{2}(𝒙-\dfrac{\pi}{4})^{5}}{5!}=\dfrac{(𝒙-\dfrac{\pi}{4})^{5}}{5!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}(𝒙-\dfrac{\pi}{4})^{2n+1}}{(2n+1)!}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $=(𝒙-\dfrac{\pi}{4})-\dfrac{(𝒙-\dfrac{\pi}{4})^{3}}{3!}+\dfrac{(𝒙-\dfrac{\pi}{4})^{5}}{5!}-\cdots$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Pattern.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The factor:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">creates the alternating signs:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$+,-,+,-,\dots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The exponent:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2n+1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">creates odd powers:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$1,3,5,7,\dots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The denominator:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(2n+1)!$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">creates matching odd factorials:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$1!,3!,5!,7!,\dots$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3 - Ｐｏｗｅｒ　Ｓｅｒｉｅｓ　ａｓ　Ｆｕｎｃｔｉｏｎｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[14-00]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[14-00]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=840" target="_blank">[14:00]</a>.
+                A++ power series defines a function.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A power series contains the variable $𝒙$.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it can define a function of $𝒙$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">General function form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\displaystyle \sum_{n=0}^{\infty}𝒂_{n}(𝒙-𝑪)^{n}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=965" target="_blank">[16:05]</a>.
+                Domain of a power series function.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The domain is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the set of $𝒙$-values for which the series converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">not every $𝒙$-value necessarily works.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">For some values of $𝒙$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">For other values of $𝒙$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series diverges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=1007"
+                    target="_blank">[16:47]</a>. Input and output.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Input:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">a value of $𝒙$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">After plugging in $𝒙$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the power series becomes an ordinary numerical series.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If that numerical series converges:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">its sum becomes the output $𝒇(𝒙)$.
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">this only happens for values of $𝒙$ where the series converges.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If that numerical series diverges:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">there is no valid output for the function at that $𝒙$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲Ｔ̲E̲ — Key interpretation.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">$𝒙$ is the input.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The sum of the convergent series is the output.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=$ sum of the power series.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But this only works:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">for $𝒙$-values inside the interval of convergence.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>４ - Ｇｅｏｍｅｔｒｉｃ　Ｓｅｒｉｅｓ　ａｓ　ａ　Ｐｏｗｅｒ　Ｓｅｒｉｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[21-46]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[21-46]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=1306"
+                    target="_blank">[21:46]</a>. The most basic power series: $\displaystyle \sum_{n=0}^{\infty}𝒙^{n}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First few terms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$1+𝒙+𝒙^{2}+𝒙^{3}+\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is a power series centered at:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=1343"
+                    target="_blank">[22:23]</a>. Geometric structure.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A geometric series has form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum 𝒂𝒓^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A geometric series converges when:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒓|&lt;1$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=1445"
+                    target="_blank">[24:05]</a>. The variable $𝒙$ acts as the common ratio.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In the geometric series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓$ is the common ratio.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the convergence depends on $𝒙$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=1475"
+                    target="_blank">[24:35]</a>. Recognizing the geometric structure
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">For:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}𝒙^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">we have:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂=1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}𝒙^{n}$ is a geometric series.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=1528"
+                    target="_blank">[25:28]</a>. Condition for convergence.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A geometric series converges when:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒓|&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We need:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙|&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Equivalent interval:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-1&lt;𝒙&lt;1$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=1640"
+                    target="_blank">[27:20]</a>. Function representation.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Define:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\displaystyle \sum_{n=0}^{\infty}𝒙^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\dfrac{1}{1-𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Domain:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1,1)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the power series represents $\dfrac{1}{1-𝒙}$ only on $(-1,1)$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=1686"
+                    target="_blank">[28:06]</a>. Sum of the geometric power series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Geometric sum formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒂}{1-𝒓}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂=1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}𝒙^{n}=\dfrac{1}{1-𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But only when:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙|&lt;1$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>５ - Ｇｅｎｅｒａｌ　Ｐｏｗｅｒ　Ｓｅｒｉｅｓ：Ｒａｄｉｕｓ　ａｎｄ　Ｉｎｔｅｒｖａｌ　ｏｆ　Ｃｏｎｖｅｒｇｅｎｃｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[33-31]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[33-31]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=2011"
+                    target="_blank">[33:31]</a>. General power series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">General form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\displaystyle \sum_{n=0}^{\infty}𝒂_{n}(𝒙-𝑪)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is centered at:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important note:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝑪)=𝒂_{0}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if $𝒙=𝑪$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">then $𝒙-𝑪=0$.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so every term after the first one disappears.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">only $𝒂_{0}$ remains.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=2108"
+                    target="_blank">[35:08]</a>. Domain is centered at $𝑪$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The domain of a power series function:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">is always an interval centered at $𝑪$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the expression is built around $(𝒙-𝑪)$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The distance from $𝑪$ to the endpoints is called:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the radius of convergence.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the center $𝑪$ sits in the middle of the interval of convergence.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=2193"
+                    target="_blank">[36:33]</a>. Three possible convergence cases.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Case A:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">convergence only at the center.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Case B:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">convergence for all real $𝒙$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Case C:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">convergence inside a finite interval around the center.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=2220"
+                    target="_blank">[37:00]</a>. Case A — Convergence only at the center.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series converges only when:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝑪$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">radius of convergence $𝑹=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">there is no interval around $𝑪$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the only valid point is the center itself.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Symbolically:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0\leq |𝒙-𝑪|\leq 0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝑪$ only.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=2317"
+                    target="_blank">[38:37]</a>. Case B — Convergence for all real $𝒙$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series converges for:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">every real value of $𝒙$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">radius of convergence $𝑹=\infty$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Symbolically:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-\infty&lt;𝒙-𝑪&lt;\infty$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interval of convergence:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-\infty,\infty)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=2375"
+                    target="_blank">[39:35]</a>. Case C — Finite radius of convergence.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series converges when:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙-𝑪|&lt;𝑹$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">It diverges when:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙-𝑪|&gt;𝑹$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹$ is the radius of convergence.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹$ tells how far we can move left and right from the center $𝑪$ while
+                                the series still converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interval from the radius.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Start with:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$|𝒙-𝑪|&lt;𝑹$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Equivalent inequality:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$-𝑹&lt;𝒙-𝑪&lt;𝑹$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Add $𝑪$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝑪-𝑹&lt;𝒙&lt;𝑪+𝑹$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the interval is centered at $𝑪$.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the radius is $𝑹$.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the preliminary interval is $(𝑪-𝑹,𝑪+𝑹)$.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Endpoints must be checked separately.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The Ratio Test usually gives:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$|𝒙-𝑪|&lt;𝑹$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">But it does not decide:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒙=𝑪-𝑹$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒙=𝑪+𝑹$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">plug each endpoint into the original power series.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">test the resulting numerical series separately.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Use any appropriate convergence test:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Alternating Series Test.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">𝒑-Series Test.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Comparison Test.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Limit Comparison Test.</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">etc.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>５．１ - Ｅｘａｍｐｌｅｓ　ｏｆ　Ｉｎｔｅｒｖａｌｓ　ｏｆ　Ｃｏｎｖｅｒｇｅｎｃｅ</h2>
+
+        <h2>５．１．１ - Ｅｘａｍｐｌｅ　１</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[44-18]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[44-18]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=2658"
+                    target="_blank">[44:18]</a>. 🧩 Example 1 — Convergence only at the center: $\displaystyle
+                \sum_{n=0}^{\infty}n!𝒙^{n}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is a power series centered at:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The factorial suggests:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use the Ratio Test.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">determine for which $𝒙$-values the power series converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=3014"
+                    target="_blank">[50:14]</a>. Use the Ratio Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Let:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=n!𝒙^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=(n+1)!𝒙^{n+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{(n+1)!𝒙^{n+1}}{n!𝒙^{n}}\right|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(n+1)!}{n!}=n+1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒙^{n+1}}{𝒙^{n}}=𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}(n+1)|𝒙|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=3107"
+                    target="_blank">[51:47]</a>. Interpreting the Ratio Test result.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If $𝒙\neq 0$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙|$ is a positive constant.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}(n+1)|𝒙|=\infty$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\infty&gt;1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series diverges by the Ratio Test.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If $𝒙=0$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}(n+1)|0|=0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0&lt;1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series converges by the Ratio Test.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series converges only at $𝒙=0$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=3205"
+                    target="_blank">[53:25]</a>. Radius and domain.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Center:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Domain:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Radius of convergence:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the power series represents a function only at the center.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Key idea.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The factorial $n!$ grows so fast that any $𝒙\neq 0$ makes the series diverge.
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Only the center survives:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the radius of convergence is $𝑹=0$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>５．１．２ - Ｅｘａｍｐｌｅ　２</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[56-59]-01.png" target="_blank">[📷image-1]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[56-59]-01.png" alt="Preview" />
+                </span> <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[56-59]-02.png" target="_blank">[📷image-2]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[56-59]-02.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=3419"
+                    target="_blank">[56:59]</a>. 🧩 Example 2 — Power series converging for all $𝒙$: $\displaystyle
+                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}𝒙^{2n}}{(2n)!}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is a power series centered at:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since factorials appear:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use the Ratio Test.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">determine for which $𝒙$-values the power series converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=3487"
+                    target="_blank">[58:07]</a>. Set up the Ratio Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Let:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{(-1)^{n}𝒙^{2n}}{(2n)!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{(-1)^{n+1}𝒙^{2n+2}}{(2n+2)!}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=3600"
+                    target="_blank">[1:00:00]</a>. Build the ratio.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{\dfrac{(-1)^{n+1}𝒙^{2n+2}}{(2n+2)!}}{\dfrac{(-1)^{n}𝒙^{2n}}{(2n)!}}\right|$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reciprocate and multiply:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{(-1)^{n+1}𝒙^{2n+2}}{(2n+2)!}\cdot
+                                \dfrac{(2n)!}{(-1)^{n}𝒙^{2n}}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=3660"
+                    target="_blank">[1:01:00]</a>. Simplify signs and powers.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The absolute value removes the alternating sign:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left|\dfrac{(-1)^{n+1}}{(-1)^{n}}\right|=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify the powers of $𝒙$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒙^{2n+2}}{𝒙^{2n}}=𝒙^{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\left|𝒙^{2}\cdot
+                                \dfrac{(2n)!}{(2n+2)!}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=3755"
+                    target="_blank">[1:02:35]</a>. Factorial simplification.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(2n+2)!=(2n+2)(2n+1)(2n)!$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(2n)!}{(2n+2)!}=\dfrac{1}{(2n+2)(2n+1)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\dfrac{𝒙^{2}}{(2n+2)(2n+1)}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=4004"
+                    target="_blank">[1:06:44]</a>. Limit result.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">For any fixed $𝒙$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙^{2}$ is a constant.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(2n+2)(2n+1)\to\infty$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\dfrac{𝒙^{2}}{(2n+2)(2n+1)}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This happens for all real $𝒙$.</li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=4107"
+                    target="_blank">[1:08:27]</a>. Conclusion for Example 2.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=0&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">By the Ratio Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the power series converges for all $𝒙$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">radius of convergence $𝑹=\infty$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">interval of convergence is $(-\infty,\infty)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 1 — Key idea.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The factorial in the denominator grows fast enough to dominate every fixed power
+                        of $𝒙$.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">No matter what real value $𝒙$ has:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the ratio limit becomes $0$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series converges for all real $𝒙$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 2 — Why the domain is all real numbers.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">After applying the Ratio Test, we get:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\dfrac{𝒙^{2}}{(2n+2)(2n+1)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙$ is fixed.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$n$ is the variable that goes to infinity.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">For any fixed real value of $𝒙$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙^{2}$ is just a constant.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(2n+2)(2n+1)\to\infty$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">constant / $\infty=0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">By the Ratio Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series converges for every real value of $𝒙$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">domain $=(-\infty,\infty)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">radius of convergence $𝑹=\infty$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we do not plug infinity into $𝒙$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙$ stays fixed.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">only $n$ goes to infinity.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>５．１．３ - Ｅｘａｍｐｌｅ　３</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[1-12-28]-01.png" target="_blank">[📷image-1]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[1-12-28]-01.png" alt="Preview" />
+                </span> <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[1-12-28]-02.png" target="_blank">[📷image-2]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[1-12-28]-02.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=4348"
+                    target="_blank">[1:12:28]</a>. 🧩 Example 3 — Finite interval of convergence: $\displaystyle
+                \sum_{n=1}^{\infty}\dfrac{𝒙^{n}}{n}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is a power series centered at:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the radius of convergence.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the interval of convergence.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Ratio Test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=4459"
+                    target="_blank">[1:14:19]</a>. Ratio Test setup.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Let:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{𝒙^{n}}{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{𝒙^{n+1}}{n+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=4517"
+                    target="_blank">[1:15:17]</a>. Simplify the ratio.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{\dfrac{𝒙^{n+1}}{n+1}}{\dfrac{𝒙^{n}}{n}}\right|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reciprocate and multiply:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\left|\dfrac{𝒙^{n+1}}{n+1}\cdot
+                                \dfrac{n}{𝒙^{n}}\right|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify powers:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒙^{n+1}}{𝒙^{n}}=𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\left|\dfrac{n}{n+1}\cdot 𝒙\right|$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{n}{n+1}&gt;0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We can write:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\dfrac{n}{n+1}|𝒙|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{n}{n+1}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=|𝒙|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=4697"
+                    target="_blank">[1:18:17]</a>. Apply the Ratio Test condition.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Ratio Test convergence requires:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=|𝒙|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We need:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙|&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-1&lt;𝒙&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This gives the preliminary interval:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1,1)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=4818"
+                    target="_blank">[1:20:18]</a>. Radius of convergence.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">From:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙|&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Radius:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Center:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series converges for all $𝒙$ inside distance $1$ from the center.
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Ratio Test does not decide the endpoints.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=4932"
+                    target="_blank">[1:22:12]</a>. Check the endpoint $𝒙=-1$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug into the original power series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{𝒙^{n}}{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If $𝒙=-1$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Then $\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n}}{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is the alternating harmonic series.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">It converges by:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Alternating Series Test.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=-1$ is included.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=5105"
+                    target="_blank">[1:25:05]</a>. Check the endpoint $𝒙=1$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug into the original power series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{𝒙^{n}}{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is the harmonic series.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The harmonic series diverges.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=1$ is not included.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=5195"
+                    target="_blank">[1:26:35]</a>. Final interval for Example 3.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Radius:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Center:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interval of convergence:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$[-1,1)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the power series converges at $-1$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it diverges at $1$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it converges for every $𝒙$ between $-1$ and $1$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Key idea.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The Ratio Test gives:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙|&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This tells us the open interval:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1,1)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But the endpoints must be checked separately.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">At $𝒙=-1$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series becomes alternating harmonic,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so it converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">At $𝒙=1$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series becomes harmonic,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so it diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">left endpoint included.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">right endpoint excluded.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>５．１．４ - Ｅｘａｍｐｌｅ　４</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[1-28-30]-01.png" target="_blank">[📷image-1]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[1-28-30]-01.png" alt="Preview" />
+                </span> <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[1-28-30]-02.png" target="_blank">[📷image-2]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[1-28-30]-02.png" alt="Preview" />
+                </span> <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[1-28-30]-03.png" target="_blank">[📷image-3]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[1-28-30]-03.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=5310"
+                    target="_blank">[1:28:30]</a>. 🧩 Example 4 — Power series centered at $2$: $\displaystyle
+                \sum_{n=1}^{\infty}\dfrac{(𝒙-2)^{n}}{n^{2}\cdot 3^{n}}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(𝒙-2)^{n}}{n^{2}\cdot 3^{n}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is a power series because:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it contains $(𝒙-2)$ raised to the power $n$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">center $=2$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">if it converges, the interval of convergence will be centered at
+                                        $2$.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Ratio Test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=5374"
+                    target="_blank">[1:29:34]</a>. Ratio Test setup.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Let:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{(𝒙-2)^{n}}{n^{2}\cdot 3^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{(𝒙-2)^{n+1}}{(n+1)^{2}\cdot 3^{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=5410"
+                    target="_blank">[1:30:10]</a>. Build the ratio.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{\dfrac{(𝒙-2)^{n+1}}{(n+1)^{2}\cdot
+                                3^{n+1}}}{\dfrac{(𝒙-2)^{n}}{n^{2}\cdot 3^{n}}}\right|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reciprocate and multiply:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{(𝒙-2)^{n+1}}{(n+1)^{2}\cdot 3^{n+1}}\cdot
+                                \dfrac{n^{2}\cdot 3^{n}}{(𝒙-2)^{n}}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=5520"
+                    target="_blank">[1:32:00]</a>. Simplify the ratio.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify powers of $(𝒙-2)$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(𝒙-2)^{n+1}}{(𝒙-2)^{n}}=𝒙-2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify powers of $3$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{3^{n}}{3^{n+1}}=\dfrac{1}{3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Keep the polynomial factor:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{n^{2}}{(n+1)^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{(𝒙-2)n^{2}}{3(n+1)^{2}}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=5602"
+                    target="_blank">[1:33:22]</a>. Separate the $n$-part from the $𝒙$-part.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\dfrac{n^{2}}{(n+1)^{2}}\cdot
+                                \left|\dfrac{𝒙-2}{3}\right|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{n^{2}}{(n+1)^{2}}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\left|\dfrac{𝒙-2}{3}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=5675"
+                    target="_blank">[1:34:35]</a>. Apply the Ratio Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Ratio Test convergence requires:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\left|\dfrac{𝒙-2}{3}\right|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We need:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left|\dfrac{𝒙-2}{3}\right|&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Multiply by $3$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙-2|&lt;3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">radius of convergence $𝑹=3$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=5758"
+                    target="_blank">[1:35:58]</a>. Solve the interval.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙-2|&lt;3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Equivalent:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-3&lt;𝒙-2&lt;3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Add $2$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-1&lt;𝒙&lt;5$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Preliminary interval:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1,5)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is only the open interval.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the endpoints must still be checked separately.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=5837"
+                    target="_blank">[1:37:17]</a>. Check endpoint $𝒙=-1$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug into the original power series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(𝒙-2)^{n}}{n^{2}\cdot 3^{n}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=-1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙-2=-3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-3)^{n}}{n^{2}\cdot 3^{n}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(-3)^{n}}{3^{n}}=(-1)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1)^{n}}{n^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This series converges by:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Alternating Series Test.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=-1$ is included.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=5976"
+                    target="_blank">[1:39:36]</a>. Check endpoint $𝒙=5$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug into the original power series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{(𝒙-2)^{n}}{n^{2}\cdot 3^{n}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=5$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙-2=3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{3^{n}}{n^{2}\cdot 3^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{3^{n}}{3^{n}}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is a 𝒑-series with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒑=2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2&gt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series converges.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=5$ is included.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=6052"
+                    target="_blank">[1:40:52]</a>. Final interval for Example 4.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Radius:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹=3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Center:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interval of convergence:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$[-1,5]$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2$ is exactly the midpoint of $-1$ and $5$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the power series converges from $-1$ to $5$,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">including both endpoints.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Key idea.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The Ratio Test gives:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙-2|&lt;3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This means:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">center $=2$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">radius $=3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So the open interval is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(2-3,2+3)=(-1,5)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then we check endpoints:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">at $𝒙=-1$, the series becomes $\displaystyle \sum
+                                \dfrac{(-1)^{n}}{n^{2}}$ and converges.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">at $𝒙=5$, the series becomes $\displaystyle \sum \dfrac{1}{n^{2}}$ and
+                                converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">both endpoints are included.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">final interval $=[-1,5]$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>５．１．５ - Ｅｘａｍｐｌｅ　５</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[1-41-21]-01.png" target="_blank">[📷image-1]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[1-41-21]-01.png" alt="Preview" />
+                </span> <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[1-41-21]-02.png" target="_blank">[📷image-2]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[1-41-21]-02.png" alt="Preview" />
+                </span> <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[1-41-21]-03.png" target="_blank">[📷image-3]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[1-41-21]-03.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=6081"
+                    target="_blank">[1:41:21]</a>. 🧩 Example 5 — Endpoint behavior with square roots: $\displaystyle
+                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}2^{n}𝒙^{n}}{\sqrt{n+1}}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}2^{n}𝒙^{n}}{\sqrt{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is a power series centered at:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the radius of convergence.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the interval of convergence.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Ratio Test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=6200"
+                    target="_blank">[1:43:20]</a>. Ratio Test setup.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Let:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{(-1)^{n}2^{n}𝒙^{n}}{\sqrt{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{(-1)^{n+1}2^{n+1}𝒙^{n+1}}{\sqrt{n+2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{𝒂_{n+1}}{𝒂_{n}}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=6271"
+                    target="_blank">[1:44:31]</a>. Build the ratio.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{\dfrac{(-1)^{n+1}2^{n+1}𝒙^{n+1}}{\sqrt{n+2}}}{\dfrac{(-1)^{n}2^{n}𝒙^{n}}{\sqrt{n+1}}}\right|$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reciprocate and multiply:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle
+                                \lim_{n\to\infty}\left|\dfrac{(-1)^{n+1}2^{n+1}𝒙^{n+1}}{\sqrt{n+2}}\cdot
+                                \dfrac{\sqrt{n+1}}{(-1)^{n}2^{n}𝒙^{n}}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=6385"
+                    target="_blank">[1:46:25]</a>. Simplify the ratio.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The absolute value removes:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{(-1)^{n+1}}{(-1)^{n}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify powers of $2$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{2^{n+1}}{2^{n}}=2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify powers of $𝒙$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒙^{n+1}}{𝒙^{n}}=𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Keep the square-root factor:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{\sqrt{n+1}}{\sqrt{n+2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\left|2𝒙\cdot
+                                \dfrac{\sqrt{n+1}}{\sqrt{n+2}}\right|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=6465"
+                    target="_blank">[1:47:45]</a>. Separate the $n$-part from the $𝒙$-part.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=\displaystyle \lim_{n\to\infty}\sqrt{\dfrac{n+1}{n+2}}\cdot 2|𝒙|$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\sqrt{\dfrac{n+1}{n+2}}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=2|𝒙|$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=6514"
+                    target="_blank">[1:48:34]</a>. Apply Ratio Test condition.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Ratio Test convergence requires:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑳=2|𝒙|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We need:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2|𝒙|&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Divide by $2$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙|&lt;\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">radius of convergence $𝑹=\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Preliminary interval:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-\dfrac{1}{2}&lt;𝒙&lt;\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the endpoints must still be checked separately.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=6630"
+                    target="_blank">[1:50:30]</a>. Check endpoint $𝒙=-\dfrac{1}{2}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug into the original power series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}2^{n}𝒙^{n}}{\sqrt{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=-\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}2^{n}(-\dfrac{1}{2})^{n}}{\sqrt{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify the signs and powers:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1)^{n}2^{n}(-\dfrac{1}{2})^{n}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}\dfrac{1}{\sqrt{n+1}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=6780"
+                    target="_blank">[1:53:00]</a>. Endpoint $𝒙=-\dfrac{1}{2}$ — Method 1: Limit Comparison Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compare:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}\dfrac{1}{\sqrt{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=1}^{\infty}\dfrac{1}{\sqrt{n}}=\sum_{n=1}^{\infty}\dfrac{1}{n^{1/2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \lim_{n\to\infty}\dfrac{\dfrac{1}{\sqrt{n+1}}}{\dfrac{1}{\sqrt{n}}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{\sqrt{n}}{\sqrt{n+1}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \lim_{n\to\infty}\sqrt{\dfrac{n}{n+1}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the limit is finite and positive:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">both series have the same behavior.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n^{1/2}}$ diverges,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">because it is a 𝒑-series with $𝒑=\dfrac{1}{2}\leq 1$.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}\dfrac{1}{\sqrt{n+1}}$ diverges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=6989"
+                    target="_blank">[1:56:29]</a>. Endpoint $𝒙=-\dfrac{1}{2}$ — Method 2: Reindexing the series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}\dfrac{1}{\sqrt{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Let:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$k=n+1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">When:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$n=0$,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$k=1$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}\dfrac{1}{\sqrt{n+1}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \sum_{k=1}^{\infty}\dfrac{1}{\sqrt{k}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{k=1}^{\infty}\dfrac{1}{k^{1/2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒑=\dfrac{1}{2}\leq 1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The 𝒑-series diverges.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=-\dfrac{1}{2}$ is not included.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=7143"
+                    target="_blank">[1:59:03]</a>. Check endpoint $𝒙=\dfrac{1}{2}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug into the original power series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}2^{n}𝒙^{n}}{\sqrt{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{n=0}^{\infty}\dfrac{(-1)^{n}2^{n}(\dfrac{1}{2})^{n}}{\sqrt{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2^{n}(\dfrac{1}{2})^{n}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}\dfrac{(-1)^{n}}{\sqrt{n+1}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=7180"
+                    target="_blank">[1:59:40]</a>. Endpoint $𝒙=\dfrac{1}{2}$ — Alternating Series Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Positive part:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=\dfrac{1}{\sqrt{n+1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check the limit:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{1}{\sqrt{n+1}}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check decreasing:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n+1}=\dfrac{1}{\sqrt{n+2}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{\sqrt{n+2}}&lt;\dfrac{1}{\sqrt{n+1}}=𝒂_{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}$ is decreasing.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">By the Alternating Series Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{n=0}^{\infty}\dfrac{(-1)^{n}}{\sqrt{n+1}}$
+                                converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=\dfrac{1}{2}$ is included.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=7262"
+                    target="_blank">[2:01:02]</a>. Final interval for Example 5.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Radius:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑹=\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Center:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑪=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interval of convergence:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(-\dfrac{1}{2},\dfrac{1}{2}\right]$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series diverges at $-\dfrac{1}{2}$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series converges at $\dfrac{1}{2}$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series converges for every $𝒙$ between $-\dfrac{1}{2}$ and
+                                $\dfrac{1}{2}$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Key idea.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The Ratio Test gives:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙|&lt;\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This gives the open interval:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(-\dfrac{1}{2},\dfrac{1}{2}\right)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">At the left endpoint:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the signs cancel,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">leaving a positive divergent 𝒑-series.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">At the right endpoint:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series remains alternating,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and converges by the Alternating Series Test.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">left endpoint excluded.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">right endpoint included.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">final interval $=\left(-\dfrac{1}{2},\dfrac{1}{2}\right]$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>６ - Ｃａｌｃｕｌｕｓ　ｏｆ　Ｐｏｗｅｒ　Ｓｅｒｉｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[2-03-14]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[2-03-14]-01.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=7394"
+                    target="_blank">[2:03:14]</a>. Calculus of power series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We can perform calculus operations on power series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">derivatives.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">integrals.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">differentiate or integrate term by term.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=7464"
+                    target="_blank">[2:04:24]</a>. Start with a general power series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Suppose:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\displaystyle \sum_{n=0}^{\infty}𝒂_{n}(𝒙-𝑪)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Expanded:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=𝒂_{0}+𝒂_{1}(𝒙-𝑪)+𝒂_{2}(𝒙-𝑪)^{2}+𝒂_{3}(𝒙-𝑪)^{3}+\cdots$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>６.1 - Ｄｅｒｉｖａｔｉｖｅｓ　ｏｆ　Ｐｏｗｅｒ　Ｓｅｒｉｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=7550"
+                    target="_blank">[2:05:50]</a>. Derivative term by term.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">each $𝒂_{n}$ is a constant,</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">we can differentiate term by term.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The variable part is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒙-𝑪)^{n}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=7599"
+                    target="_blank">[2:06:39]</a>. Apply the power rule and chain rule.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Derivative of the first term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{0}\to 0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Derivative of the second term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{1}(𝒙-𝑪)\to 𝒂_{1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Derivative of the third term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{2}(𝒙-𝑪)^{2}\to 2𝒂_{2}(𝒙-𝑪)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Derivative of the fourth term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{3}(𝒙-𝑪)^{3}\to 3𝒂_{3}(𝒙-𝑪)^{2}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=7785"
+                    target="_blank">[2:9:45]</a>. General derivative formula.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Starting from:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\displaystyle \sum_{n=0}^{\infty}𝒂_{n}(𝒙-𝑪)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)=\displaystyle \sum_{n=1}^{\infty}n𝒂_{n}(𝒙-𝑪)^{n-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the derivative starts at $n=1$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the $n=0$ term is constant,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so its derivative is $0$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>６.2 - Ｉｎｔｅｇｒａｌｓ　ｏｆ　Ｐｏｗｅｒ　Ｓｅｒｉｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=7955"
+                    target="_blank">[2:12:35]</a>. Integral term by term.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We can integrate a power series term by term.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Starting from:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\displaystyle \sum_{n=0}^{\infty}𝒂_{n}(𝒙-𝑪)^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Each term integrates using:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">power rule for integrals.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=8090"
+                    target="_blank">[2:14:50]</a>. General integral formula.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The integral is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int
+                                𝒇(𝒙)\,𝒅𝑥=𝑲+\sum_{n=0}^{\infty}\dfrac{𝒂_{n}(𝒙-𝑪)^{n+1}}{n+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">include the constant of integration.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series still starts at:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$n=0$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ — Endpoints may change.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiating or integrating a power series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">keeps the same radius of convergence.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">endpoint behavior may change.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A derivative can lose endpoints.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">An integral can gain endpoints.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">endpoints must be checked separately when needed.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>６. ３ - Ａｐｐｌｉｃａｔｉｏｎ: Ｐｏｗｅｒ　Ｓｅｒｉｅｓ　Ｆｏｒ　$\ln(1-𝒙)$</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[2-17-26]-01.png" target="_blank">[📷image-1]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[2-17-26]-01.png" alt="Preview" />
+                </span> <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 9.7/[2-17-26]-02.png" target="_blank">[📷image-2]</a>
+                    <img src="../img/Calculus 2 Lecture 9.7/[2-17-26]-02.png" alt="Preview" />
+                </span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=8246"
+                    target="_blank">[2:17:26]</a>. 🧩 Application — Find a power series representation for $\ln(1-𝒙)$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find a power series representation for:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\ln(1-𝒙)$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interval:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-1&lt;𝒙&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">start from a known power series,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then integrate term by term to create the logarithm.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=8269"
+                    target="_blank">[2:17:49]</a>. Choosing the starting function.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We want:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(1-𝒙)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Leonard’s strategy:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">look for a simpler function whose integral gives $\ln(1-𝒙)$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the integral of $\dfrac{1}{1-𝒙}$ is very close to $\ln(1-𝒙)$,</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We start with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{1-𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{1-𝒙}\,𝒅𝒙=-\ln(1-𝒙)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The negative sign appears because:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the derivative of $1-𝒙$ is $-1$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=8316"
+                    target="_blank">[2:18:36]</a>. Why $\dfrac{1}{1-𝒙}$ is useful.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The function:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{1-𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">is the sum of a geometric power series.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Geometric series formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{1-𝒓}=1+𝒓+𝒓^{2}+𝒓^{3}+\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">In this case:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{1-𝒙}=1+𝒙+𝒙^{2}+𝒙^{3}+\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Series notation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{1-𝒙}=\displaystyle \sum_{n=0}^{\infty}𝒙^{n}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">or equivalently:</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{1-𝒙}=\displaystyle \sum_{n=1}^{\infty}𝒙^{n-1}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=8518"
+                    target="_blank">[2:21:58]</a>. Why the interval is $(-1,1)$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This interval comes from the geometric series.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A geometric series converges when:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒓|&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙|&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Equivalent:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-1&lt;𝒙&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the power series for $\dfrac{1}{1-𝒙}$ is valid only on $(-1,1)$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since we are using that power series as our starting point,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the representation for $\ln(1-𝒙)$ is also built on this interval.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=8689"
+                    target="_blank">[2:24:49]</a>. Integrate both sides.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start with:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{1-𝒙}=1+𝒙+𝒙^{2}+𝒙^{3}+\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Integrate both sides:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int
+                                \dfrac{1}{1-𝒙}\,𝒅𝒙=\int(1+𝒙+𝒙^{2}+𝒙^{3}+\cdots)\,𝒅𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Left side:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{1-𝒙}\,𝒅𝒙=-\ln(1-𝒙)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Right side:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int(1+𝒙+𝒙^{2}+𝒙^{3}+\cdots)\,𝒅𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=𝒙+\dfrac{𝒙^{2}}{2}+\dfrac{𝒙^{3}}{3}+\dfrac{𝒙^{4}}{4}+\cdots+𝑲$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=8777"
+                    target="_blank">[2:26:17]</a>. Solve for $\ln(1-𝒙)$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We have:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $-\ln(1-𝒙)=𝒙+\dfrac{𝒙^{2}}{2}+\dfrac{𝒙^{3}}{3}+\dfrac{𝒙^{4}}{4}+\cdots+𝑲$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Multiply by $-1$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\ln(1-𝒙)=-𝒙-\dfrac{𝒙^{2}}{2}-\dfrac{𝒙^{3}}{3}-\dfrac{𝒙^{4}}{4}-\cdots-𝑲$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=8822"
+                    target="_blank">[2:27:02]</a>. Determine the constant.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Plug in:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Left side:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(1-0)=\ln(1)=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Right side:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">all terms with $𝒙$ become $0$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0=-𝑲$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑲=0$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=TGD-TP1c7i4&t=8851"
+                    target="_blank">[2:27:31]</a>. Final power series representation.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\ln(1-𝒙)=-𝒙-\dfrac{𝒙^{2}}{2}-\dfrac{𝒙^{3}}{3}-\dfrac{𝒙^{4}}{4}-\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Factor the negative sign:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\ln(1-𝒙)=-\left(𝒙+\dfrac{𝒙^{2}}{2}+\dfrac{𝒙^{3}}{3}+\dfrac{𝒙^{4}}{4}+\cdots\right)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Series notation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(1-𝒙)=-\displaystyle \sum_{n=1}^{\infty}\dfrac{𝒙^{n}}{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Valid on:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(-1,1)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 1 — Why this method works.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We do not invent the logarithm series from nothing.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We start from the geometric power series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{1-𝒙}=\displaystyle \sum_{n=0}^{\infty}𝒙^{n}</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then we integrate term by term.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Integrating $\dfrac{1}{1-𝒙}$ produces:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-\ln(1-𝒙)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Integrating the power series produces:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙+\dfrac{𝒙^{2}}{2}+\dfrac{𝒙^{3}}{3}+\dfrac{𝒙^{4}}{4}+\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(1-𝒙)=-\displaystyle \sum_{n=1}^{\infty}\dfrac{𝒙^{n}}{n}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 2 — Meaning of the interval.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The interval $(-1,1)$ comes from the geometric series.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{1-𝒙}=\displaystyle \sum_{n=0}^{\infty}𝒙^{n}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">only when:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒙|&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The integrated series representation is valid on the same open interval:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-1&lt;𝒙&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">a power series represents a function only where the series converges.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">Power Series and Functions
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a
+                            href="https://openstax.org/books/calculus-volume-2/pages/6-2-properties-of-power-series"
+                            target="_blank">[openstax 🌐]</a></li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Properties of Power Series
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a
+                            href="https://openstax.org/books/calculus-volume-2/pages/5-6-ratio-and-root-tests"
+                            target="_blank">[openstax🌐]</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </article>
+</body>
+
+</html>

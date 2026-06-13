@@ -1,0 +1,5 @@
+﻿image_name: [2-17-55]Application — Newton’s Law of Cooling.png
+file_name: [2-17-55]-01.png
+timestamp: 2:17:55
+counter: 01
+folder: Calculus 2 Lecture 8.1

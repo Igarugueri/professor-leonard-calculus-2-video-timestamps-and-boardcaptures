@@ -1,0 +1,5 @@
+﻿image_name: [7-53]The Alternating Series Test.png
+file_name: [7-53]-01.png
+timestamp: 7:53
+counter: 01
+folder: Calculus 2 Lecture 9.5

@@ -1,0 +1,5 @@
+﻿image_name: [1-23-26]Derivation of the exponential growth ∕ decay law_2.png
+file_name: [1-23-26]-02.png
+timestamp: 1:23:26
+counter: 02
+folder: Calculus 2 Lecture 8.1

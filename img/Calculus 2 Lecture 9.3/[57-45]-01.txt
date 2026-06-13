@@ -1,0 +1,5 @@
+﻿image_name: [57-45]Advanced Example — ∑[𝒏=1,∞] 𝒆¹ᐟⁿ∕𝒏².png
+file_name: [57-45]-01.png
+timestamp: 57:45
+counter: 01
+folder: Calculus 2 Lecture 9.3

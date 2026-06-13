@@ -1,0 +1,5 @@
+﻿image_name: [14-45]Derivatives of Hyperbolic Functions.png
+file_name: [14-45]-01.png
+timestamp: 14:45
+counter: 01
+folder: Calculus 2 Lecture 6.6

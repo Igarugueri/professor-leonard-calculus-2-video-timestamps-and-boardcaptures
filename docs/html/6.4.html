@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ６．４ － Ｄｅｒｉｖａｔｉｖｅｓ ａｎｄ Ｉｎｔｅｇｒａｌｓ ｏｆ Ｇｅｎｅｒａｌ Ｅｘｐｏｎｅｎｔｉａｌ Ｆｕｎｃｔｉｏｎｓ</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            chtml: {
+                scale: 1.05,
+                matchFontHeight: false,
+                displayAlign: 'center',
+                displayIndent: '0em',
+                linebreaks: { automatic: false }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <article class="chapter">
+        <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ６．４</h1>
+        <h1>Ｄｅｒｉｖａｔｉｖｅｓ ａｎｄ Ｉｎｔｅｇｒａｌｓ ｏｆ Ｇｅｎｅｒａｌ Ｅｘｐｏｎｅｎｔｉａｌ Ｆｕｎｃｔｉｏｎｓ</h1>
+
+        <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=5" target="_blank">[0:05]</a>.
+                Fundamental properties of exponential expressions. – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[0-05]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[0-05]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">product of powers with the same base:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂^{𝒙}\cdot 𝒂^{𝒚}=𝒂^{𝒙+𝒚}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Power of a power:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒂^{𝒙})^{𝒚}=𝒂^{𝒙𝒚}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Power of a product:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒂𝒃)^{𝒙}=𝒂^{𝒙}\cdot 𝒃^{𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Quotient of powers with the same base:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒂^{𝒙}}{𝒂^{𝒚}}=𝒂^{𝒙-𝒚}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Power of a quotient:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(\dfrac{𝒂}{𝒃}\right)^{𝒙}=\dfrac{𝒂^{𝒙}}{𝒃^{𝒙}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｄｅｒｉｖａｔｉｖｅ ｏｆ ａｎ ｅｘｐｏｎｅｎｔｉａｌ ｆｕｎｃｔｉｏｎ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=100" target="_blank">[1:40]</a>.
+                Rewriting a general exponential function using the natural exponential form. – <span
+                    class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[1-40]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[1-40]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Expressing any positive base in terms of 𝓮.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Use the identity:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒙=𝓮^{\ln 𝒙}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Apply it to a constant base 𝒂:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒂=𝓮^{\ln 𝒂}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewriting the exponential function 𝒂^𝒙.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Substitute 𝒂 = 𝓮^{ln 𝒂}:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒂^{𝒙}=(𝓮^{\ln 𝒂})^{𝒙}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Use properties of exponents:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒂^{𝒙}=𝓮^{𝒙\ln 𝒂}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Representation of a general exponential function.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Define the function:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒇(𝒙)=𝒂^{𝒙}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Equivalent natural exponential form:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒇(𝒙)=𝓮^{𝒙\ln 𝒂}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">🧩 Example – with base $2^{π}$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=𝒂^{𝒙}=𝓮^{𝒙\ln 𝒂}$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$2^{\pi}=𝓮^{\pi\ln 2}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=360" target="_blank">[6:00]</a>.
+                Derivative of a general exponential function. – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[6-00]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[6-00]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewriting the function using the natural exponential.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Start from the general exponential:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒇(𝒙)=𝒂^{𝒙}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Use the identity 𝒂 = 𝓮^{ln 𝒂}:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒂^{𝒙}=𝓮^{𝒙\ln 𝒂}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply differentiation rules.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Differentiate using the chain rule:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">
+                                        $\dfrac{𝒅}{𝒅𝒙}\Big[𝒂^{𝒙}\Big]=\dfrac{𝒅}{𝒅𝒙}\Big[𝓮^{𝒙\ln 𝒂}\Big]$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=𝓮^{𝒙\ln 𝒂}\cdot \dfrac{𝒅}{𝒅𝒙}\Big[𝒙\ln 𝒂\Big]$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Differentiate the exponent:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{𝒅}{𝒅𝒙}\Big[𝒙\ln 𝒂\Big]=\ln 𝒂$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Substitute back:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{𝒅}{𝒅𝒙}\Big[𝒂^{𝒙}\Big]=(\ln 𝒂)\,𝓮^{𝒙\ln 𝒂}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{𝒅}{𝒅𝒙}\Big[𝒂^{𝒙}\Big]=(\ln 𝒂)\,𝒂^{𝒙}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=360" target="_blank">[6:00]</a>.
+                🧩 Example – Differentiate an exponential function with base different from 𝓮: $𝒚=3^{𝒙}$ – <span
+                    class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[6-00]-02.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[6-00]-02.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply the general derivative formula.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[𝒂^{𝒙}\Big]=(\ln 𝒂)\,𝒂^{𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Example with base 3.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[3^{𝒙}\Big]=(\ln 3)\cdot 3^{𝒙}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=772" target="_blank">[12:52]</a>.
+                🧩 Example – Differentiate an exponential function with base different from 𝓮:
+                $𝒚=5^{\sqrt[3]{𝒙}}$ – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[12-52]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[12-52]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply the derivative rule for $𝒂^{𝒖}$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[𝒂^{𝒖}\Big]=(\ln 𝒂)\,𝒂^{𝒖}\cdot
+                                \dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Identify the inner function:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒖=\sqrt[3]{𝒙}=𝒙^{1/3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate the inner function:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[𝒙^{1/3}\Big]=\dfrac{1}{3}\,𝒙^{-2/3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Combine all factors:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[5^{\sqrt[3]{𝒙}}\Big]=(\ln 5)\cdot
+                                5^{\sqrt[3]{𝒙}}\cdot \dfrac{1}{3}\,𝒙^{-2/3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final simplified form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[5^{\sqrt[3]{𝒙}}\Big]=(\ln 5)\cdot
+                                \dfrac{5^{\sqrt[3]{𝒙}}}{3\sqrt[3]{𝒙^{2}}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=1005"
+                    target="_blank">[16:45]</a>. 🧩 Example – Differentiate an exponential function with base different
+                from 𝓮: $𝒚=7^{\tan(2𝒙)}$ – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[16-45]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[16-45]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given function:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=7^{\tan(2𝒙)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply the derivative rule for 𝒂^{𝒖}:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[𝒂^{𝒖}\Big]=(\ln 𝒂)\,𝒂^{𝒖}\cdot
+                                \dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Identify the inner function:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒖=\tan(2𝒙)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate the inner function (chain rule):
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[\tan(2𝒙)\Big]=\sec^{2}(2𝒙)\cdot
+                                \dfrac{𝒅}{𝒅𝒙}\Big[2𝒙\Big]$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[\tan(2𝒙)\Big]=2\sec^{2}(2𝒙)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Combine all factors:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[7^{\tan(2𝒙)}\Big]=(\ln 7)\cdot 7^{\tan(2𝒙)}\cdot
+                                2\sec^{2}(2𝒙)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[7^{\tan(2𝒙)}\Big]=2(\ln 7)\cdot
+                                7^{\tan(2𝒙)}\cdot \sec^{2}(2𝒙)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=1235"
+                    target="_blank">[20:35]</a>. 🧩 Example – Differentiate a product involving an exponential function:
+                $𝒚=𝒙^{𝓮}\cdot 𝓮^{𝒙}$ – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[20-35]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[20-35]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply the product rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}[𝒖\cdot 𝒗]=𝒖'\cdot 𝒗+𝒖\cdot 𝒗'$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Identify each factor:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒖=𝒙^{𝓮}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒗=𝓮^{𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate each factor:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[𝒙^{𝓮}\Big]=𝓮\cdot 𝒙^{𝓮-1}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[𝓮^{𝒙}\Big]=𝓮^{𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute into the product rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=(𝓮\cdot 𝒙^{𝓮-1})\cdot 𝓮^{𝒙}+𝒙^{𝓮}\cdot
+                                𝓮^{𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Factor the common exponential term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=𝓮^{𝒙}\big(𝓮\cdot 𝒙^{𝓮-1}+𝒙^{𝓮}\big)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=1453"
+                    target="_blank">[24:13]</a>. 🧩 Example – Differentiate a quotient involving exponential functions
+                with different bases: $𝒚=\dfrac{2^{𝒙}}{\sqrt{3^{𝒙}+1}}$ – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[24-13]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[24-13]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite the denominator using exponents:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sqrt{3^{𝒙}+1}=(3^{𝒙}+1)^{1/2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite the function in exponent form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=2^{𝒙}\cdot (3^{𝒙}+1)^{-1/2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply the product rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}[𝒖\cdot 𝒗]=𝒖'\cdot 𝒗+𝒖\cdot 𝒗'$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Identify each factor:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒖=2^{𝒙}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒗=(3^{𝒙}+1)^{-1/2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate each factor:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[2^{𝒙}\Big]=(\ln 2)\cdot 2^{𝒙}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[(3^{𝒙}+1)^{-1/2}\Big]$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=-\dfrac{1}{2}(3^{𝒙}+1)^{-3/2}\cdot
+                                        \dfrac{𝒅}{𝒅𝒙}\Big[3^{𝒙}\Big]$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=-\dfrac{1}{2}(3^{𝒙}+1)^{-3/2}\cdot (\ln 3)\cdot 3^{𝒙}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute into the product rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=$ $(\ln 2)\cdot 2^{𝒙}(3^{𝒙}+1)^{-1/2}$ $-
+                                2^{𝒙}\cdot \dfrac{1}{2}(\ln 3)\cdot 3^{𝒙}(3^{𝒙}+1)^{-3/2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Factor common terms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=2^{𝒙}(3^{𝒙}+1)^{-3/2}$ $\cdot$ $\Big[(\ln
+                                2)(3^{𝒙}+1)-\dfrac{1}{2}(\ln 3)\cdot 3^{𝒙}\Big]$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=1493"
+                    target="_blank">[24:53]</a>. 🧩 Example – Differentiate a product involving a general exponential
+                function: $𝒚=𝒙\cdot 5^{3𝒙}$ – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[24-53]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[24-53]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply the product rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}[𝒖\cdot 𝒗]=𝒖'\cdot 𝒗+𝒖\cdot 𝒗'$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Identify each factor:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒖=𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒗=5^{3𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate each factor:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}[𝒙]=1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\Big[5^{3𝒙}\Big]=(\ln 5)\cdot 5^{3𝒙}\cdot 3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute into the product rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=5^{3𝒙}+𝒙\cdot (\ln 5)\cdot 5^{3𝒙}\cdot 3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify the expression:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=5^{3𝒙}+3𝒙(\ln 5)5^{3𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Factor the common exponential term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=5^{3𝒙}\big(1+3𝒙\ln 5\big)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=1705"
+                    target="_blank">[28:25]</a>. 🧩 Example – Logarithmic differentiation for a variable base and
+                exponent: 𝒚 = $𝒙^{𝒙}$ – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[28-25]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[28-25]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">**Logarithmic differentiation for a variable base and exponent:** – <span
+                            class="image-container">
+                            <a href="../img/Calculus 2 Lecture 6.4/[28-25]-02.png" target="_blank">[📷image]</a>
+                            <img src="../img/Calculus 2 Lecture 6.4/[28-25]-02.png" alt="Preview" />
+                        </span>
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Use this technique when the function has the form
+                                $𝒚=(𝒇(𝒙))^{𝒈(𝒙)}$, where both the base and the exponent depend on 𝒙.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Idea: take natural logarithms to simplify exponents into products, which
+                                are easier to differentiate.
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\ln(𝒚)=\ln\Big((𝒇(𝒙))^{𝒈(𝒙)}\Big)=𝒈(𝒙)\cdot
+                                        \ln\big(𝒇(𝒙)\big)$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Differentiate both sides with respect to 𝒙 using implicit
+                                differentiation.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">This method avoids complicated applications of the chain and product
+                                rules directly on the original expression.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Especially useful for expressions like $𝒙^{𝒙}$, $(\sin 𝒙)^{𝒙}$, or
+                                $(𝒙^{2}+1)^{\sqrt{𝒙}}$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Take natural logarithms on both sides:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(𝒚)=\ln(𝒙^{𝒙})$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the power rule for logarithms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(𝒚)=𝒙\ln(𝒙)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate both sides with respect to 𝒙:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\ln(𝒚)\big]=\dfrac{𝒅}{𝒅𝒙}\big[𝒙\ln(𝒙)\big]$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply implicit differentiation on the left:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒚}\cdot \dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{𝒅}{𝒅𝒙}[𝒙]\cdot
+                                \ln(𝒙)+𝒙\cdot \dfrac{𝒅}{𝒅𝒙}\big[\ln(𝒙)\big]$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute each derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒚}\cdot \dfrac{𝒅𝒚}{𝒅𝒙}=\ln(𝒙)+𝒙\cdot \dfrac{1}{𝒙}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒚}\cdot \dfrac{𝒅𝒚}{𝒅𝒙}=\ln(𝒙)+1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Multiply both sides by 𝒚:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=(\ln(𝒙)+1)\cdot 𝒚$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute back 𝒚 = $𝒙^{𝒙}$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=(\ln(𝒙)+1)\cdot 𝒙^{𝒙}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=2140"
+                    target="_blank">[35:40]</a>. 🧩 Example – Logarithmic differentiation for a variable base and
+                exponent: $𝒚 = (𝒙² + 𝒙)^{√𝒙}$. – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[35-40]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[35-40]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Take natural logarithms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(𝒚)=\ln\Big((𝒙^{2}+𝒙)^{\sqrt{𝒙}}\Big)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(𝒚)=\sqrt{𝒙}\cdot \ln(𝒙^{2}+𝒙)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate both sides with respect to 𝒙:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\ln(𝒚)\big]=\dfrac{𝒅}{𝒅𝒙}\big[\sqrt{𝒙}\cdot
+                                \ln(𝒙^{2}+𝒙)\big]$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Implicit differentiation on the left:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒚}\cdot
+                                \dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{𝒅}{𝒅𝒙}\big[\sqrt{𝒙}\big]\cdot
+                                \ln(𝒙^{2}+𝒙)+\sqrt{𝒙}\cdot \dfrac{𝒅}{𝒅𝒙}\big[\ln(𝒙^{2}+𝒙)\big]$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Compute each derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\sqrt{𝒙}\big]=\dfrac{1}{2\sqrt{𝒙}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\ln(𝒙^{2}+𝒙)\big]=\dfrac{1}{𝒙^{2}+𝒙}\cdot
+                                \dfrac{𝒅}{𝒅𝒙}\big[𝒙^{2}+𝒙\big]$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[𝒙^{2}+𝒙\big]=2𝒙+1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute and simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒚}\cdot
+                                \dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\ln(𝒙^{2}+𝒙)}{2\sqrt{𝒙}}+\sqrt{𝒙}\dfrac{2𝒙+1}{𝒙^{2}+𝒙}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Solve for 𝒅𝒚/𝒅𝒙:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅𝒚}{𝒅𝒙}=\Big[\dfrac{\ln(𝒙^{2}+𝒙)}{2\sqrt{𝒙}}+\sqrt{𝒙}\dfrac{2𝒙+1}{𝒙^{2}+𝒙}\Big]\cdot
+                                𝒚$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute back $𝒚 = (𝒙² + 𝒙)^{√𝒙}$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅𝒚}{𝒅𝒙}=\Big[\dfrac{\ln(𝒙^{2}+𝒙)}{2\sqrt{𝒙}}+\sqrt{𝒙}\dfrac{2𝒙+1}{𝒙^{2}+𝒙}\Big]\cdot
+                                (𝒙^{2}+𝒙)^{\sqrt{𝒙}}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=3624"
+                    target="_blank">[1:00:24]</a>. 🧩 Example – Differentiation using the chain rule (not logarithmic
+                differentiation): $𝒚=(𝒙+\cos 𝒙)^{\sqrt{2}}$ – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[1-00-24]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[1-00-24]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply the power rule combined with the chain rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Outer function: $𝒖^{\sqrt{2}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Inner function: $𝒖=𝒙+\cos 𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate step by step:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}[𝒚]=\sqrt{2}\cdot (𝒙+\cos 𝒙)^{\sqrt{2}-1}\cdot
+                                \dfrac{𝒅}{𝒅𝒙}(𝒙+\cos 𝒙)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}(𝒙+\cos 𝒙)=1-\sin 𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=\sqrt{2}\,(𝒙+\cos 𝒙)^{\sqrt{2}-1}(1-\sin 𝒙)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｉｎｔｅｇｒａｌ ｏｆ ａｎ ｅｘｐｏｎｅｎｔｉａｌ ｆｕｎｃｔｉｏｎ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=2725"
+                    target="_blank">[45:25]</a>. Integral of an exponential function. – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[45-25]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[45-25]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">General antiderivative of a constant base exponential:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int 𝒂^{𝒖}\,𝒅𝒖=\dfrac{𝒂^{𝒖}}{\ln(𝒂)}+𝓒$, for
+                                $𝒂>0$, $𝒂\ne 1$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Special case: natural exponential function:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int
+                                𝓮^{𝒖}\,𝒅𝒖=\dfrac{𝓮^{𝒖}}{\ln(𝓮)}+𝓒=𝓮^{𝒖}+𝓒$, since $\ln(𝓮)=1$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=2810"
+                    target="_blank">[46:50]</a>. 🧩 Example – Definite integral of an exponential function with base
+                different from 𝓮: $\displaystyle \int_{0}^{4}3^{𝒙}\,𝒅𝒙$ – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[46-50]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[46-50]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply the general antiderivative formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int 𝒂^{𝒙}\,𝒅𝒙=\dfrac{𝒂^{𝒙}}{\ln(𝒂)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluate on the interval [0, 4]:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\Big[\dfrac{3^{𝒙}}{\ln(3)}\Big]_{0}^{4}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{3^{4}-3^{0}}{\ln(3)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{80}{\ln(3)}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=2985"
+                    target="_blank">[49:45]</a>. 🧩 Example – Definite integral using substitution: $\displaystyle
+                \int_{1}^{4}\dfrac{3^{\sqrt{𝒙}}}{\sqrt{𝒙}}\,𝒅𝒙$ – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[49-45]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[49-45]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Choose the substitution:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒖=\sqrt{𝒙}$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒖=𝒙^{1/2}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒅𝒖=\dfrac{1}{2\sqrt{𝒙}}\,𝒅𝒙$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$2\,𝒅𝒖=\dfrac{1}{\sqrt{𝒙}}\,𝒅𝒙$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Change the limits of integration:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">When $𝒙=1$ ⇒ $𝒖=1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">When $𝒙=4$ ⇒ $𝒖=2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite the integral in terms of 𝒖:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int_{1}^{2}3^{𝒖}\cdot 2\,𝒅𝒖$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=2\displaystyle \int_{1}^{2}3^{𝒖}\,𝒅𝒖$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluate the integral:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2\Big[\dfrac{3^{𝒖}}{\ln(3)}\Big]_{1}^{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=2\Big(\dfrac{3^{2}}{\ln(3)}-\dfrac{3^{1}}{\ln(3)}\Big)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=2\cdot \dfrac{9-3}{\ln(3)}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{12}{\ln(3)}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=3440"
+                    target="_blank">[57:20]</a>. 🧩 Examples – 𝒖-substitution. – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[57-20]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[57-20]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Example 1 – Substitution in an exponential with a quadratic exponent:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Original integral:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle \int (𝒙+1)\cdot 3^{𝒙^{2}+2𝒙}\,𝒅𝒙$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Choose the substitution:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Let $𝒖=𝒙^{2}+2𝒙$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒅𝒖=(2𝒙+2)\,𝒅𝒙=2(𝒙+1)\,𝒅𝒙$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Rewrite the integral:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{2}\displaystyle \int 3^{𝒖}\,𝒅𝒖$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Integrate:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{2}\cdot \dfrac{3^{𝒖}}{\ln(3)}+𝓒$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Back-substitution:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{3^{𝒙^{2}+2𝒙}}{2\ln 3}+𝓒$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Example 2 – Substitution in a rational exponential expression:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Original integral:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle \int \dfrac{3^{𝒙}}{1+3^{𝒙}}\,𝒅𝒙$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Choose the substitution:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Let $𝒖=1+3^{𝒙}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒅𝒖=(\ln 3)\cdot 3^{𝒙}\,𝒅𝒙$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Rewrite the integral:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{\ln 3}\displaystyle \int \dfrac{1}{𝒖}\,𝒅𝒖$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Integrate:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{\ln 3}\ln|𝒖|+𝓒$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Back-substitution:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{1}{\ln 3}\ln(1+3^{𝒙})+𝓒$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｄｅｒｉｖａｔｉｖｅｓ Lｏｇ ｂａｓｅ ' 𝓪 ' </h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=3738"
+                    target="_blank">[1:02:18]</a>. Derivative of logarithmic functions with base 𝒂. – <span
+                    class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[1-02-18]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[1-02-18]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Change of base formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\log_{𝒂}|𝒙|=\dfrac{\ln|𝒙|}{\ln 𝒂}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Derivative of the logarithm with base 𝒂:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\log_{𝒂}|𝒙|\big]$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{𝒅}{𝒅𝒙}\Big[\dfrac{\ln|𝒙|}{\ln 𝒂}\Big]$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{1}{\ln 𝒂}\cdot \dfrac{𝒅}{𝒅𝒙}\big[\ln|𝒙|\big]$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{1}{(\ln 𝒂)\cdot 𝒙}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Special case: natural logarithm:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}[\ln 𝒙]=\dfrac{1}{𝒙}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=3960"
+                    target="_blank">[1:06:00]</a>. Chain rule derivative of logarithmic functions with base 𝒂. – <span
+                    class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[1-06-00]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[1-06-00]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Change of base:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\log_{𝒂}|𝒖|=\dfrac{\ln|𝒖|}{\ln 𝒂}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Derivative using the chain rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\log_{𝒂}|𝒖|\big]$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{1}{\ln 𝒂}\cdot \dfrac{𝒅}{𝒅𝒙}\big[\ln|𝒖|\big]$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{1}{\ln 𝒂}\cdot \dfrac{1}{𝒖}\cdot \dfrac{𝒅𝒖}{𝒅𝒙}$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{1}{(\ln 𝒂)\cdot 𝒖}\cdot \dfrac{𝒅𝒖}{𝒅𝒙}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=4099"
+                    target="_blank">[1:08:19]</a>. 🧩 Example – Chain rule derivative of a logarithmic function with
+                base 2: $𝒚=\log_{2}\lvert\tan 𝒙\rvert$ – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[1-08-19]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[1-08-19]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply change of base:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=\dfrac{\ln|\tan 𝒙|}{\ln 2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate using the chain rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{1}{\ln 2}\cdot \dfrac{𝒅}{𝒅𝒙}\big[\ln|\tan
+                                𝒙|\big]$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{1}{\ln 2}\cdot \dfrac{1}{\tan 𝒙}\cdot
+                                        \dfrac{𝒅}{𝒅𝒙}\big[\tan 𝒙\big]$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{\sec^{2}𝒙}{(\ln 2)\cdot \tan 𝒙}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=rR8imSHCuFk&t=4260"
+                    target="_blank">[1:11:00]</a>. 🧩 Example – Differentiation of a product involving a logarithmic
+                function (base 10): $𝒚 = 𝒙² · log(𝓮^{2𝒙} + 1)$ – <span class="image-container">
+                    <a href="../img/Calculus 2 Lecture 6.4/[1-11-00]-01.png" target="_blank">[📷image]</a>
+                    <img src="../img/Calculus 2 Lecture 6.4/[1-11-00]-01.png" alt="Preview" />
+                </span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply the product rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{𝒅}{𝒅𝒙}[𝒙^{2}]\cdot \log(𝓮^{2𝒙}+1)$ $+$
+                                $𝒙^{2}\cdot \dfrac{𝒅}{𝒅𝒙}\big[\log(𝓮^{2𝒙}+1)\big]$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate each term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}[𝒙^{2}]=2𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}\big[\log(𝓮^{2𝒙}+1)\big]$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{1}{\ln 10\cdot (𝓮^{2𝒙}+1)}\cdot
+                                        \dfrac{𝒅}{𝒅𝒙}[𝓮^{2𝒙}+1]$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{1}{\ln 10\cdot (𝓮^{2𝒙}+1)}\cdot 2𝓮^{2𝒙}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=2𝒙\cdot
+                                \log(𝓮^{2𝒙}+1)+\dfrac{2𝒙^{2}𝓮^{2𝒙}}{\ln 10\cdot (𝓮^{2𝒙}+1)}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </article>
+</body>
+
+</html>

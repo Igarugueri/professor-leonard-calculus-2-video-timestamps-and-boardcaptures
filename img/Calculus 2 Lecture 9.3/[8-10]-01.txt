@@ -1,0 +1,5 @@
+﻿image_name: [8-10]Adjusting the starting point.png
+file_name: [8-10]-01.png
+timestamp: 8:10
+counter: 01
+folder: Calculus 2 Lecture 9.3

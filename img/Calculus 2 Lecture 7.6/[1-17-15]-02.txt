@@ -1,0 +1,5 @@
+﻿image_name: [1-17-15]Example 7 — Integrals over the entire real line ∫[-∞, ∞] eˣ∕(1 + e²ˣ) ⋅ 𝒅𝒙_2.png
+file_name: [1-17-15]-02.png
+timestamp: 1:17:15
+counter: 02
+folder: Calculus 2 Lecture 7.6

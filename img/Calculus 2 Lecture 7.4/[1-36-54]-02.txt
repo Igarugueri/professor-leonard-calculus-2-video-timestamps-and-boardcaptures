@@ -1,0 +1,5 @@
+﻿image_name: [1-36-54]Continue Example 4 — Transition to case 3 ∫ (𝒙² − 𝒙 − 21)∕(2𝒙³ − 𝒙² + 8𝒙 − 4) 𝒅𝒙_2.png
+file_name: [1-36-54]-02.png
+timestamp: 1:36:54
+counter: 02
+folder: Calculus 2 Lecture 7.4

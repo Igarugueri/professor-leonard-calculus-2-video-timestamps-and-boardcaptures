@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ １０．３： Ｃａｌｃｕｌｕｓ ｏｆ Ｐａｒａｍｅｔｒｉｃ Ｅｑｕａｔｉｏｎｓ</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            chtml: {
+                scale: 1.05,
+                matchFontHeight: false,
+                displayAlign: 'center',
+                displayIndent: '0em',
+                linebreaks: { automatic: false }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <article class="chapter">
+        <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ １０．３</h1>
+        <h1> Ｃａｌｃｕｌｕｓ ｏｆ Ｐａｒａｍｅｔｒｉｃ Ｅｑｕａｔｉｏｎｓ</h1>
+
+        <h2>１ - Ｌｏｃａｌ　Ｆｕｎｃｔｉｏｎ　Ｎｅｉｇｈｂｏｒｈｏｏｄ　＆　Ｓｅｔｕｐ　ｆｏｒ　ｔｈｅ　Ｓｌｏｐｅ　Ｆｏｒｍｕｌａ</h2>
+
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.3/[0-00]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 10.3/[0-00]-01.png"
+                        alt="Preview" /></span> - <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.3/[0-00]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 10.3/[0-00]-02.png" alt="Preview" /></span>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=1H6HrfX_qCA&t=0" target="_blank">[0:00]</a>.
+                Introduction: Calculus with Parametric Equations.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Find the slope of a parametric curve at a specific point $P$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">A parametric curve may fail the vertical line test globally,
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but near a specific point $P$, we can cut out a small section where the
+                                curve behaves like a function
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Function neighborhood:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">A small local piece of the curve around $P$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">on this small section, the vertical line test is satisfied
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The tangent line is understood locally, on this function neighborhood
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=1H6HrfX_qCA&t=250" target="_blank">[4:10]</a>.
+                Parametric components of the curve.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The curve is given parametrically by:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝒇(𝑻)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒈(𝑻)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The parameter varies on a local interval:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝑻\in \mathcal{I}=[𝒂,𝒃]$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The endpoints of this interval determine the beginning and end of the
+                                small section we are studying around $P$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=1H6HrfX_qCA&t=415" target="_blank">[6:55]</a>.
+                Defining a local rectangular function.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">On this small section of the curve, we can treat $𝒚$ as a function of $𝒙$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=\mathcal{F}(𝒙)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This local function is consistent with the original parametric equations:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝒇(𝑻)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒈(𝑻)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒈(𝑻)=\mathcal{F}(𝒇(𝑻))$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is the key setup:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">now we can differentiate using the Chain Rule
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>２ - Ｄｅｒｉｖａｔｉｏｎ　ｏｆ　ｔｈｅ　Ｆｉｒｓｔ　Ｄｅｒｉｖａｔｉｖｅ　Ｆｏｒｍｕｌａ</h2>
+
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.3/[11-09]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.3/[11-09]-01.png"
+                        alt="Preview" /></span>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=1H6HrfX_qCA&t=669" target="_blank">[11:09]</a>.
+                Derivation of the first derivative formula.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">On the small function neighborhood around $P$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we can write $𝒚$ as a function of $𝒙$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=\mathcal{F}(𝒙)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Original parametric equations:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝒇(𝑻)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒈(𝑻)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒈(𝑻)=\mathcal{F}(𝒇(𝑻))$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate with respect to $𝑻$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅}{𝒅𝑻}\big[𝒈(𝑻)\big]=\dfrac{𝒅}{𝒅𝑻}\big[\mathcal{F}(𝒇(𝑻))\big]$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply the Chain Rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒈'(𝑻)=\mathcal{F}'\big(𝒇(𝑻)\big)\cdot 𝒇'(𝑻)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since $\mathcal{F}'(𝒙)=\dfrac{𝒅𝒚}{𝒅𝒙}$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒈'(𝑻)=\left(\dfrac{𝒅𝒚}{𝒅𝒙}\right)\cdot 𝒇'(𝑻)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Solve for the derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{𝒈'(𝑻)}{𝒇'(𝑻)}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\dfrac{𝒅𝒚}{𝒅𝑻}}{\dfrac{𝒅𝒙}{𝒅𝑻}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the slope of the parametric curve is the ratio of vertical change to
+                                horizontal change
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=1H6HrfX_qCA&t=1086"
+                    target="_blank">[18:06]</a>. 🧩 Example 1 — Find the equation of the tangent line for $𝒙=\sec(𝑻)$,
+                $𝒚=\tan(𝑻)$, at $𝑻=\dfrac{\pi}{4}$, with $-\dfrac{\pi}{2}<𝑻<\dfrac{\pi}{2}$. <ul>
+                    <!-- ◉ nivel-2 -->
+            <li class="level-2"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.3/[18-06]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.3/[18-06]-01.png"
+                        alt="Preview" /></span>
+            </li>
+            <!-- ◉ nivel-2 -->
+            <li class="level-2">❶ Find the point on the curve.
+                <ul>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">at $𝑻=\dfrac{\pi}{4}$:
+                        <ul>
+                            <!-- ■ nivel-4 -->
+                            <li class="level-4">$𝒙=\sec\left(\dfrac{\pi}{4}\right)=\sqrt{2}$
+                            </li>
+                            <!-- ■ nivel-4 -->
+                            <li class="level-4">$𝒚=\tan\left(\dfrac{\pi}{4}\right)=1$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">so the point is:
+                        <ul>
+                            <!-- ■ nivel-4 -->
+                            <li class="level-4">$(\sqrt{2},1)$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ◉ nivel-2 -->
+            <li class="level-2">❷ Find the slope.
+                <ul>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">use the parametric derivative formula:
+                        <ul>
+                            <!-- ■ nivel-4 -->
+                            <li class="level-4">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\dfrac{𝒅𝒚}{𝒅𝑻}}{\dfrac{𝒅𝒙}{𝒅𝑻}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">differentiate:
+                        <ul>
+                            <!-- ■ nivel-4 -->
+                            <li class="level-4">$\dfrac{𝒅𝒚}{𝒅𝑻}=\sec^{2}(𝑻)$
+                            </li>
+                            <!-- ■ nivel-4 -->
+                            <li class="level-4">$\dfrac{𝒅𝒙}{𝒅𝑻}=\sec(𝑻)\tan(𝑻)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">substitute:
+                        <ul>
+                            <!-- ■ nivel-4 -->
+                            <li class="level-4">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\sec^{2}(𝑻)}{\sec(𝑻)\tan(𝑻)}$
+                            </li>
+                            <!-- ■ nivel-4 -->
+                            <li class="level-4">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\sec(𝑻)}{\tan(𝑻)}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">evaluate at $𝑻=\dfrac{\pi}{4}$:
+                        <ul>
+                            <!-- ■ nivel-4 -->
+                            <li class="level-4">
+                                $𝒎=\dfrac{\sec\left(\dfrac{\pi}{4}\right)}{\tan\left(\dfrac{\pi}{4}\right)}$
+                            </li>
+                            <!-- ■ nivel-4 -->
+                            <li class="level-4">$𝒎=\dfrac{\sqrt{2}}{1}=\sqrt{2}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ◉ nivel-2 -->
+            <li class="level-2">❸ Use point-slope form.
+                <ul>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">$𝒚-𝒚_{1}=𝒎(𝒙-𝒙_{1})$
+                    </li>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">$𝒚-1=\sqrt{2}(𝒙-\sqrt{2})$
+                    </li>
+                </ul>
+            </li>
+            <!-- ◉ nivel-2 -->
+            <li class="level-2">❹ Simplify.
+                <ul>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">$𝒚-1=\sqrt{2}𝒙-2$
+                    </li>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">$𝒚=\sqrt{2}𝒙-1$
+                    </li>
+                </ul>
+            </li>
+            <!-- ◉ nivel-2 -->
+            <li class="level-2">Final result:
+                <ul>
+                    <!-- ○ nivel-3 -->
+                    <li class="level-3">$𝒚=\sqrt{2}𝒙-1$
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        </li>
+        </ul>
+
+        <h2>３ - Ｈｏｒｉｚｏｎｔａｌ　ａｎｄ　Ｖｅｒｔｉｃａｌ　Ｔａｎｇｅｎｔｓ</h2>
+
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=1H6HrfX_qCA&t=1726"
+                    target="_blank">[28:46]</a>. Criteria for horizontal and vertical tangents.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><span class="image-container"><a
+                                href="../img/Calculus 2 Lecture 10.3/[28-46]-01.png" target="_blank">[📷image]</a><img
+                                src="../img/Calculus 2 Lecture 10.3/[28-46]-01.png" alt="Preview" /></span>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Horizontal tangent:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $\dfrac{𝒅𝒚}{𝒅𝒕}=0$ and $\dfrac{𝒅𝒙}{𝒅𝒕}\neq 0$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ $\dfrac{𝒅𝒚}{𝒅𝒙}=0$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Vertical tangent:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $\dfrac{𝒅𝒚}{𝒅𝒕}\neq 0$ and $\dfrac{𝒅𝒙}{𝒅𝒕}=0$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ $\dfrac{𝒅𝒚}{𝒅𝒙}\to \pm\infty$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Warning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $\dfrac{𝒅𝒚}{𝒅𝒕}=0$ and $\dfrac{𝒅𝒙}{𝒅𝒕}=0$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ the slope is indeterminate
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">this requires L’Hôpital’s Rule
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=1H6HrfX_qCA&t=2022"
+                    target="_blank">[33:42]</a>. 🧩 Example 2 — Horizontal and vertical tangents: $𝒙=𝒕^{2}$,
+                $𝒚=𝒕^{3}-3𝒕$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><span class="image-container"><a
+                                href="../img/Calculus 2 Lecture 10.3/[33-42]-01.png" target="_blank">[📷image-1]</a><img
+                                src="../img/Calculus 2 Lecture 10.3/[33-42]-01.png" alt="Preview" /></span> - <span
+                            class="image-container"><a href="../img/Calculus 2 Lecture 10.3/[33-42]-02.png"
+                                target="_blank">[📷image-2]</a><img src="../img/Calculus 2 Lecture 10.3/[33-42]-02.png"
+                                alt="Preview" /></span>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❶ Locate horizontal tangents.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">set $\dfrac{𝒅𝒚}{𝒅𝒕}=0$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$3𝒕^{2}-3=0$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒕=\pm 1$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">corresponding points:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒕=-1$ → $(𝒙,𝒚)=(1,2)$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒕=1$ → $(𝒙,𝒚)=(1,-2)$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❷ Locate the vertical tangent.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">set $\dfrac{𝒅𝒙}{𝒅𝒕}=0$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2𝒕=0$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒕=0$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">corresponding point:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒕=0$ → $(𝒙,𝒚)=(0,0)$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❸ Find the intercepts.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">For the $𝒙$-intercepts, set $𝒚=0$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒕^{3}-3𝒕=0$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒕(𝒕^{2}-3)=0$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒕=0,\pm \sqrt{3}$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">corresponding points:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$𝒕=0$ → $(0,0)$
+                                            </li>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$𝒕=\sqrt{3}$ → $(3,0)$
+                                            </li>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$𝒕=-\sqrt{3}$ → $(3,0)$
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">For the $𝒚$-intercept, set $𝒙=0$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒕^{2}=0$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒕=0$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">corresponding point:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$(0,0)$
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❹ Determine where the curve starts and ends.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $𝒕\to -\infty$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ $𝒙=𝒕^{2}\to \infty$ and $𝒚=𝒕^{3}-3𝒕\to -\infty$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">so the curve starts in the lower-right part of the plane
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $𝒕\to \infty$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ $𝒙=𝒕^{2}\to \infty$ and $𝒚=𝒕^{3}-3𝒕\to \infty$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">so the curve ends in the upper-right part of the plane
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❺ Determine the orientation.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">as $𝒕$ increases, the curve starts in the lower-right branch
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">passes through $(3,0)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">reaches the horizontal tangent at $(1,2)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">moves to the vertical tangent at $(0,0)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">reaches the horizontal tangent at $(1,-2)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">passes again through $(3,0)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and then continues to the upper-right branch
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">two different parameter values, $𝒕=\pm \sqrt{3}$, give the same point
+                                $(3,0)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so the curve passes through $(3,0)$ twice
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the curve has a loop
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it has horizontal tangents at $(1,2)$ and $(1,-2)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it has a vertical tangent at $(0,0)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and the direction is determined by the start at $𝒕\to -\infty$ and the
+                                end at $𝒕\to \infty$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>４ - Ｓｅｃｏｎｄ　Ｄｅｒｉｖａｔｉｖｅ　ｆｏｒ　Ｐａｒａｍｅｔｒｉｃ　Ｃｕｒｖｅｓ</h2>
+
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.3/[51-32]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.3/[51-32]-01.png"
+                        alt="Preview" /></span>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=1H6HrfX_qCA&t=3092"
+                    target="_blank">[51:32]</a>. Derivation of the second derivative formula.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start with the first derivative formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{\dfrac{𝒅𝒚}{𝒅𝑻}}{\dfrac{𝒅𝒙}{𝒅𝑻}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate with respect to $𝒙$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅}{𝒅𝒙}\left[\dfrac{𝒅𝒚}{𝒅𝒙}\right]=\dfrac{𝒅}{𝒅𝒙}\left[\dfrac{\dfrac{𝒅𝒚}{𝒅𝑻}}{\dfrac{𝒅𝒙}{𝒅𝑻}}\right]$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅^{2}𝒚}{𝒅𝒙^{2}}=\dfrac{𝒅}{𝒅𝒙}\left[\dfrac{𝒅𝒚}{𝒅𝒙}\right]$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the parametric derivative rule again:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅}{𝒅𝒙}[𝔂]=\dfrac{\dfrac{𝒅}{𝒅𝑻}[𝔂]}{\dfrac{𝒅𝒙}{𝒅𝑻}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply it to $𝔂=\dfrac{𝒅𝒚}{𝒅𝒙}$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅^{2}𝒚}{𝒅𝒙^{2}}=\dfrac{\dfrac{𝒅}{𝒅𝑻}\left[\dfrac{𝒅𝒚}{𝒅𝒙}\right]}{\dfrac{𝒅𝒙}{𝒅𝑻}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅^{2}𝒚}{𝒅𝒙^{2}}=\dfrac{\dfrac{𝒅}{𝒅𝑻}\left[\dfrac{𝒅𝒚}{𝒅𝒙}\right]}{\dfrac{𝒅𝒙}{𝒅𝑻}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is not simply
+                                $\dfrac{\dfrac{𝒅^{2}𝒚}{𝒅𝑻^{2}}}{\dfrac{𝒅^{2}𝒙}{𝒅𝑻^{2}}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this formula is used to study concavity for a parametric curve
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=1H6HrfX_qCA&t=3588"
+                    target="_blank">[59:48]</a>. 🧩 Example 3 — Find the concavity for $𝒙=𝑻^{2}-4$, $𝒚=𝑻^{3}-3𝑻$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><span class="image-container"><a
+                                href="../img/Calculus 2 Lecture 10.3/[59-48]-01.png" target="_blank">[📷image]</a><img
+                                src="../img/Calculus 2 Lecture 10.3/[59-48]-01.png" alt="Preview" /></span>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❶ Start with the first derivative.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{3𝑻^{2}-3}{2𝑻}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❷ Differentiate $\dfrac{𝒅𝒚}{𝒅𝒙}$ with respect to $𝑻$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use the Quotient Rule
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅}{𝒅𝑻}\left[\dfrac{𝒅𝒚}{𝒅𝒙}\right]=\dfrac{𝒅}{𝒅𝑻}\left[\dfrac{3𝑻^{2}-3}{2𝑻}\right]$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{2𝑻\cdot 6𝑻-2(3𝑻^{2}-3)}{4𝑻^{2}}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{12𝑻^{2}-6𝑻^{2}+6}{4𝑻^{2}}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{6𝑻^{2}+6}{4𝑻^{2}}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{3𝑻^{2}+3}{2𝑻^{2}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❸ Divide by $\dfrac{𝒅𝒙}{𝒅𝑻}$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒙}{𝒅𝑻}=2𝑻$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{𝒅^{2}𝒚}{𝒅𝒙^{2}}=\dfrac{\dfrac{𝒅}{𝒅𝑻}\left(\dfrac{𝒅𝒚}{𝒅𝒙}\right)}{\dfrac{𝒅𝒙}{𝒅𝑻}}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\dfrac{\dfrac{3𝑻^{2}+3}{2𝑻^{2}}}{2𝑻}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅^{2}𝒚}{𝒅𝒙^{2}}=\dfrac{3𝑻^{2}+3}{4𝑻^{3}}$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>５．Ａｐｐｌｉｃａｔｉｏｎｓ</h2>
+
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.3/[1-07-09]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.3/[1-07-09]-01.png"
+                        alt="Preview" /></span>
+            </li>
+        </ul>
+
+        <h2>５．１ - Ａｒｃ　Ｌｅｎｇｔｈ</h2>
+
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=1H6HrfX_qCA&t=4029"
+                    target="_blank">[1-07:09]</a>. Length of a curve (arc length).
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">From Calc 1:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">i̲f̲ $𝒚=𝒇(𝒙)$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">t̲h̲e̲n̲ the length of the curve from $𝒙=𝒂$ to $𝒙=𝒃$ is
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\displaystyle
+                                                𝑳=\int_{𝒂}^{𝒃}\sqrt{1+\big[𝒇'(𝒙)\big]^{2}}\,𝒅𝒙$
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Parametrically:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">now we do the same idea using $𝒙$ and $𝒚$ as functions of $𝒕$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Conditions:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">provided the part of the curve whose length we want to find
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">is smooth
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">and does not intersect itself
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Smooth means:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">no gaps
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">no sharp points
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the curve should not double back on itself
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">otherwise we lose the nice local behavior needed for the formula
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the total distance traveled along the parametric curve from $𝒕=𝒂$
+                                to $𝒕=𝒃$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                𝑳=\int_{𝒂}^{𝒃}\sqrt{\left(\dfrac{𝒅𝒙}{𝒅𝒕}\right)^{2}+\left(\dfrac{𝒅𝒚}{𝒅𝒕}\right)^{2}}\,𝒅𝒕$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the bounds $𝒂$ and $𝒃$ are values of the parameter $𝒕$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the integration is always with respect to $𝒕$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">How to read the formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">take $\dfrac{𝒅𝒙}{𝒅𝒕}$ and square it
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">take $\dfrac{𝒅𝒚}{𝒅𝒕}$ and square it
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">add them
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">take the square root
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then integrate over the parameter interval
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this looks very similar to the Calc 1 arc-length formula
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and it also resembles the distance formula
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">integrate the magnitude of the velocity vector over the parameter
+                                interval
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=1H6HrfX_qCA&t=4425"
+                    target="_blank">[1:13:45]</a>. 🧩 Example 4 — Arc length calculation: $𝒙=2𝑻^{2}$, $𝒚=3𝑻^{3}$, on
+                $0\le 𝑻\le 1$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><span class="image-container"><a
+                                href="../img/Calculus 2 Lecture 10.3/[1-13-45]-01.png"
+                                target="_blank">[📷image-1]</a><img
+                                src="../img/Calculus 2 Lecture 10.3/[1-13-45]-01.png" alt="Preview" /></span> - <span
+                            class="image-container"><a href="../img/Calculus 2 Lecture 10.3/[1-13-45]-02.png"
+                                target="_blank">[📷image-2]</a><img
+                                src="../img/Calculus 2 Lecture 10.3/[1-13-45]-02.png" alt="Preview" /></span>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❶ Find the derivatives.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒙}{𝒅𝑻}=4𝑻$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝑻}=9𝑻^{2}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❷ Set up the arc length integral.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle 𝑳=\int_{0}^{1}\sqrt{(4𝑻)^{2}+(9𝑻^{2})^{2}}\,𝒅𝑻$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❸ Simplify the expression.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle 𝑳=\int_{0}^{1}\sqrt{16𝑻^{2}+81𝑻^{4}}\,𝒅𝑻$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle 𝑳=\int_{0}^{1}\sqrt{𝑻^{2}(16+81𝑻^{2})}\,𝒅𝑻$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle 𝑳=\int_{0}^{1}𝑻\sqrt{16+81𝑻^{2}}\,𝒅𝑻$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❹ Use $𝒖$-substitution.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">let $𝒖=16+81𝑻^{2}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒅𝒖=162𝑻\,𝒅𝑻$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{162}𝒅𝒖=𝑻\,𝒅𝑻$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">change the bounds:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝑻=0$ → $𝒖=16$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝑻=1$ → $𝒖=97$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❺ Rewrite and evaluate the integral.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle 𝑳=\dfrac{1}{162}\int_{16}^{97}𝒖^{1/2}\,𝒅𝒖$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle 𝑳=\dfrac{1}{162}\cdot
+                                \Big[\dfrac{𝒖^{3/2}}{3/2}\Big]_{16}^{97}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle 𝑳=\Big[\dfrac{𝒖^{3/2}}{243}\Big]_{16}^{97}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle 𝑳=\dfrac{97^{3/2}-16^{3/2}}{243}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle 𝑳=\dfrac{97^{3/2}-16^{3/2}}{243}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the total distance traveled is approximately $3.67$ units
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>５．２ - Ｓｕｒｆａｃｅ　Ａｒｅａ　ｏｆ　Ｒｅｖｏｌｕｔｉｏｎ</h2>
+
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.3/[1-26-22]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.3/[1-26-22]-01.png"
+                        alt="Preview" /></span>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=1H6HrfX_qCA&t=5182"
+                    target="_blank">[1:26:22]</a>. Surface area of revolution.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">From Calc 1:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">around the $𝒙$-axis:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle
+                                        \mathcal{S}=\int_{𝒂}^{𝒃}2\pi\,𝒇(𝒙)\sqrt{1+\big[𝒇'(𝒙)\big]^{2}}\,𝒅𝒙$
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">around the $𝒚$-axis:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle
+                                        \mathcal{S}=\int_{𝒂}^{𝒃}2\pi\,𝒈(𝒚)\sqrt{1+\big[𝒈'(𝒚)\big]^{2}}\,𝒅𝒚$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Parametrically:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use the same arc-length factor as before
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">only the radius of revolution changes depending on the axis
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">circumference of the circular cross section × arc length element
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Around the $𝒙$-axis:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the radius is $𝒚$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \mathcal{S}=\int_{𝒂}^{𝒃}2\pi\,𝒚\sqrt{\left(\dfrac{𝒅𝒙}{𝒅𝒕}\right)^{2}+\left(\dfrac{𝒅𝒚}{𝒅𝒕}\right)^{2}}\,𝒅𝒕$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Around the $𝒚$-axis:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the radius is $𝒙$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \mathcal{S}=\int_{𝒂}^{𝒃}2\pi\,𝒙\sqrt{\left(\dfrac{𝒅𝒙}{𝒅𝒕}\right)^{2}+\left(\dfrac{𝒅𝒚}{𝒅𝒕}\right)^{2}}\,𝒅𝒕$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the square-root factor is the same in both formulas
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">because the length element of the curve does not change
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">only the radius changes:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">around the $𝒙$-axis → use $𝒚$
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">around the $𝒚$-axis → use $𝒙$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">Parametric equations, polar coordinates, and vector-valued functions
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a
+                            href="https://www.khanacademy.org/math/ap-calculus-bc/bc-advanced-functions-new"
+                            target="_blank">[Khan Academy🌐]</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- ● nivel-1 -->
+            <li class="level-1">Parametric Equations and Curves
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a href="https://tutorial.math.lamar.edu/Classes/CalcII/ParametricEqn.aspx"
+                            target="_blank">[Paul's Online 🌐]</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </article>
+</body>
+
+</html>

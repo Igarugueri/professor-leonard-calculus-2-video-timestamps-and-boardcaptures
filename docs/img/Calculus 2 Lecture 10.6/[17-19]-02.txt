@@ -1,0 +1,5 @@
+﻿image_name: [17-19]Example  — Approximate ∫[0,2] 1∕√(𝒙 + 1) 𝒅𝒙 with 𝒏 = 6_2.png
+file_name: [17-19]-02.png
+timestamp: 17:19
+counter: 02
+folder: Calculus 2 Lecture 10.6

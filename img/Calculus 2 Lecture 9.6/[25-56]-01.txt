@@ -1,0 +1,5 @@
+﻿image_name: [25-56]The Ratio Test.png
+file_name: [25-56]-01.png
+timestamp: 25:56
+counter: 01
+folder: Calculus 2 Lecture 9.6

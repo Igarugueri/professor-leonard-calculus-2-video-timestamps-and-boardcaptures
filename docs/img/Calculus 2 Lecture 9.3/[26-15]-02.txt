@@ -1,0 +1,5 @@
+﻿image_name: [26-15]Example 3 — The case of ∑[𝒏=1,∞] ln(𝒏)∕𝒏_2.png
+file_name: [26-15]-02.png
+timestamp: 26:15
+counter: 02
+folder: Calculus 2 Lecture 9.3

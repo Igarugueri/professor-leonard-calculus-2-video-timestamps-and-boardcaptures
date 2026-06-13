@@ -1,0 +1,5 @@
+﻿image_name: [1-17-13]Example 6 — 𝒙 = sin(𝑻), 𝒚 = sin(2𝑻), with 𝐈 = [0, 2π]_2.png
+file_name: [1-17-13]-02.png
+timestamp: 1:17:13
+counter: 02
+folder: Calculus 2 Lecture 10.2

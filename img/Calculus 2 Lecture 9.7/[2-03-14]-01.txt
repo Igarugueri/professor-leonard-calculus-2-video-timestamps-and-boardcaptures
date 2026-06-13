@@ -1,0 +1,5 @@
+﻿image_name: [2-03-14]Calculus of power series.png
+file_name: [2-03-14]-01.png
+timestamp: 2:03:14
+counter: 01
+folder: Calculus 2 Lecture 9.7

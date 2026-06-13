@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ８．１ - Ｓｏｌｖｉｎｇ Ｆｉｒｓｔ Ｏｒｄｅｒ Ｄｉｆｆｅｒｅｎｔｉａｌ Ξｑｕａｔｉｏｎｓ Ｂｙ Ｓｅｐａｒａｔｉｏｎ ｏｆ Ｖａｒｉａｂｌｅｓ</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <article class="chapter">
+        <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ８．１ </h1>
+        <h1> Ｓｏｌｖｉｎｇ Ｆｉｒｓｔ Ｏｒｄｅｒ Ｄｉｆｆｅｒｅｎｔｉａｌ Ξｑｕａｔｉｏｎｓ Ｂｙ Ｓｅｐａｒａｔｉｏｎ ｏｆ Ｖａｒｉａｂｌｅｓ</h1>
+
+        <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ　Ｔｏ　Ｆｉｒｓｔ－Ｏｒｄｅｒ　Ｄｉｆｆｅｒｅｎｔｉａｌ　Ｅｑｕａｔｉｏｎｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 8.1/[0-00]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 8.1/[0-00]-01.png"
+                        alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=0" target="_blank">0:00</a>.
+                Introduction to first-order differential equations.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differential equations have broad applications, especially in engineering and
+                        applied sciences.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Focus of the lecture:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">separable differential equations
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the most basic class of first-order differential equations</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=84" target="_blank">1:24</a>.
+                Definition of a differential equation and the concept of order.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A differential equation is an equation involving a derivative and an unknown
+                        function.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Definition of order:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the order of a differential equation is the highest derivative that
+                                appears in it.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First-order differential equations.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">A first-order differential equation contains only a first derivative.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=185" target="_blank">3:05</a>.
+                Basic first-order equations of the form $\dfrac{𝒅𝒚}{𝒅𝒙}=𝒇(𝒙)$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=238"
+                            target="_blank">3:58</a>. Basic idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">A first-order differential equation contains the first derivative of an
+                                unknown function.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Solving it means finding the function whose derivative satisfies the
+                                equation.
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">In simple cases such as
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\dfrac{𝒅𝒚}{𝒅𝒙}=𝒇(𝒙)$,</li>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">we can recover $𝒚$ by integrating:
+                                                <ul>
+                                                    <!-- ▢ nivel-6 -->
+                                                    <li class="level-6">$𝒚=\displaystyle \int 𝒇(𝒙)\,𝒅𝒙$</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=263"
+                            target="_blank">4:23</a>. Limitation of this basic method.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">It works only when the right-hand side depends entirely on $𝒙$:
+                                $𝒇(𝒙)$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">It does not immediately solve equations of the form
+                                $\dfrac{𝒅𝒚}{𝒅𝒙}=𝒇(𝒙,𝒚)$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=323" target="_blank">5:23</a>.
+                First-order equations with mixed variables.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">General form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=𝒇(𝒙,𝒚)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning of a solution:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">A solution is a function $𝒚=𝒚(𝒙)$, defined on some interval, such
+                                that
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">when we differentiate $𝒚(𝒙)$, its derivative matches the
+                                        right-hand side of the differential equation.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">In other words,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒚=𝒚(𝒙)$ is a solution if $\dfrac{𝒅𝒚}{𝒅𝒙}=𝒇(𝒙,𝒚(𝒙))$.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">We treat $𝒚$ as a function of $𝒙$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Even if $𝒚$ is not given explicitly, it is still understood to depend
+                                on $𝒙$, just as in implicit differentiation.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｖｅｒｉｆｙｉｎｇ　Ｓｏｌｕｔｉｏｎｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">Verifying whether a proposed function is a solution to a differential equation.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Strategy:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Differentiate the proposed function.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Then compare the result with the right-hand side of the differential
+                                equation.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">A proposed function is a solution if, after differentiating it,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the derivative satisfies the differential equation identically.
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">In other words,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">substituting the function into the equation must make both sides
+                                        equal on the given interval.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=493" target="_blank">8:13</a>. 🧩
+                Example 1 — Verify that $𝒚=𝒙+1+𝒄𝒆^{𝒙}$ is a solution to $𝒚'=𝒚-𝒙$ on $(-\infty,\infty)$. – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 8.1/[8-13]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 8.1/[8-13]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 1: Differentiate the proposed function.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒙+1+𝒄𝒆^{𝒙}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{𝒅𝒚}{𝒅𝒙}=1+𝒄𝒆^{𝒙}=𝒚' \;\;(1)$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 2: Compute the right-hand side of the differential equation.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The equation requires:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒚'=𝒚-𝒙$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Since $𝒚=𝒙+1+𝒄𝒆^{𝒙}$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒚-𝒙=(𝒙+1+𝒄𝒆^{𝒙})-𝒙=1+𝒄𝒆^{𝒙}\;\;(2)$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Step 3: Compare both expressions.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">From differentiation:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒚'=1+𝒄𝒆^{𝒙}\;\;(1)$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">From substitution into $𝒚-𝒙$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒚-𝒙=1+𝒄𝒆^{𝒙}\;\;(2)$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒚'=𝒚-𝒙$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Conclusion:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The proposed function is indeed a solution on $(-\infty,\infty)$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">NOTE:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The constant $𝒄$ remains arbitrary here.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">That means this expression represents a family of solutions, not just
+                                one single curve.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｇｅｎｅｒａｌ　Ｓｏｌｕｔｉｏｎｓ　Ａｎｄ　Ｉｎｉｔｉａｌ　Ｖａｌｕｅ　Ｐｒｏｂｌｅｍｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=881" target="_blank">14:41</a>.
+                General solutions and arbitrary constants. – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 8.1/[14-41]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 8.1/[14-41]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=916"
+                            target="_blank">15:16</a>. A first-order differential equation typically has a solution with
+                        one arbitrary constant $𝒄$.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A solution containing one arbitrary constant is called a general solution.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Geometric interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the general solution represents a family of integral curves. </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=990" target="_blank">16:30</a>.
+                Particular solutions and initial values. – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 8.1/[16-30]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 8.1/[16-30]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">For a particular solution,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">an initial value is required.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Standard initial-value form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚(𝒙_{0})=𝒚_{0}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Geometric meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the initial value selects one specific curve from the family of
+                                solutions.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Equivalently,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">it forces the solution curve to pass through the fixed point
+                                        $(𝒙_{0},𝒚_{0})$.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">NOTE 1:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the arbitrary constant is what distinguishes one curve from another
+                                within the same family.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">once the initial value is imposed,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the constant is determined,</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">and the general solution becomes a particular solution.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">NOTE 2:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Two different initial points can determine the same constant only if
+                                both points lie on the same particular solution curve.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=1255" target="_blank">20:55</a>.
+                🧩 Example 2 — :Initial value problem with $𝒚(0)=0$. – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 8.1/[20-55]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 8.1/[20-55]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the previously verified general solution on🧩Example 1:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒙+1+𝒄𝒆^{𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute the initial value.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0=0+1+𝒄𝒆^{0}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0=1+𝒄$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒄=-1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Particular solution:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒙+1-𝒆^{𝒙}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the initial condition reduces the general solution to one specific
+                                curve.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｓｅｐａｒａｂｌｅ　Ｄｉｆｆｅｒｅｎｔｉａｌ　Ｅｑｕａｔｉｏｎｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 8.1/[26-21]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 8.1/[26-21]-01.png"
+                        alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=1581" target="_blank">26:21</a>.
+                Definition of a separable differential equation.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A separable differential equation is a first-order differential equation that
+                        can be written as a product of:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">a function of $𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and a function of $𝒚$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Structural idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">one factor depends on one variable,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and the other factor depends on the second variable.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main consequence:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the variables can be separated onto opposite sides of the equation.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=1714" target="_blank">28:34</a>.
+                Standard forms of separable equations.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Product form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=𝓰(𝒙)𝒉(𝒚)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Equivalent differential form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{M}(𝒙)\,𝒅𝒙+\mathcal{N}(𝒚)\,𝒅𝒚=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">These two forms are equivalent ways of expressing the same separable structure.
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=1810" target="_blank">30:10</a>.
+                Classification 🧩 examples: separable vs. non-separable.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A differential equation is separable when all $𝒙$-terms can be placed on one
+                        side and all $𝒚$-terms on the other.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If $𝒙$ and $𝒚$ remain mixed in a way that cannot be separated,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the equation is non-separable.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Separable examples:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒙^{2}+1)\,𝒅𝒙+\dfrac{1}{𝒚}\,𝒅𝒚=0$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">already written with the $𝒙$-part and the $𝒚$-part separated
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒕}=𝒌𝒚$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">can be viewed as $𝓰(𝒕)𝒉(𝒚)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">with $𝒌=𝓰(𝒕)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">and $𝒚=𝒉(𝒚)$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Non-separable examples:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=𝒙𝒚^{2}+2𝒙^{2}$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the terms do not factor into one function of $𝒙$ times one
+                                        function of $𝒚$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Compare with:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$\dfrac{𝒅𝒚}{𝒅𝒙}=𝒙^{2}𝒚^{2}+2𝒙^{2}$</li>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$=𝒙^{2}(𝒚^{2}+2)$</li>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">this one is separable, because it can be written as
+                                                <ul>
+                                                    <!-- ▢ nivel-6 -->
+                                                    <li class="level-6">$𝓰(𝒙)𝒉(𝒚)$</li>
+                                                </ul>
+                                            </li>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">with
+                                                <ul>
+                                                    <!-- ▢ nivel-6 -->
+                                                    <li class="level-6">$𝓰(𝒙)=𝒙^{2}$</li>
+                                                    <!-- ▢ nivel-6 -->
+                                                    <li class="level-6">$𝒉(𝒚)=𝒚^{2}+2$ </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒙+𝒚)\,𝒅𝒙+𝒙𝒚\,𝒅𝒚=0$
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the variables remain mixed and cannot be cleanly separated</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｇｅｎｅｒａｌ ｍｅｔｈｏｄ ｆｏｒ ｓｏｌｖｉｎｇ ｂｙ ｓｅｐａｒａｔｉｏｎ ｏｆ ｖａｒｉａｂｌｅｓ．</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=2110" target="_blank">35:10</a>.
+                General method for solving by separation of variables. – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 8.1/[35-10]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 8.1/[35-10]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start with a separable equation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒙}=𝓰(𝒙)\cdot 𝒉(𝒚)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rearrangement:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Divide both sides by $𝒉(𝒚)$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{𝒉(𝒚)}\cdot \dfrac{𝒅𝒚}{𝒅𝒙}=𝓰(𝒙)$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Then separate the variables:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{𝒉(𝒚)}\,𝒅𝒚=𝓰(𝒙)\,𝒅𝒙$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Integrate both sides.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{𝒉(𝒚)}\,𝒅𝒚=\int 𝓰(𝒙)\,𝒅𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">General solution form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{H}(𝒚)=\mathcal{G}(𝒙)+𝒄$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interpretation of the notation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{H}(𝒚)$ is the antiderivative of $\dfrac{1}{𝒉(𝒚)}$ with
+                                respect to $𝒚$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{G}(𝒙)$ is the antiderivative of $𝓰(𝒙)$ with respect to $𝒙$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Heuristic idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The step
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{𝒉(𝒚)}\cdot \dfrac{𝒅𝒚}{𝒅𝒙}=𝓰(𝒙)$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">is treated as if the $𝒅𝒙$ moves to the other side:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{𝒉(𝒚)}\,𝒅𝒚=𝓰(𝒙)\,𝒅𝒙$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">This is the standard separation-of-variables manipulation.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">first separate all $𝒚$-terms from all $𝒙$-terms</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then integrate each side with respect to its own variable</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=2421" target="_blank">40:21</a>.
+                🧩 Example 1 — Solve $\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{𝒚}{𝒙}$ – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 8.1/[40-21]-01.png" target="_blank">[📷image-1]</a><img
+                        src="../img/Calculus 2 Lecture 8.1/[40-21]-01.png" alt="Preview" /></span> – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 8.1/[40-21]-02.png"
+                        target="_blank">[📷image-2]</a><img src="../img/Calculus 2 Lecture 8.1/[40-21]-02.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Recognize it as separable.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Rewrite:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{𝒚}\cdot \dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{1}{𝒙}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Separate and integrate.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{𝒚}\,𝒅𝒚=\int \dfrac{1}{𝒙}\,𝒅𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Logarithmic antiderivatives:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln|𝒚|=\ln|𝒙|+𝒄_{1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=2667"
+                            target="_blank">44:27</a>. Constant manipulation.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Rewrite the constant in logarithmic form so it can be combined with the
+                                other logarithm:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒄_{1}=\ln|𝒆^{𝒄_{1}}|$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Let $𝒄_{2}=𝒆^{𝒄_{1}}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Then $𝒄_{1}=\ln|𝒄_{2}|$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Combine logarithms.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln|𝒚|=\ln|𝒙|+\ln|𝒄_{2}|$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\ln|𝒙\cdot 𝒄_{2}|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Exponentiate both sides.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒆^{\ln|𝒚|}=𝒆^{\ln|𝒙\cdot 𝒄_{2}|}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so $|𝒚|=|𝒙\cdot 𝒄_{2}|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Remove the absolute values.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=\pm 𝒙\cdot 𝒄_{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\pm 𝒄_{2}\,𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Absorb the sign into the constant.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒄=\pm 𝒄_{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒚=𝒄𝒙$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=3040"
+                            target="_blank">50:40</a>. Final general solution.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒄𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">NOTE:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">In logarithmic separable equations, the constant is often rewritten and
+                                renamed so the logarithms can be combined cleanly.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The $\pm$ sign that appears after removing absolute values is absorbed
+                                into the arbitrary constant.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=3362" target="_blank">56:02</a>.
+                🧩 Example 2 — Solve $\dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{𝒙𝒚}{𝒙^{2}+1}$. – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 8.1/[56-02]-01.png" target="_blank">[📷image-1]</a><img
+                        src="../img/Calculus 2 Lecture 8.1/[56-02]-01.png" alt="Preview" /></span> – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 8.1/[56-02]-02.png"
+                        target="_blank">[📷image-2]</a><img src="../img/Calculus 2 Lecture 8.1/[56-02]-02.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Recognize it as separable.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Product form:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{𝒅𝒚}{𝒅𝒙}=𝓰(𝒙)\cdot 𝒉(𝒚)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{𝒅𝒚}{𝒅𝒙}=\left(\dfrac{𝒙}{𝒙^{2}+1}\right)\cdot 𝒚$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Separate the variables.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒚}\cdot \dfrac{𝒅𝒚}{𝒅𝒙}=\dfrac{𝒙}{𝒙^{2}+1}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">hence
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{𝒚}\,𝒅𝒚=\dfrac{𝒙}{𝒙^{2}+1}\,𝒅𝒙$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Integrate both sides.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{𝒚}\,𝒅𝒚=\int \dfrac{𝒙}{𝒙^{2}+1}\,𝒅𝒙$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln|𝒚|=\displaystyle \int \dfrac{𝒙}{𝒙^{2}+1}\,𝒅𝒙+𝒄_{1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the substitution on the right-hand side.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒖=𝒙^{2}+1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then $𝒅𝒖=2𝒙\,𝒅𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so $\dfrac{𝒅𝒖}{2}=𝒙\,𝒅𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle \int \dfrac{𝒙}{𝒙^{2}+1}\,𝒅𝒙=\dfrac{1}{2}\int
+                                        \dfrac{1}{𝒖}\,𝒅𝒖$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{1}{2}\ln|𝒖|$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$=\dfrac{1}{2}\ln|𝒙^{2}+1|$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So the integrated equation becomes:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln|𝒚|=\dfrac{1}{2}\ln|𝒙^{2}+1|+𝒄_{1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=3735"
+                            target="_blank">1:02:15</a>. Rewrite the constant in logarithmic form.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒄_{1}=\ln|𝒆^{𝒄_{1}}|$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒄_{2}=𝒆^{𝒄_{1}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Then:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒄_{1}=\ln|𝒄_{2}|$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute this back into the equation.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln|𝒚|=\dfrac{1}{2}\ln|𝒙^{2}+1|+\ln|𝒄_{2}|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite the factor $\dfrac{1}{2}$ as an exponent.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{2}\ln|𝒙^{2}+1|=\ln|(𝒙^{2}+1)^{1/2}|$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\ln|\sqrt{𝒙^{2}+1}|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Combine the logarithms.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln|𝒚|=\ln|\sqrt{𝒙^{2}+1}|+\ln|𝒄_{2}|$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\ln|\sqrt{𝒙^{2}+1}\cdot 𝒄_{2}|$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Exponentiate both sides.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒆^{\ln|𝒚|}=𝒆^{\ln|\sqrt{𝒙^{2}+1}\cdot 𝒄_{2}|}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$|𝒚|=|\sqrt{𝒙^{2}+1}\cdot 𝒄_{2}|$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Remove the absolute values.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=\pm \sqrt{𝒙^{2}+1}\cdot 𝒄_{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\pm 𝒄_{2}\sqrt{𝒙^{2}+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Absorb the sign into the constant.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒄=\pm 𝒄_{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"> Final general solution.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒄\sqrt{𝒙^{2}+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">NOTE:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Since $𝒙^{2}+1&gt;0$ for every real $𝒙$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\sqrt{𝒙^{2}+1}$ is always defined and positive.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">As in the previous example,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the $\pm$ sign is absorbed into the arbitrary constant.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ａｄｖａｎｃｅｄ　Ｉｎｉｔｉａｌ　Ｖａｌｕｅ　Ｐｒｏｂｌｅｍ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=4173"
+                    target="_blank">1:09:33</a>. 🧩 Example — Solve the IVP: $(𝒚^{2}-1)\dfrac{𝒅𝒚}{𝒅𝒙}=-𝒚𝒆^{𝒙}$
+                with $𝒚(0)=1$. – <span class="image-container"><a href="../img/Calculus 2 Lecture 8.1/[1-09-33]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 8.1/[1-09-33]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Separate the variables.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒚^{2}-1)\,𝒅𝒚=-𝒚𝒆^{𝒙}\,𝒅𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒚^{2}-1}{𝒚}\,𝒅𝒚=-𝒆^{𝒙}\,𝒅𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify the $𝒚$-integrand.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒚^{2}-1}{𝒚}=𝒚-\dfrac{1}{𝒚}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Integrate both sides.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \left(𝒚-\dfrac{1}{𝒚}\right)\,𝒅𝒚=\int
+                                -𝒆^{𝒙}\,𝒅𝒙$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{2}𝒚^{2}-\ln|𝒚|=-𝒆^{𝒙}+𝒄_{1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Multiply through by $2$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚^{2}-2\ln|𝒚|=-2𝒆^{𝒙}+2𝒄_{1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite the logarithmic term.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Since $2\ln|𝒚|=\ln(𝒚^{2})$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒚^{2}-\ln(𝒚^{2})=-2𝒆^{𝒙}+𝒄_{2}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">where $𝒄_{2}=2𝒄_{1}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Apply the initial value.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Substitute $𝒚(0)=1$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$1^{2}-\ln(1^{2})=-2𝒆^{0}+𝒄_{2}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$1-0=-2+𝒄_{2}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒄_{2}=3$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Particular implicit solution.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚^{2}-\ln(𝒚^{2})=-2𝒆^{𝒙}+3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">NOTE:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The solution is left in implicit form.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Solving explicitly for $𝒚$ is not practical here.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｎａｔｕｒａｌ　Ｇｒｏｗｔｈ　＆　Ｄｅｃａｙ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=4727"
+                    target="_blank">1:18:47</a>. Modeling natural growth and decay. – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 8.1/[1-18-47]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 8.1/[1-18-47]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Basic idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Growth or decay occurs at a rate proportional to the size of the
+                                population.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important clarification:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒌𝒕$ does not imply $\dfrac{𝒅𝒚}{𝒅𝒕}=𝒌𝒚$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">In fact, if $𝒚=𝒌𝒕$, then
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{𝒅𝒚}{𝒅𝒕}=𝒌$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">For natural growth and decay, the correct assumption is:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the rate of change is proportional to the current population
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">So:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{𝒅𝒚}{𝒅𝒕}\propto 𝒚$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">hence $\dfrac{𝒅𝒚}{𝒅𝒕}=𝒌𝒚$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">In words:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the rate of change of the population is proportional to the
+                                        population itself.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differential equation model:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒕}=𝒌𝒚$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">where $𝒚=𝒚(𝒕)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interpretation of the derivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒕}$ measures how fast the population changes with
+                                respect to time.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">If $\dfrac{𝒅𝒚}{𝒅𝒕}&gt;0$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the population is increasing.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">If $\dfrac{𝒅𝒚}{𝒅𝒕}&lt;0$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the population is decreasing.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interpretation of $𝒌$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if $𝒌&gt;0$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the population grows</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if $𝒌&lt;0$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the population decays</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Initial value:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚(0)=𝒚_{0}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚_{0}$ represents the starting population.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=5006"
+                    target="_blank">1:23:26</a>. Derivation of the exponential growth/decay law. – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 8.1/[1-23-26]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 8.1/[1-23-26]-01.png"
+                        alt="Preview" /></span> – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 8.1/[1-23-26]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 8.1/[1-23-26]-02.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start from the model:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒕}=𝒌𝒚$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Separate variables:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒚}\cdot \dfrac{𝒅𝒚}{𝒅𝒕}=𝒌$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">hence
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{𝒚}\,𝒅𝒚=𝒌\,𝒅𝒕$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Integrate both sides:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{𝒚}\,𝒅𝒚=\int 𝒌\,𝒅𝒕$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln|𝒚|=𝒌𝒕+𝒄_{1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Exponentiate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒆^{\ln|𝒚|}=𝒆^{𝒌𝒕+𝒄_{1}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒚|=𝒆^{𝒌𝒕}\cdot 𝒆^{𝒄_{1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite the constant:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒄_{2}=𝒆^{𝒄_{1}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$|𝒚|=𝒄_{2}\,𝒆^{𝒌𝒕}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Remove the absolute value:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=\pm 𝒄_{2}\,𝒆^{𝒌𝒕}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Absorb the sign into the constant:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒄=\pm 𝒄_{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒚=𝒄𝒆^{𝒌𝒕}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the initial value $𝒚(0)=𝒚_{0}$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚_{0}=𝒄𝒆^{0}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚_{0}=𝒄$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final model:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒚_{0}𝒆^{𝒌𝒕}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚_{0}$ is the initial population.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The constant $𝒌$ determines whether the model describes growth or
+                                decay.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｍｏｄｅｌ　Ａｓｓｕｍｐｔｉｏｎｓ　Ｆｏｒ　Ｎａｔｕｒａｌ　Ｇｒｏｗｔｈ　＆　Ｄｅｃａｙ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=6255"
+                    target="_blank">1:44:15</a>. Modeling assumption for the exponential growth/decay model.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Core assumption:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The equation $\dfrac{𝒅𝒚}{𝒅𝒕}=𝒌𝒚$ can only be used when the problem
+                                states that the growth or decay rate is <strong>proportional</strong> to the current
+                                population.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">This proportionality cannot be assumed unless it is explicitly given in
+                                the statement.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important remark:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Not every growth or decay process is proportional to the population
+                                size.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Some external effects may act non-proportionally, so the model
+                                $\dfrac{𝒅𝒚}{𝒅𝒕}=𝒌𝒚$ would no longer be appropriate.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Example of a non-proportional effect:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">If an external agent acts independently of the current population size,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the population may decrease in a way that is not proportional to
+                                        $𝒚$.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">In such a case,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the exponential model should not be assumed.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Λｐｐｌｉｃａｔｉｏｎｓ</h2>
+
+        <h2>1 - Ｂａｃｔｅｒｉａｌ　Ｇｒｏｗｔｈ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=6405"
+                    target="_blank">1:46:45</a>. 🧩 Application — Bacterial growth. – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 8.1/[1-46-45]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 8.1/[1-46-45]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Growth of bacteria is proportional to its population. Initially, 600 bacteria
+                        are present. After 3 hours, 10,000 bacteria are present.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Modeling assumption:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the growth of the bacteria is proportional to its population.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Initial data:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">initially there are 600 bacteria</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">after 3 hours there are 10,000 bacteria</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the number of bacteria after $𝒕$ hours.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start from the natural growth model:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒚_{0}𝒆^{𝒌𝒕}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute the initial population.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=600𝒆^{𝒌𝒕}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the second data point:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚(3)=10{,}000$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$10{,}000=600𝒆^{3𝒌}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{50}{3}=𝒆^{3𝒌}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Solve more efficiently for $𝒆^{𝒌}$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(\dfrac{50}{3}\right)^{1/3}=\left(𝒆^{3𝒌}\right)^{1/3}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒆^{𝒌}=\left(\dfrac{50}{3}\right)^{1/3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite the model.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=600𝒆^{𝒌𝒕}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=600(𝒆^{𝒌})^{𝒕}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=600\left[\left(\dfrac{50}{3}\right)^{1/3}\right]^{𝒕}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=600\left(\dfrac{50}{3}\right)^{𝒕/3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final model:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=600\left(\dfrac{50}{3}\right)^{𝒕/3}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=6948"
+                    target="_blank">1:55:48</a>. Population after 5 hours.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute $𝒕=5$ into the model.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=600\left(\dfrac{50}{3}\right)^{5/3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Numerical value:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚\approx 65248$ bacteria</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=7093"
+                    target="_blank">1:58:13</a>. Time required to reach 24,000 bacteria.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Set
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$24000=600\left(\dfrac{50}{3}\right)^{𝒕/3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$40=\left(\dfrac{50}{3}\right)^{𝒕/3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Take logarithms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(40)=\left(\dfrac{𝒕}{3}\right)\ln\left(\dfrac{50}{3}\right)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Solve for $𝒕$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒕=\dfrac{3\ln(40)}{\ln\left(\dfrac{50}{3}\right)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Approximate time:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒕\approx 3.93$ hours</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>2 - Ｈａｌｆ－Ｌｉｆｅ　＆　Ｒａｄｉｏａｃｔｉｖｅ　Ｄｅｃａｙ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=7355"
+                    target="_blank">2:02:35</a>. 🧩 Application — Half-life and radioactive decay model. – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 8.1/[2-02-35]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 8.1/[2-02-35]-01.png"
+                        alt="Preview" /></span> – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 8.1/[2-02-35]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 8.1/[2-02-35]-02.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Suppose the half-life of compound A is 1602 years. We have 100 mg to start. Find
+                        the amount after $𝒕$ years.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">half-life = 1602 years</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">initial amount = 100 mg</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the amount after $𝒕$ years.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Start from the natural decay model:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒚_{0}𝒆^{𝒌𝒕}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute the initial amount.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=100𝒆^{𝒌𝒕}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Half-life condition:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">after 1602 years, half of the initial amount remains
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒚(1602)=50$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$50=100𝒆^{1602𝒌}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{2}=𝒆^{1602𝒌}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Solve for $𝒆^{𝒌}$.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(\dfrac{1}{2}\right)^{1/1602}=\left(𝒆^{1602𝒌}\right)^{1/1602}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒆^{𝒌}=\left(\dfrac{1}{2}\right)^{1/1602}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite the model.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=100𝒆^{𝒌𝒕}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=100(𝒆^{𝒌})^{𝒕}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=100\left[\left(\dfrac{1}{2}\right)^{1/1602}\right]^{𝒕}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=100\left(\dfrac{1}{2}\right)^{𝒕/1602}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final decay model:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=100\left(\dfrac{1}{2}\right)^{𝒕/1602}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Amount remaining after 1000 years.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute $𝒕=1000$ into the model.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=100\left(\dfrac{1}{2}\right)^{1000/1602}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Numerical value:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚\approx 64.88$ mg</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Time required for the amount to decay to 40 mg.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Set
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$40=100\left(\dfrac{1}{2}\right)^{𝒕/1602}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{2}{5}=\left(\dfrac{1}{2}\right)^{𝒕/1602}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Take logarithms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\ln\left(\dfrac{2}{5}\right)=\left(\dfrac{𝒕}{1602}\right)\ln\left(\dfrac{1}{2}\right)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Solve for $𝒕$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $𝒕=\dfrac{1602\ln\left(\dfrac{2}{5}\right)}{\ln\left(\dfrac{1}{2}\right)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Approximate time:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒕\approx 2118$ years</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3 - Ｎｅｗｔｏｎ’ｓ　Ｌａｗ　Ｏｆ　Ｃｏｏｌｉｎｇ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=8275"
+                    target="_blank">2:17:55</a>. 🧩 Application — Newton’s Law of Cooling. – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 8.1/[2-17-55]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 8.1/[2-17-55]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Basic principle:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">A body cools at a rate proportional to the difference between:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the temperature of the body</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">and the ambient temperature</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differential equation model:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒕}=𝒌(𝒚-𝒚_{𝒂})$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning of the variables:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚$ = temperature of the body</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒕$ = time</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚_{𝒂}$ = ambient temperature</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The cooling rate depends not just on $𝒚$ itself,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">but on how far $𝒚$ is from the ambient temperature.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">As $𝒚$ gets closer to $𝒚_{𝒂}$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the rate of cooling becomes smaller.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3.1 - Ｔｕｒｋｅｙ　Ｃｏｏｌｉｎｇ　Ｃａｓｅ　Ｓｔｕｄｙ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 8.1/[2-22-22]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 8.1/[2-22-22]-01.png"
+                        alt="Preview" /></span> – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 8.1/[2-22-22]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 8.1/[2-22-22]-02.png" alt="Preview" /></span> – <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 8.1/[2-22-22]-03.png"
+                        target="_blank">[📷image-3]</a><img src="../img/Calculus 2 Lecture 8.1/[2-22-22]-03.png"
+                        alt="Preview" /></span> – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 8.1/[2-22-22]-04.png" target="_blank">[📷image-4]</a><img
+                        src="../img/Calculus 2 Lecture 8.1/[2-22-22]-04.png" alt="Preview" /></span> </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=8542"
+                    target="_blank">2:22:22</a>. 🧩 C ase study — Cooling of a turkey.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A turkey is taken out of an oven at 225°. After 20 min, the temperature was
+                        185°. The temperature of my house was 70°.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Conditions:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">ambient temperature $𝒚_{𝒂}=70$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚(0)=225$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚(20)=185$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interpretation of the variables:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚(𝒕)$ = temperature of the turkey</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒕$ = time in minutes</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute the ambient temperature into the model:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒅𝒚}{𝒅𝒕}=𝒌(𝒚-70)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"> Separate the variables.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rearrangement:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{𝒚-70}\cdot \dfrac{𝒅𝒚}{𝒅𝒕}=𝒌$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">hence
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\dfrac{1}{𝒚-70}\,𝒅𝒚=𝒌\,𝒅𝒕$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Integrate both sides:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{𝒚-70}\,𝒅𝒚=\int 𝒌\,𝒅𝒕$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln|𝒚-70|=𝒌𝒕+𝒄_{1}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Solve the general form.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Exponentiate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒆^{\ln|𝒚-70|}=𝒆^{𝒌𝒕+𝒄_{1}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$|𝒚-70|=𝒆^{𝒌𝒕}\cdot 𝒆^{𝒄_{1}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite the constant:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒄_{2}=𝒆^{𝒄_{1}}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$|𝒚-70|=𝒄_{2}𝒆^{𝒌𝒕}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Remove the absolute value:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚-70=\pm 𝒄_{2}𝒆^{𝒌𝒕}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Absorb the sign into the constant:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Let $𝒄=\pm 𝒄_{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒚-70=𝒄𝒆^{𝒌𝒕}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=9390"
+                    target="_blank">2:36:30</a>. Apply the first condition $𝒚(0)=225$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute into the general solution:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$225-70=𝒄𝒆^{𝒌\cdot 0}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$155=𝒄$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚-70=155𝒆^{𝒌𝒕}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Apply the second condition $𝒚(20)=185$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$185-70=155𝒆^{20𝒌}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$115=155𝒆^{20𝒌}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{23}{31}=𝒆^{20𝒌}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Solve more efficiently for $𝒆^{𝒌}$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(\dfrac{23}{31}\right)^{1/20}=\left(𝒆^{20𝒌}\right)^{1/20}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒆^{𝒌}=\left(\dfrac{23}{31}\right)^{1/20}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Final temperature model.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚-70=155𝒆^{𝒌𝒕}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=155(𝒆^{𝒌})^{𝒕}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=155\left[\left(\dfrac{23}{31}\right)^{1/20}\right]^{𝒕}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=155\left(\dfrac{23}{31}\right)^{𝒕/20}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=70+155\left(\dfrac{23}{31}\right)^{𝒕/20}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=9885"
+                    target="_blank">2:44:45</a>. Temperature after 30 minutes.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute $𝒕=30$ into the model:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=70+155\left(\dfrac{23}{31}\right)^{30/20}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Approximate value:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚\approx 169°$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=WxVaVzxsDb0&t=9965"
+                    target="_blank">2:46:05</a>. Time needed for the turkey to cool to 125°F.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Set:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$125=70+155\left(\dfrac{23}{31}\right)^{𝒕/20}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$55=155\left(\dfrac{23}{31}\right)^{𝒕/20}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{11}{31}=\left(\dfrac{23}{31}\right)^{𝒕/20}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Take logarithms:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\ln\left(\dfrac{11}{31}\right)=\left(\dfrac{𝒕}{20}\right)\ln\left(\dfrac{23}{31}\right)$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Solve for $𝒕$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $𝒕=\dfrac{20\ln\left(\dfrac{11}{31}\right)}{\ln\left(\dfrac{23}{31}\right)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Approximate time:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒕\approx 69.4$ minutes</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">NOTE:
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The model predicts that the turkey cools quickly at first,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">because the difference between its temperature and the room temperature
+                                is large.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Later the cooling slows down,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">because the turkey gets closer to the ambient temperature 70.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｃｏｒｅ　Ｉｄｅａｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">Main conceptual summary.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A first-order differential equation involves a first derivative.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A general solution contains one arbitrary constant.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">An initial value selects one particular solution.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Separable equations are solved by:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">separating variables</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">integrating both sides</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and then simplifying algebraically</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Many natural models arise from separable equations:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">exponential growth</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">exponential decay</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">half-life</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Newton’s law of cooling</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </article>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+﻿image_name: [11-31]Example Advanced Expansion ln( 𝒙⁵ sin²(π𝒙) ∕ ∛(𝒙⁴ + 2) ).png
+file_name: [11-31]-01.png
+timestamp: 11:31
+counter: 01
+folder: Calculus 2 Lecture 6.1

@@ -1,0 +1,5 @@
+﻿image_name: [1-28-30]Example 4 — Power series centered at 2 ∑[𝒏=1,∞] (𝒙 - 2)ⁿ∕(𝒏² ⋅ 3ⁿ)_2.png
+file_name: [1-28-30]-02.png
+timestamp: 1:28:30
+counter: 02
+folder: Calculus 2 Lecture 9.7

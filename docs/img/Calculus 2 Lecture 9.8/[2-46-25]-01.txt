@@ -1,0 +1,5 @@
+﻿image_name: [2-46-25]Example 8 — Find Maclaurin series for Sinh(𝒙).png
+file_name: [2-46-25]-01.png
+timestamp: 2:46:25
+counter: 01
+folder: Calculus 2 Lecture 9.8

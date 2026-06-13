@@ -1,0 +1,5 @@
+﻿image_name: [33-31]Example 3 —  ∑[𝒏=2,∞] (-1)ⁿ⁻¹ ⋅ √(𝒏 + 1)∕(𝒏 - 1)_2.png
+file_name: [33-31]-02.png
+timestamp: 33:31
+counter: 02
+folder: Calculus 2 Lecture 9.5

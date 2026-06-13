@@ -1,0 +1,5 @@
+﻿image_name: [8-12]Example 1 — Evaluate the integral ∫[1, ∞] 1∕𝒙² 𝒅𝒙.png
+file_name: [8-12]-01.png
+timestamp: 8:12
+counter: 01
+folder: Calculus 2 Lecture 7.6

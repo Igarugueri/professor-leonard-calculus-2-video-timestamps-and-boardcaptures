@@ -1,0 +1,5 @@
+﻿image_name: [1-40-19]Quick guide for choosing tests._2.png
+file_name: [1-40-19]-02.png
+timestamp: 1:40:19
+counter: 02
+folder: Calculus 2 Lecture 9.6

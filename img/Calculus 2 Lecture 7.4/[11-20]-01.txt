@@ -1,0 +1,5 @@
+﻿image_name: [11-20]Example 1 — Distinct linear factors ∫ (4𝒙² − 4𝒙 + 6)∕(𝒙³ − 𝒙² − 6𝒙) 𝒅𝒙_1.png
+file_name: [11-20]-01.png
+timestamp: 11:20
+counter: 01
+folder: Calculus 2 Lecture 7.4

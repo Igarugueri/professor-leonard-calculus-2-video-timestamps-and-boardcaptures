@@ -1,0 +1,5 @@
+﻿image_name: [1-09-33]Example — Solve the IVP (𝒚² − 1) 𝒅𝒚∕𝒅𝒙 = −𝒚𝒆ˣ with 𝒚(0) = 1.png
+file_name: [1-09-33]-01.png
+timestamp: 1:09:33
+counter: 01
+folder: Calculus 2 Lecture 8.1

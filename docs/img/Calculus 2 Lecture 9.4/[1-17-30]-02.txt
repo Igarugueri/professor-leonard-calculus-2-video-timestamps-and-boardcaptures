@@ -1,0 +1,5 @@
+﻿image_name: [1-17-30]Advanced Example 2 — ∑ (√𝒏 + ln(𝒏))∕(𝒏² + 1)_2.png
+file_name: [1-17-30]-02.png
+timestamp: 1:17:30
+counter: 02
+folder: Calculus 2 Lecture 9.4

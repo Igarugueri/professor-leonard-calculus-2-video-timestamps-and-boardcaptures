@@ -1,0 +1,5 @@
+﻿image_name: [20-03]General Table of Derivatives and Integrals.png
+file_name: [20-03]-01.png
+timestamp: 20:03
+counter: 01
+folder: Calculus 2 Lecture 6.6

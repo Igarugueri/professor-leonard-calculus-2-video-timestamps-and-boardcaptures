@@ -1,0 +1,5 @@
+﻿image_name: [33-43]Conversion — Rectangular to polar (3, -4).png
+file_name: [33-43]-01.png
+timestamp: 33:43
+counter: 01
+folder: Calculus 2 Lecture 10.4

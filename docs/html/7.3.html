@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ７．３ - Ｉｎｔｅｇｒａｌｓ Ｂｙ Ｔｒｉｇｏｎｏｍｅｔｒｉｃ Ｓｕｂｓｔｉｔｕｔｉｏｎ</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <article class="chapter">
+    <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ７．３</h1>
+    <h1>Ｉｎｔｅｇｒａｌｓ Ｂｙ Ｔｒｉｇｏｎｏｍｅｔｒｉｃ Ｓｕｂｓｔｉｔｕｔｉｏｎ</h1>
+
+    <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=1" target="_blank">[0:01]</a>.
+        Introduction to Section 7.3: Trigonometric Substitution.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Standard integration methods do not directly handle certain radical expressions.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The method is motivated by the Pythagorean Theorem and right-triangle constructions.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>🧩 Ｆｉｒｓｔ Ｍｏｄｅｌ Ｅｘａｍｐｌｅ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">– <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[1-12]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[1-12]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[1-12]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[1-12]-02.png" alt="Preview" />
+        </span></li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=72" target="_blank">[1:12]</a>.
+        Geometric interpretation of radicals.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Relate the radical to the Pythagorean Theorem and a right triangle.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sqrt{1+𝒙^{2}}=\sqrt{1^{2}+𝒙^{2}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Determine whether the radical represents the hypotenuse or a leg.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">General classification:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">In a form like $\sqrt{𝒂^{2}+𝒙^{2}}$, the radical is the hypotenuse.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">In a form like $\sqrt{𝒂^{2}-𝒙^{2}}$, the radical is a leg.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">In a form like $\sqrt{𝒙^{2}-𝒂^{2}}$, the radical is also a leg.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">NOTE: The letter $𝒂$ is just the constant in the expression. Its role depends on
+                    the form of the radical:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">if the hypotenuse is the constant term, then $𝒂$ is the hypotenuse;</li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">if the variable $𝒙$ term is the hypotenuse, then $𝒂$ is a leg.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Using the usual right-triangle notation:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Form $\sqrt{𝒂^{2}+𝓫^{2}}$: the radical is the hypotenuse $𝓬$.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Form $𝒂=\sqrt{𝓬^{2}-𝓫^{2}}$: the radical is a leg.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Form $𝓫=\sqrt{𝓬^{2}-𝒂^{2}}$: the radical is a leg.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=254" target="_blank">[4:14]</a>.
+        Strategy for constructing the reference triangle.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Build the triangle for the model radical $\sqrt{1+𝒙^{2}}$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">adjacent side = $1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">opposite side = $𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">hypotenuse = $\sqrt{1+𝒙^{2}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Arrange the triangle so that a basic trig ratio gives $𝒙/𝒂$.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Trigonometric relation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\tan(\theta)=\dfrac{𝒙}{1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\tan(\theta)=𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">First substitution model:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙=\tan(\theta)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the radical:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sqrt{1+𝒙^{2}}\to\sqrt{1+\tan^{2}(\theta)}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Differentiate:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒙=\sec^{2}(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=425" target="_blank">[7:05]</a>.
+        Rewrite the integral using the substitution.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙=\tan(\theta)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒙=\sec^{2}(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Transform the radical:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sqrt{1+𝒙^{2}}\to\sqrt{1+\tan^{2}(\theta)}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=592" target="_blank">[9:52]</a>.
+        Trigonometric integral obtained after substitution.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$1+\tan^{2}(\theta)=\sec^{2}(\theta)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Then:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sqrt{1+\tan^{2}(\theta)}=\sqrt{\sec^{2}(\theta)}=\sec(\theta)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The integral becomes:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \sec^{3}(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the known secant-power result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int
+                \sec^{3}(\theta)\,𝒅\theta=\dfrac{1}{2}\sec(\theta)\tan(\theta)+\dfrac{1}{2}\ln|\sec(\theta)+\tan(\theta)|+\mathcal{C}$
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=884" target="_blank">[14:44]</a>.
+        Return to the original variable using the triangle.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Recover the trigonometric functions:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sec(\theta)=\sqrt{1+𝒙^{2}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\tan(\theta)=𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute back into the antiderivative.</li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=1038" target="_blank">[17:18]</a>.
+        Final result.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The antiderivative is:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{2}𝒙\sqrt{1+𝒙^{2}}+\dfrac{1}{2}\ln|\sqrt{1+𝒙^{2}}+𝒙|+\mathcal{C}$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">See lecture 7.1</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｔｈｅ Ｔｈｒｅｅ Ｓｔａｎｄａｒｄ Ｃａｓｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=1136" target="_blank">[18:56]</a>.
+        Classification of the three standard trig-substitution forms. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[18-56]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[18-56]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[18-56]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[18-56]-02.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Case 1: $\sqrt{𝒂^{2}-𝒙^{2}}$
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Build the triangle associated with sine substitution.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use $𝒙=𝒂\sin(\theta)$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=1656" target="_blank">[27:36]</a>.
+            Case 2: $\sqrt{𝒂^{2}+𝒙^{2}}$
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Build the triangle associated with tangent substitution.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use $𝒙=𝒂\tan(\theta)$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=1840" target="_blank">[30:40]</a>.
+            Case 3: $\sqrt{𝒙^{2}-𝒂^{2}}$
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Build the triangle associated with secant substitution.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use $𝒙=𝒂\sec(\theta)$.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｅｘａｍｐｌｅｓ — Ｔｒｉｇｏｎｏｍｅｔｒｉｃ Ｓｕｂｓｔｉｔｕｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=2196" target="_blank">[36:36]</a>. 🧩
+        Example 1 — : $\displaystyle \int \dfrac{𝒙^{2}}{\sqrt{9-𝒙^{2}}}\,𝒅𝒙$. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[36-36]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[36-36]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[36-36]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[36-36]-02.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[36-36]-03.png" target="_blank">[📷image-3]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[36-36]-03.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Identify the radical as the form $\sqrt{𝒂^{2}-𝒙^{2}}$.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Build the reference triangle:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">hypotenuse = $3$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">opposite side = $𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">adjacent side = $\sqrt{9-𝒙^{2}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Trigonometric relation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin(\theta)=\dfrac{𝒙}{3}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitution:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙=3\sin(\theta)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒙=3\cos(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute into the integral:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \dfrac{(3\sin(\theta))^{2}}{\sqrt{9-(3\sin(\theta))^{2}}}\cdot
+                3\cos(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Simplify the radical:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sqrt{9-9\sin^{2}(\theta)}=3\sqrt{1-\sin^{2}(\theta)}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$1-\sin^{2}(\theta)=\cos^{2}(\theta)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Reduce the integral to:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$9\displaystyle \int \sin^{2}(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite $\sin^{2}(\theta)$ with the half-angle identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin^{2}(\theta)=\dfrac{1}{2}(1-\cos(2\theta))$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Integrate:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$9\displaystyle \int \dfrac{1}{2}(1-\cos(2\theta))\,𝒅\theta$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{9}{2}\Big[\theta-\dfrac{1}{2}\sin(2\theta)\Big]+\mathcal{C}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite in terms of $𝒙$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\theta=\sin^{-1}\left(\dfrac{𝒙}{3}\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin(\theta)=\dfrac{𝒙}{3}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\cos(\theta)=\dfrac{\sqrt{9-𝒙^{2}}}{3}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin(2\theta)=2\sin(\theta)\cos(\theta)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{9}{2}\sin^{-1}\left(\dfrac{𝒙}{3}\right)-\dfrac{1}{2}𝒙\sqrt{9-𝒙^{2}}+\mathcal{C}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=3265" target="_blank">[54:25]</a>. 🧩
+        Example 2 — Definite integral: $\displaystyle \int_{1}^{\sqrt{3}}\dfrac{1}{(1+𝒙^{2})^{3/2}}\,𝒅𝒙$. – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[54-25]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[54-25]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the denominator as a radical power:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{(\sqrt{1+𝒙^{2}})^{3}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Build the reference triangle for $\sqrt{1+𝒙^{2}}$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">adjacent side = $1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">opposite side = $𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">hypotenuse = $\sqrt{1+𝒙^{2}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Trigonometric relation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\tan(\theta)=𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitution:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙=\tan(\theta)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒙=\sec^{2}(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=3677"
+              target="_blank">[1:01:17]</a>. Change the bounds:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙=1\to\theta=\pi/4$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙=\sqrt{3}\to\theta=\pi/3$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙\in[1,\sqrt{3}]\to\theta\in[\pi/4,\pi/3]$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Transform the integral:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle
+                \int_{\pi/4}^{\pi/3}\dfrac{\sec^{2}(\theta)}{(\sqrt{1+\tan^{2}(\theta)})^{3}}\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$1+\tan^{2}(\theta)=\sec^{2}(\theta)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Simplify to the elementary integral:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{\pi/4}^{\pi/3}\cos(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Evaluate:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin(\theta)\Big|_{\pi/4}^{\pi/3}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\sin(\pi/3)-\sin(\pi/4)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{\sqrt{3}-\sqrt{2}}{2}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=4257" target="_blank">[1:10:57]</a>. 🧩
+        Example 3 —: $\displaystyle \int \dfrac{\sqrt{𝒙^{2}-4}}{𝒙^{4}}\,𝒅𝒙$. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[1-10-57]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[1-10-57]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[1-10-57]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[1-10-57]-02.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Identify the standard form:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sqrt{𝒙^{2}-𝒂^{2}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Build the reference triangle:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">hypotenuse = $𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">adjacent side = $2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">opposite side = $\sqrt{𝒙^{2}-4}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Trigonometric relation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sec(\theta)=\dfrac{𝒙}{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitution:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙=2\sec(\theta)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒙=2\sec(\theta)\tan(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Transform the integral:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \dfrac{\sqrt{(2\sec(\theta))^{2}-4}}{(2\sec(\theta))^{4}}\cdot
+                2\sec(\theta)\tan(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Simplify step by step:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sqrt{4\sec^{2}(\theta)-4}=2\sqrt{\sec^{2}(\theta)-1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sec^{2}(\theta)-1=\tan^{2}(\theta)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integral becomes:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{1}{4}\displaystyle \int
+                    \dfrac{\tan^{2}(\theta)}{\sec^{3}(\theta)}\,𝒅\theta$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite in sine and cosine:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{\tan^{2}(\theta)}{\sec^{3}(\theta)}=\sin^{2}(\theta)\cos(\theta)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{1}{4}\displaystyle \int \sin^{2}(\theta)\cos(\theta)\,𝒅\theta$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Secondary substitution:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒖=\sin(\theta)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒖=\cos(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Resulting polynomial integral:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{4}\displaystyle \int 𝒖^{2}\,𝒅𝒖$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Antiderivative:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{12}\sin^{3}(\theta)+\mathcal{C}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Return to the original variable using the triangle:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin(\theta)=\dfrac{\sqrt{𝒙^{2}-4}}{𝒙}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{12}\left[\dfrac{\sqrt{𝒙^{2}-4}}{𝒙}\right]^{3}+\mathcal{C}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{(𝒙^{2}-4)^{3/2}}{12𝒙^{3}}+\mathcal{C}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=q6JwTGpG8b4&t=5593" target="_blank">[1:33:13]</a>. 🧩
+        Example 4 — Evaluate $\displaystyle \int \dfrac{1}{(3-2𝒙-𝒙^{2})^{5/2}}\,𝒅𝒙$. – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[1-33-13]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[1-33-13]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[1-33-13]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[1-33-13]-02.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[36-36]-03.png" target="_blank">[📷image-3]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[36-36]-03.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.3/[1-33-13]-04.png" target="_blank">[📷image-4]</a>
+          <img src="../img/Calculus 2 Lecture 7.3/[1-33-13]-04.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the denominator as a radical power:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \dfrac{1}{[\sqrt{3-2𝒙-𝒙^{2}}]^{5}}\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Complete the square in the quadratic expression:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$3-2𝒙-𝒙^{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-𝒙^{2}-2𝒙+3$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-(𝒙^{2}+2𝒙)+3$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-(𝒙^{2}+2𝒙+1)+3+1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-(𝒙+1)^{2}+4$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=4-(𝒙+1)^{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute this back into the integral:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \dfrac{1}{[\sqrt{4-(𝒙+1)^{2}}]^{5}}\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">First substitution to standardize the radical:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒖=𝒙+1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒖=𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The integral becomes:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \dfrac{1}{[\sqrt{4-𝒖^{2}}]^{5}}\,𝒅𝒖$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Recognize the form:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sqrt{2^{2}-𝒖^{2}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Build the reference triangle:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">hypotenuse = $2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">opposite side = $𝒖$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">adjacent side = $\sqrt{4-𝒖^{2}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Trigonometric substitution:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin(\theta)=\dfrac{𝒖}{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒖=2\sin(\theta)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒖=2\cos(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute into the integral:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \dfrac{1}{[\sqrt{4-(2\sin(\theta))^{2}}]^{5}}\cdot
+                2\cos(\theta)\,𝒅\theta$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int \dfrac{1}{[\sqrt{4-4\sin^{2}(\theta)}]^{5}}\cdot
+                2\cos(\theta)\,𝒅\theta$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int \dfrac{1}{[2\sqrt{1-\sin^{2}(\theta)}]^{5}}\cdot
+                2\cos(\theta)\,𝒅\theta$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int
+                \dfrac{2\cos(\theta)}{32[\sqrt{1-\sin^{2}(\theta)}]^{5}}\,𝒅\theta$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{16}\displaystyle \int
+                \dfrac{\cos(\theta)}{[\sqrt{1-\sin^{2}(\theta)}]^{5}}\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$1-\sin^{2}(\theta)=\cos^{2}(\theta)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Then:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{16}\displaystyle \int
+                \dfrac{\cos(\theta)}{[\sqrt{\cos^{2}(\theta)}]^{5}}\,𝒅\theta$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{16}\displaystyle \int \dfrac{\cos(\theta)}{\cos^{5}(\theta)}\,𝒅\theta$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{16}\displaystyle \int \dfrac{1}{\cos^{4}(\theta)}\,𝒅\theta$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{16}\displaystyle \int \sec^{4}(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite $\sec^{4}(\theta)$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{16}\displaystyle \int \sec^{2}(\theta)\cdot \sec^{2}(\theta)\,𝒅\theta$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sec^{2}(\theta)=\tan^{2}(\theta)+1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">So:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{16}\displaystyle \int (\tan^{2}(\theta)+1)\cdot \sec^{2}(\theta)\,𝒅\theta$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Secondary substitution:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\mathcal{W}=\tan(\theta)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅\mathcal{W}=\sec^{2}(\theta)\,𝒅\theta$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The integral becomes:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{16}\displaystyle \int (\mathcal{W}^{2}+1)\,𝒅\mathcal{W}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Integrate:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{16}\Big[\dfrac{1}{3}\mathcal{W}^{3}+\mathcal{W}\Big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{16}\Big[\dfrac{1}{3}\tan^{3}(\theta)+\tan(\theta)\Big]$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Return from $\theta$ to $𝒖$ using the triangle:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\tan(\theta)=\dfrac{\text{opposite}}{\text{adjacent}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\tan(\theta)=\dfrac{𝒖}{\sqrt{4-𝒖^{2}}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{1}{16}\left[\dfrac{1}{3}\left(\dfrac{𝒖}{\sqrt{4-𝒖^{2}}}\right)^{3}+\dfrac{𝒖}{\sqrt{4-𝒖^{2}}}\right]+\mathcal{C}$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Put both terms over the same denominator:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $=\dfrac{1}{16}\left[\dfrac{𝒖^{3}}{3(\sqrt{4-𝒖^{2}})^{3}}+\dfrac{3𝒖(4-𝒖^{2})}{3(\sqrt{4-𝒖^{2}})^{3}}\right]+\mathcal{C}$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Combine the numerators:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{16}\dfrac{𝒖^{3}+3𝒖(4-𝒖^{2})}{3(\sqrt{4-𝒖^{2}})^{3}}+\mathcal{C}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{16}\dfrac{𝒖^{3}+12𝒖-3𝒖^{3}}{3(\sqrt{4-𝒖^{2}})^{3}}+\mathcal{C}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{16}\dfrac{12𝒖-2𝒖^{3}}{3(\sqrt{4-𝒖^{2}})^{3}}+\mathcal{C}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{24}\dfrac{6𝒖-𝒖^{3}}{(\sqrt{4-𝒖^{2}})^{3}}+\mathcal{C}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute back $𝒖=𝒙+1$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{1}{24}\dfrac{6(𝒙+1)-(𝒙+1)^{3}}{(\sqrt{4-(𝒙+1)^{2}})^{3}}+\mathcal{C}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Expand the numerator:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$6(𝒙+1)=6𝒙+6$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$(𝒙+1)^{3}=𝒙^{3}+3𝒙^{2}+3𝒙+1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$6(𝒙+1)-(𝒙+1)^{3}$
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=6𝒙+6-(𝒙^{3}+3𝒙^{2}+3𝒙+1)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=6𝒙+6-𝒙^{3}-3𝒙^{2}-3𝒙-1$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=5+3𝒙-3𝒙^{2}-𝒙^{3}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Simplify the denominator:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$4-(𝒙+1)^{2}=4-(𝒙^{2}+2𝒙+1)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=3-2𝒙-𝒙^{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{24}\dfrac{5+3𝒙-3𝒙^{2}-𝒙^{3}}{(\sqrt{3-2𝒙-𝒙^{2}})^{3}}+\mathcal{C}$
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+    <p><a href="https://openstax.org/books/calculus-volume-2/pages/3-3-trigonometric-substitution"
+        target="_blank">[openstax🌐]</a></p>
+
+  </article>
+</body>
+
+</html>

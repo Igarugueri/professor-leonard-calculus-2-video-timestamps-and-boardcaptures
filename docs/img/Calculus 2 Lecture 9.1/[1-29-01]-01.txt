@@ -1,0 +1,5 @@
+﻿image_name: [1-29-01]Example — Sequence 𝒂ₙ = (-1)ⁿ∕𝒏.png
+file_name: [1-29-01]-01.png
+timestamp: 1:29:01
+counter: 01
+folder: Calculus 2 Lecture 9.1

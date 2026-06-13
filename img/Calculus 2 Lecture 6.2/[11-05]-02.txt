@@ -1,0 +1,5 @@
+﻿image_name: [11-05]Graphical and geometric relationship of inverse functions.png
+file_name: [11-05]-02.png
+timestamp: 11:05
+counter: 02
+folder: img

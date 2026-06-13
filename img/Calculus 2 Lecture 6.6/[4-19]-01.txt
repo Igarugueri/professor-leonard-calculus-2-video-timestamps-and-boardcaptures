@@ -1,0 +1,5 @@
+﻿image_name: [4-19]Hyperbolic Function Identities.png
+file_name: [4-19]-01.png
+timestamp: 4:19
+counter: 01
+folder: Calculus 2 Lecture 6.6

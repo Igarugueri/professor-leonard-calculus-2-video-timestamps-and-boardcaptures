@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ７．６－Ｉｍｐｒｏｐｅｒ Ｉｎｔｅｇｒａｌｓ</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <article class="chapter">
+    <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ７．６</h1>
+    <h1>Ｉｍｐｒｏｐｅｒ Ｉｎｔｅｇｒａｌｓ</h1>
+    <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=0" target="_blank">[0:00]</a>.
+        Introduction to improper integrals and conditions for existence. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 7.6/[0-00]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 7.6/[0-00]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=39" target="_blank">[0:39]</a>.
+            Fundamental requirement:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Usual conditions for a definite integral
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int_{𝒂}^{𝒃} 𝒇(𝒙)\,𝒅𝒙$, $𝒇(𝒙)$ must be bounded and finite
+                    on $[𝒂,𝒃]$.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=77" target="_blank">[1:17]</a>.
+            Visual definition:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Improper integrals arise when the region extends infinitely.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Or when the integrand is not bounded on the interval.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｆｕｎｄａｍｅｎｔａｌ　Ｃａｓｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=134" target="_blank">[2:14]</a>.
+        Classification of the two fundamental cases. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 7.6/[2-14]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 7.6/[2-14]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Informal idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">An improper integral appears when the usual conditions for a definite integral fail.
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">That typically happens because:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the interval is infinite,</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">or the function is unbounded on the interval.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><strong>Case 1</strong>:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The interval of integration is infinite.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">It starts at 𝒂 but extends without bound.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><strong>Case 2</strong>:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The interval $[𝒂,𝒃]$ is finite,</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">but the function $𝒇(𝒙)$ is unbounded (has an infinite discontinuity) at an endpoint
+                or at some point inside the interval.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｃａｓｅ　1　—　Ｉｎｆｉｎｉｔｅ　Ｉｎｔｅｒｖａｌｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=492" target="_blank">[8:12]</a>. 🧩
+        Example 1 — Evaluate the integral $\displaystyle \int_{1}^{\infty}\dfrac{1}{𝒙^{2}}\,𝒅𝒙$. – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 7.6/[8-12]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 7.6/[8-12]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">1. Identify why the integral is improper.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The function $\dfrac{1}{𝒙^{2}}$ is defined for every $𝒙\ge 1$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">There is no infinite discontinuity on $[1,\infty)$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The improper behavior comes from the interval extending to infinity.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So this is <strong>Case 1</strong>: an infinite interval.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">But if we changed the interval to $[-1,\infty]$, then at $𝒙=0$ the function would be
+                undefined.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">It would have an infinite discontinuity there.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">In that situation, a vertical asymptote appears.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">So <strong>Case 2</strong> would also be present.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">2. Replace the infinite upper limit with a variable.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Consider $\displaystyle \int_{1}^{𝒃}\dfrac{1}{𝒙^{2}}\,𝒅𝒙$, where $𝒃&gt;1$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">We do this because we cannot substitute $\infty$ directly into the integral.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">3. Visual interpretation.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">This represents the area under $\dfrac{1}{𝒙^{2}}$ from $𝒙=1$ to $𝒙=𝒃$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then we study what happens as $𝒃$ grows without bound.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">4. Evaluate the finite integral first.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{1}^{𝒃}\dfrac{1}{𝒙^{2}}\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int_{1}^{𝒃} 𝒙^{-2}\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\Big[\dfrac{𝒙^{-1}}{-1}\Big]_{1}^{𝒃}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\Big[-\dfrac{1}{𝒙}\Big]_{1}^{𝒃}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-\dfrac{1}{𝒃}-\left(-\dfrac{1}{1}\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-\dfrac{1}{𝒃}+1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=953" target="_blank">[15:53]</a>.
+            Use a limit to recover the improper integral.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The way we handle “plugging in infinity” is with a limit.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒃\to\infty}\int_{1}^{𝒃}\dfrac{1}{𝒙^{2}}\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒃\to\infty}\left(-\dfrac{1}{𝒃}+1\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=0+1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final evaluation.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integral converges.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{1}^{\infty}\dfrac{1}{𝒙^{2}}\,𝒅𝒙=1$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｃｏｎｖｅｒｇｅｎｃｅ　Ａｎｄ　Ｎｏｔａｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=1114" target="_blank">[18:34]</a>.
+        General notation and definitions of convergence. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 7.6/[18-34]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 7.6/[18-34]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Formal notation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{𝒂}^{\infty} 𝒇(𝒙)\cdot 𝒅𝒙=\lim_{𝒃\to\infty}\int_{𝒂}^{𝒃}
+                𝒇(𝒙)\cdot 𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{-\infty}^{𝒃} 𝒇(𝒙)\cdot 𝒅𝒙=\lim_{𝒂\to-\infty}\int_{𝒂}^{𝒃}
+                𝒇(𝒙)\cdot 𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=1315" target="_blank">[21:55]</a>.
+            Definitions:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3"><strong>Convergence</strong>:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the limit exists and is finite</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3"><strong>Divergence</strong>:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the limit does not exist, or is infinite</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｅｘａｍｐｌｅｓ　Ｏｎ　Ｉｎｆｉｎｉｔｅ　Ｉｎｔｅｒｖａｌｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=1535" target="_blank">[25:35]</a>. 🧩
+        Example 2 — Evaluate the integral $\displaystyle \int_{1}^{\infty}\dfrac{3}{𝒙}\cdot 𝒅𝒙$. – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 7.6/[25-35]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 7.6/[25-35]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Identify why the integral is improper.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The function $\dfrac{3}{𝒙}$ is defined for every $𝒙\ge 1$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">There is no infinite discontinuity on $[1,\infty)$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The improper behavior comes from the interval extending to infinity.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So this is <strong>Case 1</strong>: an infinite interval.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Replace the infinite upper limit with a variable.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Consider $\displaystyle \int_{1}^{𝒃}\dfrac{3}{𝒙}\cdot 𝒅𝒙$, where $𝒃&gt;1$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the improper integral as a limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒃\to\infty}\int_{1}^{𝒃}\dfrac{3}{𝒙}\cdot 𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Evaluate the antiderivative first.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒃\to\infty}\Big[3\ln|𝒙|\Big]_{1}^{𝒃}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Simplify the expression.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒃\to\infty} 3\big[\ln(𝒃)-\ln(1)\big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒃\to\infty} 3\big[\ln(𝒃)-0\big]$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Analyze the limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">As $𝒃\to\infty$, $\ln(𝒃)\to\infty$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore the expression grows without bound.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final conclusion.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integral is <strong>divergent</strong>.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=1870" target="_blank">[31:10]</a>. 🧩
+        Example 3 — <strong>Generalization for power integrals (p-integrals)</strong>: $\displaystyle
+        \int_{1}^{\infty}\dfrac{1}{𝒙^{𝒏}}\cdot 𝒅𝒙$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 7.6/[31-10]-01.png" target="_blank">[📷image-1]</a><img
+            src="../img/Calculus 2 Lecture 7.6/[31-10]-01.png" alt="Preview" /></span> – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 7.6/[31-10]-02.png"
+            target="_blank">[📷image-2]</a><img src="../img/Calculus 2 Lecture 7.6/[31-10]-02.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Goal:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Study the general behavior of improper integrals of the form $\displaystyle
+                \int_{1}^{\infty}\dfrac{1}{𝒙^{𝒏}}\cdot 𝒅𝒙$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the improper integral as a limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{1}^{\infty}\dfrac{1}{𝒙^{𝒏}}\cdot
+                𝒅𝒙=\lim_{𝒃\to\infty}\int_{1}^{𝒃}\dfrac{1}{𝒙^{𝒏}}\cdot 𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒃\to\infty}\int_{1}^{𝒃} 𝒙^{-𝒏}\cdot 𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Important precondition.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The formal antiderivative used below is valid only for $𝒏\neq 1$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So the case $𝒏=1$ must be treated separately.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If $𝒏=1$, then
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \dfrac{1}{𝒙}\,𝒅𝒙=\ln|𝒙|$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Integrate formally for $𝒏\neq 1$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒃\to\infty}\Big[\dfrac{𝒙^{-𝒏+1}}{-𝒏+1}\Big]_{1}^{𝒃}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle
+                \lim_{𝒃\to\infty}\left[\dfrac{𝒃^{-𝒏+1}}{1-𝒏}-\dfrac{1}{1-𝒏}\right]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒃\to\infty}\dfrac{𝒃^{-𝒏+1}-1}{1-𝒏}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the exponent to study the limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-𝒏+1=-(𝒏-1)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so $𝒃^{-𝒏+1}=\dfrac{1}{𝒃^{𝒏-1}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Hence:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int_{1}^{\infty}\dfrac{1}{𝒙^{𝒏}}\cdot 𝒅𝒙=\dfrac{1}{1-𝒏}\cdot
+                    \lim_{𝒃\to\infty}\left[\dfrac{1}{𝒃^{𝒏-1}}-1\right]$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Analyze the limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If $𝒏&gt;1$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">then $𝒏-1&gt;0$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">so $\dfrac{1}{𝒃^{𝒏-1}}\to 0$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">and the integral converges.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If $𝒏=1$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the integral becomes $\displaystyle \int_{1}^{\infty}\dfrac{1}{𝒙}\cdot 𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">which diverges, as shown in the previous example.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If $𝒏&lt;1$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">then $𝒏-1&lt;0$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">so $𝒃^{-𝒏+1}$ grows without bound</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">and the integral diverges.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><strong>Final p-integral criterion.</strong>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{1}^{\infty}\dfrac{1}{𝒙^{𝒏}}\cdot 𝒅𝒙$ <strong>converges if
+                  $𝒏&gt;1$</strong></li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{1}^{\infty}\dfrac{1}{𝒙^{𝒏}}\cdot 𝒅𝒙$ <strong>diverges if
+                  $𝒏\le 1$</strong></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=2626" target="_blank">[43:46]</a>. 🧩
+        Example 4 — Evaluate the improper integral $\displaystyle \int_{1}^{\infty} 𝒆^{-2𝒙}\cdot 𝒅𝒙$. – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 7.6/[43-46]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 7.6/[43-46]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the improper integral as a limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{1}^{\infty} 𝒆^{-2𝒙}\cdot 𝒅𝒙=\lim_{𝒃\to\infty}\int_{1}^{𝒃}
+                𝒆^{-2𝒙}\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=2799" target="_blank">[46:39]</a>.
+            Use substitution.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒖=-2𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒅𝒖=-2\,𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{𝒅𝒖}{-2}=𝒅𝒙$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the integral using 𝒖.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒃\to\infty}\int_{1}^{𝒃} 𝒆^{-2𝒙}\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒃\to\infty}\int 𝒆^{𝒖}\cdot \dfrac{𝒅𝒖}{-2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-\dfrac{1}{2}\displaystyle \lim_{𝒃\to\infty}\Big[𝒆^{𝒖}\Big]_{1}^{𝒃}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-\dfrac{1}{2}\displaystyle \lim_{𝒃\to\infty}\Big[𝒆^{-2𝒙}\Big]_{1}^{𝒃}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Evaluate the limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-\dfrac{1}{2}\displaystyle \lim_{𝒃\to\infty}\Big[𝒆^{-2𝒃}-𝒆^{-2}\Big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-\dfrac{1}{2}\displaystyle
+                \lim_{𝒃\to\infty}\left[\dfrac{1}{𝒆^{2𝒃}}-\dfrac{1}{𝒆^{2}}\right]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Since $\dfrac{1}{𝒆^{2𝒃}}\to 0$ as $𝒃\to\infty$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the expression becomes $-\dfrac{1}{2}\left(0-\dfrac{1}{𝒆^{2}}\right)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{1}^{\infty} 𝒆^{-2𝒙}\cdot 𝒅𝒙=\dfrac{1}{2𝒆^{2}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The improper integral converges.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=3254" target="_blank">[54:14]</a>. 🧩
+        Example 5 — Evaluate the improper integral $\displaystyle \int_{0}^{\infty}\sin(𝒙)\cdot 𝒅𝒙$. – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 7.6/[54-14]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 7.6/[54-14]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the improper integral as a limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle
+                \int_{0}^{\infty}\sin(𝒙)\,𝒅𝒙=\lim_{𝒃\to\infty}\int_{0}^{𝒃}\sin(𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Evaluate the antiderivative.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒃\to\infty}\Big[-\cos(𝒙)\Big]_{0}^{𝒃}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitute the bounds.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒃\to\infty}\Big[-\cos(𝒃)-(-\cos(0))\Big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒃\to\infty}\Big[-\cos(𝒃)+\cos(0)\Big]$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Analyze the limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\cos(0)=1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">but $\cos(𝒃)$ does not approach a single value as $𝒃\to\infty$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">it keeps oscillating between $-1$ and $1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒃\to\infty}\Big[-\cos(𝒃)+1\Big]$ does not exist</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so $\displaystyle \int_{0}^{\infty}\sin(𝒙)\cdot 𝒅𝒙$ diverges</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=3630" target="_blank">[1:00:30]</a>. 🧩
+        Example 6 — Evaluate the improper integral $\displaystyle \int_{-\infty}^{0} 𝒙𝒆^{𝒙}\cdot 𝒅𝒙$. – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 7.6/[1-00-30]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 7.6/[1-00-30]-01.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Identify why the integral is improper.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">This is <strong>Case 1</strong>: an infinite interval.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The interval extends to $-\infty$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">There is no infinite discontinuity in the integrand $𝒙𝒆^{𝒙}$ on $(-\infty,0]$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the improper integral as a limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{-\infty}^{0} 𝒙𝒆^{𝒙}\cdot 𝒅𝒙=\lim_{𝒂\to-\infty}\int_{𝒂}^{0}
+                𝒙𝒆^{𝒙}\cdot 𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use integration by parts.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Choose:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒖=𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒅\mathcal{V}=𝒆^{𝒙}\,𝒅𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒅𝒖=𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\mathcal{V}=𝒆^{𝒙}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the integration by parts formula.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒂\to-\infty}\Big[𝒙𝒆^{𝒙}-\int 𝒆^{𝒙}\,𝒅𝒙\Big]_{𝒂}^{0}$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒂\to-\infty}\Big[𝒙𝒆^{𝒙}-𝒆^{𝒙}\Big]_{𝒂}^{0}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒂\to-\infty}\Big[𝒆^{𝒙}(𝒙-1)\Big]_{𝒂}^{0}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Evaluate the bounds.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒂\to-\infty}\Big[𝒆^{0}(0-1)-𝒆^{𝒂}(𝒂-1)\Big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒂\to-\infty}\Big[-1-𝒂𝒆^{𝒂}+𝒆^{𝒂}\Big]$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=4274"
+              target="_blank">[1:11:14]</a>. Key issue:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Resolve the indeterminate behavior in the term $𝒂𝒆^{𝒂}$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Rewrite:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒂𝒆^{𝒂}=\dfrac{𝒂}{𝒆^{-𝒂}}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then apply L'Hôpital's Rule to the limit:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{𝒂\to-\infty} 𝒂𝒆^{𝒂}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\displaystyle \lim_{𝒂\to-\infty}\dfrac{𝒂}{𝒆^{-𝒂}}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\displaystyle \lim_{𝒂\to-\infty}\dfrac{1}{-𝒆^{-𝒂}}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\displaystyle \lim_{𝒂\to-\infty}\left(-\dfrac{1}{𝒆^{-𝒂}}\right)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Since $𝒂\to-\infty$, we have $-𝒂\to\infty$, so $𝒆^{-𝒂}\to\infty$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Therefore, $-\dfrac{1}{𝒆^{-𝒂}}\to 0$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Hence:
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">$\displaystyle \lim_{𝒂\to-\infty} 𝒂𝒆^{𝒂}=0$</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒂\to-\infty}\Big[-1-𝒂𝒆^{𝒂}+𝒆^{𝒂}\Big]=-1-0+0$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integral converges.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{-\infty}^{0} 𝒙𝒆^{𝒙}\cdot 𝒅𝒙=-1$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=4635" target="_blank">[1:17:15]</a>. 🧩
+        Example 7 — <strong>Integrals over the entire real line</strong>: $\displaystyle
+        \int_{-\infty}^{\infty}\dfrac{𝒆^{𝒙}}{1+𝒆^{2𝒙}}\cdot 𝒅𝒙$ – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 7.6/[1-17-15]-01.png" target="_blank">[📷image-1]</a><img
+            src="../img/Calculus 2 Lecture 7.6/[1-17-15]-01.png" alt="Preview" /></span> – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 7.6/[1-17-15]-02.png"
+            target="_blank">[📷image-2]</a><img src="../img/Calculus 2 Lecture 7.6/[1-17-15]-02.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">1. Identify why the integral is improper.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The function $\dfrac{𝒆^{𝒙}}{1+𝒆^{2𝒙}}$ is defined everywhere.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">There is no infinite discontinuity on $[-\infty,\infty]$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The improper behavior comes from the interval extending to infinity.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So this is <strong>Case 1</strong>: an infinite interval.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">General form:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{-\infty}^{\infty} 𝒇(𝒙)\cdot 𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=4803"
+              target="_blank">[1:20:03]</a>. Additivity property:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Split the integral at $𝒙=0$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{-\infty}^{\infty}\dfrac{𝒆^{𝒙}}{1+𝒆^{2𝒙}}\cdot 𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int_{-\infty}^{0}\dfrac{𝒆^{𝒙}}{1+𝒆^{2𝒙}}\cdot
+                𝒅𝒙+\int_{0}^{\infty}\dfrac{𝒆^{𝒙}}{1+𝒆^{2𝒙}}\cdot 𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite both pieces as limits.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒂\to-\infty}\int_{𝒂}^{0}\dfrac{𝒆^{𝒙}}{1+𝒆^{2𝒙}}\cdot 𝒅𝒙$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$+\displaystyle \lim_{𝒃\to\infty}\int_{0}^{𝒃}\dfrac{𝒆^{𝒙}}{1+𝒆^{2𝒙}}\cdot 𝒅𝒙$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitution for the integrand.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let $𝒖=𝒆^{𝒙}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then $𝒅𝒖=𝒆^{𝒙}\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \dfrac{𝒆^{𝒙}}{1+𝒆^{2𝒙}}\cdot 𝒅𝒙=\int
+                    \dfrac{1}{1+𝒖^{2}}\cdot 𝒅𝒖$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\tan^{-1}(𝒖)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\tan^{-1}(𝒆^{𝒙})$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the antiderivative to both improper pieces.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒂\to-\infty}\Big[\tan^{-1}(𝒆^{𝒙})\Big]_{𝒂}^{0}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$+\displaystyle \lim_{𝒃\to\infty}\Big[\tan^{-1}(𝒆^{𝒙})\Big]_{0}^{𝒃}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Evaluate each limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">First piece:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{𝒂\to-\infty}\Big[\tan^{-1}(𝒆^{0})-\tan^{-1}(𝒆^{𝒂})\Big]$
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\tan^{-1}(1)-\tan^{-1}(0)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\dfrac{\pi}{4}-0$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Second piece:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{𝒃\to\infty}\Big[\tan^{-1}(𝒆^{𝒃})-\tan^{-1}(𝒆^{0})\Big]$
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\tan^{-1}(\infty)-\tan^{-1}(1)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\dfrac{\pi}{2}-\dfrac{\pi}{4}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{-\infty}^{\infty}\dfrac{𝒆^{𝒙}}{1+𝒆^{2𝒙}}\cdot
+                𝒅𝒙=\dfrac{\pi}{4}+\left(\dfrac{\pi}{2}-\dfrac{\pi}{4}\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{\pi}{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The improper integral <strong>converges</strong></li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">and its value is $\dfrac{\pi}{2}$.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｃａｓｅ　2　—　Ｉｎｆｉｎｉｔｅ　Ｄｉｓｃｏｎｔｉｎｕｉｔｉｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=5611" target="_blank">[1:33:31]</a>. 🧩
+        Example 6 — Analysis of Case 2: Infinite discontinuities: $\displaystyle \int_{0}^{9} 𝒙^{-1/2}\cdot 𝒅𝒙$. –
+        <span class="image-container"><a href="../img/Calculus 2 Lecture 7.6/[1-33-31]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 7.6/[1-33-31]-01.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">1. Identify why the integral is improper.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The function $𝒙^{-1/2}=\dfrac{1}{\sqrt{𝒙}}$ is undefined at $𝒙=0$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">There is a vertical asymptote at $𝒙=0$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So the improper behavior comes from the function itself, not from an infinite
+                interval.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">2. Replace the problematic endpoint with an intermediate value.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Because we cannot plug $𝒙=0$ directly into the integral, we replace the lower limit
+                $0$ with $𝒄$, where $0&lt;𝒄&lt;9$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">This gives:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int_{𝒄}^{9} 𝒙^{-1/2}\cdot 𝒅𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">This parallels Case 1:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">in Case 1 we replaced $\infty$ with a variable $𝒃$,</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">here we replace the problematic endpoint $0$ with a variable $𝒄$.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">3. Use a one-sided limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Since the discontinuity is at the left endpoint, we approach from the right:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒄\to 0^{+}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So the improper integral is rewritten as:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{𝒄\to 0^{+}}\int_{𝒄}^{9} 𝒙^{-1/2}\cdot 𝒅𝒙$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">4. Evaluate the integral first.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{𝒄}^{9} 𝒙^{-1/2}\cdot 𝒅𝒙=\Big[2𝒙^{1/2}\Big]_{𝒄}^{9}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=2\sqrt{9}-2\sqrt{𝒄}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">5. Take the limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒄\to 0^{+}}\Big[2\sqrt{9}-2\sqrt{𝒄}\Big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=6-0$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=6$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒄\to 0^{+}}\int_{𝒄}^{9} 𝒙^{-1/2}\cdot 𝒅𝒙=6$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore, the improper integral converges.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=6188" target="_blank">[1:43:08]</a>.
+        <strong>Types Of Infinite Discontinuities.</strong> – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 7.6/[1-43-08]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 7.6/[1-43-08]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The discontinuity can occur at the upper endpoint.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If $𝒇(𝒙)$ blows up at $𝒙=𝒃$, then the improper integral
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int_{𝒂}^{𝒃} 𝒇(𝒙)\,𝒅𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">is defined by approaching $𝒃$ from the left:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{𝒄\to 𝒃^{-}}\int_{𝒂}^{𝒄} 𝒇(𝒙)\,𝒅𝒙$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=6395"
+              target="_blank">[1:46:35]</a>. The discontinuity can occur at the lower endpoint.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If $𝒇(𝒙)$ blows up at $𝒙=𝒂$, then the improper integral
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int_{𝒂}^{𝒃} 𝒇(𝒙)\,𝒅𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">is defined by approaching $𝒂$ from the right:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{𝒄\to 𝒂^{+}}\int_{𝒄}^{𝒃} 𝒇(𝒙)\,𝒅𝒙$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=6601"
+              target="_blank">[1:50:01]</a>. The discontinuity can occur at an interior point.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If $𝒇(𝒙)$ blows up at some point $𝒙=𝒄$ with $𝒂&lt;𝒄&lt;𝒃$,</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">then the integral must be split into two improper integrals:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int_{𝒂}^{𝒃} 𝒇(𝒙)\,𝒅𝒙=\int_{𝒂}^{𝒄}
+                    𝒇(𝒙)\,𝒅𝒙+\int_{𝒄}^{𝒃} 𝒇(𝒙)\,𝒅𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">and each part is defined separately:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{𝒕\to 𝒄^{-}}\int_{𝒂}^{𝒕} 𝒇(𝒙)\,𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$+\displaystyle \lim_{𝒔\to 𝒄^{+}}\int_{𝒔}^{𝒃} 𝒇(𝒙)\,𝒅𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Both one-sided improper integrals must converge for the original integral to converge.
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">NOTE:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">A removable discontinuity does not create area by itself, because changing or removing
+                the value of a function at isolated points does not change the value of the integral.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Having many removable discontinuities does not necessarily prevent the area from being
+                computed, because isolated point changes do not affect the value of the integral.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｅｘａｍｐｌｅｓ　Ｏｎ　Ｉｎｆｉｎｉｔｅ　Ｄｉｓｃｏｎｔｉｎｕｉｔｉｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=6911" target="_blank">[1:55:11]</a>. 🧩
+        Example 7 — Discontinuity at the upper limit: $\displaystyle \int_{1}^{4}\dfrac{1}{(4-𝒙)^{2/3}}\cdot 𝒅𝒙$. –
+        <span class="image-container"><a href="../img/Calculus 2 Lecture 7.6/[1-55-11]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 7.6/[1-55-11]-01.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">1. Identify why the integral is improper.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The interval $[1,4]$ is finite.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The problem is not an infinite interval.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integrand $\dfrac{1}{(4-𝒙)^{2/3}}$ blows up at $𝒙=4$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So the improper behavior comes from an infinite discontinuity at the <strong>upper
+                  endpoint</strong>.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">2. Replace the problematic endpoint with a variable.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{1}^{4}\dfrac{1}{(4-𝒙)^{2/3}}\cdot 𝒅𝒙=\lim_{𝒄\to
+                4^{-}}\int_{1}^{𝒄}(4-𝒙)^{-2/3}\cdot 𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">3. Use substitution.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let $𝒖=4-𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then $𝒅𝒖=-𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So $-𝒅𝒖=𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">4. Integrate.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒄\to 4^{-}}\int_{1}^{𝒄}(4-𝒙)^{-2/3}\cdot 𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒄\to 4^{-}}-\int 𝒖^{-2/3}\cdot 𝒅𝒖$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒄\to 4^{-}}-\Big[3𝒖^{1/3}\Big]_{1}^{𝒄}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-3\displaystyle \lim_{𝒄\to 4^{-}}\Big[(4-𝒙)^{1/3}\Big]_{1}^{𝒄}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">5. Evaluate the limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-3\displaystyle \lim_{𝒄\to 4^{-}}\Big[(4-𝒄)^{1/3}-(4-1)^{1/3}\Big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-3\Big[0-3^{1/3}\Big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=3\cdot 3^{1/3}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integral <strong>converges</strong>.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{1}^{4}\dfrac{1}{(4-𝒙)^{2/3}}\cdot 𝒅𝒙=3\cdot 3^{1/3}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=7423" target="_blank">[2:03:43]</a>. 🧩
+        Example 8 — Lower endpoint. Evaluate the logarithmic improper integral: $\displaystyle \int_{0}^{1}\ln(𝒙)\cdot
+        𝒅𝒙$. – <span class="image-container"><a href="../img/Calculus 2 Lecture 7.6/[2-03-43]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 7.6/[2-03-43]-01.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">1. Identify why the integral is improper.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The interval $[0,1]$ is finite.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The problem is not an infinite interval.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integrand $\ln(𝒙)$ is not defined at $𝒙=0$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">In fact, $\ln(𝒙)\to -\infty$ as $𝒙\to 0^{+}$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So this is <strong>Case 2</strong>: an infinite discontinuity at the lower endpoint.
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">2. First find the antiderivative of $\ln(𝒙)$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use integration by parts:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒖=\ln(𝒙)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒅\mathcal{V}=𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒅𝒖=\dfrac{1}{𝒙}\cdot 𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\mathcal{V}=𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \ln(𝒙)\,𝒅𝒙=𝒙\ln(𝒙)-\int 𝒙\cdot \dfrac{1}{𝒙}\,𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=𝒙\ln(𝒙)-𝒙+𝑪$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">3. Rewrite the improper integral as a limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{0}^{1}\ln(𝒙)\cdot 𝒅𝒙=\lim_{𝒄\to
+                0^{+}}\int_{𝒄}^{1}\ln(𝒙)\cdot 𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">4. Evaluate with the antiderivative.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒄\to 0^{+}}\Big[𝒙\ln(𝒙)-𝒙\Big]_{𝒄}^{1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒄\to 0^{+}}\Big[(1\ln(1)-1)-(𝒄\ln(𝒄)-𝒄)\Big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒄\to 0^{+}}\Big[-1-𝒄\ln(𝒄)+𝒄\Big]$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">5. Handle the difficult limit.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Since $𝒄\to 0^{+}$, we have $𝒄\to 0$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So it remains to evaluate:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{𝒄\to 0^{+}} 𝒄\ln(𝒄)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Rewrite it as:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{𝒄\to 0^{+}}\dfrac{\ln(𝒄)}{1/𝒄}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Apply L'Hôpital's Rule:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{𝒄\to 0^{+}}\left[\dfrac{1/𝒄}{-1/𝒄^{2}}\right]$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\displaystyle \lim_{𝒄\to 0^{+}}(-𝒄)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=0$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Hence:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \lim_{𝒄\to 0^{+}} 𝒄\ln(𝒄)=0$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">and $\displaystyle \lim_{𝒄\to 0^{+}} 𝒄=0$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">6. Final result.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{0}^{1}\ln(𝒙)\cdot 𝒅𝒙=-1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So the integral <strong>converges</strong>.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=8080" target="_blank">[2:14:40]</a>. 🧩
+        Example 9 — <strong>Discontinuity at an interior point of the interval</strong>: $\displaystyle
+        \int_{-1}^{1}\dfrac{1}{𝒙^{2}}\cdot 𝒅𝒙$. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 7.6/[2-14-40]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 7.6/[2-14-40]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">1. Identify why the integral is improper.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The interval $[-1,1]$ is finite.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integrand $\dfrac{1}{𝒙^{2}}$ is not defined at $𝒙=0$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">There is a vertical asymptote at the interior point $𝒙=0$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So this is <strong>Case 2</strong>: an infinite discontinuity at an interior point.
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">2. Split the integral at the discontinuity.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{-1}^{1}\dfrac{1}{𝒙^{2}}\cdot 𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int_{-1}^{0}\dfrac{1}{𝒙^{2}}\cdot
+                𝒅𝒙+\int_{0}^{1}\dfrac{1}{𝒙^{2}}\cdot 𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Key idea:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">When the discontinuity is at an interior point,
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">the improper integral must be separated into <strong>two improper
+                          integrals</strong></li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">one on each side of the discontinuity.</li>
+                    </ul>
+                  </li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Convergence requirement.
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">The original integral converges <strong>only if both pieces converge</strong>.
+                      </li>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">If either side diverges,
+                        <ul>
+                          <!-- ▢ nivel-6 -->
+                          <li class="level-6">then the whole integral diverges.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">3. Evaluate the left-hand side.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒄\to 0^{-}}\int_{-1}^{𝒄} 𝒙^{-2}\cdot 𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒄\to 0^{-}}\Big[-\dfrac{1}{𝒙}\Big]_{-1}^{𝒄}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒄\to 0^{-}}\left(-\dfrac{1}{𝒄}-1\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Since $𝒄\to 0^{-}$, we have $-\dfrac{1}{𝒄}\to +\infty$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore the left-hand integral <strong>diverges</strong>.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">5. Evaluate the right-hand side.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒄\to 0^{+}}\int_{𝒄}^{1} 𝒙^{-2}\cdot 𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒄\to 0^{+}}\Big[-\dfrac{1}{𝒙}\Big]_{𝒄}^{1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒄\to 0^{+}}\left(-1+\dfrac{1}{𝒄}\right)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Since $𝒄\to 0^{+}$, we have $\dfrac{1}{𝒄}\to +\infty$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore the right-hand integral <strong>diverges</strong>.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">6. Final conclusion.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Both one-sided improper integrals diverge.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So the original integral $\displaystyle \int_{-1}^{1}\dfrac{1}{𝒙^{2}}\cdot 𝒅𝒙$
+                <strong>diverges</strong>.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=8192" target="_blank">[2:16:32]</a>. 🧩
+        Example 10 — Combined-case: $\displaystyle \int_{0}^{\infty}\dfrac{𝒆^{-\sqrt{𝒙}}}{\sqrt{𝒙}}\cdot 𝒅𝒙$. –
+        <span class="image-container"><a href="../img/Calculus 2 Lecture 7.6/[2-16-32]-01.png"
+            target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 7.6/[2-16-32]-01.png"
+            alt="Preview" /></span> – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 7.6/[2-16-32]-02.png" target="_blank">[📷image-2]</a><img
+            src="../img/Calculus 2 Lecture 7.6/[2-16-32]-02.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">1. Identify why the integral is improper.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The interval extends to $\infty$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integrand $\dfrac{𝒆^{-\sqrt{𝒙}}}{\sqrt{𝒙}}$ is also unbounded at $𝒙=0$ because
+                of the factor $\dfrac{1}{\sqrt{𝒙}}$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So this example combines:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4"><strong>Case 1</strong>: an infinite interval</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4"><strong>Case 2</strong>: an infinite discontinuity at the lower endpoint</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">2. Strategy.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Split the integral at $𝒙=1$ so each issue is handled separately.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{0}^{\infty}\dfrac{𝒆^{-\sqrt{𝒙}}}{\sqrt{𝒙}}\cdot 𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int_{0}^{1}\dfrac{𝒆^{-\sqrt{𝒙}}}{\sqrt{𝒙}}\cdot
+                𝒅𝒙+\int_{1}^{\infty}\dfrac{𝒆^{-\sqrt{𝒙}}}{\sqrt{𝒙}}\cdot 𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">3. Rewrite both pieces as limits.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒄\to 0^{+}}\int_{𝒄}^{1}\dfrac{𝒆^{-\sqrt{𝒙}}}{\sqrt{𝒙}}\cdot
+                𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$+\displaystyle \lim_{𝒃\to\infty}\int_{1}^{𝒃}\dfrac{𝒆^{-\sqrt{𝒙}}}{\sqrt{𝒙}}\cdot
+                𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">4. Use the same substitution in both parts.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let $𝒖=-\sqrt{𝒙}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then $𝒅𝒖=-\dfrac{1}{2\sqrt{𝒙}}\cdot 𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So $𝒅𝒙=-2\sqrt{𝒙}\cdot 𝒅𝒖$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Hence:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \dfrac{𝒆^{-\sqrt{𝒙}}}{\sqrt{𝒙}}\cdot 𝒅𝒙=-2\int
+                    𝒆^{𝒖}\,𝒅𝒖=-2𝒆^{𝒖}=-2𝒆^{-\sqrt{𝒙}}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">5. Evaluate the first improper piece.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒄\to 0^{+}}\Big[-2𝒆^{-\sqrt{𝒙}}\Big]_{𝒄}^{1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒄\to 0^{+}}\Big[-2𝒆^{-1}+2𝒆^{-\sqrt{𝒄}}\Big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-\dfrac{2}{𝒆}+2$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">6. Evaluate the second improper piece.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \lim_{𝒃\to\infty}\Big[-2𝒆^{-\sqrt{𝒙}}\Big]_{1}^{𝒃}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒃\to\infty}\Big[-2𝒆^{-\sqrt{𝒃}}+2𝒆^{-1}\Big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=0+\dfrac{2}{𝒆}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">7. Add both results.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\left(-\dfrac{2}{𝒆}+2\right)+\dfrac{2}{𝒆}=2$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integral <strong>converges</strong>.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{0}^{\infty}\dfrac{𝒆^{-\sqrt{𝒙}}}{\sqrt{𝒙}}\cdot 𝒅𝒙=2$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｃｏｍｐａｒｉｓｏｎ　Ｔｈｅｏｒｅｍ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=8820" target="_blank">[2:27:00]</a>.
+        Comparison Theorem for improper integrals. – <span class="image-container"><a
+            href="../img/Calculus 2 Lecture 7.6/[2-27-00]-01.png" target="_blank">[📷image]</a><img
+            src="../img/Calculus 2 Lecture 7.6/[2-27-00]-01.png" alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Setup:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Assume $0\le 𝒈(𝒙)\le 𝒇(𝒙)$ on $[𝒂,\infty)$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So $𝒇(𝒙)$ is above $𝒈(𝒙)$ on the interval.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Fundamental comparison:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If $\displaystyle \int_{𝒂}^{\infty} 𝒇(𝒙)\cdot 𝒅𝒙$ converges,</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">then $\displaystyle \int_{𝒂}^{\infty} 𝒈(𝒙)\cdot 𝒅𝒙$ also converges.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Intuition:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">if the bigger area is finite,</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">then the smaller area must also be finite.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Reverse comparison:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If $\displaystyle \int_{𝒂}^{\infty} 𝒈(𝒙)\cdot 𝒅𝒙$ diverges,</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">then $\displaystyle \int_{𝒂}^{\infty} 𝒇(𝒙)\cdot 𝒅𝒙$ also diverges.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Intuition:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">if the smaller area is already infinite,</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">then the bigger area must also be infinite.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Important conditions:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The comparison is stated for nonnegative functions.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">That is why we require $0\le 𝒈(𝒙)\le 𝒇(𝒙)$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Important warning:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The implications only work in these directions.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">You may conclude:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">bigger converges ⇒ smaller converges</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">smaller diverges ⇒ bigger diverges</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">But you may not conclude:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">smaller converges ⇒ bigger converges</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">bigger diverges ⇒ smaller diverges</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Main idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Instead of integrating a difficult function directly,</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">compare it with a simpler function whose improper behavior is already known.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｅｘａｍｐｌｅ　Ｏｆ　Ｔｈｅ　Ｃｏｍｐａｒｉｓｏｎ　Ｔｅｓｔ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=g-M8FHslgdk&t=9300" target="_blank">[2:35:00]</a>. 🧩
+        Example 11 — Comparison test: $\displaystyle \int_{1}^{\infty}\dfrac{1}{𝒙+\sin^{2}𝒙}\cdot 𝒅𝒙$ – <span
+          class="image-container"><a href="../img/Calculus 2 Lecture 7.6/[2-35-00]-01.png"
+            target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 7.6/[2-35-00]-01.png"
+            alt="Preview" /></span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Goal:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Apply the Comparison Test to determine whether
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int_{1}^{\infty}\dfrac{1}{𝒙+\sin^{2}𝒙}\cdot 𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">converges or diverges.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Comparison function:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Compare it with
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int_{1}^{\infty}\dfrac{1}{1+𝒙}\cdot 𝒅𝒙$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Key inequality:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Since $\sin(𝒙)\le 1$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">then $\sin^{2}(𝒙)\le 1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Adding $𝒙$ to both sides gives:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙+\sin^{2}(𝒙)\le 𝒙+1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Taking reciprocals reverses the inequality:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{1}{𝒙+\sin^{2}𝒙}\ge \dfrac{1}{1+𝒙}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Why this is useful:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integrand is nonnegative.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">It is bigger than a simpler function whose improper integral is already known.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Check the comparison integral:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{1}^{\infty}\dfrac{1}{1+𝒙}\cdot 𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒃\to\infty}\int_{1}^{𝒃}\dfrac{1}{1+𝒙}\cdot 𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒃\to\infty}\Big[\ln|1+𝒙|\Big]_{1}^{𝒃}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \lim_{𝒃\to\infty}\Big[\ln(1+𝒃)-\ln(2)\Big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\infty$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Conclusion by comparison:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Because
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{1}{𝒙+\sin^{2}𝒙}\ge \dfrac{1}{1+𝒙}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">and
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int_{1}^{\infty}\dfrac{1}{1+𝒙}\cdot 𝒅𝒙$ diverges,</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">it follows from the Comparison Test that
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int_{1}^{\infty}\dfrac{1}{𝒙+\sin^{2}𝒙}\cdot 𝒅𝒙$ also diverges.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The integral is <strong>divergent</strong>.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">NOTE:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Recall the algebra of inequalities for positive quantities:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">If $0&lt;𝒇(𝒙)\le 𝒈(𝒙)$, then $\dfrac{1}{𝒇(𝒙)}\ge \dfrac{1}{𝒈(𝒙)}$.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">In words:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">a smaller positive denominator gives a larger fraction,</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">and a larger positive denominator gives a smaller fraction.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">This is why, from
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙+\sin^{2}(𝒙)\le 1+𝒙$,</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">we may conclude that
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{1}{𝒙+\sin^{2}𝒙}\ge \dfrac{1}{1+𝒙}$.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">Improper Integrals
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://openstax.org/books/calculus-volume-2/pages/3-7-improper-integrals"
+              target="_blank">[openstax🌐]</a></li>
+        </ul>
+      </li>
+      <!-- ● nivel-1 -->
+      <li class="level-1">Comparison Tests
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://openstax.org/books/calculus-volume-2/pages/5-4-comparison-tests"
+              target="_blank">[openstax🌐]</a></li>
+        </ul>
+      </li>
+      <!-- ● nivel-1 -->
+      <li class="level-1">Basic Functions and Identities
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://openstax.org/books/precalculus-2e/pages/a-basic-functions-and-identities"
+              target="_blank">[openstax🌐]</a></li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+</body>
+
+</html>

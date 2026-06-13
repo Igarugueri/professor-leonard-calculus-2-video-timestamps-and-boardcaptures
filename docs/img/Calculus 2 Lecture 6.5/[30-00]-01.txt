@@ -1,0 +1,5 @@
+﻿image_name: [30-00]Example Evaluation of inverse trigonometric expressions using exact values.png
+file_name: [30-00]-01.png
+timestamp: 30:00
+counter: 01
+folder: Calculus 2 Lecture 6.5

@@ -1,0 +1,5 @@
+﻿image_name: [36-36]Example 1 — ∫ 𝒙² ∕ √(9 − 𝒙²) 𝒅𝒙_2.png
+file_name: [36-36]-02.png
+timestamp: 36:36
+counter: 02
+folder: Calculus 2 Lecture 7.3

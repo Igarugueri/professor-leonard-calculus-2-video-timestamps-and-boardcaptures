@@ -1,0 +1,5 @@
+﻿image_name: [1-14-15]Example 7 — Rewriting the series Σ[n=1,∞] = 5∕3 - 5∕9 + 5∕27 - 5∕81 + ... in geometric form.png
+file_name: [1-14-15]-01.png
+timestamp: 1:14:15
+counter: 01
+folder: Calculus 2 Lecture 9.2

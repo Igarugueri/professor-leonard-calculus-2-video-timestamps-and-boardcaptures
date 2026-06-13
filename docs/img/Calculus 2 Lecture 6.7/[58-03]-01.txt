@@ -1,0 +1,5 @@
+﻿image_name: [58-03]Exponential indeterminate forms 0⁰, ∞⁰, and 1^∞.png
+file_name: [58-03]-01.png
+timestamp: 58:03
+counter: 01
+folder: Calculus 2 Lecture 6.7

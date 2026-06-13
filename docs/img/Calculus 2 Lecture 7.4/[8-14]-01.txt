@@ -1,0 +1,5 @@
+﻿image_name: [8-14]Case 1 Distinct linear factors.png
+file_name: [8-14]-01.png
+timestamp: 8:14
+counter: 01
+folder: Calculus 2 Lecture 7.4

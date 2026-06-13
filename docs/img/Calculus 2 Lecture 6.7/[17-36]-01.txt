@@ -1,0 +1,5 @@
+﻿image_name: [17-36]Counterexample — Analyze limₓ→0⁺ (cos 𝒙)∕𝒙.png
+file_name: [17-36]-01.png
+timestamp: 17:36
+counter: 01
+folder: Calculus 2 Lecture 6.7

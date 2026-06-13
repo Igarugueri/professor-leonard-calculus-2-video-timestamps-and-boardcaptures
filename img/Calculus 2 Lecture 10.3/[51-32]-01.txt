@@ -1,0 +1,5 @@
+﻿image_name: [51-32]Derivation of the second derivative formula.png
+file_name: [51-32]-01.png
+timestamp: 51:32
+counter: 01
+folder: Calculus 2 Lecture 10.3

@@ -1,0 +1,5 @@
+﻿image_name: [2-17-26]Application — Find a power series representation for Ln(1 - 𝒙)_2.png
+file_name: [2-17-26]-02.png
+timestamp: 2:17:26
+counter: 02
+folder: Calculus 2 Lecture 9.7

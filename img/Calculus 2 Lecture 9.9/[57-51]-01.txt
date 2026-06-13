@@ -1,0 +1,5 @@
+﻿image_name: [57-51]New question — When does a function have a Taylor series representation.png
+file_name: [57-51]-01.png
+timestamp: 57:51
+counter: 01
+folder: Calculus 2 Lecture 9.9

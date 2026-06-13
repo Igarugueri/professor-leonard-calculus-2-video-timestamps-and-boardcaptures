@@ -1,0 +1,5 @@
+﻿image_name: [24-34]Example — Composite trigonometric functions limₓ→π [2 sin² 𝒙] ∕[1 + cos 𝒙].png
+file_name: [24-34]-01.png
+timestamp: 24:34
+counter: 01
+folder: Calculus 2 Lecture 6.7

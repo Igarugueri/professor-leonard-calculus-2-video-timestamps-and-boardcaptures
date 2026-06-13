@@ -1,0 +1,5 @@
+﻿image_name: [38-42]Example Composition of trigonometric functions and geometric identities.png
+file_name: [38-42]-01.png
+timestamp: 38:42
+counter: 01
+folder: Calculus 2 Lecture 6.5

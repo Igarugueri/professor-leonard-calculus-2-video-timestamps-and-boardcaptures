@@ -1,0 +1,5 @@
+﻿image_name: [9-47]Example 1 — Evaluate ∫ cos³(2𝒙) sin⁵(2𝒙) 𝒅𝒙.png
+file_name: [9-47]-01.png
+timestamp: 9:47
+counter: 01
+folder: Calculus 2 Lecture 7.2

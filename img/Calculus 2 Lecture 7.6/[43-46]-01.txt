@@ -1,0 +1,5 @@
+﻿image_name: [43-46]Example 4 — Evaluate the improper integral ∫[1, ∞] e⁻²𝒙 ⋅ 𝒅𝒙.png
+file_name: [43-46]-01.png
+timestamp: 43:46
+counter: 01
+folder: Calculus 2 Lecture 7.6

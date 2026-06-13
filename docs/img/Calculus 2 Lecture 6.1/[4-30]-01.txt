@@ -1,0 +1,5 @@
+﻿image_name: [4-30]Example Expansion ln(3𝒙⁴ ∕ 2𝒚²).png
+file_name: [4-30]-01.png
+timestamp: 4:30
+counter: 01
+folder: Calculus 2 Lecture 6.1

@@ -1,0 +1,5 @@
+﻿image_name: [33-42]Example 2 — Horizontal and vertical tangents 𝒙 = 𝒕², 𝒚 = 𝒕³ - 3𝒕_2.png
+file_name: [33-42]-02.png
+timestamp: 33:42
+counter: 02
+folder: Calculus 2 Lecture 10.3

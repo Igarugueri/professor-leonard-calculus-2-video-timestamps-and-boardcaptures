@@ -1,0 +1,5 @@
+﻿image_name: [44-18]Example 1 — Convergence only at the center ∑[𝒏=0,∞] 𝒏!𝒙ⁿ.png
+file_name: [44-18]-01.png
+timestamp: 44:18
+counter: 01
+folder: Calculus 2 Lecture 9.7

@@ -1,0 +1,5 @@
+﻿image_name: [33-31]General power series.png
+file_name: [33-31]-01.png
+timestamp: 33:31
+counter: 01
+folder: Calculus 2 Lecture 9.7

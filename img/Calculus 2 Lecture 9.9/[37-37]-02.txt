@@ -1,0 +1,5 @@
+﻿image_name: [37-37]Example 2 — Taylor polynomial for √𝒙_2.png
+file_name: [37-37]-02.png
+timestamp: 37:37
+counter: 02
+folder: Calculus 2 Lecture 9.9

@@ -1,0 +1,5 @@
+﻿image_name: [1-53]Notation and basic properties of 𝒇⁻¹.png
+file_name: [1-53]-01.png
+timestamp: 1:53
+counter: 01
+folder: img

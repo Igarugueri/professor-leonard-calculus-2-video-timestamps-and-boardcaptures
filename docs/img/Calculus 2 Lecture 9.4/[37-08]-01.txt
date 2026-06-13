@@ -1,0 +1,5 @@
+﻿image_name: [37-08]Example 4 — The failure of Direct Comparison ∑[𝒏=1,∞] 1∕(√𝒏 + 1).png
+file_name: [37-08]-01.png
+timestamp: 37:08
+counter: 01
+folder: Calculus 2 Lecture 9.4

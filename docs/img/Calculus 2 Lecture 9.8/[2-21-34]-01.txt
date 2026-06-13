@@ -1,0 +1,5 @@
+﻿image_name: [2-21-34]Example 6 — Find Taylor series for 1∕(1 + 𝒙) centered at 𝑪 = 2_1.png
+file_name: [2-21-34]-01.png
+timestamp: 2:21:34
+counter: 01
+folder: Calculus 2 Lecture 9.8

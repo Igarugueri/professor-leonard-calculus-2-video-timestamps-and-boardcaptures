@@ -1,0 +1,5 @@
+﻿image_name: [16-45]Example — absolute convergence example ∑[𝒏=1,∞] sin(2𝒏)∕𝒏².png
+file_name: [16-45]-01.png
+timestamp: 16:45
+counter: 01
+folder: Calculus 2 Lecture 9.6

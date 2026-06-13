@@ -1,0 +1,5 @@
+﻿image_name: [45-25]Integral of an exponential function.png
+file_name: [45-25]-01.png
+timestamp: 45:25
+counter: 01
+folder: Calculus 2 Lecture 6.4

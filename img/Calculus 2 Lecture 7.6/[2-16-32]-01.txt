@@ -1,0 +1,5 @@
+﻿image_name: [2-16-32]Combined-case example ∫[0, ∞] e⁻√𝒙 ∕ √𝒙 ⋅ 𝒅𝒙_1.png
+file_name: [2-16-32]-01.png
+timestamp: 2:16:32
+counter: 01
+folder: Calculus 2 Lecture 7.6

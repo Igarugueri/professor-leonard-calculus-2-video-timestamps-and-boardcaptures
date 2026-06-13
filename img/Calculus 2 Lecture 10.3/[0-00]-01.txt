@@ -1,0 +1,5 @@
+﻿image_name: [0-00]Local function neighborhood and slope formula_1.png
+file_name: [0-00]-01.png
+timestamp: 0:00
+counter: 01
+folder: Calculus 2 Lecture 10.3

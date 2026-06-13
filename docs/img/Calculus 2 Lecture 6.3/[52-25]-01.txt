@@ -1,0 +1,5 @@
+﻿image_name: [52-25]Example Differentiate the function 𝒙²𝓮^(−2𝒙).png
+file_name: [52-25]-01.png
+timestamp: 52:25
+counter: 01
+folder: Calculus 2 Lecture 6.3

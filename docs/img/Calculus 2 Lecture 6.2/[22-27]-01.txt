@@ -1,0 +1,5 @@
+﻿image_name: [22-27]Example 𝒇(𝒙) = 𝒙³ - 1 find 𝒇⁻¹(𝓪) when 𝓪 = -1.png
+file_name: [22-27]-01.png
+timestamp: 22:27
+counter: 01
+folder: img

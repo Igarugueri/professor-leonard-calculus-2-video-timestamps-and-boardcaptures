@@ -1,0 +1,5 @@
+﻿image_name: [46-14]Example 4 — 𝒙 = 𝒂 cos(θ) 𝒚 = 𝒂 sin(θ) with 𝒂 more than 0.png
+file_name: [46-14]-01.png
+timestamp: 46:14
+counter: 01
+folder: Calculus 2 Lecture 10.2

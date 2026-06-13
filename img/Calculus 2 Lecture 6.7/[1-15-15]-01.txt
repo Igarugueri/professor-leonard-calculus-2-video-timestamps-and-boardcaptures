@@ -1,0 +1,5 @@
+﻿image_name: [1-15-15]Case Study — limₓ→π∕2⁻ (tan 𝒙)^{cos 𝒙}.png
+file_name: [1-15-15]-01.png
+timestamp: 1:15:15
+counter: 01
+folder: Calculus 2 Lecture 6.7

@@ -1,0 +1,5 @@
+﻿image_name: [1-55-11]Example 7 — Discontinuity at the upper limit ∫ [1, 4] 1∕(4 − 𝒙)²ᐟ³ ⋅ 𝒅𝒙.png
+file_name: [1-55-11]-01.png
+timestamp: 1:55:11
+counter: 01
+folder: Calculus 2 Lecture 7.6

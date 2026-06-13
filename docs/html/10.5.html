@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ １０．５： Ｃａｌｃｕｌｕｓ ｏｆ Ｐｏｌａｒ Ｅｑｕａｔｉｏｎｓ</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <article class="chapter">
+        <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ １０．５</h1>
+        <h1> Ｃａｌｃｕｌｕｓ ｏｆ Ｐｏｌａｒ Ｅｑｕａｔｉｏｎｓ</h1>
+
+        <h2>１ - Ｃａｌｃｕｌｕｓ　ｏｆ　Ｐｏｌａｒ　Ｅｑｕａｔｉｏｎｓ</h2>
+
+        <h2>１．１ - Ａｒｅａ　Ｂｏｕｎｄ　ｂｙ　ａ　Ｐｏｌａｒ　Ｃｕｒｖｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.5/[0-17]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.5/[0-17]-01.png"
+                        alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=17" target="_blank">[0:17]</a>.
+                Goal — Find the area bound by a polar curve.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">in rectangular coordinates, area is built from rectangles</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">in polar coordinates, area is built from sectors</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Setup:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the curve is given by $𝒓=𝒇(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the region runs from angle $𝜶$ to angle $𝜷$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Sector area:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\dfrac{1}{2}𝒓^{2}𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Infinitesimal idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">split the region into many tiny sectors</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">let the angle width $d𝜽$ go to zero</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then the sum of all those tiny sector areas becomes an integral</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\displaystyle \int_{𝜶}^{𝜷}\dfrac{1}{2}𝒓^{2}\,d𝜽$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=238" target="_blank">[3:58]</a>.
+                Why the formula works.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The integral adds:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">an infinite number of tiny sector areas</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the variable is angular,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the integration is with respect to $𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">polar area is accumulated by angle, not by horizontal width</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Visual interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the bounded region is swept out from $𝜽=𝜶$ to $𝜽=𝜷$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">while $𝒓$ changes according to the curve $𝒓=𝒇(𝜽)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=366" target="_blank">[6:06]</a>.
+                🧩 Example 1 — Find the area bound by $𝒓^{2}=4\cos(2𝜽)$. <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.5/[6-06]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 10.5/[6-06]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the total area of the entire figure</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=2\sqrt{\cos(2𝜽)}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use previous graph knowledge:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">one loop is traced from $𝜽=0$ to $𝜽=\dfrac{\pi}{4}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">at $𝜽=0$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒓=2$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">at $𝜽=\dfrac{\pi}{4}$:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒓=0$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Symmetry:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the whole figure has 4 congruent pieces</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Strategy:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the area of one piece from $0$ to $\dfrac{\pi}{4}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then multiply by $4$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Set up:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=4\displaystyle \int_{0}^{\pi/4}\dfrac{1}{2}𝒓^{2}\,d𝜽$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute $𝒓^{2}=4\cos(2𝜽)$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=4\displaystyle
+                                \int_{0}^{\pi/4}\dfrac{1}{2}\left(4\cos(2𝜽)\right)\,d𝜽$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=8\displaystyle \int_{0}^{\pi/4}\cos(2𝜽)\,d𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Integrate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=8\cdot \dfrac{\sin(2𝜽)}{2}\Big|_{0}^{\pi/4}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=4\sin(2𝜽)\Big|_{0}^{\pi/4}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=4\sin\left(2\cdot \dfrac{\pi}{4}\right)-4\sin(2\cdot 0)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=4\sin\left(\dfrac{\pi}{2}\right)-4\sin(0)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=4$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=4$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">each of the four congruent pieces has area $1$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=837" target="_blank">[13:57]</a>.
+                🧩 Example 2 — Find the area bound by $𝒓=1+\cos(𝜽)$. <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.5/[13-57]-01.png" target="_blank">[📷image-1]</a><img
+                        src="../img/Calculus 2 Lecture 10.5/[13-57]-01.png" alt="Preview" /></span> - <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 10.5/[13-57]-02.png"
+                        target="_blank">[📷image-2]</a><img src="../img/Calculus 2 Lecture 10.5/[13-57]-02.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the total area of the cardioid</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Symmetry:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the graph is symmetric about the polar axis</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Strategy:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the upper half from $0$ to $\pi$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then multiply by $2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Set up:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=2\displaystyle
+                                \int_{0}^{\pi}\dfrac{1}{2}(1+\cos(𝜽))^{2}\,d𝜽$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the factor $2$ and the factor $\dfrac{1}{2}$ cancel</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\mathcal{A}=\displaystyle \int_{0}^{\pi}(1+\cos(𝜽))^{2}\,d𝜽$
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Expand:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\displaystyle
+                                \int_{0}^{\pi}(1+2\cos(𝜽)+\cos^{2}(𝜽))\,d𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the power-reduction identity:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos^{2}(𝜽)=\dfrac{1+\cos(2𝜽)}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\displaystyle
+                                \int_{0}^{\pi}\left(1+2\cos(𝜽)+\dfrac{1}{2}(1+\cos(2𝜽))\right)\,d𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify the integrand:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\displaystyle
+                                \int_{0}^{\pi}\left(\dfrac{3}{2}+2\cos(𝜽)+\dfrac{1}{2}\cos(2𝜽)\right)\,d𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Integrate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\mathcal{A}=\left[\dfrac{3}{2}𝜽+2\sin(𝜽)+\dfrac{1}{4}\sin(2𝜽)\right]\Big|_{0}^{\pi}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\mathcal{A}=\left[\dfrac{3}{2}\pi+2\sin(\pi)+\dfrac{1}{4}\sin(2\pi)\right]-\left[0+2\sin(0)+\dfrac{1}{4}\sin(0)\right]$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\dfrac{3\pi}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\dfrac{3\pi}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the total area enclosed by the cardioid is $\dfrac{3\pi}{2}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>１．２ - Ａｒｅａ　Ｂｅｔｗｅｅｎ　Ｔｗｏ　Ｐｏｌａｒ　Ｃｕｒｖｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.5/[23-17]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 10.5/[23-17]-01.png"
+                        alt="Preview" /></span> - <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.5/[23-17]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 10.5/[23-17]-02.png" alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=1397"
+                    target="_blank">[23:17]</a>. Area between two polar curves.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Suppose:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓_{1}=𝒇(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓_{2}=𝒈(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">on the interval $[𝜶,𝜷]$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is the polar version of big curve minus little curve</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but instead of subtracting rectangular strips,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">we subtract sector areas</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Recall:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the area bound by one polar curve is
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle \int_{𝜶}^{𝜷}\dfrac{1}{2}𝒓^{2}\,d𝜽$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So for two curves:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">first find the area of the outer sector-region</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then subtract the area of the inner sector-region</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Outer curve:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the one farther from the pole</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Inner curve:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the one closer to the pole</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Set up with $𝒓_{1}$ and $𝒓_{2}$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\displaystyle
+                                \int_{𝜶}^{𝜷}\dfrac{1}{2}𝒓_{1}^{2}\,d𝜽-\int_{𝜶}^{𝜷}\dfrac{1}{2}𝒓_{2}^{2}\,d𝜽$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Combine the integrals:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\displaystyle
+                                \int_{𝜶}^{𝜷}\dfrac{1}{2}(𝒓_{1}^{2}-𝒓_{2}^{2})\,d𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Replace $𝒓_{1}$ and $𝒓_{2}$ by their functions:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\displaystyle
+                                \int_{𝜶}^{𝜷}\dfrac{1}{2}(𝒇(𝜽)^{2}-𝒈(𝜽)^{2})\,d𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">at each angle $𝜽$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">take the big sector minus the little sector</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then add all those sector differences from $𝜶$ to $𝜷$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the bounds $[𝜶,𝜷]$ must describe the region you actually want</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and on that interval you must know which curve is outer and which is
+                                inner</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is the polar analogue of
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">upper function minus lower function</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">except here it becomes
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">outer radius squared minus inner radius squared</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=1710"
+                    target="_blank">[28:30]</a>. 🧩 Example 3 — Find the area between $𝒓=3$ and $𝒓=2+2\cos(𝜽)$. <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 10.5/[28-30]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 10.5/[28-30]-01.png"
+                        alt="Preview" /></span> - <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.5/[28-30]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 10.5/[28-30]-02.png" alt="Preview" /></span> - <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 10.5/[28-30]-03.png"
+                        target="_blank">[📷image-3]</a><img src="../img/Calculus 2 Lecture 10.5/[28-30]-03.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the region where the cardioid lies outside the circle</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Identify the curves:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=3$ is a circle of radius $3$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=2+2\cos(𝜽)=2(1+\cos(𝜽))$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so the second curve is a larger sideways cardioid</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First find the intersection angles.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">set the two curves equal:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$3=2+2\cos(𝜽)$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">solve:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$1=2\cos(𝜽)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\cos(𝜽)=\dfrac{1}{2}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝜽=\dfrac{\pi}{3}$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝜽=\dfrac{5\pi}{3}$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important interval choice:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Leonard rewrites $\dfrac{5\pi}{3}$ as $-\dfrac{\pi}{3}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">reason:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the desired shaded region is swept in the positive direction
+                                        from $-\dfrac{\pi}{3}$ to $\dfrac{\pi}{3}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so the natural interval is:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\left[-\dfrac{\pi}{3},\dfrac{\pi}{3}\right]$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Outer minus inner on this interval:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">outer curve = $2+2\cos(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">inner curve = $3$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Direct setup:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\displaystyle
+                                \int_{-\pi/3}^{\pi/3}\dfrac{1}{2}\left[(2+2\cos(𝜽))^{2}-3^{2}\right]\,d𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Symmetry shortcut:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the region is symmetric about the polar axis</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so Leonard instead uses:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\mathcal{A}=2\displaystyle
+                                        \int_{0}^{\pi/3}\dfrac{1}{2}\left[(2+2\cos(𝜽))^{2}-3^{2}\right]\,d𝜽$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the $2$ and the $\dfrac{1}{2}$ cancel</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Simplify the integrand:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(2+2\cos(𝜽))^{2}=4+8\cos(𝜽)+4\cos^{2}(𝜽)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\mathcal{A}=\displaystyle
+                                        \int_{0}^{\pi/3}\left[4+8\cos(𝜽)+4\cos^{2}(𝜽)-9\right]\,d𝜽$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\mathcal{A}=\displaystyle
+                                        \int_{0}^{\pi/3}\left[-5+8\cos(𝜽)+4\cos^{2}(𝜽)\right]\,d𝜽$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use power reduction:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos^{2}(𝜽)=\dfrac{1+\cos(2𝜽)}{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$4\cos^{2}(𝜽)=2+2\cos(2𝜽)$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so the integral becomes:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\mathcal{A}=\displaystyle
+                                        \int_{0}^{\pi/3}\left[-3+8\cos(𝜽)+2\cos(2𝜽)\right]\,d𝜽$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Integrate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\left[-3𝜽+8\sin(𝜽)+\sin(2𝜽)\right]_{0}^{\pi/3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\mathcal{A}=-3\left(\dfrac{\pi}{3}\right)+8\sin\left(\dfrac{\pi}{3}\right)+\sin\left(\dfrac{2\pi}{3}\right)$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=-\pi+8\left(\dfrac{\sqrt{3}}{2}\right)+\dfrac{\sqrt{3}}{2}$
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=-\pi+\dfrac{9\sqrt{3}}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final result:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\dfrac{9\sqrt{3}}{2}-\pi$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is the area of the part of the cardioid that extends outside the
+                                circle</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>１．３ - Ａｒｃ　Ｌｅｎｇｔｈ　ｏｆ　ａ　Ｐｏｌａｒ　Ｃｕｒｖｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=2974"
+                    target="_blank">[49:34]</a>. Arc length for $𝒓=𝒇(𝜽)$. <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.5/[49-34]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 10.5/[49-34]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">find the distance along a polar curve from $𝜽=𝜶$ to $𝜽=𝜷$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{L}=\displaystyle
+                                \int_{𝜶}^{𝜷}\sqrt{𝒓^{2}+\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)^{2}}\,d𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Structure of the formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">square the radius term $𝒓$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">square the derivative term $\dfrac{𝒅𝒓}{𝒅𝜽}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">add them</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">take the square root</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">integrate with respect to $𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">this is the polar analogue of the arc length formulas from rectangular
+                                and parametric calculus</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the formula measures the total length of the curve as the angle sweeps
+                                from $𝜶$ to $𝜷$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Practical workflow:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❶ compute $\dfrac{𝒅𝒓}{𝒅𝜽}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❷ form $𝒓^{2}+\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)^{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❸ simplify the square root as much as possible</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❹ integrate over $[𝜶,𝜷]$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>１．４ - Ｓｕｒｆａｃｅ　Ａｒｅａ　ｏｆ　Ｒｅｖｏｌｕｔｉｏｎ　ｉｎ　Ｐｏｌａｒ　Ｆｏｒｍ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=3159"
+                    target="_blank">[52:39]</a>. Surface area of revolution for a polar curve.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">surface area is built from
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">circumference × arc length element</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Recall the polar arc length element:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒅𝒔=\sqrt{𝒓^{2}+\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)^{2}}\,d𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So the general structure is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{S}=\displaystyle \int \text{ circumference}\cdot 𝒅𝒔$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the radius of the little circles of revolution is not the polar radius
+                                $𝒓$ itself</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is the appropriate rectangular component of the point on the curve
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=3340"
+                    target="_blank">[55:40]</a>. Revolution about the polar axis. <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.5/[55-40]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 10.5/[55-40]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is the $𝒙$-axis analogue.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Radius of each circle:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the distance to the polar axis is the $𝒚$-coordinate</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒚=𝒓\sin(𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Circumference term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2\pi(𝒓\sin(𝜽))$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{S}=\displaystyle \int_{𝜶}^{𝜷}2\pi\cdot 𝒓\sin(𝜽)\cdot
+                                \sqrt{𝒓^{2}+\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)^{2}}\,d𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">circumference of the circular slice × polar arc length element</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=3510"
+                    target="_blank">[58:30]</a>. Revolution about the line $𝜽=\dfrac{\pi}{2}$. <span
+                    class="image-container"><a href="../img/Calculus 2 Lecture 10.5/[58-30]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 10.5/[58-30]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is the $𝒚$-axis analogue.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Radius of each circle:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the distance to the line $𝜽=\dfrac{\pi}{2}$ is the $𝒙$-coordinate</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙=𝒓\cos(𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Circumference term:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2\pi(𝒓\cos(𝜽))$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Formula:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{S}=\displaystyle \int_{𝜶}^{𝜷}2\pi\cdot 𝒓\cos(𝜽)\cdot
+                                \sqrt{𝒓^{2}+\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)^{2}}\,d𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">circumference of the circular slice × polar arc length element</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Notes.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">N̲O̲T̲E̲ 1 — Why $𝒙$ and $𝒚$ appear.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">even though the curve is given in polar form,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the radius of revolution is measured as a rectangular distance
+                                        to the axis</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">around the polar axis, that distance is $𝒚$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">around the line $𝜽=\dfrac{\pi}{2}$, that distance is $𝒙$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">N̲O̲T̲E̲ 2 — Main workflow.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❶ Identify the axis of revolution.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❷ Choose the correct radius:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒓\sin(𝜽)$ for the polar axis</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒓\cos(𝜽)$ for the line $𝜽=\dfrac{\pi}{2}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❸ Compute $\dfrac{𝒅𝒓}{𝒅𝜽}$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❹ Form the arc length factor:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\sqrt{𝒓^{2}+\left(\dfrac{𝒅𝒓}{𝒅𝜽}\right)^{2}}$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❺ Multiply by $2\pi$ times the appropriate radius.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❻ Integrate from $𝜶$ to $𝜷$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">N̲O̲T̲E̲ 3 — Conceptual summary.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">same philosophy as in Calc 1:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">circumference × length</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">only now everything is written in terms of $𝜽$ and polar components
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>２．４. １ - Ｅｘａｍｐｌｅ 4</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><span class="image-container"><a href="../img/Calculus 2 Lecture 10.5/[1-01-26]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 10.5/[1-01-26]-01.png"
+                        alt="Preview" /></span> - <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 10.5/[1-01-26]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 10.5/[1-01-26]-02.png" alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=3686"
+                    target="_blank">[1:01:26]</a>. 🧩 Example 4 — Find the intersections of the polar curves
+                $𝒓=\cos(𝜽)$ and $𝒓=\cos(2𝜽)$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Goal:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">determine all geometric points where the two curves intersect</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main workflow:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❶ set the two equations equal to find intersections reached at the same
+                                angle $𝜽$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❷ solve for the possible angle values</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❸ compute the corresponding radius $𝒓$ for each valid angle</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❹ check separately whether both curves also pass through the pole $𝒓=0$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Why the extra pole check is necessary:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">in polar coordinates, the same geometric point can be reached with
+                                different angle values</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so two curves may both pass through the origin even if that does not
+                                appear from setting the equations equal</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=3770"
+                    target="_blank">[1:02:50]</a>. Set the curves equal.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Same-angle intersection condition:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos(𝜽)=\cos(2𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use the identity:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos(2𝜽)=2\cos^{2}(𝜽)-1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Substitute:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos(𝜽)=2\cos^{2}(𝜽)-1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rearrange:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0=2\cos^{2}(𝜽)-\cos(𝜽)-1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Factor:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$0=(2\cos(𝜽)+1)(\cos(𝜽)-1)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=3926"
+                    target="_blank">[1:05:26]</a>. Solve the factored equation.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Case 1:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos(𝜽)-1=0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos(𝜽)=1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Find the corresponding radius:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=\cos(0)=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First intersection point:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(1,0)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Case 2:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2\cos(𝜽)+1=0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\cos(𝜽)=-\dfrac{1}{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=\dfrac{2\pi}{3}$ and $\dfrac{4\pi}{3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Find the corresponding radius:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=\cos\left(\dfrac{2\pi}{3}\right)=-\dfrac{1}{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=\cos\left(\dfrac{4\pi}{3}\right)=-\dfrac{1}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Additional intersection points:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(-\dfrac{1}{2},\dfrac{2\pi}{3}\right)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(-\dfrac{1}{2},\dfrac{4\pi}{3}\right)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=4028"
+                    target="_blank">[1:07:08]</a>. Important interpretation.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Do not stop after finding only $𝜽$.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A polar intersection point must be written as:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(𝒓,𝜽)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So after solving for $𝜽$,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">always substitute back to get $𝒓$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Warning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">do not mix radius values from one case with angles from another case
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">each point must come from one consistent solved case</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=4125"
+                    target="_blank">[1:08:45]</a>. Why negative radii look strange.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A point like:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(-\dfrac{1}{2},\dfrac{2\pi}{3}\right)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Means:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">start at angle $\dfrac{2\pi}{3}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">then move in the opposite direction because the radius is negative</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So negative-$𝒓$ points are valid polar points,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">not mistakes</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=4203"
+                    target="_blank">[1:10:03]</a>. Special check — Does either curve pass through the pole?
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">For $𝒓=\cos(𝜽)$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=0$ when $\cos(𝜽)=0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=\dfrac{\pi}{2},\dfrac{3\pi}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">For $𝒓=\cos(2𝜽)$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=0$ when $\cos(2𝜽)=0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝜽=\dfrac{\pi}{4},\dfrac{3\pi}{4},\dfrac{5\pi}{4},\dfrac{7\pi}{4}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">both curves pass through the pole</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">they reach the origin at different angle values</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">so this intersection does not necessarily appear when solving
+                                $\cos(𝜽)=\cos(2𝜽)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=4292"
+                    target="_blank">[1:11:32]</a>. Pole intersection.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since both curves pass through $𝒓=0$,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the origin is also an intersection point</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final extra intersection:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=0$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=Kh265EC11OI&t=4322"
+                    target="_blank">[1:12:02]</a>. Final list of intersections.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Intersections found from equal-angle solving:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$(1,0)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(-\dfrac{1}{2},\dfrac{2\pi}{3}\right)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\left(-\dfrac{1}{2},\dfrac{4\pi}{3}\right)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Additional pole intersection:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒓=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Final interpretation:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the total intersections are
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$(1,0)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\left(-\dfrac{1}{2},\dfrac{2\pi}{3}\right)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\left(-\dfrac{1}{2},\dfrac{4\pi}{3}\right)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">and the pole $𝒓=0$</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">Notes &amp; Strategy.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">N̲O̲T̲E̲ 1 — In polar coordinates, equal geometric points do not always require
+                        equal angles.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">N̲O̲T̲E̲ 2 — Setting $𝒇(𝜽)=𝒈(𝜽)$ only finds intersections that occur with
+                        the same parameter angle.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">N̲O̲T̲E̲ 3 — Always check the pole separately when solving intersection problems
+                        in polar form.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">N̲O̲T̲E̲ 4 — Final answer must be a list of points, not just angle values.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>３ - Ｎｏｔｅｓ　＆　Ｓｔｒａｔｅｇｙ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 1 — How to think about polar area.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">rectangular area adds thin rectangles</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">polar area adds thin sectors</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">the variable of accumulation is $𝜽$</li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 2 — Main workflow for area bound by one polar curve.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❶ Identify the graph or the relevant traced piece.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❷ Find the correct angle interval $[𝜶,𝜷]$.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❸ Use symmetry whenever possible.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❹ Apply:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\displaystyle \int_{𝜶}^{𝜷}\dfrac{1}{2}𝒓^{2}\,d𝜽$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 3 — Main workflow for area between two polar curves.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❶ Find the intersection angles first.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❷ Determine which interval traces the desired region.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❸ Identify the outer curve and the inner curve.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❹ Apply:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\mathcal{A}=\displaystyle
+                                \int_{𝜶}^{𝜷}\dfrac{1}{2}(\text{outer}^{2}-\text{inner}^{2})\,d𝜽$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">❺ Use symmetry to simplify the bounds whenever possible.</li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 4 — Why interval choice matters.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">in polar problems, the bounds are angles</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">choosing the wrong angular interval can produce the wrong region</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">always think geometrically about the direction of the sweep</li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 5 — The pole can be an intersection even when equal-angle solving misses it.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">two polar curves may reach the origin at different angle values</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">so solving $𝒓_{1}=𝒓_{2}$ does not always capture every intersection</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">always check separately whether both curves pass through $𝒓=0$</li>
+                </ul>
+            </li>
+        </ul>
+    </article>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+﻿image_name: [4-17]Algebraic procedure to determine the inverse function_2.png
+file_name: [4-17]-02.png
+timestamp: 4:17
+counter: 02
+folder: img

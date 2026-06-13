@@ -1,0 +1,5 @@
+﻿image_name: [14-00]A power series defines a function.png
+file_name: [14-00]-01.png
+timestamp: 14:00
+counter: 01
+folder: Calculus 2 Lecture 9.7

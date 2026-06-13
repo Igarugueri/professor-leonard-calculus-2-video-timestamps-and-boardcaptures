@@ -1,0 +1,5 @@
+﻿image_name: [20-33]Conversion — Polar to rectangular (4, π∕6).png
+file_name: [20-33]-01.png
+timestamp: 20:33
+counter: 01
+folder: Calculus 2 Lecture 10.4

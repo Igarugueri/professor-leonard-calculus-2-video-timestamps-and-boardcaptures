@@ -1,0 +1,5 @@
+﻿image_name: [19-08]Example 2 — Evaluate ∫ 𝒙³ ln 𝒙 𝒅𝒙.png
+file_name: [19-08]-01.png
+timestamp: 19:08
+counter: 01
+folder: Calculus 2 Lecture 7.1

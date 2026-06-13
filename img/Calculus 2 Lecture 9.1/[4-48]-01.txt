@@ -1,0 +1,5 @@
+﻿image_name: [4-48]Example 1 — Listing the first terms of the sequence {((-1)ⁿ⁺¹ 2ⁿ) ∕ (n+1)}.png
+file_name: [4-48]-01.png
+timestamp: 4:48
+counter: 01
+folder: Calculus 2 Lecture 9.1

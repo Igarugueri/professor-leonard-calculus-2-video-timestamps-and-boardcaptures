@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．３： Ｕｓｉｎｇ ｔｈｅ Ｉｎｔｅｇｒａｌ Ｔｅｓｔ ｆｏｒ Ｃｏｎｖｅｒｇｅｎｃｅ／Ｄｉｖｅｒｇｅｎｃｅ ｏｆ Ｓｅｒｉｅｓ， Ｐ－Ｓｅｒｉｅｓ</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <article class="chapter">
+        <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ９．３</h1>
+        <h1> Ｕｓｉｎｇ ｔｈｅ Ｉｎｔｅｇｒａｌ Ｔｅｓｔ ｆｏｒ Ｃｏｎｖｅｒｇｅｎｃｅ／Ｄｉｖｅｒｇｅｎｃｅ ｏｆ Ｓｅｒｉｅｓ， Ｐ－Ｓｅｒｉｅｓ</h1>
+
+
+        <h2>Ｔｈｅｏｒｙ　ａｎｄ　Ｃｏｎｄｉｔｉｏｎｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=0" target="_blank">[0:00]</a>.
+                Fundamental idea of the Integral Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Main question:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">can we use integrals to test convergence or divergence of a series?</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Basic intuition:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">an integral adds up infinitely many small areas.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">a series adds up infinitely many terms.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if the terms of a series can be represented by a function,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">then the improper integral of that function can help determine
+                                        whether the series converges or diverges.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 1: Relationship between rectangles and series terms.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A series adds:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{1}+𝒂_{2}+𝒂_{3}+\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">An integral adds:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">areas under a curve.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Conceptual connection:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the terms of the series can be thought of as rectangle heights.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the integral adds up the area under the corresponding function.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Key idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if the total area is finite,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the series may also be finite.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">if the total area is infinite,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the series may also diverge.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=64" target="_blank">[1:04]</a>.
+                Requirements for applying the Integral Test.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Let the sequence terms be represented by a function:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=𝒇(𝒏)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">To apply the Integral Test, $𝒇(𝒙)$ must be:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❶ Continuous
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">The function must be continuous on the interval. Meaning:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">no breaks.</li>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">no jumps.</li>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">no vertical asymptotes inside the interval.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❷ Positive
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">The function must be positive on the interval. Meaning:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$𝒇(𝒙)&gt;0$</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">This matches the idea of adding positive terms in the series.
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">❸ Decreasing
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">The function must be decreasing on the interval. Meaning:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">as $𝒙$ increases, $𝒇(𝒙)$ gets smaller.</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">If decreasing is not obvious,
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">use the first derivative.</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">If:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$𝒇'(𝒙)&lt;0$</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">Then:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">$𝒇(𝒙)$ is decreasing.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">These conditions must hold on the interval being tested:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">usually $[1,\infty)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">or sometimes $[𝑵,\infty)$, if the first few terms cause problems.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=159" target="_blank">[2:39]</a>.
+                Formal statement of the Integral Test. – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 9.3/[2-39]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 9.3/[2-39]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Suppose:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒂_{n}=𝒇(𝒏)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If $𝒇(𝒙)$ is:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">continuous,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">positive,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">and decreasing</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">on $[1,\infty)$, then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty} 𝒂_{n}$ and $\displaystyle
+                                \int_{1}^{\infty} 𝒇(𝒙)\cdot 𝒅𝑥$ have the same convergence behavior.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">N̲O̲T̲E̲ 2: Relationship between the series and the improper integral.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ $\displaystyle \int_{1}^{\infty} 𝒇(𝒙)\cdot 𝒅𝑥$ converges,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ $\displaystyle \sum_{𝒏=1}^{\infty} 𝒂_{n}$ converges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">i̲f̲ $\displaystyle \int_{1}^{\infty} 𝒇(𝒙)\cdot 𝒅𝑥$ diverges,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">t̲h̲e̲n̲ $\displaystyle \sum_{𝒏=1}^{\infty} 𝒂_{n}$ diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series and the integral have the same result only in terms of
+                                convergence or divergence.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">they do not necessarily have the same numerical value.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=240" target="_blank">[4:00]</a>.
+                The integral as a bound for the series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Conceptual idea:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the improper integral acts as a bound for the series.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the integral converges:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it gives an upper-bound type idea.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series is trapped under a finite amount of total area.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If the integral diverges:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it shows that the accumulated area grows without bound.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series also diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Practical meaning:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we use the integral to decide whether the series converges or diverges.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｃｒｉｔｉｃａｌ　Ｎｏｔｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">– <span class="image-container"><a href="../img/Calculus 2 Lecture 9.3/[4-45]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.3/[4-45]-01.png"
+                        alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=285" target="_blank">[4:45]</a>.
+                ✱ The Integral Test does not necessarily give the sum.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">If $\displaystyle \int_{1}^{\infty} 𝒇(𝒙)\cdot 𝒅𝑥=𝑳$
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">This does not mean $\displaystyle \sum_{𝒏=1}^{\infty} 𝒂_{n}=𝑳$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">It only means:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the series converges.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the integral value is not necessarily the series sum.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=428" target="_blank">[7:08]</a>.
+                ✱ Adding or subtracting finitely many terms does not affect convergence.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Convergence is not affected by:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">adding finitely many terms.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">subtracting finitely many terms.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">ignoring the first few terms.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important distinction:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the sum may change.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">but the convergence or divergence does not change.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we may start the Integral Test at a later integer if necessary.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=490" target="_blank">[8:10]</a>.
+                Adjusting the starting point. – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 9.3/[8-10]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 9.3/[8-10]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Sometimes $𝒇(𝒙)$ is not decreasing from $𝒏=1$.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But if $𝒇(𝒙)$ becomes decreasing after some point,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we can start the integral at that later point.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">instead of starting at $1$,</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we may start at $3$, $5$, $7$, or another suitable integer.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Reason:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">removing finitely many terms does not affect convergence.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｅｘａｍｐｌｅｓ　Ｕｓｉｎｇ　ｔｈｅ　Ｉｎｔｅｇｒａｌ　Ｔｅｓｔ</h2>
+        <h2>Ｅｘａｍｐｌｅ 1</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">– <span class="image-container"><a href="../img/Calculus 2 Lecture 9.3/[10-30]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.3/[10-30]-01.png"
+                        alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=630" target="_blank">[10:30]</a>.
+                🧩 Example 1 — Determining convergence for $\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏^{2}+1}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏^{2}+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First check the Divergence Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{1}{𝒏^{2}+1}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the limit is $0$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3"><strong>the Divergence Test is inconclusive.</strong></li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we must use another test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=742" target="_blank">[12:22]</a>.
+                Applying the Integral Test to Example 1.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Define:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\dfrac{1}{𝒙^{2}+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check the conditions on $[1,\infty)$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is positive.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is continuous.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is decreasing.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Integral Test can be applied.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=820" target="_blank">[13:40]</a>.
+                Applying the Integral Test to a variant of Example 1: $𝒇(𝒙)=\dfrac{1}{𝒙^{2}-1}$
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check the conditions on $[1,\infty)$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is not continuous at $𝒙=1$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">because $𝒙^{2}-1=0$ when $𝒙=1$.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore, we cannot use the interval $[1,\infty)$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Can we subtract a finite number of terms?
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Yes.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">convergence is not affected by removing finitely many terms.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">So we adjust the starting interval:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">instead of $[1,\infty)$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">use $[2,\infty)$.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check the conditions on $[2,\infty)$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is positive.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is continuous.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is decreasing.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Integral Test can be applied on $[2,\infty)$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=862" target="_blank">[14:22]</a>.
+                Solving the improper integral in Example 1.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Set up the integral:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int_{1}^{\infty}\dfrac{1}{𝒙^{2}+1}\cdot 𝒅𝑥$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite as an improper integral:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{b\to\infty}\int_{1}^{b}\dfrac{1}{𝒙^{2}+1}\cdot
+                                𝒅𝑥$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Antiderivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{1}{𝒙^{2}+1}\cdot 𝒅𝑥=\tan^{-1}(𝒙)$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=1002"
+                    target="_blank">[16:42]</a>. Evaluating the limit in Example 1.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{b\to\infty}\Big[\tan^{-1}(𝒙)\Big]_{1}^{b}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \lim_{b\to\infty}\Big[\tan^{-1}(b)-\tan^{-1}(1)\Big]$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{b\to\infty}\tan^{-1}(b)=\dfrac{\pi}{2}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\tan^{-1}(1)=\dfrac{\pi}{4}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{\pi}{2}-\dfrac{\pi}{4}=\dfrac{\pi}{4}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the improper integral converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=1080"
+                    target="_blank">[18:00]</a>. Conclusion for Example 1.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the limit exists the improper integral converges,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series $\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏^{2}+1}$ and
+                                the integral converge.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{\pi}{4}$ is the value of the integral.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is not necessarily the sum of the series.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｅｘａｍｐｌｅ 2</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">– <span class="image-container"><a href="../img/Calculus 2 Lecture 9.3/[19-34]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.3/[19-34]-01.png"
+                        alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=1174"
+                    target="_blank">[19:34]</a>. 🧩 Example 2 — Analyzing $\displaystyle
+                \sum_{𝒏=1}^{\infty}\dfrac{3}{2𝒏-1}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{3}{2𝒏-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First check the Divergence Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{3}{2𝒏-1}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the limit is $0$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3"><strong>the Divergence Test is inconclusive.</strong></li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">we must continue.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=1212"
+                    target="_blank">[20:12]</a>. Applying the Integral Test to Example 2.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Define:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\dfrac{3}{2𝒙-1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check the conditions on $[1,\infty)$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is positive.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is continuous.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is decreasing.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Integral Test can be applied.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=1260"
+                    target="_blank">[21:00]</a>. Solving the improper integral in Example 2.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Set up:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int_{1}^{\infty}\dfrac{3}{2𝒙-1}\cdot 𝒅𝑥$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite as an improper integral:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{b\to\infty}\int_{1}^{b}\dfrac{3}{2𝒙-1}\cdot 𝒅𝑥$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use substitution:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒖=2𝒙-1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$d𝒖=2\cdot 𝒅𝑥$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒅𝑥=\dfrac{d𝒖}{2}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Antiderivative:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{3}{2𝒙-1}\cdot 𝒅𝑥=\dfrac{3}{2}\ln|2𝒙-1|$
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=1345"
+                    target="_blank">[22:25]</a>. Evaluating the limit in Example 2.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \lim_{b\to\infty}\Big[\dfrac{3}{2}\ln(2𝒙-1)\Big]_{1}^{b}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle
+                                \lim_{b\to\infty}\Big[\dfrac{3}{2}\ln(2b-1)-\dfrac{3}{2}\ln(1)\Big]$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(1)=0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(2b-1)\to\infty$ as $b\to\infty$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the improper integral diverges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=1515"
+                    target="_blank">[25:15]</a>. Conclusion for Example 2.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the improper integral diverges,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series $\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{3}{2𝒏-1}$
+                                diverges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ｅｘａｍｐｌｅ 3</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">– <span class="image-container"><a href="../img/Calculus 2 Lecture 9.3/[26-15]-01.png"
+                        target="_blank">[📷image-1]</a><img src="../img/Calculus 2 Lecture 9.3/[26-15]-01.png"
+                        alt="Preview" /></span> – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 9.3/[26-15]-02.png" target="_blank">[📷image-2]</a><img
+                        src="../img/Calculus 2 Lecture 9.3/[26-15]-02.png" alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=1575"
+                    target="_blank">[26:15]</a>. 🧩 Example 3 — The case of $\displaystyle
+                \sum_{𝒏=1}^{\infty}\dfrac{\ln(𝒏)}{𝒏}$.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{\ln(𝒏)}{𝒏}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First check the Divergence Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{\ln(𝒏)}{𝒏}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the limit is $0$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Divergence Test is inconclusive.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Define $𝒇(𝒙)$ as a model of theseries:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\dfrac{\ln(𝒙)}{𝒙}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=1690"
+                    target="_blank">[28:10]</a>. Checking decreasing behavior for Example 3.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">To prove decreasing,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">take the derivative.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">
+                                $\dfrac{d}{d𝒙}\left[\dfrac{\ln(𝒙)}{𝒙}\right]=\dfrac{1-\ln(𝒙)}{𝒙^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">We need:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)\le 0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since $𝒙^{2}&gt;0$,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the sign depends on $1-\ln(𝒙)$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=1780"
+                            target="_blank">[29:40]</a>. Sign analysis for Example 3.
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">The derivative is non-positive when:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$1-\ln(𝒙)\le 0$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">This means:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$1\le \ln(𝒙)$</li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒆\le 𝒙$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Therefore:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$𝒇(𝒙)$ is decreasing for $𝒙\ge 𝒆$.</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">Since:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$3&gt;𝒆$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">We can use the interval:
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$[3,\infty)$</li>
+                                </ul>
+                            </li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3"> N̲O̲T̲E̲ — Strictly decreasing versus non-increasing.
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">If $𝒇'(𝒙)&lt;0$
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">Then $𝒇(𝒙)$ is strictly decreasing.</li>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">This means the function is always going down</li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">If $𝒇'(𝒙)\le 0$
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">Then $𝒇(𝒙)$ is decreasing / non-increasing.</li>
+                                            <li class="level-5">This means the function does not go up.</li>
+                                            <li class="level-5">it may go down,
+                                                <ul>
+                                                    <!-- ▢ nivel-6 -->
+                                                    <li class="level-6">or it may stay flat at isolated points.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">For the Integral Test:
+                                        <ul>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">non-increasing behavior is enough.</li>
+                                            <!-- ▣ nivel-5 -->
+                                            <li class="level-5">so using $𝒇'(𝒙)\le 0$ is valid.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=1867"
+                    target="_blank">[31:07]</a>. Adjusting the lower limit in Example 3.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The original series starts at $𝒏=1$.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">But the function is guaranteed to be decreasing from $𝒙=3$ onward.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is allowed because:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">removing finitely many terms does not affect convergence.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use the integral from $3$ to $\infty$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=2202"
+                    target="_blank">[36:42]</a>. Solving the improper integral in Example 3.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Set up:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int_{3}^{\infty}\dfrac{\ln(𝒙)}{𝒙}\cdot 𝒅𝑥$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite as an improper integral:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{b\to\infty}\int_{3}^{b}\dfrac{\ln(𝒙)}{𝒙}\cdot
+                                𝒅𝑥$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use substitution:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒖=\ln(𝒙)$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$d𝒖=\dfrac{1}{𝒙}\cdot 𝒅𝑥$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{\ln(𝒙)}{𝒙}\cdot
+                                𝒅𝑥=\dfrac{[\ln(𝒙)]^{2}}{2}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=2321"
+                    target="_blank">[38:41]</a>. Conclusion for Example 3.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \lim_{b\to\infty}\Big[\dfrac{[\ln(𝒙)]^{2}}{2}\Big]_{3}^{b}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle
+                                \lim_{b\to\infty}\left(\dfrac{[\ln(b)]^{2}}{2}-\dfrac{[\ln(3)]^{2}}{2}\right)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\ln(b)\to\infty$ as $b\to\infty$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{[\ln(b)]^{2}}{2}\to\infty$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the improper integral diverges.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the improper integral diverges,
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the series $\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{\ln(𝒏)}{𝒏}$
+                                diverges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>𝒑－Ｓｅｒｉｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">– <span class="image-container"><a href="../img/Calculus 2 Lecture 9.3/[41-16]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.3/[41-16]-01.png"
+                        alt="Preview" /></span></li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=2476"
+                    target="_blank">[41:16]</a>. Introduction to 𝒑-Series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A 𝒑-series has the form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏^{𝒑}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏$ is the changing index.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒑$ is a fixed exponent.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1">General form of a 𝒑-series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏^{𝒑}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Expands as:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$1+\dfrac{1}{2^{𝒑}}+\dfrac{1}{3^{𝒑}}+\dfrac{1}{4^{𝒑}}+\cdots$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒑$ does not change.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">only $𝒏$ changes.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=2605"
+                    target="_blank">[43:25]</a>. Convergence and divergence rules for 𝒑-Series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">𝒑-series rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏^{𝒑}}$ converges if
+                                $𝒑&gt;1$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏^{𝒑}}$ diverges if
+                                $𝒑\le 1$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Special case:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">when $𝒑=1$,
+                                <ul>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏}$ is <strong>the
+                                            harmonic series.</strong></li>
+                                    <!-- ■ nivel-4 -->
+                                    <li class="level-4">the harmonic series diverges.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=2981"
+                    target="_blank">[49:41]</a>. 🧩 Example — 𝒑-Series: $\displaystyle
+                \sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏^{2}}$ – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 9.3/[49-41]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 9.3/[49-41]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒑=2$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$2&gt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏^{2}}$ converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=3055"
+                    target="_blank">[50:55]</a>. 🧩 Example — 𝒑-Series: $\displaystyle
+                \sum_{𝒏=1}^{\infty}\dfrac{1}{\sqrt[3]{𝒏}}$ – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 9.3/[50-55]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 9.3/[50-55]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\sqrt[3]{𝒏}=𝒏^{1/3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \sum_{𝒏=1}^{\infty}\dfrac{1}{\sqrt[3]{𝒏}}=\sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏^{1/3}}$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒑=\dfrac{1}{3}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{3}&lt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{1}{\sqrt[3]{𝒏}}$ diverges.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=3131"
+                    target="_blank">[52:11]</a>. 🧩 Example — 𝒑-Series: $\displaystyle \sum_{𝒏=1}^{\infty} 𝒏^{-\pi}$
+                – <span class="image-container"><a href="../img/Calculus 2 Lecture 9.3/[52-11]-01.png"
+                        target="_blank">[📷image]</a><img src="../img/Calculus 2 Lecture 9.3/[52-11]-01.png"
+                        alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒏^{-\pi}=\dfrac{1}{𝒏^{\pi}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}
+                                𝒏^{-\pi}=\sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏^{\pi}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Here:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒑=\pi$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\pi&gt;1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty} 𝒏^{-\pi}$ converges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=3393"
+                    target="_blank">[56:33]</a>. Important note about recognizing 𝒑-Series.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">A 𝒑-series must have the form:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">constant / $𝒏^{𝒑}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">It cannot have extra terms added in the denominator.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Example:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{1}{𝒏^{7}+1}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is not directly a 𝒑-series.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">However:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it can later be compared to a 𝒑-series.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><strong>This leads to the Comparison Test.</strong></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ａｄｖａｎｃｅｄ　Ｉｎｔｅｇｒａｌ　Ｔｅｓｔ　Ｅｘａｍｐｌｅ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=3465"
+                    target="_blank">[57:45]</a>. 🧩 Advanced Example — :$\displaystyle
+                \sum_{𝒏=1}^{\infty}\dfrac{𝒆^{1/𝒏}}{𝒏^{2}}$. – <span class="image-container"><a
+                        href="../img/Calculus 2 Lecture 9.3/[57-45]-01.png" target="_blank">[📷image]</a><img
+                        src="../img/Calculus 2 Lecture 9.3/[57-45]-01.png" alt="Preview" /></span>
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Given series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{𝒆^{1/𝒏}}{𝒏^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">First check the Divergence Test:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{n\to\infty}\dfrac{𝒆^{1/𝒏}}{𝒏^{2}}=0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since the limit is $0$:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">the Divergence Test is inconclusive.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is not geometric:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">because the changing variable is not a constant raised to the $𝒏$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">This is not a 𝒑-series:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">because the numerator is not constant.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">try the Integral Test.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=3625"
+                    target="_blank">[1:00:25]</a>. Validating the Integral Test conditions for the advanced example.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Define:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\dfrac{𝒆^{1/𝒙}}{𝒙^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check positivity:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒆^{1/𝒙}$ is positive.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙^{2}$ is positive for $𝒙\ge 1$.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">therefore, $𝒇(𝒙)$ is positive.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check continuity:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{𝒆^{1/𝒙}}{𝒙^{2}}$ is continuous on $[1,\infty)$.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Check decreasing:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">use the first derivative.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=3669"
+                    target="_blank">[1:01:09]</a>. Showing decreasing behavior in the advanced example.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Differentiate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)=\dfrac{𝒆^{1/𝒙}}{𝒙^{2}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Using the quotient rule:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)=\dfrac{-𝒆^{1/𝒙}\cdot (1+2𝒙)}{𝒙^{4}}$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Sign analysis:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒆^{1/𝒙}&gt;0$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$1+2𝒙&gt;0$ for $𝒙\ge 1$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒙^{4}&gt;0$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Because of the negative sign:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇'(𝒙)&lt;0$ on $[1,\infty)$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒇(𝒙)$ is decreasing on $[1,\infty)$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=4042"
+                    target="_blank">[1:07:22]</a>. Solving the integral in the advanced example.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Set up:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int_{1}^{\infty}\dfrac{𝒆^{1/𝒙}}{𝒙^{2}}\cdot 𝒅𝑥$
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Rewrite as an improper integral:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle
+                                \lim_{b\to\infty}\int_{1}^{b}\dfrac{𝒆^{1/𝒙}}{𝒙^{2}}\cdot 𝒅𝑥$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Use substitution:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒖=\dfrac{1}{𝒙}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$d𝒖=-\dfrac{1}{𝒙^{2}}\cdot 𝒅𝑥$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-d𝒖=\dfrac{1}{𝒙^{2}}\cdot 𝒅𝑥$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Then:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int \dfrac{𝒆^{1/𝒙}}{𝒙^{2}}\cdot 𝒅𝑥=-𝒆^{1/𝒙}$</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=4188"
+                    target="_blank">[1:09:48]</a>. Evaluating the advanced example.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Evaluate:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \lim_{b\to\infty}\Big[-𝒆^{1/𝒙}\Big]_{1}^{b}$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=\displaystyle \lim_{b\to\infty}\Big[-𝒆^{1/b}-(-𝒆^{1})\Big]$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\dfrac{1}{b}\to 0$ as $b\to\infty$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒆^{1/b}\to 𝒆^{0}=1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$-𝒆^{1/b}+𝒆\to -1+𝒆$</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$=𝒆-1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The improper integral converges.</li>
+                </ul>
+            </li>
+
+            <!-- ● nivel-1 -->
+            <li class="level-1"><a href="https://www.youtube.com/watch?v=8jPpNK4GIVs&t=4222"
+                    target="_blank">[1:10:22]</a>. Final conclusion for the advanced example.
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Since:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \int_{1}^{\infty}\dfrac{𝒆^{1/𝒙}}{𝒙^{2}}\cdot
+                                𝒅𝑥=𝒆-1$</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">The improper integral converges.</li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Therefore:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$\displaystyle \sum_{𝒏=1}^{\infty}\dfrac{𝒆^{1/𝒏}}{𝒏^{2}}$ converges
+                                by the Integral Test.</li>
+                        </ul>
+                    </li>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2">Important:
+                        <ul>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">$𝒆-1$ is the value of the integral.</li>
+                            <!-- ○ nivel-3 -->
+                            <li class="level-3">it is not necessarily the sum of the series.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+        <ul>
+            <!-- ● nivel-1 -->
+            <li class="level-1">The 𝒑-Series and The Integral Test
+                <ul>
+                    <!-- ◉ nivel-2 -->
+                    <li class="level-2"><a
+                            href="https://openstax.org/books/calculus-volume-2/pages/5-3-the-divergence-and-integral-tests"
+                            target="_blank">[openstax🌐]</a></li>
+                </ul>
+            </li>
+        </ul>
+
+
+    </article>
+</body>
+
+</html>

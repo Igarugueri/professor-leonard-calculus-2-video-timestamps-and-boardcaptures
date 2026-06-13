@@ -1,0 +1,5 @@
+﻿image_name: [2-01-43]Example 4 — Explanation ∫ 1∕(𝒙² + 4) 𝒅𝒙_2.png
+file_name: [2-01-43]-02.png
+timestamp: 2:01:43
+counter: 02
+folder: Calculus 2 Lecture 7.4

@@ -1,0 +1,5 @@
+﻿image_name: [27-52]Example 2 — ∑[𝒏=1,∞] (-1)ⁿ ⋅ 2𝒏∕(4𝒏 - 1).png
+file_name: [27-52]-01.png
+timestamp: 27:52
+counter: 01
+folder: Calculus 2 Lecture 9.5

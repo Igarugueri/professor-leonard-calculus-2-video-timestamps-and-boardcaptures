@@ -1,0 +1,5 @@
+﻿image_name: [18-06]Example 1 — Find the equation of the tangent line for 𝒙 = sec(𝑻) 𝒚 = tan(𝑻) at 𝑻 = π∕4 with -π∕2  𝑻 π∕2.png
+file_name: [18-06]-01.png
+timestamp: 18:06
+counter: 01
+folder: Calculus 2 Lecture 10.3

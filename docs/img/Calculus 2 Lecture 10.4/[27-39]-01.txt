@@ -1,0 +1,5 @@
+﻿image_name: [27-39]Conversion — Rectangular to polar (-1, 1).png
+file_name: [27-39]-01.png
+timestamp: 27:39
+counter: 01
+folder: Calculus 2 Lecture 10.4

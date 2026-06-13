@@ -1,0 +1,5 @@
+﻿image_name: [1-18-47]Modeling natural growth and decay.png
+file_name: [1-18-47]-01.png
+timestamp: 1:18:47
+counter: 01
+folder: Calculus 2 Lecture 8.1

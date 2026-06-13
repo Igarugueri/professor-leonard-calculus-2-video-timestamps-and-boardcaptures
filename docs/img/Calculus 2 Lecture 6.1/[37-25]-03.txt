@@ -1,0 +1,5 @@
+﻿image_name: [37-25]Example  The Critical Case ∫ 1∕𝒙_2 d𝒙.png
+file_name: [37-25]-03.png
+timestamp: 37:25
+counter: 03
+folder: Calculus 2 Lecture 6.1

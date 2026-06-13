@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ７．２ － Ｔｅｃｈｎｉｑｕｅｓ Ｆｏｒ Ｔｒｉｇｏｎｏｍｅｔｒｉｃ Ｉｎｔｅｇｒａｌｓ</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <article class="chapter">
+    <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ７．２ </h1>
+    <h1> Ｔｅｃｈｎｉｑｕｅｓ Ｆｏｒ Ｔｒｉｇｏｎｏｍｅｔｒｉｃ Ｉｎｔｅｇｒａｌｓ</h1>
+
+
+
+    <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=1" target="_blank">[0:01]</a>.
+        Introduction to Section 7.2: Techniques for Trigonometric Integrals.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Continuation of the previous section on trigonometric integration.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Focus on products of powers of sine and cosine, and later on tangent/secant and
+            cotangent/cosecant.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｓｉｎｅ–Ｃｏｓｉｎｅ Ｐａｔｔｅｒｎｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=63" target="_blank">[1:03]</a>. Case
+        analysis for integrals of the form $\displaystyle \int \sin^{m}(𝒙)\cos^{n}(𝒙)\,𝒅𝒙$. – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[1-03]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[1-03]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Two cases:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Case 1: $m$ and/or $n$ is odd.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Case 2: $m$ and $n$ are even.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Case 1: At least one power is odd.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If the power of $\sin(𝒙)$ is odd:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Keep one factor of $\sin(𝒙)$.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Use the Pythagorean identity to change $\sin^{2}(𝒙)=1-\cos^{2}(𝒙)$.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If the power of $\cos(𝒙)$ is odd:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Do the same for $\cos(𝒙)$.</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Use $\cos^{2}(𝒙)=1-\sin^{2}(𝒙)$.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If both powers are odd:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Pick the one that will give power $2$, if possible.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Case 2: Both powers are even.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use the half-angle identities:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\sin^{2}(𝒙)=\left(\dfrac{1}{2}\right)(1-\cos(2𝒙))$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\cos^{2}(𝒙)=\left(\dfrac{1}{2}\right)(1+\cos(2𝒙))$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Go to this link <a
+                  href="https://openstax.org/books/precalculus-2e/pages/7-3-double-angle-half-angle-and-reduction-formulas"
+                  target="_blank">[openstax🌐]</a></li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">NOTE:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The labels “odd” and “even” apply only to integer powers.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">A fractional exponent such as $\dfrac{1}{2}$ is neither odd nor even.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">In those cases, use the rule based on the other exponent, if that one is an integer
+                odd or even power.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｅｘａｍｐｌｅｓ — Ｓｉｎｅ ａｎｄ Ｃｏｓｉｎｅ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=587" target="_blank">[9:47]</a>. 🧩
+        Example 1 — Both powers odd: $\displaystyle \int \cos^{3}(2𝒙)\sin^{5}(2𝒙)\,𝒅𝒙$. – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[9-47]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[9-47]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Case 1: both powers are odd.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Pick the smaller odd power so as to obtain a squared factor.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Strip off one factor of $\cos(2𝒙)$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the integrand:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \cos^{2}(2𝒙)\sin^{5}(2𝒙)\cos(2𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the Pythagorean identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\cos^{2}(2𝒙)=1-\sin^{2}(2𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int [1-\sin^{2}(2𝒙)]\sin^{5}(2𝒙)\cos(2𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Simple substitution:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒖=\sin(2𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒖=2\cos(2𝒙)\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒅𝒖}{2}=\cos(2𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Polynomial integral in 𝒖:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int (1-𝒖^{2})𝒖^{5}\,\dfrac{𝒅𝒖}{2}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\left(\dfrac{1}{2}\right)\displaystyle \int (𝒖^{5}-𝒖^{7})\,𝒅𝒖$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\left(\dfrac{1}{2}\right)\Big[𝒖^{6}/6-𝒖^{8}/8\Big]$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\left(\dfrac{1}{12}\right)\sin^{6}(2𝒙)-\left(\dfrac{1}{16}\right)\sin^{8}(2𝒙)+𝓒$
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=1151" target="_blank">[19:11]</a>. 🧩
+        Example 2 — At least one power is odd: Evaluate $\displaystyle \int \sin^{3}(𝒙)\cos^{2}(𝒙)\,𝒅𝒙$. – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[19-11]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[19-11]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The power of sine is odd.Strip off one factor of $\sin(𝒙)$.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Convert $\sin^{2}(𝒙)$ into $1-\cos^{2}(𝒙)$.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitution:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒖=\cos(𝒙)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Resulting polynomial integral in 𝒖.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\left(\dfrac{1}{5}\right)\cos^{5}(𝒙)-\left(\dfrac{1}{3}\right)\cos^{3}(𝒙)+𝓒$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=1657" target="_blank">[27:37]</a>. 🧩
+        Example 3 — Both powers are even: $\displaystyle \int \sin^{4}(𝒙)\cos^{4}(𝒙)\,𝒅𝒙$. – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[27-37]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[27-37]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[27-37]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[27-37]-02.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Since both powers are even, use identities instead of the odd-power substitution strategy.
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the double-angle identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin(𝒙)\cos(𝒙)=\left(\dfrac{1}{2}\right)\sin(2𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \sin^{4}(𝒙)\cos^{4}(𝒙)\,𝒅𝒙=\displaystyle \int
+                    \big[\left(\dfrac{1}{2}\right)\sin(2𝒙)\big]^{4}\,𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\left(\dfrac{1}{16}\right)\displaystyle \int \sin^{4}(2𝒙)\,𝒅𝒙$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the fourth power:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\left(\dfrac{1}{16}\right)\displaystyle \int \big[\sin^{2}(2𝒙)\big]^{2}\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the half-angle identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin^{2}(2𝒙)=\left(\dfrac{1}{2}\right)(1-\cos(4𝒙))$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\left(\dfrac{1}{16}\right)\displaystyle \int
+                    \big[\left(\dfrac{1}{2}\right)(1-\cos(4𝒙))\big]^{2}\,𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\left(\dfrac{1}{64}\right)\displaystyle \int (1-\cos(4𝒙))^{2}\,𝒅𝒙$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Expand the square:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\left(\dfrac{1}{64}\right)\displaystyle \int [1-2\cos(4𝒙)+\cos^{2}(4𝒙)]\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply the half-angle identity again:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\cos^{2}(4𝒙)=\left(\dfrac{1}{2}\right)(1+\cos(8𝒙))$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Simplify the integrand:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\left(\dfrac{1}{64}\right)\displaystyle \int
+                \left[\dfrac{3}{2}-2\cos(4𝒙)+\left(\dfrac{1}{2}\right)\cos(8𝒙)\right]\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final expanded result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int
+                \sin^{4}(𝒙)\cos^{4}(𝒙)\,𝒅𝒙=\left(\dfrac{3}{128}\right)𝒙-\left(\dfrac{1}{128}\right)\sin(4𝒙)+\left(\dfrac{1}{1024}\right)\sin(8𝒙)+𝓒$
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=2938" target="_blank">[48:58]</a>. 🧩
+        Example 4 — Without using the reduction formula: Evaluate $\displaystyle \int \sin^{6}(𝒙)\,𝒅𝒙$ – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[48-58]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[48-58]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[48-58]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[48-58]-02.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[48-58]-03.png" target="_blank">[📷image-3]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[48-58]-03.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the integrand:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \sin^{6}(𝒙)\,𝒅𝒙=\displaystyle \int (\sin^{2}(𝒙))^{3}\,𝒅𝒙$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the half-angle identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin^{2}(𝒙)=\left(\dfrac{1}{2}\right)(1-\cos(2𝒙))$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Therefore:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \sin^{6}(𝒙)\,𝒅𝒙=\displaystyle \int
+                    \big[\left(\dfrac{1}{2}\right)(1-\cos(2𝒙))\big]^{3}\,𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\left(\dfrac{1}{8}\right)\displaystyle \int (1-\cos(2𝒙))^{3}\,𝒅𝒙$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Expand the cube using Pascal’s Triangle:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$(1-\cos(2𝒙))^{3}=1-3\cos(2𝒙)+3\cos^{2}(2𝒙)-\cos^{3}(2𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\left(\dfrac{1}{8}\right)\displaystyle \int
+                    [1-3\cos(2𝒙)+3\cos^{2}(2𝒙)-\cos^{3}(2𝒙)]\,𝒅𝒙$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Treat the even-power term:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\cos^{2}(2𝒙)=\left(\dfrac{1}{2}\right)(1+\cos(4𝒙))$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Treat the odd-power term separately:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \cos^{3}(2𝒙)\,𝒅𝒙=\displaystyle \int
+                (1-\sin^{2}(2𝒙))\cos(2𝒙)\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let $𝒖=\sin(2𝒙)$, so $\dfrac{𝒅𝒖}{2}=\cos(2𝒙)\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \cos^{3}(2𝒙)\,𝒅𝒙=\left(\dfrac{1}{2}\right)\displaystyle
+                    \int (1-𝒖^{2})\,𝒅𝒖$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\left(\dfrac{1}{2}\right)𝒖-\left(\dfrac{1}{6}\right)𝒖^{3}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\left(\dfrac{1}{2}\right)\sin(2𝒙)-\left(\dfrac{1}{6}\right)\sin^{3}(2𝒙)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Combine all terms and simplify.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int
+                \sin^{6}(𝒙)\,𝒅𝒙=\left(\dfrac{5}{16}\right)𝒙-\left(\dfrac{1}{4}\right)\sin(2𝒙)+\left(\dfrac{3}{64}\right)\sin(4𝒙)+\left(\dfrac{1}{48}\right)\sin^{3}(2𝒙)+𝓒$
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｄｅｆｉｎｅｄ Ｉｎｔｅｇｒａｌ Ｅｘａｍｐｌｅ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=4266" target="_blank">[1:11:06]</a>. 🧩
+        Example 5 — Definite integral: $\displaystyle \int_{0}^{\pi/2}\sin^{3}(𝒙)\cos^{1/2}(𝒙)\,𝒅𝒙$. – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[1-11-06]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[1-11-06]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The power of sine is odd, so strip off one factor of $\sin(𝒙)$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{0}^{\pi/2}\sin^{2}(𝒙)\cos^{1/2}(𝒙)\cdot \sin(𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the Pythagorean identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin^{2}(𝒙)=1-\cos^{2}(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{0}^{\pi/2}(1-\cos^{2}(𝒙))\cos^{1/2}(𝒙)\cdot \sin(𝒙)\,𝒅𝒙$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitution:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒖=\cos(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒖=-\sin(𝒙)\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-𝒅𝒖=\sin(𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Change the bounds:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">When $𝒙=0$, $𝒖=1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">When $𝒙=\pi/2$, $𝒖=0$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the integral in 𝒖:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-\displaystyle \int_{1}^{0}(1-𝒖^{2})𝒖^{1/2}\,𝒅𝒖$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int_{0}^{1}(𝒖^{1/2}-𝒖^{5/2})\,𝒅𝒖$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Evaluate:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\Big[\left(\dfrac{2}{3}\right)𝒖^{3/2}-\left(\dfrac{2}{7}\right)𝒖^{7/2}\Big]_{0}^{1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{2}{3}-\dfrac{2}{7}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final numerical value:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{8}{21}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｔａｎｇｅｎｔ ａｎｄ Ｓｅｃａｎｔ OR Ｃｏｓｅｃａｎｔ ａｎｄ Ｃｏｔａｎｇｅｎｔ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=5065" target="_blank">[1:24:25]</a>.
+        Integrals involving tangent and secant: $\displaystyle \int \tan^{m}(𝒙)\sec^{n}(𝒙)\,𝒅𝒙$ or $\displaystyle
+        \int \cot^{m}(𝒙)\csc^{n}(𝒙)\,𝒅𝒙$ – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[1-24-25]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[1-24-25]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[1-24-25]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[1-24-25]-02.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rule 1: If the power of $\tan(𝒙)$ or $\cot(𝒙)$ is odd.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Keep one factor $\sec(𝒙)\tan(𝒙)$.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Analogously: keep one factor $\csc(𝒙)\cot(𝒙)$.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\tan^{2}(𝒙)=\sec^{2}(𝒙)-1$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\cot^{2}(𝒙)=\csc^{2}(𝒙)-1$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rule 2: If the power of $\sec(𝒙)$ or $\csc(𝒙)$ is even.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Strip off one factor $\sec^{2}(𝒙)$.
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">Analogously: strip off one factor $\csc^{2}(𝒙)$.</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\sec^{2}(𝒙)=\tan^{2}(𝒙)+1$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\csc^{2}(𝒙)=\cot^{2}(𝒙)+1$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">If both rules apply, both methods are valid.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Choose the one that makes the algebra simpler.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">There is no conflict: it is a choice of convenience.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">NOTE:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The labels “odd” and “even” apply only to integer powers.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">A fractional exponent such as $\dfrac{1}{2}$ is neither odd nor even.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">In those cases, use the rule based on the other exponent, if that one is an integer
+                odd or even power.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=5405" target="_blank">[1:30:05]</a>. 🧩
+        Example 6 — Tangent power odd: $\displaystyle \int \tan^{5}(𝒙)\sec^{3}(𝒙)\,𝒅𝒙$. – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[1-30-05]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[1-30-05]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The power of tangent is odd.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Keep one factor $\sec(𝒙)\tan(𝒙)$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the integrand:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \tan^{4}(𝒙)\sec^{2}(𝒙)\cdot \sec(𝒙)\tan(𝒙)\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int (\tan^{2}(𝒙))^{2}\sec^{2}(𝒙)\cdot \sec(𝒙)\tan(𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\tan^{2}(𝒙)=\sec^{2}(𝒙)-1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int (\sec^{2}(𝒙)-1)^{2}\sec^{2}(𝒙)\cdot \sec(𝒙)\tan(𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitution:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒖=\sec(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒖=\sec(𝒙)\tan(𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Resulting polynomial integral in 𝒖:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int (𝒖^{2}-1)^{2}𝒖^{2}\,𝒅𝒖$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=5799" target="_blank">[1:36:39]</a>. 🧩
+        Example 7 — Evaluate $\displaystyle \int_{0}^{\pi/4}\sqrt{\tan(𝒙)}\sec^{6}(𝒙)\,𝒅𝒙$. – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[1-36-39]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[1-36-39]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[1-36-39]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[1-36-39]-02.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Note:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The exponent $1/2$ is neither odd nor even.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So the useful pattern comes from $\sec^{6}(𝒙)$, since the secant power is even.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Apply Rule 2.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Strip off one factor $\sec^{2}(𝒙)$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Rewrite the remaining secant power:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\sqrt{\tan(𝒙)}\sec^{6}(𝒙)=(\tan(𝒙))^{1/2}\sec^{4}(𝒙)\cdot
+                    \sec^{2}(𝒙)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=(\tan(𝒙))^{1/2}(\sec^{2}(𝒙))^{2}\cdot \sec^{2}(𝒙)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sec^{2}(𝒙)=1+\tan^{2}(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So the integrand becomes:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$(\tan(𝒙))^{1/2}(1+\tan^{2}(𝒙))^{2}\sec^{2}(𝒙)\,𝒅𝒙$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitution:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒖=\tan(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒖=\sec^{2}(𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Change the bounds:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">When $𝒙=0$, $𝒖=0$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">When $𝒙=\pi/4$, $𝒖=1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Resulting integral in 𝒖:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int_{0}^{1} 𝒖^{1/2}(1+𝒖^{2})^{2}\,𝒅𝒖$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int_{0}^{1}
+                (𝒖^{1/2}+2𝒖^{5/2}+𝒖^{9/2})\,𝒅𝒖$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Evaluate:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\Big[\left(\dfrac{2}{3}\right)𝒖^{3/2}+\left(\dfrac{4}{7}\right)𝒖^{7/2}+\left(\dfrac{2}{11}\right)𝒖^{11/2}\Big]_{0}^{1}$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\dfrac{2}{3}+\dfrac{4}{7}+\dfrac{2}{11}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=6678" target="_blank">[1:51:18]</a>. 🧩
+        Example 8 — Integrals involving cosecant and cotangent: Evaluate $\displaystyle \int
+        \cot^{5}(𝒙)\csc^{5}(𝒙)\,𝒅𝒙$. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[1-51-18]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[1-51-18]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">By analogy with the tangent/secant rules, the power of $\cot(𝒙)$ is odd.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Keep one factor $\csc(𝒙)\cot(𝒙)$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the integrand:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \cot^{4}(𝒙)\csc^{4}(𝒙)\cdot \csc(𝒙)\cot(𝒙)\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int (\cot^{2}(𝒙))^{2}\csc^{4}(𝒙)\cdot \csc(𝒙)\cot(𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\cot^{2}(𝒙)=\csc^{2}(𝒙)-1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int (\csc^{2}(𝒙)-1)^{2}\csc^{4}(𝒙)\cdot \csc(𝒙)\cot(𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitution:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒖=\csc(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒅𝒖=-\csc(𝒙)\cot(𝒙)\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-𝒅𝒖=\csc(𝒙)\cot(𝒙)\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Resulting polynomial integral in 𝒖:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-\displaystyle \int (𝒖^{2}-1)^{2}𝒖^{4}\,𝒅𝒖$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-\displaystyle \int (𝒖^{4}-2𝒖^{2}+1)𝒖^{4}\,𝒅𝒖$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=-\displaystyle \int (𝒖^{8}-2𝒖^{6}+𝒖^{4})\,𝒅𝒖$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Integrate term by term:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $-\Big[\left(\dfrac{1}{9}\right)𝒖^{9}-\left(\dfrac{2}{7}\right)𝒖^{7}+\left(\dfrac{1}{5}\right)𝒖^{5}\Big]+𝓒$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int
+                \cot^{5}(𝒙)\csc^{5}(𝒙)\,𝒅𝒙=-\left(\dfrac{1}{9}\right)\csc^{9}(𝒙)+\left(\dfrac{2}{7}\right)\csc^{7}(𝒙)-\left(\dfrac{1}{5}\right)\csc^{5}(𝒙)+𝓒$
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｏｔｈｅｒ Ｃａｓｅｓ Ｎｏｔ Ｆｉｔｔｉｎｇ Ｔｈｅ Ｓｔａｎｄａｒｄ Ｐａｔｔｅｒｎｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=7235" target="_blank">[2:00:35]</a>.
+        Strategies for cases not covered by the standard patterns. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[2-00-35]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[2-00-35]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">If it does not fit the pattern:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">General idea: convert everything to sine and cosine when the standard rules do not
+                apply.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=7403" target="_blank">[2:03:23]</a>. 🧩
+        Example 9 — Simplify $\displaystyle \int \dfrac{1-\tan^{2}(𝒙)}{\sec^{2}(𝒙)}\,𝒅𝒙$. – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[2-03-23]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[2-03-23]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Note: for other cases not covered by the standard patterns, convert to $\sin(𝒙)$ and
+            $\cos(𝒙)$.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the fraction:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int
+                \left[\dfrac{1}{\sec^{2}(𝒙)}-\dfrac{\tan^{2}(𝒙)}{\sec^{2}(𝒙)}\right]\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Convert to sine and cosine:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{\sec^{2}(𝒙)}=\cos^{2}(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{\tan^{2}(𝒙)}{\sec^{2}(𝒙)}=\left[\dfrac{\sin^{2}(𝒙)}{\cos^{2}(𝒙)}\right]\cdot
+                \cos^{2}(𝒙)=\sin^{2}(𝒙)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">So the integrand becomes:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \big[\cos^{2}(𝒙)-\sin^{2}(𝒙)\big]\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Recognize the identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\cos^{2}(𝒙)-\sin^{2}(𝒙)=\cos(2𝒙)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Therefore:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \cos(2𝒙)\,𝒅𝒙=\dfrac{\sin(2𝒙)}{2}+𝓒$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｐｒｏｄｕｃｔｓ Ｗｉｔｈ Ｄｉｆｆｅｒｅｎｔ Ａｎｇｌｅｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=7693" target="_blank">[2:08:13]</a>.
+        Integrals of products with different angles. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[2-08-13]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[2-08-13]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use product-to-sum identities. <a
+              href="https://openstax.org/books/precalculus-2e/pages/7-4-sum-to-product-and-product-to-sum-formulas"
+              target="_blank">[openstax 🌐]</a>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\sin(𝓶𝒙)\sin(𝓷𝒙)=\left(\dfrac{1}{2}\right)\big[\cos(𝓶𝒙-𝓷𝒙)-\cos(𝓶𝒙+𝓷𝒙)\big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\sin(𝓶𝒙)\cos(𝓷𝒙)=\left(\dfrac{1}{2}\right)\big[\sin(𝓶𝒙-𝓷𝒙)+\sin(𝓶𝒙+𝓷𝒙)\big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\cos(𝓶𝒙)\cos(𝓷𝒙)=\left(\dfrac{1}{2}\right)\big[\cos(𝓶𝒙-𝓷𝒙)+\cos(𝓶𝒙+𝓷𝒙)\big]$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=pLrUBjiEo-w&t=7980" target="_blank">[2:13:00]</a>. 🧩
+        Example 10 — Evaluate $\displaystyle \int_{0}^{\pi/2}\sin(𝒙)\cos(2𝒙)\,𝒅𝒙$. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.2/[2-13-00]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.2/[2-13-00]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use the product-to-sum identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin(𝒙)\cos(2𝒙)=\left(\dfrac{1}{2}\right)\big[\sin(𝒙-2𝒙)+\sin(𝒙+2𝒙)\big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\left(\dfrac{1}{2}\right)\big[\sin(-𝒙)+\sin(3𝒙)\big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\left(\dfrac{1}{2}\right)\big[-\sin(𝒙)+\sin(3𝒙)\big]$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewrite the integral:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\left(\dfrac{1}{2}\right)\displaystyle \int_{0}^{\pi/2} [-\sin(𝒙)+\sin(3𝒙)]\,𝒅𝒙$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Integrate term by term:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\left(\dfrac{1}{2}\right)\Big[\cos(𝒙)-\dfrac{\cos(3𝒙)}{3}\Big]_{0}^{\pi/2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Evaluate the bounds:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\left(\dfrac{1}{2}\right)\Big[(\cos(\pi/2)-\dfrac{\cos(3\pi/2)}{3})-(\cos(0)-\dfrac{\cos(0)}{3})\Big]$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\left(\dfrac{1}{2}\right)\big[(0-0)-(1-\dfrac{1}{3})\big]$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\left(\dfrac{1}{2}\right)\big[-\dfrac{2}{3}\big]$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-\dfrac{1}{3}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+    <p><a href="https://openstax.org/books/calculus-volume-2/pages/3-2-trigonometric-integrals"
+        target="_blank">[openstax🌐]</a></p>
+
+
+  </article>
+</body>
+
+</html>

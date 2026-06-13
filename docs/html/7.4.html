@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ７．４ - Ｉｎｔｅｇｒａｔｉｏｎ Ｂｙ Ｐａｒｔｉａｌ Ｆｒａｃｔｉｏｎｓ</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, chtml: { scale: 1.05, matchFontHeight: false, displayAlign: 'center', displayIndent: '0em', linebreaks: { automatic: false } }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] } }; </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <article class="chapter">
+    <h1>Ｃａｌｃｕｌｕｓ ２ Ｌｅｃｔｕｒｅ ７．４</h1>
+    <h1>Ｉｎｔｅｇｒａｔｉｏｎ Ｂｙ Ｐａｒｔｉａｌ Ｆｒａｃｔｉｏｎｓ</h1>
+
+    <h2>Ｉｎｔｒｏｄｕｃｔｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=0" target="_blank">[0:00]</a>.
+        Introduction to Section 7.4: Partial Fractions.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Guiding question:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">How to integrate rational functions that do not fit directly into substitution,
+                integration by parts, or trig substitution.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Central idea:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Take one complicated rational fraction and decompose it into simpler fractions.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Key observation:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The decomposition depends on the type of factors that appear in the denominator.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ａｌｇｅｂｒａｉｃ　Ｆｏｕｎｄａｔｉｏｎｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1">– <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[1-07]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[1-07]-01.png" alt="Preview" />
+        </span></li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=67" target="_blank">[1:07]</a>. Two
+        algebra rules that justify the method: “The how”
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=82" target="_blank">[1:22]</a>.
+            Rule 1 — Polynomial factorization.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Every polynomial can be factored as a product of:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">linear factors: $𝒂𝒙+𝒃$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">and/or irreducible quadratic factors: $𝒂𝒙^{2}+𝒃𝒙+𝒄$
+                    <ul>
+                      <!-- ▣ nivel-5 -->
+                      <li class="level-5">Some quadratics cannot be factored over the reals/rationals because their
+                        roots are complex.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=255" target="_blank">[4:15]</a>.
+            Rule 2 — Proper rational functions.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If every rational function $𝑹(𝒙)/𝑸(𝒙)$ satisfies
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$degree(𝑹)&lt;degree(𝑸)$,</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">then it can be decomposed into partial fractions.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=341" target="_blank">[5:41]</a>.
+        Clarification of preliminary concepts using the introductory example.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">🧩 Example 1 — Evaluate $\displaystyle \int \dfrac{4x^{2}-4x+6}{x^{3}-x^{2}-6x}\,dx$.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">What “polynomial” means.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">What “rational function” means.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">What the degree of the numerator and denominator means.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The degree of $𝑹(𝒙)=4x^{2}-4x+6$ is $2$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The degree of $𝑸(𝒙)=x^{3}-x^{2}-6x$ is $3$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So $degree(𝑹)&lt;degree(𝑸)$, and partial fraction decomposition is possible.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=378" target="_blank">[6:18]</a>.
+            Criterion for improper rational functions.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If $degree(𝑹)\ge degree(𝑸)$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">first perform polynomial long division,</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">and then apply partial fractions to the proper remainder.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=417" target="_blank">[6:57]</a>. Note
+        on division.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">There is no “magic shortcut” different from long division.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Synthetic division only counts as a shortened version when it genuinely applies.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｃａｓｅ　１　—　Ｄｉｓｔｉｎｃｔ　Ｌｉｎｅａｒ　Ｆａｃｔｏｒｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=494" target="_blank">[8:14]</a>. Case
+        1: <strong>Distinct</strong> linear factors. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[8-14]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[8-14]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Definition.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Linear factors are <strong>distinct</strong> when none of them repeats.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Example of distinct factors:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$(𝒙+1)(𝒙-1)(𝒙+4)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Example of non-distinct factors:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$(𝒙+1)^{2}(𝒙-4)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Decomposition rule.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If the denominator has distinct linear factors,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">write one fraction for each linear factor.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">General model.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑹(𝒙)/𝑸(𝒙)=\dfrac{𝑨}{𝒂_{1}𝒙+𝒃_{1}}+\dfrac{𝑩}{𝒂_{2}𝒙+𝒃_{2}}+\cdots$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rule for the numerators.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">For linear factors, the numerators are constants.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=680" target="_blank">[11:20]</a>. 🧩
+        Example 1 — Distinct linear factors: $\displaystyle \int \dfrac{4𝒙^{2}-4𝒙+6}{𝒙^{3}-𝒙^{2}-6𝒙}\,𝒅𝒙$. –
+        <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[11-20]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[11-20]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[11-20]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[11-20]-02.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">First step:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Ignore the numerator for the moment and factor the denominator completely.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Complete factorization of the denominator.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙^{3}-𝒙^{2}-6𝒙=𝒙(𝒙^{2}-𝒙-6)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=𝒙(𝒙-3)(𝒙+2)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Identification of the factor type.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">There are three factors.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">All are linear.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">All are distinct.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Setup of the decomposition.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{4𝒙^{2}-4𝒙+6}{𝒙(𝒙-3)(𝒙+2)}=\dfrac{𝑨}{𝒙}+\dfrac{𝑩}{𝒙-3}+\dfrac{𝑪}{𝒙+2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Common-denominator idea.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Once everything is written over the same denominator,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the numerators must match.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">“Cover-up” method to build the common numerator.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Each fraction is multiplied by the factors it is missing.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝑨}{𝒙}$ contributes $𝑨(𝒙-3)(𝒙+2)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝑩}{𝒙-3}$ contributes $𝑩𝒙(𝒙+2)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝑪}{𝒙+2}$ contributes $𝑪𝒙(𝒙-3)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Equality of numerators.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$4𝒙^{2}-4𝒙+6=𝑨(𝒙-3)(𝒙+2)+𝑩𝒙(𝒙+2)+𝑪𝒙(𝒙-3)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Distribution and regrouping of terms.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$4𝒙^{2}-4𝒙+6=(𝑨𝒙^{2}-𝑨𝒙-6𝑨)+(𝑩𝒙^{2}+2𝑩𝒙)+(𝑪𝒙^{2}-3𝑪𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$4𝒙^{2}-4𝒙+6=(𝑨+𝑩+𝑪)𝒙^{2}+(-𝑨+2𝑩-3𝑪)𝒙-6𝑨$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Comparison of coefficients.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$4=𝑨+𝑩+𝑪$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-4=-𝑨+2𝑩-3𝑪$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$6=-6𝑨$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Solving the system.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">From $6=-6𝑨$, we get:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑨=-1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Substitute $𝑨=-1$ into the first equation:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$4=-1+𝑩+𝑪$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$5=𝑩+𝑪$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Substitute $𝑨=-1$ into the second equation:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$-4=1+2𝑩-3𝑪$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$-5=2𝑩-3𝑪$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Solve the remaining two-equation system:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$5=𝑩+𝑪$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$-5=2𝑩-3𝑪$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Multiply the first equation by $2$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$10=2𝑩+2𝑪$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Subtract the second equation:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$15=5𝑪$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑪=3$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Back-substitute into $5=𝑩+𝑪$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$5=𝑩+3$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑩=2$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Coefficients obtained.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑨=-1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑩=2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑪=3$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=1891" target="_blank">[31:31]</a>.
+            Rewriting the integral.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \dfrac{4𝒙^{2}-4𝒙+6}{𝒙^{3}-𝒙^{2}-6𝒙}\,𝒅𝒙=\displaystyle \int
+                \left[-\dfrac{1}{𝒙}+\dfrac{2}{𝒙-3}+\dfrac{3}{𝒙+2}\right]\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Important observation.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">With linear factors, the final integration produces a sum of logarithms.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final integration.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-\ln|𝒙|+2\ln|𝒙-3|+3\ln|𝒙+2|+𝑪$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Warning about coefficients.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If the denominator were something like $2𝒙-3$, the extra derivative factor would have
+                to be taken into account when integrating.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=2259" target="_blank">[37:39]</a>.
+        Shortcut for distinct linear factors. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[37-39]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[37-39]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">🧩 Example 1 — Distinct linear factors: $\displaystyle \int
+            \dfrac{4𝒙^{2}-4𝒙+6}{𝒙^{3}-𝒙^{2}-6𝒙}\,𝒅𝒙$</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Instead of distributing everything,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">substitute values of $𝒙$ that make specific factors zero.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Start from the numerator identity:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$4𝒙^{2}-4𝒙+6=𝑨(𝒙-3)(𝒙+2)+𝑩𝒙(𝒙+2)+𝑪𝒙(𝒙-3)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">With $𝒙=0$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$6=𝑨(-3)(2)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$6=-6𝑨$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑨=-1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">With $𝒙=3$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$30=𝑩\cdot 3\cdot 5$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$30=15𝑩$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑩=2$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">With $𝒙=-2$:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$30=𝑪(-2)(-5)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$30=10𝑪$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑪=3$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Coefficients obtained by the shortcut.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑨=-1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑩=2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑪=3$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewritten partial-fraction form.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-\dfrac{1}{𝒙}+\dfrac{2}{𝒙-3}+\dfrac{3}{𝒙+2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Advantage of the shortcut.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">It is much faster when all factors are linear and distinct.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">It avoids distributing and solving the full coefficient-comparison system.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Limitation.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">It does not work as well with irreducible quadratics,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">because you cannot usually make them zero with simple real values.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=2710" target="_blank">[45:10]</a>. 🧩
+        Example 2 — Long division first: $\displaystyle \int \dfrac{𝒙^{4}-3𝒙^{2}-3𝒙-2}{𝒙^{3}-𝒙^{2}-2𝒙}\,𝒅𝒙$. –
+        <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[45-10]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[45-10]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[45-10]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[45-10]-02.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[45-10]-03.png" target="_blank">[📷image-3]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[45-10]-03.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Difference from the previous example.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The degree of the numerator is greater than the degree of the denominator.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Consequence.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3"><strong>Long division must be done first</strong>.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Beginning of polynomial long division.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Rewrite the numerator with a placeholder term:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙^{4}+0𝒙^{3}-3𝒙^{2}-3𝒙-2$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use of placeholders.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Insert $0𝒙^{3}$ so no powers of $𝒙$ are skipped during the division.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Long-division steps.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">First quotient term:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙^{4}\div 𝒙^{3}=𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Multiply back:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙(𝒙^{3}-𝒙^{2}-2𝒙)=𝒙^{4}-𝒙^{3}-2𝒙^{2}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Subtract and simplify:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$(𝒙^{4}+0𝒙^{3}-3𝒙^{2}-3𝒙-2)-(𝒙^{4}-𝒙^{3}-2𝒙^{2})$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=𝒙^{3}-𝒙^{2}-3𝒙-2$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Second quotient term:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙^{3}\div 𝒙^{3}=1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Multiply back again:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$1(𝒙^{3}-𝒙^{2}-2𝒙)=𝒙^{3}-𝒙^{2}-2𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Subtract and simplify:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$(𝒙^{3}-𝒙^{2}-3𝒙-2)-(𝒙^{3}-𝒙^{2}-2𝒙)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=-𝒙-2$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Result of the division.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Quotient:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙+1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Remainder:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$-𝒙-2$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Correct form of the result.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒙^{4}-3𝒙^{2}-3𝒙-2}{𝒙^{3}-𝒙^{2}-2𝒙}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=𝒙+1+\dfrac{-𝒙-2}{𝒙^{3}-𝒙^{2}-2𝒙}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Care with the sign of the remainder.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">It is convenient to factor out the negative sign:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙+1-\dfrac{𝒙+2}{𝒙^{3}-𝒙^{2}-2𝒙}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The instructor isolates this rational piece first before decomposing it.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Factorization of the denominator in the remainder.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙^{3}-𝒙^{2}-2𝒙=𝒙(𝒙^{2}-𝒙-2)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=𝒙(𝒙-2)(𝒙+1)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Now the remaining rational part is proper.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">New partial-fraction decomposition.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝒙+2}{𝒙(𝒙-2)(𝒙+1)}=\dfrac{𝑨}{𝒙}+\dfrac{𝑩}{𝒙-2}+\dfrac{𝑪}{𝒙+1}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Equality of numerators.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙+2=𝑨(𝒙-2)(𝒙+1)+𝑩𝒙(𝒙+1)+𝑪𝒙(𝒙-2)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Quick solution by substituting roots.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">With $𝒙=0$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$2=𝑨(-2)(1)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$2=-2𝑨$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑨=-1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">With $𝒙=2$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$4=𝑩(2)(3)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$4=6𝑩$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑩=\dfrac{2}{3}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">With $𝒙=-1$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$1=𝑪(-1)(-3)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$1=3𝑪$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑪=\dfrac{1}{3}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewriting the full integral.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int
+                \left[𝒙+1-\left(-\dfrac{1}{𝒙}+\dfrac{\dfrac{2}{3}}{𝒙-2}+\dfrac{\dfrac{1}{3}}{𝒙+1}\right)\right]\,𝒅𝒙$
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=\displaystyle \int
+                \left[𝒙+1+\dfrac{1}{𝒙}-\dfrac{\dfrac{2}{3}}{𝒙-2}-\dfrac{\dfrac{1}{3}}{𝒙+1}\right]\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final integration by simple pieces.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Direct integration of the polynomial part:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int (𝒙+1)\,𝒅𝒙=\dfrac{1}{2}𝒙^{2}+𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Logarithmic terms:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \dfrac{1}{𝒙}\,𝒅𝒙=\ln|𝒙|$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \dfrac{\dfrac{2}{3}}{𝒙-2}\,𝒅𝒙=\dfrac{2}{3}\ln|𝒙-2|$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \dfrac{\dfrac{1}{3}}{𝒙+1}\,𝒅𝒙=\dfrac{1}{3}\ln|𝒙+1|$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final result.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{1}{2}𝒙^{2}+𝒙+\ln|𝒙|-\dfrac{2}{3}\ln|𝒙-2|-\dfrac{1}{3}\ln|𝒙+1|+𝑪$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｃａｓｅ　２　—　Ｒｅｐｅａｔｅｄ　Ｌｉｎｅａｒ　Ｆａｃｔｏｒｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=3905" target="_blank">[1:05:05]</a>. 🧩
+        Example 3 — Transition to case 2, repeated linear factor: $\displaystyle \int
+        \dfrac{2𝒙^{2}+3𝒙+7}{𝒙^{3}+𝒙^{2}-𝒙-1}\,𝒅𝒙$. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[1-05-05]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[1-05-05]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">First step:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">factor the denominator.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Factorization by grouping.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙^{3}+𝒙^{2}-𝒙-1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=𝒙^{2}(𝒙+1)-1(𝒙+1)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=(𝒙+1)(𝒙^{2}-1)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=(𝒙-1)(𝒙+1)^{2}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Recognition of the new case.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">A repeated linear factor appears.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=4223" target="_blank">[1:10:23]</a>.
+        Case 2: Repeated linear factors. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[1-10-23]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[1-10-23]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">If a linear factor is repeated,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">a fraction must be included for each power up to the highest one.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">General model.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{𝑨_{1}}{(𝒙-𝒂)}+\dfrac{𝑨_{2}}{(𝒙-𝒂)^{2}}+\cdots+\dfrac{𝑨_{n}}{(𝒙-𝒂)^{n}}$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=4279" target="_blank">[1:11:19]</a>.🧩
+        Continue Example 3 — Transition to case 2: $\displaystyle \int \dfrac{2𝒙^{2}+3𝒙+7}{𝒙^{3}+𝒙^{2}-𝒙-1}\,𝒅𝒙$
+        – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[1-11-19]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[1-11-19]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Application to 🧩 Example 3.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝑨}{𝒙-1}+\dfrac{𝑩}{𝒙+1}+\dfrac{𝑪}{(𝒙+1)^{2}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Construction of the common denominator.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The highest necessary power of the repeated factor is used.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=4223"
+              target="_blank">[1:10:23]</a>. What would happen if the denominator also contained $𝒙^{3}$? – <span
+              class="image-container">
+              <a href="../img/Calculus 2 Lecture 7.4/[1-10-23]-02.png" target="_blank">[📷image]</a>
+              <img src="../img/Calculus 2 Lecture 7.4/[1-10-23]-02.png" alt="Preview" />
+            </span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then $𝒙^{3}$ would count as another repeated linear factor.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">You would need one fraction for each power:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{𝑫}{𝒙}+\dfrac{𝑬}{𝒙^{2}}+\dfrac{𝑭}{𝒙^{3}}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">So the setup would become:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">
+                    $\dfrac{𝑨}{𝒙-1}+\dfrac{𝑩}{𝒙+1}+\dfrac{𝑪}{(𝒙+1)^{2}}+\dfrac{𝑫}{𝒙}+\dfrac{𝑬}{𝒙^{2}}+\dfrac{𝑭}{𝒙^{3}}$
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The shortcut still works partially.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙=1$ and $𝒙=-1$ can be used to isolate some constants.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Coefficients obtained from the repeated-factor setup.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">With $𝒙=1$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$12=𝑨(2)^{2}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑨=3$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">With $𝒙=-1$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$6=𝑪(-2)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑪=-3$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Use of an additional value to find the remaining constant.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Taking $𝒙=0$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$7=𝑨-𝑩-𝑪$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$7=3-𝑩+3$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑩=-1$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewriting the integral.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int
+                \left[\dfrac{3}{𝒙-1}-\dfrac{1}{𝒙+1}-\dfrac{3}{(𝒙+1)^{2}}\right]\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Integration of the repeated term.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-\dfrac{3}{(𝒙+1)^{2}}$ is integrated with the power rule, not with $\ln$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let $𝒖=𝒙+1$, then:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \dfrac{3}{(𝒙+1)^{2}}\,𝒅𝒙=3\int
+                    (𝒙+1)^{-2}\,𝒅𝒙=-\dfrac{3}{𝒙+1}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Because the term in the integral is subtracted,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">the final contribution becomes $+\dfrac{3}{𝒙+1}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Result.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$3\ln|𝒙-1|-\ln|𝒙+1|+\dfrac{3}{𝒙+1}+𝑪$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Additional comment.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The logarithmic part can also be combined as:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\ln\left|\dfrac{(𝒙-1)^{3}}{𝒙+1}\right|+\dfrac{3}{𝒙+1}+𝑪$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｃａｓｅ　３　—　Ｉｒｒｅｄｕｃｉｂｌｅ　Ｑｕａｄｒａｔｉｃ　Ｆａｃｔｏｒｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=5491" target="_blank">[1:31:31]</a>. 🧩
+        Example 4 — Transition to case 3: $\displaystyle \int \dfrac{𝒙^{2}-𝒙-21}{2𝒙^{3}-𝒙^{2}+8𝒙-4}\,𝒅𝒙$. – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[1-31-31]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[1-31-31]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Exam-style approach.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">First check whether it fits a simpler method.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then verify the degree.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then factor.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Factorization of the denominator.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$2𝒙^{3}-𝒙^{2}+8𝒙-4=(2𝒙-1)(𝒙^{2}+4)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Recognition of an irreducible quadratic.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙^{2}+4$ does not factor over the reals.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=5711" target="_blank">[1:35:11]</a>.
+        Case 3: Irreducible quadratic factors. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[1-35-11]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[1-35-11]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">General rule.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Each irreducible quadratic gets a linear numerator.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Degree rule.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The numerator must have degree one less than the denominator factor.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=5814" target="_blank">[1:36:54]</a>.🧩
+        Continue Example 4 — Transition to case 3 $\displaystyle \int \dfrac{𝒙^{2}-𝒙-21}{2𝒙^{3}-𝒙^{2}+8𝒙-4}\,𝒅𝒙$.
+        – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[1-36-54]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[1-36-54]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[1-36-54]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[1-36-54]-02.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[1-36-54]-03.png" target="_blank">[📷image-3]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[1-36-54]-03.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Application to the example.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝑨}{2𝒙-1}+\dfrac{𝑩𝒙+𝑪}{𝒙^{2}+4}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Construction of the common denominator.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙^{2}-𝒙-21=𝑨(𝒙^{2}+4)+(𝑩𝒙+𝑪)(2𝒙-1)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">In this case the shortcut does not solve everything.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">You may try some simple value,</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">but in the end you must distribute and compare coefficients.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Regrouping by powers of $𝒙$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙^{2}-𝒙-21=(𝑨+2𝑩)𝒙^{2}+(-𝑩+2𝑪)𝒙+(4𝑨-𝑪)$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Comparison of coefficients.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑨+2𝑩=1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-𝑩+2𝑪=-1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$4𝑨-𝑪=-21$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final coefficients.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑨=-5$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑩=3$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑪=1$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewriting the integral.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \left[-\dfrac{5}{2𝒙-1}+\dfrac{3𝒙+1}{𝒙^{2}+4}\right]\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Splitting the quadratic term.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{3𝒙+1}{𝒙^{2}+4}=\dfrac{3𝒙}{𝒙^{2}+4}+\dfrac{1}{𝒙^{2}+4}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Different techniques are used in each part:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\ln$ for $-\dfrac{5}{2𝒙-1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">substitution for $\dfrac{𝒙}{𝒙^{2}+4}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\tan^{-1}$ for $\dfrac{1}{𝒙^{2}+4}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Integration of the linear-factor term.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let $𝒖=2𝒙-1$, so $𝒅𝒖=2𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \dfrac{-5}{2𝒙-1}\,𝒅𝒙=-\dfrac{5}{2}\ln|2𝒙-1|$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Substitution for $\dfrac{𝒙}{𝒙^{2}+4}$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let $𝒖=𝒙^{2}+4$, so $𝒅𝒖=2𝒙\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$3\displaystyle \int \dfrac{𝒙}{𝒙^{2}+4}\,𝒅𝒙=\dfrac{3}{2}\ln|𝒙^{2}+4|$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Since $𝒙^{2}+4&gt;0$,
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">this may also be written as $\dfrac{3}{2}\ln(𝒙^{2}+4)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=6948"
+              target="_blank">[1:55:48]</a>. First method for $\displaystyle \int \dfrac{1}{𝒙^{2}+4}\,𝒅𝒙$. – <span
+              class="image-container">
+              <a href="../img/Calculus 2 Lecture 7.4/[1-55-48]-01.png" target="_blank">[📷image]</a>
+              <img src="../img/Calculus 2 Lecture 7.4/[1-55-48]-01.png" alt="Preview" />
+            </span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Rewrite it in a form compatible with $\tan^{-1}$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Factor out a $4$ from the denominator:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\dfrac{1}{𝒙^{2}+4}=\dfrac{1}{4\left[\left(\dfrac{𝒙}{2}\right)^{2}+1\right]}$
+                  </li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Hence:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \dfrac{1}{𝒙^{2}+4}\,𝒅𝒙=\dfrac{1}{4}\int
+                    \dfrac{1}{\left(\dfrac{𝒙}{2}\right)^{2}+1}\,𝒅𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Using $𝒖=\dfrac{𝒙}{2}$, so $𝒅𝒙=2𝒅𝒖$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int
+                    \dfrac{1}{𝒙^{2}+4}\,𝒅𝒙=\dfrac{1}{2}\tan^{-1}\left(\dfrac{𝒙}{2}\right)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=7008"
+              target="_blank">[1:56:48]</a>. Second method for $\displaystyle \int \dfrac{1}{𝒙^{2}+4}\,𝒅𝒙$. – <span
+              class="image-container">
+              <a href="../img/Calculus 2 Lecture 7.4/[1-56-48]-01.png" target="_blank">[📷image]</a>
+              <img src="../img/Calculus 2 Lecture 7.4/[1-56-48]-01.png" alt="Preview" />
+            </span>
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Interpret it through trig substitution.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\tan(\theta)=\dfrac{𝒙}{2}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙=2\tan(\theta)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒅𝒙=2\sec^{2}(\theta)\,𝒅\theta$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \dfrac{1}{𝒙^{2}+4}\,𝒅𝒙=\int
+                    \dfrac{2\sec^{2}(\theta)}{4\tan^{2}(\theta)+4}\,𝒅\theta$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\dfrac{1}{2}\int \dfrac{\sec^{2}(\theta)}{\tan^{2}(\theta)+1}\,𝒅\theta$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\dfrac{1}{2}\int 1\,𝒅\theta$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\dfrac{1}{2}\theta$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Returning to $𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\theta=\tan^{-1}\left(\dfrac{𝒙}{2}\right)$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">so the result is again $\dfrac{1}{2}\tan^{-1}\left(\dfrac{𝒙}{2}\right)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final combined result.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $-\dfrac{5}{2}\ln|2𝒙-1|+\dfrac{3}{2}\ln|𝒙^{2}+4|+\dfrac{1}{2}\tan^{-1}\left(\dfrac{𝒙}{2}\right)+𝑪$
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=7303" target="_blank">[2:01:43]</a>. 🧩
+        Example 4 — Explanation: $\displaystyle \int \dfrac{1}{𝒙^{2}+4}\,𝒅𝒙$. – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[2-01-43]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[2-01-43]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[2-01-43]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[2-01-43]-02.png" alt="Preview" />
+        </span></li>
+    </ul>
+
+    <h2>Ｃａｓｅ　４　—　Ｒｅｐｅａｔｅｄ　Ｉｒｒｅｄｕｃｉｂｌｅ　Ｑｕａｄｒａｔｉｃｓ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=8170" target="_blank">[2:16:10]</a>.
+        Case 4: Repeated irreducible quadratics.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">If an irreducible quadratic factor is repeated,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">write one fraction for each power.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Each numerator remains linear.</li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">General model:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝑨𝒙+𝑩}{quadratic}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$+\dfrac{𝑪𝒙+𝑫}{(quadratic)^{2}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$+\cdots$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=8222" target="_blank">[2:17:02]</a>.
+        Large structural review 🧩 Example — : $\dfrac{5𝒙^{4}-3𝒙^{2}-𝒙+1}{𝒙(𝒙-1)^{2}(𝒙^{2}+1)(𝒙^{2}+𝒙+1)^{2}}$ –
+        <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[2-17-02]-01.png" target="_blank">[📷image]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[2-17-02]-01.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">1. Check whether the denominator can be factored any further.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">In this example, the denominator is already completely factored over the reals.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">2. Identify the types of factors in the denominator.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">linear factor:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">repeated linear factor:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$(𝒙-1)^{2}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">irreducible quadratic factor:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒙^{2}+1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">repeated irreducible quadratic factor:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$(𝒙^{2}+𝒙+1)^{2}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">3. Check whether the rational function is proper.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">degree of the numerator = $4$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">degree of the denominator = $9$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so $degree(numerator)&lt;degree(denominator)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">therefore, no long division is needed.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">4. General counting rule.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Write one fraction for each factor.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">If a factor is repeated, include one fraction for each power up to the highest one.
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{}{𝒙}+\dfrac{}{𝒙-1}+\dfrac{}{(𝒙-1)^{2}}+\dfrac{}{𝒙^{2}+1}+\dfrac{}{𝒙^{2}+𝒙+1}+\dfrac{}{(𝒙^{2}+𝒙+1)^{2}}$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">5. General rule for the numerators.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use constants for linear factors.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use linear expressions for irreducible quadratic factors.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">6. Correct decomposition for this example.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">
+                $\dfrac{𝑨}{𝒙}+\dfrac{𝑩}{𝒙-1}+\dfrac{𝑪}{(𝒙-1)^{2}}+\dfrac{𝑫𝒙+𝑬}{𝒙^{2}+1}+\dfrac{𝑭𝒙+𝑮}{𝒙^{2}+𝒙+1}+\dfrac{𝑯𝒙+𝑰}{(𝒙^{2}+𝒙+1)^{2}}$
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Key takeaway.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">This single example combines all the main cases:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">linear factors</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">repeated linear factors</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">irreducible quadratics</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">repeated irreducible quadratics</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">There is no “alternative shortcut.”
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">The correct partial-fraction decomposition is exactly this setup.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=8620" target="_blank">[2:23:40]</a>. 🧩
+        Example 5 — Case 4: Evaluate $\displaystyle \int \dfrac{𝒙^{3}-2𝒙^{2}+3𝒙+2}{𝒙(𝒙^{2}+1)^{2}}\,𝒅𝒙$. – <span
+          class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[2-23-40]-01.png" target="_blank">[📷image-1]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[2-23-40]-01.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[2-23-40]-02.png" target="_blank">[📷image-2]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[2-23-40]-02.png" alt="Preview" />
+        </span> – <span class="image-container">
+          <a href="../img/Calculus 2 Lecture 7.4/[2-23-40]-03.png" target="_blank">[📷image-3]</a>
+          <img src="../img/Calculus 2 Lecture 7.4/[2-23-40]-03.png" alt="Preview" />
+        </span>
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Correct setup.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\dfrac{𝑨}{𝒙}+\dfrac{𝑩𝒙+𝑪}{𝒙^{2}+1}+\dfrac{𝑫𝒙+𝑬}{(𝒙^{2}+1)^{2}}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Construction of the common denominator.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙^{3}-2𝒙^{2}+3𝒙+2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=𝑨(𝒙^{2}+1)^{2}+(𝑩𝒙+𝑪)𝒙(𝒙^{2}+1)+(𝑫𝒙+𝑬)𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">First useful value.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Let $𝒙=0$.</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then $2=𝑨$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Since the shortcut is no longer enough,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the expression must be distributed and regrouped by powers of $𝒙$.</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Expansion and collection of like terms.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝒙^{3}-2𝒙^{2}+3𝒙+2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$=(𝑨+𝑩)𝒙^{4}+𝑪𝒙^{3}+(2𝑨+𝑩+𝑫)𝒙^{2}+(𝑪+𝑬)𝒙+𝑨$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Comparison of coefficients.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">coefficient of $𝒙^{4}$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑨+𝑩=0$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">coefficient of $𝒙^{3}$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑪=1$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">coefficient of $𝒙^{2}$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$2𝑨+𝑩+𝑫=-2$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">coefficient of $𝒙$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑪+𝑬=3$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">constant term:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑨=2$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Step-by-step solution of the coefficients.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑨=2$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$𝑪=1$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">from $𝑪+𝑬=3$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$1+𝑬=3$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑬=2$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">from $𝑨+𝑩=0$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$2+𝑩=0$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑩=-2$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">from $2𝑨+𝑩+𝑫=-2$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$2(2)+(-2)+𝑫=-2$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝑫=-4$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Rewriting the integral.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int
+                \left[\dfrac{2}{𝒙}+\dfrac{-2𝒙+1}{𝒙^{2}+1}+\dfrac{-4𝒙+2}{(𝒙^{2}+1)^{2}}\right]\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Splitting into several simpler integrals.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$2\displaystyle \int \dfrac{1}{𝒙}\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-2\displaystyle \int \dfrac{𝒙}{𝒙^{2}+1}\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\displaystyle \int \dfrac{1}{𝒙^{2}+1}\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-4\displaystyle \int \dfrac{𝒙}{(𝒙^{2}+1)^{2}}\,𝒅𝒙$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$2\displaystyle \int \dfrac{1}{(𝒙^{2}+1)^{2}}\,𝒅𝒙$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Techniques used.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Logarithm for $\dfrac{1}{𝒙}$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$2\displaystyle \int \dfrac{1}{𝒙}\,𝒅𝒙=2\ln|𝒙|$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Substitution for $\dfrac{𝒙}{𝒙^{2}+1}$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">let $𝒖=𝒙^{2}+1$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒅𝒖=2𝒙\,𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$-2\displaystyle \int \dfrac{𝒙}{𝒙^{2}+1}\,𝒅𝒙=-\ln|𝒙^{2}+1|$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Inverse tangent for $\dfrac{1}{𝒙^{2}+1}$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\displaystyle \int \dfrac{1}{𝒙^{2}+1}\,𝒅𝒙=\tan^{-1}(𝒙)$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Negative-power substitution for $\dfrac{𝒙}{(𝒙^{2}+1)^{2}}$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">let $𝒖=𝒙^{2}+1$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$𝒅𝒖=2𝒙\,𝒅𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$-4\displaystyle \int \dfrac{𝒙}{(𝒙^{2}+1)^{2}}\,𝒅𝒙=\dfrac{2}{𝒙^{2}+1}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Trig substitution for $\dfrac{1}{(𝒙^{2}+1)^{2}}$:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">use $\tan(\theta)=𝒙$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">then $𝒅𝒙=\sec^{2}(\theta)\,𝒅\theta$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$2\displaystyle \int \dfrac{1}{(𝒙^{2}+1)^{2}}\,𝒅𝒙=2\int
+                    \cos^{2}(\theta)\,𝒅\theta$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Treatment of the last term.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Use the identity:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\cos^{2}(\theta)=\dfrac{1+\cos(2\theta)}{2}$</li>
+                </ul>
+              </li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">Then:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$2\int \cos^{2}(\theta)\,𝒅\theta=\theta+\dfrac{\sin(2\theta)}{2}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$=\theta+\sin(\theta)\cos(\theta)$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Return from $\theta$ to $𝒙$.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\theta=\tan^{-1}(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\sin(\theta)=\dfrac{𝒙}{\sqrt{𝒙^{2}+1}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$\cos(\theta)=\dfrac{1}{\sqrt{𝒙^{2}+1}}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">so:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\theta+\sin(\theta)\cos(\theta)=\tan^{-1}(𝒙)+\dfrac{𝒙}{𝒙^{2}+1}$</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Final combination of terms.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$2\ln|𝒙|$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$-\ln|𝒙^{2}+1|$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$+\tan^{-1}(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$+\dfrac{2}{𝒙^{2}+1}$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$+\tan^{-1}(𝒙)$</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$+\dfrac{𝒙+2}{𝒙^{2}+1}$</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Simplified final answer.
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">$2\ln|𝒙|-\ln|𝒙^{2}+1|+2\tan^{-1}(𝒙)+\dfrac{𝒙+2}{𝒙^{2}+1}+𝑪$</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ｃｏｎｃｌｕｓｉｏｎ</h2>
+    <ul>
+      <!-- ● nivel-1 -->
+      <li class="level-1"><a href="https://www.youtube.com/watch?v=KJGp0pyPoVo&t=10514" target="_blank">[2:55:14]</a>.
+        Closing of the last example.
+        <ul>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">The hardest part of the method is usually the algebra:
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">factor correctly</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">set up the decomposition correctly</li>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">compare coefficients without sign errors</li>
+            </ul>
+          </li>
+          <!-- ◉ nivel-2 -->
+          <li class="level-2">Once the decomposition is done,
+            <ul>
+              <!-- ○ nivel-3 -->
+              <li class="level-3">the integration usually reduces to already-known techniques:
+                <ul>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">logarithms</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">substitution</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">$\tan^{-1}$</li>
+                  <!-- ■ nivel-4 -->
+                  <li class="level-4">and, in some cases, trig substitution</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Ａｄｄｉｔｉｏｎａｌ　ｒｅｓｏｕｒｃｅｓ</h2>
+    <p><a href="https://openstax.org/books/calculus-volume-2/pages/3-3-trigonometric-substitution"
+        target="_blank">[openstax🌐]</a></p>
+
+  </article>
+</body>
+
+</html>

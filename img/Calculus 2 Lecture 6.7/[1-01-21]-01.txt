@@ -1,0 +1,5 @@
+﻿image_name: [1-01-21]Case Study — limₓ→₀⁺ 𝒙ˣ.png
+file_name: [1-01-21]-01.png
+timestamp: 1:01:21
+counter: 01
+folder: Calculus 2 Lecture 6.7

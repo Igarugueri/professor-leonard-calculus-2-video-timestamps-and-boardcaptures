@@ -1,0 +1,5 @@
+﻿image_name: [8-13]Example 1 — Verify that 𝒚 = 𝒙 + 1 + 𝒄e^𝒙 is a solution to 𝒚' = 𝒚 − 𝒙 on (−∞, ∞).png
+file_name: [8-13]-01.png
+timestamp: 8:13
+counter: 01
+folder: Calculus 2 Lecture 8.1

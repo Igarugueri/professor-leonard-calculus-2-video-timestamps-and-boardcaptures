@@ -1,0 +1,5 @@
+﻿image_name: [27-50]Example — Repeated application of L’Hôpital’s Rule limₓ→∞ 𝒙³∕𝒆²ˣ.png
+file_name: [27-50]-01.png
+timestamp: 27:50
+counter: 01
+folder: Calculus 2 Lecture 6.7

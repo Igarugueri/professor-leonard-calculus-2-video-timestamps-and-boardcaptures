@@ -1,0 +1,5 @@
+﻿image_name: [36-35]Example 3 — Integration by substitution  ∫ cosh²(3𝒙) sinh(3𝒙) d𝒙.png
+file_name: [36-35]-01.png
+timestamp: 36:35
+counter: 01
+folder: Calculus 2 Lecture 6.6

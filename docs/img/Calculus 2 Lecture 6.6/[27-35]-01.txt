@@ -1,0 +1,5 @@
+﻿image_name: [27-35]Example — Composite derivative  𝒅∕𝒅𝒙 [cosh²(3𝒕² + 1)]_1.png
+file_name: [27-35]-01.png
+timestamp: 27:35
+counter: 01
+folder: Calculus 2 Lecture 6.6

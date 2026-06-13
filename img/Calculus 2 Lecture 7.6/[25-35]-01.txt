@@ -1,0 +1,5 @@
+﻿image_name: [25-35]Example 2 — Evaluate the integral ∫[1, ∞] 3∕𝒙 ⋅ 𝒅𝒙.png
+file_name: [25-35]-01.png
+timestamp: 25:35
+counter: 01
+folder: Calculus 2 Lecture 7.6

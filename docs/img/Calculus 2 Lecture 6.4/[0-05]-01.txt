@@ -1,0 +1,5 @@
+﻿image_name: [0-05]Fundamental properties of exponential expressions.png
+file_name: [0-05]-01.png
+timestamp: 0:05
+counter: 01
+folder: Calculus 2 Lecture 6.4
