@@ -1,10 +1,18 @@
 # Calculus 2 – Structured Notes and Visual Index (Professor Leonard Lectures)
 
-Includes synchronized video timestamps, complete whiteboard captures, structured MathJax-rendered notes, and direct navigation to specific concepts throughout each lecture.
+A fast-reference study tool for finding concepts quickly, revisiting the exact explanation, and reviewing Professor Leonard’s lectures without having to rewatch them in full.
 
-Designed as a fast-reference resource for review, revision, and long-term retention of key Calculus 2 concepts.
+This repository includes clickable video timestamps, complete whiteboard captures, structured MathJax-rendered notes, and direct navigation to specific concepts throughout each lecture.
 
-This repository is intended as a searchable reference companion to the original lectures, allowing rapid access to specific concepts without having to rewatch entire videos.
+It is designed to help students:
+
+* find a concept quickly
+* avoid losing 40 minutes searching through a lecture
+* see the exact whiteboard work for a topic
+* return directly to the moment where an idea is explained
+* review efficiently without rewatching an entire class
+
+
 
 ## Index
 
@@ -114,15 +122,15 @@ Many lectures include supplementary references at the end of the notes. These ty
 
 ## 4. Motivation
 
-This project was created to serve as a fast, reliable reference for key concepts in *Calculus 2*.
+This project was created to solve a practical study problem: long lectures are extremely valuable, but they are not always easy to search, revisit, or review efficiently.
 
-Rather than replacing the original lectures, its purpose is to make them easier to revisit, search, and navigate. The repository allows users to quickly locate a concept, jump to the relevant timestamp, review the associated whiteboard work, and continue studying without having to rewatch entire lectures.
+The aim of this repository is not to replace Professor Leonard’s lectures, but to make them easier to use as a long-term reference tool.
 
-The notes are not literal transcripts. Instead, they condense the essential mathematical content written on the board, supplemented when necessary with explanatory remarks, clarifications, and observations that arose during the creation of the project.
+Instead of forcing students to rewatch entire lectures just to relocate a single explanation, the project allows them to identify a concept quickly, jump to the exact timestamp, inspect the corresponding whiteboard work, and continue studying with minimal friction.
 
-Each lecture was manually reviewed, indexed, timestamped, cross-referenced, and supplemented with complete visual references from the original whiteboard presentations.
+The notes are not literal transcripts. They are structured study notes built from the mathematical content on the board, supplemented where necessary with clarifications, explanatory remarks, and cross-references.
 
-This is especially useful during revision periods or while studying more advanced calculus topics.
+Each lecture was manually reviewed, indexed, timestamped, organized, and linked to a complete visual record of the original whiteboard presentation.
 
 ---
 
@@ -138,7 +146,7 @@ His lectures not only provide mathematical content, but also a model of clear an
 
 * All timestamps, transcriptions, formatting, indexing, image organization, and cross-references were generated manually by the author.
 
-* Whiteboard captures consist of screenshots taken from the original lecture videos and are included under fair use for educational purposes.
+* Whiteboard captures consist of screenshots from the original lecture videos and are included for educational and reference purposes.
 
 * Additional references may include links to OpenStax and other freely available educational resources.
 
