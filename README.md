@@ -1,8 +1,11 @@
 # Calculus 2 – Structured Notes and Visual Index (Professor Leonard Lectures)
 
-A fast-reference study tool for finding concepts quickly, revisiting the exact explanation, and reviewing Professor Leonard’s lectures without having to rewatch them in full.
+Structured navigation and study companion for Professor Leonard's Calculus 2 lectures.
 
-This repository includes clickable video timestamps, complete whiteboard captures, structured MathJax-rendered notes, and direct navigation to specific concepts throughout each lecture.
+Includes synchronized video timestamps, complete whiteboard captures, structured MathJax-rendered notes, and direct navigation to specific concepts throughout each lecture.
+
+Designed as a fast-reference resource for review, revision, and long-term retention of key Calculus 2 concepts.
+
 
 It is designed to help students:
 
@@ -26,9 +29,12 @@ It is designed to help students:
 
 ## 1. Repository Overview
 
-This repository provides a structured index to Professor Leonard’s Calculus 2 lecture series, combining clickable timestamps, complete whiteboard captures, and organized mathematical notes across the full lecture series.
+This repository is a structured navigation and study companion for Professor Leonard's Calculus lecture series. Rather than replacing the original lectures, it helps students quickly locate concepts, revisit explanations, review whiteboard work, and navigate directly to relevant moments within the videos. The following links provide direct access to each lecture:
 
-Topics:
+
+### Complete Lecture Collection
+
+
 
 - [Calculus 2 Lecture 6.1 - The Natural Log Function](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.1.html)
 
@@ -84,9 +90,16 @@ Topics:
 
 - [Calculus 2 Lecture 10.6 - Numerical Integration With Trapezoidal and Simpson's Rule](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/10.6.html)
 
+### Companion Project
+
+Related repository:
+
+- [Professor Leonard Calculus 1 – Video Timestamps and Board Captures](https://github.com/Igarugueri/professor-leonard-calculus-1-video-timestamps-and-boardcaptures)
+
+
 ### Course Numbering Note
 
-Professor Leonard’s Calculus 2 lecture series continues the numbering sequence from Calculus 1. Calculus 1 ends with Lecture 5.4, and this repository begins with Lecture 6.1.
+Calculus 2 continues the lecture numbering established in Calculus 1. Therefore, this repository begins with Lecture 6.1.
 
 ### Folder Structure
 
@@ -94,16 +107,20 @@ Professor Leonard’s Calculus 2 lecture series continues the numbering sequence
   Public-facing folder used by GitHub Pages to display content online (HTML + CSS only).
 
 - **img/**  
-   Contains all whiteboard screenshots used throughout the project. These are not a small selection of representative images; they constitute a systematic visual capture of the lecture content and are referenced throughout the notes.
+  Contains all whiteboard screenshots used throughout the project. These are not a small selection of representative images; they constitute a systematic visual capture of the lecture content and are referenced throughout the notes.
+  All screenshots were manually selected and captured during the review process.
 
   Each image is accompanied by a `.txt` sidecar file storing metadata.
 
-  Example:
-  image_name: [12-35]IntegrationByParts.png
-  file_name: [12-35]-01.png
-  timestamp: 12:35
-  counter: 01
-  folder: Calculus 2 Lecture 7.1
+ Example metadata:
+
+```text
+image_name: [12-35]IntegrationByParts.png
+file_name: [12-35]-01.png
+timestamp: 12:35
+counter: 01
+folder: Calculus 2 Lecture 7.1
+```
 
 - **ytb/**  
   Contains the original lightweight timestamp indexes created during the early stages of the project. These files were designed to be pasted directly into YouTube comments so that viewers could navigate the lecture while watching it. Although largely superseded by the Markdown and LaTeX versions, they are preserved as part of the project's development history.
@@ -165,9 +182,9 @@ Many lectures include supplementary references at the end of the notes. These ty
 
 ## 4. Motivation
 
-This project was created to solve a practical study problem: long lectures are extremely valuable, but they are not always easy to search, revisit, or review efficiently.
+The primary goal of this project is not to replace Professor Leonard's lectures, but to make them easier to navigate, revisit, and study efficiently over the long term.
 
-The aim of this repository is not to replace Professor Leonard’s lectures, but to make them easier to use as a long-term reference tool.
+This project was created to solve a practical study problem: long lectures are extremely valuable, but they are not always easy to search, revisit, or review efficiently.
 
 Instead of forcing students to rewatch entire lectures just to relocate a single explanation, the project allows them to identify a concept quickly, jump to the exact timestamp, inspect the corresponding whiteboard work, and continue studying with minimal friction.
 
