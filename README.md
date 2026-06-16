@@ -128,14 +128,12 @@ folder: Calculus 2 Lecture 7.1
 - **md/**  
   Markdown versions of each lecture containing clickable video timestamps, screenshots, and structured notes.
 
-These files provide direct navigation between the notes and the original lecture recordings.
-
-**Important:** the `md/` files depend on the `img/` folder. Both should be downloaded together in order to display screenshots correctly.
-
 - **latex/**  
   Enhanced versions of the Markdown notes using LaTeX notation for mathematical expressions.
 
-These files represent the final refined version of the notes and provide improved readability and mathematical clarity compared to the original Markdown drafts.
+  
+**Important:** the `md/` and `latex/` files depend on the `img/` folder. They should be downloaded together in order to display screenshots correctly.
+
 
 ---
 
@@ -148,14 +146,13 @@ These notes were created and structured using [Zettlr](https://www.zettlr.com/),
 ### How to Use Locally
 
 1. Clone or download the repository.
-2. Open the following folders in Zettlr or your preferred Markdown editor:
 
-- `img/`
-- `ytb/`
-- `md/`
-- `latex/`
+2. Keep the original folder structure intact.
 
-For the best experience, keep the original folder structure intact, since screenshots are referenced through relative paths.
+3. Open the files in the `md/` or `latex/` folders using Zettlr or another Markdown editor.
+
+The notes use relative paths to load the whiteboard screenshots stored in the `img/` folder. As long as the original folder structure is preserved, images and links will work automatically without any additional configuration.
+
 
 ---
 
