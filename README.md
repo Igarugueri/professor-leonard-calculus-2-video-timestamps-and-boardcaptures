@@ -6,13 +6,11 @@ This repository includes clickable video timestamps, complete whiteboard capture
 
 It is designed to help students:
 
-* find a concept quickly
-* avoid losing 40 minutes searching through a lecture
-* see the exact whiteboard work for a topic
-* return directly to the moment where an idea is explained
-* review efficiently without rewatching an entire class
-
-
+- find a concept quickly
+- avoid losing 40 minutes searching through a lecture
+- see the exact whiteboard work for a topic
+- return directly to the moment where an idea is explained
+- review efficiently without rewatching an entire class
 
 ## Index
 
@@ -30,63 +28,61 @@ It is designed to help students:
 
 This repository provides a structured index to Professor Leonard’s Calculus 2 lecture series, combining clickable timestamps, complete whiteboard captures, and organized mathematical notes across the full lecture series.
 
-
 Topics:
 
-* [Calculus 2 Lecture 6.1 - The Natural Log Function](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.1.html)
+- [Calculus 2 Lecture 6.1 - The Natural Log Function](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.1.html)
 
-* [Calculus 2 Lecture 6.2 - Derivatives of Inverse Functions](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.2.html)
+- [Calculus 2 Lecture 6.2 - Derivatives of Inverse Functions](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.2.html)
 
-* [Calculus 2 Lecture 6.3 - Derivatives and Integrals of Exponential Functions](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.3.html)
+- [Calculus 2 Lecture 6.3 - Derivatives and Integrals of Exponential Functions](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.3.html)
 
-* [Calculus 2 Lecture 6.4 - Derivatives and Integrals of General Exponential Functions](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.4.html)
+- [Calculus 2 Lecture 6.4 - Derivatives and Integrals of General Exponential Functions](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.4.html)
 
-* [Calculus 2 Lecture 6.5 - Calculus of Inverse Trigonometric Functions](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.5.html)
+- [Calculus 2 Lecture 6.5 - Calculus of Inverse Trigonometric Functions](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.5.html)
 
-* [Calculus 2 Lecture 6.6 - A Discussion of Hyperbolic Functions](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.6.html)
+- [Calculus 2 Lecture 6.6 - A Discussion of Hyperbolic Functions](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.6.html)
 
-* [Calculus 2 Lecture 6.7 - Evaluating Limits of Indeterminate Forms](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.7.html)
+- [Calculus 2 Lecture 6.7 - Evaluating Limits of Indeterminate Forms](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/6.7.html)
 
-* [Calculus 2 Lecture 7.1 - Integration By Parts](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/7.1.html)
+- [Calculus 2 Lecture 7.1 - Integration By Parts](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/7.1.html)
 
-* [Calculus 2 Lecture 7.2 - Techniques For Trigonometric Integrals](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/7.2.html)
+- [Calculus 2 Lecture 7.2 - Techniques For Trigonometric Integrals](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/7.2.html)
 
-* [Calculus 2 Lecture 7.3 - Integrals By Trigonometric Substitution](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/7.3.html)
+- [Calculus 2 Lecture 7.3 - Integrals By Trigonometric Substitution](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/7.3.html)
 
-* [Calculus 2 Lecture 7.4 - Integration By Partial Fractions](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/7.4.html)
+- [Calculus 2 Lecture 7.4 - Integration By Partial Fractions](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/7.4.html)
 
-* [Calculus 2 Lecture 7.6 - Improper Integrals](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/7.6.html)
+- [Calculus 2 Lecture 7.6 - Improper Integrals](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/7.6.html)
 
-* [Calculus 2 Lecture 8.1 - Solving First Order Differential Equations By Separation of Variables](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/8.1.html)
+- [Calculus 2 Lecture 8.1 - Solving First Order Differential Equations By Separation of Variables](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/8.1.html)
 
-* [Calculus 2 Lecture 9.1 - Convergence and Divergence of Sequences](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.1.html)
+- [Calculus 2 Lecture 9.1 - Convergence and Divergence of Sequences](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.1.html)
 
-* [Calculus 2 Lecture 9.2 - Series, Geometric Series, Harmonic Series, and Divergence Test](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.2.html)
+- [Calculus 2 Lecture 9.2 - Series, Geometric Series, Harmonic Series, and Divergence Test](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.2.html)
 
-* [Calculus 2 Lecture 9.3 - Using the Integral Test for Convergence/Divergence of Series, P-Series](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.3.html)
+- [Calculus 2 Lecture 9.3 - Using the Integral Test for Convergence/Divergence of Series, P-Series](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.3.html)
 
-* [Calculus 2 Lecture 9.4 - The Comparison Test for Series and The Limit Comparison Test](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.4.html)
+- [Calculus 2 Lecture 9.4 - The Comparison Test for Series and The Limit Comparison Test](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.4.html)
 
-* [Calculus 2 Lecture 9.5 - Showing Convergence With the Alternating Series Test, Finding Error of Sums](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.5.html)
+- [Calculus 2 Lecture 9.5 - Showing Convergence With the Alternating Series Test, Finding Error of Sums](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.5.html)
 
-* [Calculus 2 Lecture 9.6 - Absolute Convergence, Ratio Test and Root Test For Series](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.6.html)
+- [Calculus 2 Lecture 9.6 - Absolute Convergence, Ratio Test and Root Test For Series](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.6.html)
 
-* [Calculus 2 Lecture 9.7 - Power Series, Calculus of Power Series, Ratio Test for Int. of Convergence](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.7.html)
+- [Calculus 2 Lecture 9.7 - Power Series, Calculus of Power Series, Ratio Test for Int. of Convergence](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.7.html)
 
-* [Calculus 2 Lecture 9.8 - Representation of Functions by Taylor Series and Maclauren Series](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.8.html)
+- [Calculus 2 Lecture 9.8 - Representation of Functions by Taylor Series and Maclauren Series](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.8.html)
 
-* [Calculus 2 Lecture 9.9 - Approximation of Functions by Taylor Polynomials](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.9.html)
+- [Calculus 2 Lecture 9.9 - Approximation of Functions by Taylor Polynomials](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/9.9.html)
 
-* [Calculus 2 Lecture 10.2 - Introduction to Parametric Equations](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/10.2.html)
+- [Calculus 2 Lecture 10.2 - Introduction to Parametric Equations](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/10.2.html)
 
-* [Calculus 2 Lecture 10.3 - Calculus of Parametric Equations](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/10.3.html)
+- [Calculus 2 Lecture 10.3 - Calculus of Parametric Equations](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/10.3.html)
 
-* [Calculus 2 Lecture 10.4 - Using Polar Coordinates and Polar Equations](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/10.4.html)
+- [Calculus 2 Lecture 10.4 - Using Polar Coordinates and Polar Equations](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/10.4.html)
 
-* [Calculus 2 Lecture 10.5 - Calculus of Polar Equations](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/10.5.html)
+- [Calculus 2 Lecture 10.5 - Calculus of Polar Equations](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/10.5.html)
 
-* [Calculus 2 Lecture 10.6 - Numerical Integration With Trapezoidal and Simpson's Rule](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/10.6.html)
-
+- [Calculus 2 Lecture 10.6 - Numerical Integration With Trapezoidal and Simpson's Rule](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/html/10.6.html)
 
 ### Course Numbering Note
 
@@ -98,29 +94,29 @@ Professor Leonard’s Calculus 2 lecture series continues the numbering sequence
   Public-facing folder used by GitHub Pages to display content online (HTML + CSS only).
 
 - **img/**  
-  Contains all whiteboard screenshots used throughout the project. These are not a small selection of representative images; they constitute a systematic visual capture of the lecture content and are referenced throughout the notes.
+   Contains all whiteboard screenshots used throughout the project. These are not a small selection of representative images; they constitute a systematic visual capture of the lecture content and are referenced throughout the notes.
 
   Each image is accompanied by a `.txt` sidecar file storing metadata.
 
   Example:
-image\_name: [12-35]IntegrationByParts.png
-file\_name: [12-35]-01.png
-timestamp: 12:35
-counter: 01
-folder: Calculus 2 Lecture 7.1
+  image_name: [12-35]IntegrationByParts.png
+  file_name: [12-35]-01.png
+  timestamp: 12:35
+  counter: 01
+  folder: Calculus 2 Lecture 7.1
 
 - **ytb/**  
-Contains the original lightweight timestamp indexes created during the early stages of the project. These files were designed to be pasted directly into YouTube comments so that viewers could navigate the lecture while watching it. Although largely superseded by the Markdown and LaTeX versions, they are preserved as part of the project's development history.
+  Contains the original lightweight timestamp indexes created during the early stages of the project. These files were designed to be pasted directly into YouTube comments so that viewers could navigate the lecture while watching it. Although largely superseded by the Markdown and LaTeX versions, they are preserved as part of the project's development history.
 
 - **md/**  
-Markdown versions of each lecture containing clickable video timestamps, screenshots, and structured notes.
+  Markdown versions of each lecture containing clickable video timestamps, screenshots, and structured notes.
 
 These files provide direct navigation between the notes and the original lecture recordings.
 
 **Important:** the `md/` files depend on the `img/` folder. Both should be downloaded together in order to display screenshots correctly.
 
 - **latex/**  
-Enhanced versions of the Markdown notes using LaTeX notation for mathematical expressions.
+  Enhanced versions of the Markdown notes using LaTeX notation for mathematical expressions.
 
 These files represent the final refined version of the notes and provide improved readability and mathematical clarity compared to the original Markdown drafts.
 
@@ -137,10 +133,10 @@ These notes were created and structured using [Zettlr](https://www.zettlr.com/),
 1. Clone or download the repository.
 2. Open the following folders in Zettlr or your preferred Markdown editor:
 
- - `img/`
- - `ytb/`
- - `md/`
- - `latex/`
+- `img/`
+- `ytb/`
+- `md/`
+- `latex/`
 
 For the best experience, keep the original folder structure intact, since screenshots are referenced through relative paths.
 
@@ -150,8 +146,7 @@ For the best experience, keep the original folder structure intact, since screen
 
 To explore the notes visually online, visit the rendered HTML site via GitHub Pages:
 
-[GitHub Pages – Calculus 2 (Professor Leonard Lectures)](https://igarugueri.github.io/professor-leonard-calculus-1-video-timestamps-and-boardcaptures/
-)
+[GitHub Pages – Calculus 2 (Professor Leonard Lectures)](https://igarugueri.github.io/professor-leonard-calculus-2-video-timestamps-and-boardcaptures/)
 
 The online version includes:
 
@@ -190,14 +185,14 @@ Special thanks to Professor Leonard for his remarkable ability to teach mathemat
 
 His lectures not only provide mathematical content, but also a model of clear and effective teaching that inspired the creation of this repository.
 
-* This project was independently created as a personal study and indexing tool.
+- This project was independently created as a personal study and indexing tool.
 
-* All timestamps, transcriptions, formatting, indexing, image organization, and cross-references were generated manually by the author.
+- All timestamps, transcriptions, formatting, indexing, image organization, and cross-references were generated manually by the author.
 
-* Whiteboard captures consist of screenshots from the original lecture videos and are included for educational and reference purposes.
+- Whiteboard captures consist of screenshots from the original lecture videos and are included for educational and reference purposes.
 
-* Additional references may include links to OpenStax and other freely available educational resources.
+- Additional references may include links to OpenStax and other freely available educational resources.
 
-* AI-assisted tools, including ChatGPT, were used to support parts of the workflow such as HTML generation, formatting, proofreading, and repository organization. All final content, indexing decisions, screenshots, timestamps, and study notes were reviewed and curated manually by the author.
+- AI-assisted tools, including ChatGPT, were used to support parts of the workflow such as HTML generation, formatting, proofreading, and repository organization. All final content, indexing decisions, screenshots, timestamps, and study notes were reviewed and curated manually by the author.
 
 © 2026. See the LICENSE file for reuse and distribution terms.
